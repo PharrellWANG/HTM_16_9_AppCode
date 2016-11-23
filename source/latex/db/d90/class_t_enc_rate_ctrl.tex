@@ -1,0 +1,62 @@
+\hypertarget{class_t_enc_rate_ctrl}{}\section{T\+Enc\+Rate\+Ctrl Class Reference}
+\label{class_t_enc_rate_ctrl}\index{T\+Enc\+Rate\+Ctrl@{T\+Enc\+Rate\+Ctrl}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a3573825510eb67f7dfb6e157ac60acb7}\label{class_t_enc_rate_ctrl_a3573825510eb67f7dfb6e157ac60acb7}} 
+Void {\bfseries init} (Int total\+Frames, Int target\+Bitrate, Int frame\+Rate, Int G\+O\+P\+Size, Int pic\+Width, Int pic\+Height, Int L\+C\+U\+Width, Int L\+C\+U\+Height, Int keep\+Hier\+Bits, Bool use\+L\+C\+U\+Separate\+Model, \hyperlink{struct_g_o_p_entry}{G\+O\+P\+Entry} G\+O\+P\+List\mbox{[}M\+A\+X\+\_\+\+G\+OP\mbox{]})
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a47479cbf8644b9e112e6b72f409f7956}\label{class_t_enc_rate_ctrl_a47479cbf8644b9e112e6b72f409f7956}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_aa68f99878bef8f446e0df54a71623e35}\label{class_t_enc_rate_ctrl_aa68f99878bef8f446e0df54a71623e35}} 
+Void {\bfseries init\+R\+C\+Pic} (Int frame\+Level)
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_aa0cc14677a13f6dc376b70942cb1164b}\label{class_t_enc_rate_ctrl_aa0cc14677a13f6dc376b70942cb1164b}} 
+Void {\bfseries init\+R\+C\+G\+OP} (Int number\+Of\+Pictures)
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a732526606166cc7cd4acc565a66d7dc8}\label{class_t_enc_rate_ctrl_a732526606166cc7cd4acc565a66d7dc8}} 
+Void {\bfseries destroy\+R\+C\+G\+OP} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a019f24db3dc302b008f8ea8c12c80b0b}\label{class_t_enc_rate_ctrl_a019f24db3dc302b008f8ea8c12c80b0b}} 
+Void {\bfseries set\+R\+C\+QP} (Int QP)
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a8dd22f02a2e94ddd02b856db75f048ee}\label{class_t_enc_rate_ctrl_a8dd22f02a2e94ddd02b856db75f048ee}} 
+Int {\bfseries get\+R\+C\+QP} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a0ca7564e37ff69979b1f9630571ce361}\label{class_t_enc_rate_ctrl_a0ca7564e37ff69979b1f9630571ce361}} 
+\hyperlink{class_t_enc_r_c_seq}{T\+Enc\+R\+C\+Seq} $\ast$ {\bfseries get\+R\+C\+Seq} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a9a37dc4d8969a2973c24232c63719c10}\label{class_t_enc_rate_ctrl_a9a37dc4d8969a2973c24232c63719c10}} 
+\hyperlink{class_t_enc_r_c_g_o_p}{T\+Enc\+R\+C\+G\+OP} $\ast$ {\bfseries get\+R\+C\+G\+OP} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_acf728ef4507cb4047c41840f30546e29}\label{class_t_enc_rate_ctrl_acf728ef4507cb4047c41840f30546e29}} 
+\hyperlink{class_t_enc_r_c_pic}{T\+Enc\+R\+C\+Pic} $\ast$ {\bfseries get\+R\+C\+Pic} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a5ea922796176b2fa071d455cc1143336}\label{class_t_enc_rate_ctrl_a5ea922796176b2fa071d455cc1143336}} 
+list$<$ \hyperlink{class_t_enc_r_c_pic}{T\+Enc\+R\+C\+Pic} $\ast$ $>$ \& {\bfseries get\+Pic\+List} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a1e9e1d221587acbe5312aca017db2f6b}\label{class_t_enc_rate_ctrl_a1e9e1d221587acbe5312aca017db2f6b}} 
+Bool {\bfseries get\+Cpb\+Saturation\+Enabled} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a54d9f28941cd184834d1e331915ad59b}\label{class_t_enc_rate_ctrl_a54d9f28941cd184834d1e331915ad59b}} 
+U\+Int {\bfseries get\+Cpb\+State} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a233174b7bef3de028bf7f6f6f17abf22}\label{class_t_enc_rate_ctrl_a233174b7bef3de028bf7f6f6f17abf22}} 
+U\+Int {\bfseries get\+Cpb\+Size} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a82d20ca026c6695775d245feb6611912}\label{class_t_enc_rate_ctrl_a82d20ca026c6695775d245feb6611912}} 
+U\+Int {\bfseries get\+Buffering\+Rate} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_a457f67ace2d7cb217766715c125da769}\label{class_t_enc_rate_ctrl_a457f67ace2d7cb217766715c125da769}} 
+Int {\bfseries update\+Cpb\+State} (Int actual\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_enc_rate_ctrl_af52a1ab000a19136d581322d972e0827}\label{class_t_enc_rate_ctrl_af52a1ab000a19136d581322d972e0827}} 
+Void {\bfseries init\+Hrd\+Param} (const \hyperlink{class_t_com_h_r_d}{T\+Com\+H\+RD} $\ast$pc\+Hrd, Int i\+Frame\+Rate, Double f\+Initial\+Cpb\+Fullness)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_rate_ctrl_8h}{T\+Enc\+Rate\+Ctrl.\+h}\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_rate_ctrl_8cpp}{T\+Enc\+Rate\+Ctrl.\+cpp}\end{DoxyCompactItemize}

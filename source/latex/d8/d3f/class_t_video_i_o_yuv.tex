@@ -1,0 +1,151 @@
+\hypertarget{class_t_video_i_o_yuv}{}\section{T\+Video\+I\+O\+Yuv Class Reference}
+\label{class_t_video_i_o_yuv}\index{T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}}
+
+
+Y\+UV file I/O class.  
+
+
+
+
+{\ttfamily \#include $<$T\+Video\+I\+O\+Yuv.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Void \hyperlink{class_t_video_i_o_yuv_a65a9025501cfaa3d9c682d1a51c5d458}{open} (const std\+::string \&file\+Name, Bool b\+Write\+Mode, const Int file\+Bit\+Depth\mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE\mbox{]}, const Int M\+S\+B\+Extended\+Bit\+Depth\mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE\mbox{]}, const Int internal\+Bit\+Depth\mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE\mbox{]})
+\begin{DoxyCompactList}\small\item\em open or create file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_video_i_o_yuv_a6f4cf21b7363356645639f05a1318635}\label{class_t_video_i_o_yuv_a6f4cf21b7363356645639f05a1318635}} 
+Void \hyperlink{class_t_video_i_o_yuv_a6f4cf21b7363356645639f05a1318635}{close} ()
+\begin{DoxyCompactList}\small\item\em close file \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_video_i_o_yuv_ae5c8dd5ff37103f2ed1f54b75ea05b6f}{skip\+Frames} (U\+Int num\+Frames, U\+Int width, U\+Int height, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} format)
+\item 
+Bool \hyperlink{class_t_video_i_o_yuv_ac709b426a47663adb1f05a1aadebbe1c}{read} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Pic\+Yuv, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Pic\+Yuv\+True\+Org, const Input\+Colour\+Space\+Conversion ipcsc, Int ai\+Pad\mbox{[}2\mbox{]}, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} file\+Format=N\+U\+M\+\_\+\+C\+H\+R\+O\+M\+A\+\_\+\+F\+O\+R\+M\+AT, const Bool b\+Clip\+To\+Rec709=false)
+\begin{DoxyCompactList}\small\item\em read one frame with padding parameter \end{DoxyCompactList}\item 
+Bool \hyperlink{class_t_video_i_o_yuv_a1e0ade1f702a1d24a8290bb61de71b05}{write} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Pic\+Yuv, const Input\+Colour\+Space\+Conversion ip\+C\+SC, Int conf\+Left=0, Int conf\+Right=0, Int conf\+Top=0, Int conf\+Bottom=0, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} file\+Format=N\+U\+M\+\_\+\+C\+H\+R\+O\+M\+A\+\_\+\+F\+O\+R\+M\+AT, const Bool b\+Clip\+To\+Rec709=false)
+\begin{DoxyCompactList}\small\item\em write one Y\+UV frame with padding parameter \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_video_i_o_yuv_ab721f67c64c9cba1b288a581ea5f7c2f}\label{class_t_video_i_o_yuv_ab721f67c64c9cba1b288a581ea5f7c2f}} 
+Bool {\bfseries write} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Pic\+Yuv\+Top, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Pic\+Yuv\+Bottom, const Input\+Colour\+Space\+Conversion ip\+C\+SC, Int conf\+Left=0, Int conf\+Right=0, Int conf\+Top=0, Int conf\+Bottom=0, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} file\+Format=N\+U\+M\+\_\+\+C\+H\+R\+O\+M\+A\+\_\+\+F\+O\+R\+M\+AT, const Bool is\+Tff=false, const Bool b\+Clip\+To\+Rec709=false)
+\item 
+\mbox{\Hypertarget{class_t_video_i_o_yuv_a1d6c64567822c98aafe6e719b6b1f0db}\label{class_t_video_i_o_yuv_a1d6c64567822c98aafe6e719b6b1f0db}} 
+Bool \hyperlink{class_t_video_i_o_yuv_a1d6c64567822c98aafe6e719b6b1f0db}{is\+Eof} ()
+\begin{DoxyCompactList}\small\item\em check for end-\/of-\/file \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_video_i_o_yuv_a61605b9f6f2ba3105d7cb25ad4bab695}\label{class_t_video_i_o_yuv_a61605b9f6f2ba3105d7cb25ad4bab695}} 
+Bool \hyperlink{class_t_video_i_o_yuv_a61605b9f6f2ba3105d7cb25ad4bab695}{is\+Fail} ()
+\begin{DoxyCompactList}\small\item\em check for failure \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_video_i_o_yuv_a2f8830d0445a55bc8621f966f25a59a4}\label{class_t_video_i_o_yuv_a2f8830d0445a55bc8621f966f25a59a4}} 
+static Void {\bfseries Colour\+Space\+Convert} (const \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} \&src, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} \&dest, const Input\+Colour\+Space\+Conversion conversion, Bool b\+Is\+Forwards)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Y\+UV file I/O class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_video_i_o_yuv_a65a9025501cfaa3d9c682d1a51c5d458}\label{class_t_video_i_o_yuv_a65a9025501cfaa3d9c682d1a51c5d458}} 
+\index{T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}!open@{open}}
+\index{open@{open}!T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily Void T\+Video\+I\+O\+Yuv\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{Bool}]{b\+Write\+Mode,  }\item[{const Int}]{file\+Bit\+Depth\mbox{[}\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\mbox{]},  }\item[{const Int}]{M\+S\+B\+Extended\+Bit\+Depth\mbox{[}\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\mbox{]},  }\item[{const Int}]{internal\+Bit\+Depth\mbox{[}\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+open or create file 
+
+Open file for reading/writing Y\textquotesingle{}Cb\+Cr frames.
+
+Frames read/written have bitdepth file\+Bit\+Depth, and are automatically formatted as 8 or 16 bit word values (see \hyperlink{class_t_video_i_o_yuv_a1e0ade1f702a1d24a8290bb61de71b05}{T\+Video\+I\+O\+Yuv\+::write()}).
+
+Image data read or written is converted to/from internal\+Bit\+Depth (See scale\+Plane(), \hyperlink{class_t_video_i_o_yuv_ac709b426a47663adb1f05a1aadebbe1c}{T\+Video\+I\+O\+Yuv\+::read()} and \hyperlink{class_t_video_i_o_yuv_a1e0ade1f702a1d24a8290bb61de71b05}{T\+Video\+I\+O\+Yuv\+::write()} for further details).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pch\+File} & file name string \\
+\hline
+{\em b\+Write\+Mode} & file open mode\+: true=write, false=read \\
+\hline
+{\em file\+Bit\+Depth} & bit-\/depth array of input/output file data. \\
+\hline
+{\em M\+S\+B\+Extended\+Bit\+Depth} & \\
+\hline
+{\em internal\+Bit\+Depth} & bit-\/depth array to scale image data to/from when reading/writing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_video_i_o_yuv_ac709b426a47663adb1f05a1aadebbe1c}\label{class_t_video_i_o_yuv_ac709b426a47663adb1f05a1aadebbe1c}} 
+\index{T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}!read@{read}}
+\index{read@{read}!T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily Bool T\+Video\+I\+O\+Yuv\+::read (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$}]{p\+Pic\+Yuv\+User,  }\item[{\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$}]{p\+Pic\+Yuv\+True\+Org,  }\item[{const Input\+Colour\+Space\+Conversion}]{ipcsc,  }\item[{Int}]{ai\+Pad\mbox{[}2\mbox{]},  }\item[{\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{format = {\ttfamily NUM\+\_\+CHROMA\+\_\+FORMAT},  }\item[{const Bool}]{b\+Clip\+To\+Rec709 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+read one frame with padding parameter 
+
+Read one Y\textquotesingle{}Cb\+Cr frame, performing any required input scaling to change from the bitdepth of the input file to the internal bit-\/depth.
+
+If a bit-\/depth reduction is required, and internal\+Bitdepth $>$= 8, then the input file is assumed to be I\+T\+U-\/R B\+T.\+601/709 compliant, and the resulting data is clipped to the appropriate legal range, as if the file had been provided at the lower-\/bitdepth compliant to Rec601/709.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Pic\+Yuv\+User} & input picture Y\+UV buffer class pointer \\
+\hline
+{\em p\+Pic\+Yuv\+True\+Org} & \\
+\hline
+{\em ipcsc} & \\
+\hline
+{\em ai\+Pad} & source padding size, ai\+Pad\mbox{[}0\mbox{]} = horizontal, ai\+Pad\mbox{[}1\mbox{]} = vertical \\
+\hline
+{\em format} & chroma format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, false in case of error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_video_i_o_yuv_ae5c8dd5ff37103f2ed1f54b75ea05b6f}\label{class_t_video_i_o_yuv_ae5c8dd5ff37103f2ed1f54b75ea05b6f}} 
+\index{T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}!skip\+Frames@{skip\+Frames}}
+\index{skip\+Frames@{skip\+Frames}!T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}}
+\subsubsection{\texorpdfstring{skip\+Frames()}{skipFrames()}}
+{\footnotesize\ttfamily Void T\+Video\+I\+O\+Yuv\+::skip\+Frames (\begin{DoxyParamCaption}\item[{U\+Int}]{num\+Frames,  }\item[{U\+Int}]{width,  }\item[{U\+Int}]{height,  }\item[{\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{format }\end{DoxyParamCaption})}
+
+Skip num\+Frames in input.
+
+This function correctly handles cases where the input file is not seekable, by consuming bytes. \mbox{\Hypertarget{class_t_video_i_o_yuv_a1e0ade1f702a1d24a8290bb61de71b05}\label{class_t_video_i_o_yuv_a1e0ade1f702a1d24a8290bb61de71b05}} 
+\index{T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}!write@{write}}
+\index{write@{write}!T\+Video\+I\+O\+Yuv@{T\+Video\+I\+O\+Yuv}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily Bool T\+Video\+I\+O\+Yuv\+::write (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$}]{p\+Pic\+Yuv\+User,  }\item[{const Input\+Colour\+Space\+Conversion}]{ip\+C\+SC,  }\item[{Int}]{conf\+Left = {\ttfamily 0},  }\item[{Int}]{conf\+Right = {\ttfamily 0},  }\item[{Int}]{conf\+Top = {\ttfamily 0},  }\item[{Int}]{conf\+Bottom = {\ttfamily 0},  }\item[{\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{format = {\ttfamily NUM\+\_\+CHROMA\+\_\+FORMAT},  }\item[{const Bool}]{b\+Clip\+To\+Rec709 = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+write one Y\+UV frame with padding parameter 
+
+Write one Y\textquotesingle{}Cb\+Cr frame. No bit-\/depth conversion is performed, pc\+Pic\+Yuv is assumed to be at T\+Video\+I\+O\+::m\+\_\+file\+Bitdepth depth.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Pic\+Yuv\+User} & input picture Y\+UV buffer class pointer \\
+\hline
+{\em ip\+C\+SC} & \\
+\hline
+{\em conf\+Left} & conformance window left border \\
+\hline
+{\em conf\+Right} & conformance window right border \\
+\hline
+{\em conf\+Top} & conformance window top border \\
+\hline
+{\em conf\+Bottom} & conformance window bottom border \\
+\hline
+{\em format} & chroma format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true for success, false in case of error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Video\+I\+O/\hyperlink{_t_video_i_o_yuv_8h}{T\+Video\+I\+O\+Yuv.\+h}\item 
+Lib/\+T\+Lib\+Video\+I\+O/\hyperlink{_t_video_i_o_yuv_8cpp}{T\+Video\+I\+O\+Yuv.\+cpp}\end{DoxyCompactItemize}

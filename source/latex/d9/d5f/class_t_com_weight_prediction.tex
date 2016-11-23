@@ -1,0 +1,48 @@
+\hypertarget{class_t_com_weight_prediction}{}\section{T\+Com\+Weight\+Prediction Class Reference}
+\label{class_t_com_weight_prediction}\index{T\+Com\+Weight\+Prediction@{T\+Com\+Weight\+Prediction}}
+
+
+weighting prediction class  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Weight\+Prediction.\+h$>$}
+
+
+
+Inheritance diagram for T\+Com\+Weight\+Prediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d6/d95/class_t_com_weight_prediction__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_weight_prediction_ae4992636776e89db63001c2b1155a246}\label{class_t_com_weight_prediction_ae4992636776e89db63001c2b1155a246}} 
+Void \hyperlink{class_t_com_weight_prediction_ae4992636776e89db63001c2b1155a246}{get\+Wp\+Scaling} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const Int i\+Ref\+Idx0, const Int i\+Ref\+Idx1, \hyperlink{struct_w_p_scaling_param}{W\+P\+Scaling\+Param} $\ast$\&wp0, \hyperlink{struct_w_p_scaling_param}{W\+P\+Scaling\+Param} $\ast$\&wp1)
+\begin{DoxyCompactList}\small\item\em derivation of wp tables \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_weight_prediction_a61c142b657d627e52c225898a2e34793}\label{class_t_com_weight_prediction_a61c142b657d627e52c225898a2e34793}} 
+Void \hyperlink{class_t_com_weight_prediction_a61c142b657d627e52c225898a2e34793}{add\+Weight\+Bi} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&bit\+Depths, const U\+Int i\+Part\+Unit\+Idx, const U\+Int ui\+Width, const U\+Int ui\+Height, const \hyperlink{struct_w_p_scaling_param}{W\+P\+Scaling\+Param} $\ast$const wp0, const \hyperlink{struct_w_p_scaling_param}{W\+P\+Scaling\+Param} $\ast$const wp1, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const rpc\+Yuv\+Dst, const Bool b\+Round\+Luma=true)
+\begin{DoxyCompactList}\small\item\em weighted averaging for bi-\/pred \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_weight_prediction_a98ef87ca5c2b0e3a3a6456c1983c86d0}\label{class_t_com_weight_prediction_a98ef87ca5c2b0e3a3a6456c1983c86d0}} 
+Void \hyperlink{class_t_com_weight_prediction_a98ef87ca5c2b0e3a3a6456c1983c86d0}{add\+Weight\+Uni} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const pc\+Yuv\+Src0, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&bit\+Depths, const U\+Int i\+Part\+Unit\+Idx, const U\+Int ui\+Width, const U\+Int ui\+Height, const \hyperlink{struct_w_p_scaling_param}{W\+P\+Scaling\+Param} $\ast$const wp0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const rpc\+Yuv\+Dst)
+\begin{DoxyCompactList}\small\item\em weighted averaging for uni-\/pred \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_weight_prediction_a1e039837266c8b743415d791a50863db}\label{class_t_com_weight_prediction_a1e039837266c8b743415d791a50863db}} 
+Void \hyperlink{class_t_com_weight_prediction_a1e039837266c8b743415d791a50863db}{x\+Weighted\+Prediction\+Uni} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const pc\+Yuv\+Src, const U\+Int ui\+Part\+Addr, const Int i\+Width, const Int i\+Height, const \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Pred, const Int i\+Ref\+Idx=-\/1)
+\begin{DoxyCompactList}\small\item\em weighted prediction for uni-\/pred \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_weight_prediction_a15c4853f0a80e8c7558952be68959d91}\label{class_t_com_weight_prediction_a15c4853f0a80e8c7558952be68959d91}} 
+Void \hyperlink{class_t_com_weight_prediction_a15c4853f0a80e8c7558952be68959d91}{x\+Weighted\+Prediction\+Bi} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const pc\+Yuv\+Src0, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$const pc\+Yuv\+Src1, const Int i\+Ref\+Idx0, const Int i\+Ref\+Idx1, const U\+Int ui\+Part\+Idx, const Int i\+Width, const Int i\+Height, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst)
+\begin{DoxyCompactList}\small\item\em weighted prediction for bi-\/pred \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+weighting prediction class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_weight_prediction_8h}{T\+Com\+Weight\+Prediction.\+h}\item 
+Lib/\+T\+Lib\+Common/T\+Com\+Weight\+Prediction.\+cpp\end{DoxyCompactItemize}

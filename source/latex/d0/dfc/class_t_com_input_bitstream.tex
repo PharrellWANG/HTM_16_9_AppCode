@@ -1,0 +1,164 @@
+\hypertarget{class_t_com_input_bitstream}{}\section{T\+Com\+Input\+Bitstream Class Reference}
+\label{class_t_com_input_bitstream}\index{T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}}
+
+
+{\ttfamily \#include $<$T\+Com\+Bit\+Stream.\+h$>$}
+
+
+
+Collaboration diagram for T\+Com\+Input\+Bitstream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dbe/class_t_com_input_bitstream__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a3eabe89bef2c94dd1518a196f98abe39}\label{class_t_com_input_bitstream_a3eabe89bef2c94dd1518a196f98abe39}} 
+Void {\bfseries read\+Byte} (U\+Int \&rui\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a5e5a2b89c98b7504f107e696e0b05d2a}\label{class_t_com_input_bitstream_a5e5a2b89c98b7504f107e696e0b05d2a}} 
+Void {\bfseries peek\+Previous\+Byte} (U\+Int \&byte)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a0e5465698bdab2315dbfa82c5da215fa}\label{class_t_com_input_bitstream_a0e5465698bdab2315dbfa82c5da215fa}} 
+U\+Char {\bfseries get\+Held\+Bits} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ad6ee7885871ae22f355bb63030d2246e}\label{class_t_com_input_bitstream_ad6ee7885871ae22f355bb63030d2246e}} 
+\hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} \& {\bfseries operator=} (const \hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} \&src)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a5deb3b2c6f0680352963bfc1a463fa2c}\label{class_t_com_input_bitstream_a5deb3b2c6f0680352963bfc1a463fa2c}} 
+U\+Int {\bfseries get\+Byte\+Location} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_adb1bbf88ab0817c4026cc713687e8b07}\label{class_t_com_input_bitstream_adb1bbf88ab0817c4026cc713687e8b07}} 
+U\+Int {\bfseries peek\+Bits} (U\+Int ui\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a7aaab1fce25c2af37e1d84fa6ca583c0}\label{class_t_com_input_bitstream_a7aaab1fce25c2af37e1d84fa6ca583c0}} 
+U\+Int {\bfseries read} (U\+Int number\+Of\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a7ee8b7b524ce7280542f8766af13aa90}\label{class_t_com_input_bitstream_a7ee8b7b524ce7280542f8766af13aa90}} 
+U\+Int {\bfseries read\+Byte} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a62fe749536724bcf2f34ca32c8646c68}\label{class_t_com_input_bitstream_a62fe749536724bcf2f34ca32c8646c68}} 
+U\+Int {\bfseries get\+Num\+Bits\+Until\+Byte\+Aligned} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ad4d126328cbf4a46ecd85f249641d997}\label{class_t_com_input_bitstream_ad4d126328cbf4a46ecd85f249641d997}} 
+U\+Int {\bfseries get\+Num\+Bits\+Left} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a5d57d5cc7f511cb0b9a55d41d00d3b9a}\label{class_t_com_input_bitstream_a5d57d5cc7f511cb0b9a55d41d00d3b9a}} 
+U\+Int {\bfseries get\+Num\+Bits\+Read} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_abff1646904759f347ed3dc1e0cc53a2d}\label{class_t_com_input_bitstream_abff1646904759f347ed3dc1e0cc53a2d}} 
+Void {\bfseries push\+Emulation\+Prevention\+Byte\+Location} (U\+Int pos)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a6acbeac2976520701c1482c429c92c62}\label{class_t_com_input_bitstream_a6acbeac2976520701c1482c429c92c62}} 
+U\+Int {\bfseries num\+Emulation\+Prevention\+Bytes\+Read} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ade5ce9df9e23ab040a654ac3fa060f20}\label{class_t_com_input_bitstream_ade5ce9df9e23ab040a654ac3fa060f20}} 
+const std\+::vector$<$ U\+Int $>$ \& {\bfseries get\+Emulation\+Prevention\+Byte\+Location} () const
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a3fd49adf853f9f79d51a519e5178752a}\label{class_t_com_input_bitstream_a3fd49adf853f9f79d51a519e5178752a}} 
+U\+Int {\bfseries get\+Emulation\+Prevention\+Byte\+Location} (U\+Int idx)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a25aed1b01bd7d194fb20b9f6b212e51d}\label{class_t_com_input_bitstream_a25aed1b01bd7d194fb20b9f6b212e51d}} 
+Void {\bfseries clear\+Emulation\+Prevention\+Byte\+Location} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a7d8e320872585390739c153b0dc5b6ad}\label{class_t_com_input_bitstream_a7d8e320872585390739c153b0dc5b6ad}} 
+Void {\bfseries set\+Emulation\+Prevention\+Byte\+Location} (const std\+::vector$<$ U\+Int $>$ \&vec)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a431c4d7400c2c1e188659ad484855af0}\label{class_t_com_input_bitstream_a431c4d7400c2c1e188659ad484855af0}} 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries get\+Fifo} () const
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_afd0be844c598fe87ee6a3cc7004a0e8f}\label{class_t_com_input_bitstream_afd0be844c598fe87ee6a3cc7004a0e8f}} 
+std\+::vector$<$ uint8\+\_\+t $>$ \& {\bfseries get\+Fifo} ()
+\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_com_input_bitstream_a1614ece9f93086929270fd9cacbe1fa5}{T\+Com\+Input\+Bitstream} ()
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a030bcb39e6ddb911fde8c61e4b8203d7}\label{class_t_com_input_bitstream_a030bcb39e6ddb911fde8c61e4b8203d7}} 
+{\bfseries T\+Com\+Input\+Bitstream} (const \hyperlink{class_t_com_input_bitstream}{T\+Com\+Input\+Bitstream} \&src)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a9510bf214a7941459044b878b429b04f}\label{class_t_com_input_bitstream_a9510bf214a7941459044b878b429b04f}} 
+Void {\bfseries reset\+To\+Start} ()
+\item 
+Void \hyperlink{class_t_com_input_bitstream_a641f89e7e0d543aad8bf9aa9180878ae}{pseudo\+Read} (U\+Int ui\+Number\+Of\+Bits, U\+Int \&rui\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ac4c03512a258dd676d98da15725b9442}\label{class_t_com_input_bitstream_ac4c03512a258dd676d98da15725b9442}} 
+Void {\bfseries read} (U\+Int ui\+Number\+Of\+Bits, U\+Int \&rui\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ada1a8907eaa008bb8985d0109713c616}\label{class_t_com_input_bitstream_ada1a8907eaa008bb8985d0109713c616}} 
+U\+Int {\bfseries read\+Out\+Trailing\+Bits} ()
+\item 
+\hyperlink{class_t_com_input_bitstream}{T\+Com\+Input\+Bitstream} $\ast$ \hyperlink{class_t_com_input_bitstream_a8d6c02be422f2e8afea9b47b2f92581c}{extract\+Substream} (U\+Int ui\+Num\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a704d4ab8f6a57b18c4041ae33b9ec478}\label{class_t_com_input_bitstream_a704d4ab8f6a57b18c4041ae33b9ec478}} 
+U\+Int {\bfseries read\+Byte\+Alignment} ()
+\end{DoxyCompactItemize}
+
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ad0e90464155dcbcad429ea13df618a50}\label{class_t_com_input_bitstream_ad0e90464155dcbcad429ea13df618a50}} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries m\+\_\+fifo}
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a4a239e03accf4a5c3ab84a514b3bc332}\label{class_t_com_input_bitstream_a4a239e03accf4a5c3ab84a514b3bc332}} 
+std\+::vector$<$ U\+Int $>$ \hyperlink{class_t_com_input_bitstream_a4a239e03accf4a5c3ab84a514b3bc332}{m\+\_\+emulation\+Prevention\+Byte\+Location}
+\begin{DoxyCompactList}\small\item\em F\+I\+FO for storage of complete bytes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a9a8fb69a002ba6450d8a93dd3d6c9dcb}\label{class_t_com_input_bitstream_a9a8fb69a002ba6450d8a93dd3d6c9dcb}} 
+U\+Int {\bfseries m\+\_\+fifo\+\_\+idx}
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_ab05c271de7377407555843c280f5a0d4}\label{class_t_com_input_bitstream_ab05c271de7377407555843c280f5a0d4}} 
+U\+Int \hyperlink{class_t_com_input_bitstream_ab05c271de7377407555843c280f5a0d4}{m\+\_\+num\+\_\+held\+\_\+bits}
+\begin{DoxyCompactList}\small\item\em Read index into m\+\_\+fifo. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_aff795915e44482761e3bfe6465d452b5}\label{class_t_com_input_bitstream_aff795915e44482761e3bfe6465d452b5}} 
+U\+Char {\bfseries m\+\_\+held\+\_\+bits}
+\item 
+\mbox{\Hypertarget{class_t_com_input_bitstream_a805bdaa3c62bb93bb028d9820c9c260f}\label{class_t_com_input_bitstream_a805bdaa3c62bb93bb028d9820c9c260f}} 
+U\+Int {\bfseries m\+\_\+num\+Bits\+Read}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Model of an input bitstream that extracts bits from a predefined bytestream. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_com_input_bitstream_a1614ece9f93086929270fd9cacbe1fa5}\label{class_t_com_input_bitstream_a1614ece9f93086929270fd9cacbe1fa5}} 
+\index{T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}!T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}}
+\index{T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}!T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}}
+\subsubsection{\texorpdfstring{T\+Com\+Input\+Bitstream()}{TComInputBitstream()}}
+{\footnotesize\ttfamily T\+Com\+Input\+Bitstream\+::\+T\+Com\+Input\+Bitstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new bitstream reader object that reads from buf. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_input_bitstream_a8d6c02be422f2e8afea9b47b2f92581c}\label{class_t_com_input_bitstream_a8d6c02be422f2e8afea9b47b2f92581c}} 
+\index{T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}!extract\+Substream@{extract\+Substream}}
+\index{extract\+Substream@{extract\+Substream}!T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}}
+\subsubsection{\texorpdfstring{extract\+Substream()}{extractSubstream()}}
+{\footnotesize\ttfamily \hyperlink{class_t_com_input_bitstream}{T\+Com\+Input\+Bitstream} $\ast$ T\+Com\+Input\+Bitstream\+::extract\+Substream (\begin{DoxyParamCaption}\item[{U\+Int}]{ui\+Num\+Bits }\end{DoxyParamCaption})}
+
+Extract substream from the current bitstream.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Num\+Bits} & number of bits to transfer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_input_bitstream_a641f89e7e0d543aad8bf9aa9180878ae}\label{class_t_com_input_bitstream_a641f89e7e0d543aad8bf9aa9180878ae}} 
+\index{T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}!pseudo\+Read@{pseudo\+Read}}
+\index{pseudo\+Read@{pseudo\+Read}!T\+Com\+Input\+Bitstream@{T\+Com\+Input\+Bitstream}}
+\subsubsection{\texorpdfstring{pseudo\+Read()}{pseudoRead()}}
+{\footnotesize\ttfamily Void T\+Com\+Input\+Bitstream\+::pseudo\+Read (\begin{DoxyParamCaption}\item[{U\+Int}]{ui\+Number\+Of\+Bits,  }\item[{U\+Int \&}]{rui\+Bits }\end{DoxyParamCaption})}
+
+read ui\+Number\+Of\+Bits from bitstream without updating the bitstream state, storing the result in rui\+Bits.
+
+If reading ui\+Number\+Of\+Bits would overrun the bitstream buffer, the bitstream is effectively padded with sufficient zero-\/bits to avoid the overrun. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_bit_stream_8h}{T\+Com\+Bit\+Stream.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_bit_stream_8cpp}{T\+Com\+Bit\+Stream.\+cpp}\end{DoxyCompactItemize}

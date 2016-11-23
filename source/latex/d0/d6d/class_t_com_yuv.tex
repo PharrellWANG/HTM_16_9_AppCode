@@ -1,0 +1,154 @@
+\hypertarget{class_t_com_yuv}{}\section{T\+Com\+Yuv Class Reference}
+\label{class_t_com_yuv}\index{T\+Com\+Yuv@{T\+Com\+Yuv}}
+
+
+general Y\+UV buffer class  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Yuv.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a4952a96c1ffe4e51573b4089f313bcdf}\label{class_t_com_yuv_a4952a96c1ffe4e51573b4089f313bcdf}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a663d349f056e772ccf82da03ae1caa0c}\label{class_t_com_yuv_a663d349f056e772ccf82da03ae1caa0c}} 
+const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a492f6a0c1ff1f0fdfa163e814a5a0cb6}\label{class_t_com_yuv_a492f6a0c1ff1f0fdfa163e814a5a0cb6}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id, const U\+Int ui\+Part\+Unit\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_ab7742aa3945d9481a203573dcb72689d}\label{class_t_com_yuv_ab7742aa3945d9481a203573dcb72689d}} 
+const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id, const U\+Int ui\+Part\+Unit\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a69952a8617d7a4c10775e466026e7dc9}\label{class_t_com_yuv_a69952a8617d7a4c10775e466026e7dc9}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id, const U\+Int i\+Trans\+Unit\+Idx, const U\+Int i\+Blk\+Size\+For\+Component)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_ad93c19cebd6c9445d1a2b71b6b89afef}\label{class_t_com_yuv_ad93c19cebd6c9445d1a2b71b6b89afef}} 
+const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr} (const Component\+ID id, const U\+Int i\+Trans\+Unit\+Idx, const U\+Int i\+Blk\+Size\+For\+Component) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_ab3405ada6546b3267702149ee99e6cde}\label{class_t_com_yuv_ab3405ada6546b3267702149ee99e6cde}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr\+Pix} (const Component\+ID id, const U\+Int i\+PixX, const U\+Int i\+PixY)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a924af9d0bd12ee77fef8a8da22c6371a}\label{class_t_com_yuv_a924af9d0bd12ee77fef8a8da22c6371a}} 
+const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Addr\+Pix} (const Component\+ID id, const U\+Int i\+PixX, const U\+Int i\+PixY) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a2e25ff1d17aeb95e39a04fc937f4d0b6}\label{class_t_com_yuv_a2e25ff1d17aeb95e39a04fc937f4d0b6}} 
+U\+Int {\bfseries get\+Stride} (const Component\+ID id) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a6dc4d08e5a7c0bf5a8e368647b7650f4}\label{class_t_com_yuv_a6dc4d08e5a7c0bf5a8e368647b7650f4}} 
+U\+Int {\bfseries get\+Height} (const Component\+ID id) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a1905c3dc72eaa9113dab33549426fc5c}\label{class_t_com_yuv_a1905c3dc72eaa9113dab33549426fc5c}} 
+U\+Int {\bfseries get\+Width} (const Component\+ID id) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a8bb763211cf902f3ab548d2c8a602856}\label{class_t_com_yuv_a8bb763211cf902f3ab548d2c8a602856}} 
+\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} {\bfseries get\+Chroma\+Format} () const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a5b26fec3150347545dc99a39fa63e32a}\label{class_t_com_yuv_a5b26fec3150347545dc99a39fa63e32a}} 
+U\+Int {\bfseries get\+Number\+Valid\+Components} () const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_aee3f4f151e32ff028c38c8f1c4043324}\label{class_t_com_yuv_aee3f4f151e32ff028c38c8f1c4043324}} 
+U\+Int {\bfseries get\+Component\+ScaleX} (const Component\+ID id) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a4e2e1403d0e88aed1a981674388375d2}\label{class_t_com_yuv_a4e2e1403d0e88aed1a981674388375d2}} 
+U\+Int {\bfseries get\+Component\+ScaleY} (const Component\+ID id) const
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_af2a4457789efd3b7ece3bffaba0428df}\label{class_t_com_yuv_af2a4457789efd3b7ece3bffaba0428df}} 
+Void \hyperlink{class_t_com_yuv_af2a4457789efd3b7ece3bffaba0428df}{create} (const U\+Int i\+Width, const U\+Int i\+Height, const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} chroma\+Format\+I\+DC)
+\begin{DoxyCompactList}\small\item\em Create Y\+UV buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_yuv_af39247b18c610b282a0723676d68d249}\label{class_t_com_yuv_af39247b18c610b282a0723676d68d249}} 
+Void \hyperlink{class_t_com_yuv_af39247b18c610b282a0723676d68d249}{destroy} ()
+\begin{DoxyCompactList}\small\item\em Destroy Y\+UV buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_yuv_ae73c74b2ea1730f909ebb30182df4b6a}\label{class_t_com_yuv_ae73c74b2ea1730f909ebb30182df4b6a}} 
+Void \hyperlink{class_t_com_yuv_ae73c74b2ea1730f909ebb30182df4b6a}{clear} ()
+\begin{DoxyCompactList}\small\item\em clear Y\+UV buffer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_yuv_a15b15a70fbaac30db7fd8ef03853243c}\label{class_t_com_yuv_a15b15a70fbaac30db7fd8ef03853243c}} 
+Void {\bfseries copy\+To\+Pic\+Yuv} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Dst, const U\+Int ctu\+Rs\+Addr, const U\+Int ui\+Abs\+Zorder\+Idx, const U\+Int ui\+Part\+Depth=0, const U\+Int ui\+Part\+Idx=0) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a22a1193391fcc44cb5fabee6e1989000}\label{class_t_com_yuv_a22a1193391fcc44cb5fabee6e1989000}} 
+Void {\bfseries copy\+To\+Pic\+Component} (const Component\+ID id, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Dst, const U\+Int i\+Ctu\+Rs\+Addr, const U\+Int ui\+Abs\+Zorder\+Idx, const U\+Int ui\+Part\+Depth=0, const U\+Int ui\+Part\+Idx=0) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_aa26be3c6f602ea197b1ec380817e0929}\label{class_t_com_yuv_aa26be3c6f602ea197b1ec380817e0929}} 
+Void {\bfseries copy\+From\+Pic\+Yuv} (const \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Src, const U\+Int ctu\+Rs\+Addr, const U\+Int ui\+Abs\+Zorder\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_af7db04579acc0074721e414d715d784d}\label{class_t_com_yuv_af7db04579acc0074721e414d715d784d}} 
+Void {\bfseries copy\+From\+Pic\+Component} (const Component\+ID id, const \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Src, const U\+Int i\+Ctu\+Rs\+Addr, const U\+Int ui\+Abs\+Zorder\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a7e77cbfb161122f593b7b3c1d5027a00}\label{class_t_com_yuv_a7e77cbfb161122f593b7b3c1d5027a00}} 
+Void {\bfseries copy\+To\+Part\+Yuv} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Dst\+Part\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a22750b4429bde0ae8a912ae14d4a4f9a}\label{class_t_com_yuv_a22750b4429bde0ae8a912ae14d4a4f9a}} 
+Void {\bfseries copy\+To\+Part\+Component} (const Component\+ID id, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Dst\+Part\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_afedafddc439fca52a668251b33d79b2e}\label{class_t_com_yuv_afedafddc439fca52a668251b33d79b2e}} 
+Void {\bfseries copy\+Part\+To\+Yuv} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Src\+Part\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_acec8daff086d19f8f33a749af8a19d0e}\label{class_t_com_yuv_acec8daff086d19f8f33a749af8a19d0e}} 
+Void {\bfseries copy\+Part\+To\+Component} (const Component\+ID id, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Src\+Part\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a41929f4e8758bb27a4a7f502ed90dabd}\label{class_t_com_yuv_a41929f4e8758bb27a4a7f502ed90dabd}} 
+Void {\bfseries copy\+Part\+To\+Part\+Yuv} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Part\+Idx, const U\+Int ui\+Width, const U\+Int ui\+Height) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a57644d00c73e32c747b1dc00470d381e}\label{class_t_com_yuv_a57644d00c73e32c747b1dc00470d381e}} 
+Void {\bfseries copy\+Part\+To\+Part\+Component} (const Component\+ID id, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const U\+Int ui\+Part\+Idx, const U\+Int ui\+Width\+Component, const U\+Int ui\+Height\+Component) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a4c57247b420bc0e679782eb70200e57b}\label{class_t_com_yuv_a4c57247b420bc0e679782eb70200e57b}} 
+Void {\bfseries copy\+Part\+To\+Part\+Component\+MxN} (const Component\+ID id, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const \hyperlink{struct_t_com_rectangle}{T\+Com\+Rectangle} \&rect) const
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a4fb238a982bd290f911e37d51f4148a4}\label{class_t_com_yuv_a4fb238a982bd290f911e37d51f4148a4}} 
+Void {\bfseries add\+Clip} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, const U\+Int ui\+Tr\+Unit\+Idx, const U\+Int ui\+Part\+Size, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_ab43bcf2e10bf907d724bbd294231e194}\label{class_t_com_yuv_ab43bcf2e10bf907d724bbd294231e194}} 
+Void {\bfseries subtract} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, const U\+Int ui\+Tr\+Unit\+Idx, const U\+Int ui\+Part\+Size)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_abdb1c25f2d4bc036579328f025b58b29}\label{class_t_com_yuv_abdb1c25f2d4bc036579328f025b58b29}} 
+Void {\bfseries add\+Avg} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, const U\+Int i\+Part\+Unit\+Idx, const U\+Int i\+Width, const U\+Int i\+Height, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_af8a851c01899bc7f4bad36dfb01d6c2d}\label{class_t_com_yuv_af8a851c01899bc7f4bad36dfb01d6c2d}} 
+Void {\bfseries remove\+High\+Freq} (const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src, const U\+Int ui\+Part\+Idx, const U\+Int ui\+Width, const U\+Int ui\+Height, const Int bit\+Depths\mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE\mbox{]}, const Bool b\+Clip\+To\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_af80864e20769d4ceac5b96c0a1f55a4a}\label{class_t_com_yuv_af80864e20769d4ceac5b96c0a1f55a4a}} 
+Void {\bfseries add\+Clip\+Part\+Luma} (Int bit\+Depth, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Tr\+Unit\+Idx, U\+Int ui\+Part\+Size)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a424b1252438cb26d08ba7366c1f609d4}\label{class_t_com_yuv_a424b1252438cb26d08ba7366c1f609d4}} 
+Void {\bfseries add\+A\+RP} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, Bool b\+Clip, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a6a283390c7cafbfdc82f31e026a19958}\label{class_t_com_yuv_a6a283390c7cafbfdc82f31e026a19958}} 
+Void {\bfseries add\+A\+R\+P\+Luma} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, Bool b\+Clip, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a96160e45a5e127f66fa106723f1550cd}\label{class_t_com_yuv_a96160e45a5e127f66fa106723f1550cd}} 
+Void {\bfseries add\+A\+R\+P\+Chroma} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, Bool b\+Clip, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a59525a55ca2e3ef18f3858ae7f3c5b99}\label{class_t_com_yuv_a59525a55ca2e3ef18f3858ae7f3c5b99}} 
+Void {\bfseries subtract\+A\+RP} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a2c953c6cdb4e7ac194c3aba77b8e8fff}\label{class_t_com_yuv_a2c953c6cdb4e7ac194c3aba77b8e8fff}} 
+Void {\bfseries subtract\+A\+R\+P\+Luma} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a7cf10b3c078977edc9152caba7014c94}\label{class_t_com_yuv_a7cf10b3c078977edc9152caba7014c94}} 
+Void {\bfseries subtract\+A\+R\+P\+Chroma} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a679c8147cd88ca0edb0564993341d5f9}\label{class_t_com_yuv_a679c8147cd88ca0edb0564993341d5f9}} 
+Void {\bfseries multiply\+A\+RP} (U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, U\+Char dW)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_adc70394fcfcf012d59c6f24c7bfc10a0}\label{class_t_com_yuv_adc70394fcfcf012d59c6f24c7bfc10a0}} 
+Void {\bfseries multiply\+A\+R\+P\+Luma} (U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, U\+Char dW)
+\item 
+\mbox{\Hypertarget{class_t_com_yuv_a670e374688cdbf3bda86f9c3e009d2e4}\label{class_t_com_yuv_a670e374688cdbf3bda86f9c3e009d2e4}} 
+Void {\bfseries multiply\+A\+R\+P\+Chroma} (U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, U\+Char dW)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+general Y\+UV buffer class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_yuv_8h}{T\+Com\+Yuv.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_yuv_8cpp}{T\+Com\+Yuv.\+cpp}\end{DoxyCompactItemize}

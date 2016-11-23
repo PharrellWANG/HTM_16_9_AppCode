@@ -1,0 +1,43 @@
+\hypertarget{_annex_bread_8cpp}{}\section{Lib/\+T\+Lib\+Decoder/\+Annex\+Bread.cpp File Reference}
+\label{_annex_bread_8cpp}\index{Lib/\+T\+Lib\+Decoder/\+Annex\+Bread.\+cpp@{Lib/\+T\+Lib\+Decoder/\+Annex\+Bread.\+cpp}}
+
+
+reading functions for Annex B byte streams  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}Annex\+Bread.\+h\char`\"{}}\newline
+Include dependency graph for Annex\+Bread.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d3/d6a/_annex_bread_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+Bool \hyperlink{_annex_bread_8cpp_a853938b5d3bca6ddbab7362a84ca96f4}{byte\+Stream\+N\+A\+L\+Unit} (\hyperlink{class_input_byte_stream}{Input\+Byte\+Stream} \&bs, vector$<$ uint8\+\_\+t $>$ \&nal\+Unit, \hyperlink{struct_annex_b_stats}{Annex\+B\+Stats} \&stats)
+\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+reading functions for Annex B byte streams 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_annex_bread_8cpp_a853938b5d3bca6ddbab7362a84ca96f4}\label{_annex_bread_8cpp_a853938b5d3bca6ddbab7362a84ca96f4}} 
+\index{Annex\+Bread.\+cpp@{Annex\+Bread.\+cpp}!byte\+Stream\+N\+A\+L\+Unit@{byte\+Stream\+N\+A\+L\+Unit}}
+\index{byte\+Stream\+N\+A\+L\+Unit@{byte\+Stream\+N\+A\+L\+Unit}!Annex\+Bread.\+cpp@{Annex\+Bread.\+cpp}}
+\subsubsection{\texorpdfstring{byte\+Stream\+N\+A\+L\+Unit()}{byteStreamNALUnit()}}
+{\footnotesize\ttfamily Bool byte\+Stream\+N\+A\+L\+Unit (\begin{DoxyParamCaption}\item[{\hyperlink{class_input_byte_stream}{Input\+Byte\+Stream} \&}]{bs,  }\item[{vector$<$ uint8\+\_\+t $>$ \&}]{nal\+Unit,  }\item[{\hyperlink{struct_annex_b_stats}{Annex\+B\+Stats} \&}]{stats }\end{DoxyParamCaption})}
+
+Parse an A\+VC AnnexB Bytestream bs to extract a single nal\+Unit while accumulating bytestream statistics into stats.
+
+Returns false if E\+OF was reached (NB, nalunit data may be valid), otherwise true. 

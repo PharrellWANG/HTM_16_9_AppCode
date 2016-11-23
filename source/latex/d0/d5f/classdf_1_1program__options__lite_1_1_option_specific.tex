@@ -1,0 +1,39 @@
+\hypertarget{classdf_1_1program__options__lite_1_1_option_specific}{}\section{df\+:\+:program\+\_\+options\+\_\+lite\+:\+:Option\+Specific Class Reference}
+\label{classdf_1_1program__options__lite_1_1_option_specific}\index{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific@{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdf_1_1program__options__lite_1_1_option_specific_a77c7c1f10b614b9eecc9e91f8e9a9f1f}\label{classdf_1_1program__options__lite_1_1_option_specific_a77c7c1f10b614b9eecc9e91f8e9a9f1f}} 
+{\bfseries Option\+Specific} (\hyperlink{structdf_1_1program__options__lite_1_1_options}{Options} \&parent\+\_\+)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific} \& \hyperlink{classdf_1_1program__options__lite_1_1_option_specific_acea9355e21c8508c877d026b0607dc43}{operator()} (const std\+::string \&name, T \&storage, T default\+\_\+val, const std\+::string \&desc=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classdf_1_1program__options__lite_1_1_option_specific_a8c281b88ceafb34f0e857403f3be0190}\label{classdf_1_1program__options__lite_1_1_option_specific_a8c281b88ceafb34f0e857403f3be0190}} 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific} \& {\bfseries operator()} (const std\+::string \&name, std\+::vector$<$ T $>$ \&storage, T default\+\_\+val, unsigned ui\+Max\+Num, const std\+::string \&desc=\char`\"{}\char`\"{})
+\item 
+\mbox{\Hypertarget{classdf_1_1program__options__lite_1_1_option_specific_a10273a65b1a657e814906ba3629f4e46}\label{classdf_1_1program__options__lite_1_1_option_specific_a10273a65b1a657e814906ba3629f4e46}} 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific} \& {\bfseries operator()} (const std\+::string \&name, std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&storage, T default\+\_\+val, unsigned ui\+Max\+Num\+Dim1, unsigned ui\+Max\+Num\+Dim2, const std\+::string \&desc=\char`\"{}\char`\"{})
+\item 
+\hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific} \& \hyperlink{classdf_1_1program__options__lite_1_1_option_specific_a757b17855cd89bc536c51f5c7e716d83}{operator()} (const std\+::string \&name, Option\+Func\+::\+Func $\ast$func, const std\+::string \&desc=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classdf_1_1program__options__lite_1_1_option_specific_acea9355e21c8508c877d026b0607dc43}\label{classdf_1_1program__options__lite_1_1_option_specific_acea9355e21c8508c877d026b0607dc43}} 
+\index{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific@{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific}!operator()@{operator()}}
+\index{operator()@{operator()}!df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific@{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific}\& df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{T \&}]{storage,  }\item[{T}]{default\+\_\+val,  }\item[{const std\+::string \&}]{desc = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add option described by name to the parent \hyperlink{structdf_1_1program__options__lite_1_1_options}{Options} list, with storage for the option\textquotesingle{}s value with default\+\_\+val as the default value with desc as an optional help description \mbox{\Hypertarget{classdf_1_1program__options__lite_1_1_option_specific_a757b17855cd89bc536c51f5c7e716d83}\label{classdf_1_1program__options__lite_1_1_option_specific_a757b17855cd89bc536c51f5c7e716d83}} 
+\index{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific@{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific}!operator()@{operator()}}
+\index{operator()@{operator()}!df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific@{df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classdf_1_1program__options__lite_1_1_option_specific}{Option\+Specific}\& df\+::program\+\_\+options\+\_\+lite\+::\+Option\+Specific\+::operator() (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{Option\+Func\+::\+Func $\ast$}]{func,  }\item[{const std\+::string \&}]{desc = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Add option described by name to the parent \hyperlink{structdf_1_1program__options__lite_1_1_options}{Options} list, with desc as an optional help description instead of storing the value somewhere, a function of type Option\+Func\+::\+Func is called. It is upto this function to correctly handle evaluating the option\textquotesingle{}s value. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+App\+Common/program\+\_\+options\+\_\+lite.\+h\end{DoxyCompactItemize}

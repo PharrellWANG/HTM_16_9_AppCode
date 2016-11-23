@@ -1,0 +1,34 @@
+<map id="App/TAppEncoder/encmain.cpp" name="App/TAppEncoder/encmain.cpp">
+<area shape="rect" id="node4" href="$d2/daf/_t_app_enc_top_8h.html" title="Encoder application class (header) " alt="" coords="1766,79,1874,104"/>
+<area shape="rect" id="node47" href="$d1/d52/program__options__lite_8h_source.html" title="TAppCommon/program\l_options_lite.h" alt="" coords="2016,739,2176,777"/>
+<area shape="rect" id="node7" href="$d1/d30/_t_enc_top_8h.html" title="encoder class (header) " alt="" coords="1292,152,1457,177"/>
+<area shape="rect" id="node31" href="$d0/d9e/_access_unit_8h.html" title="Access Unit class (header) " alt="" coords="173,299,355,324"/>
+<area shape="rect" id="node34" href="$d1/d86/_t_video_i_o_yuv_8h.html" title="YUV file I/O class (header) " alt="" coords="1874,665,2062,691"/>
+<area shape="rect" id="node46" href="$df/d9b/_t_app_enc_cfg_8h.html" title="Handle encoder configuration parameters (header) " alt="" coords="284,519,391,544"/>
+<area shape="rect" id="node8" href="$d9/df9/_t_com_list_8h.html" title="general list class (header) " alt="" coords="581,745,755,771"/>
+<area shape="rect" id="node16" href="$d4/d9a/_t_com_prediction_8h.html" title="prediction class (header) " alt="" coords="1865,445,2077,471"/>
+<area shape="rect" id="node25" href="$d7/dfd/_t_com_tr_quant_8h.html" title="transform and quantization class (header) " alt="" coords="1536,519,1736,544"/>
+<area shape="rect" id="node30" href="$d7/dc3/_t_com_loop_filter_8h.html" title="deblocking filter (header) " alt="" coords="1037,372,1248,397"/>
+<area shape="rect" id="node36" href="$d0/d24/_t_enc_cfg_8h.html" title="encoder configuration class (header) " alt="" coords="735,592,819,617"/>
+<area shape="rect" id="node37" href="$d7/da4/_t_enc_g_o_p_8h.html" title="GOP encoder class (header) " alt="" coords="1097,225,1188,251"/>
+<area shape="rect" id="node38" href="$d6/d18/_t_enc_sample_adaptive_offset_8h.html" title="estimation part of sample adaptive offset class (header) " alt="" coords="1495,299,1691,324"/>
+<area shape="rect" id="node39" href="$d1/d40/_t_enc_entropy_8h.html" title="entropy encoder class (header) " alt="" coords="1383,445,1492,471"/>
+<area shape="rect" id="node40" href="$da/d96/_t_enc_sbac_8h.html" title="Context&#45;adaptive entropy encoder class (header) " alt="" coords="1829,372,1923,397"/>
+<area shape="rect" id="node41" href="$d8/dbb/_t_enc_slice_8h.html" title="slice encoder class (header) " alt="" coords="862,445,954,471"/>
+<area shape="rect" id="node42" href="$da/d0a/_t_enc_rate_ctrl_8h.html" title="Rate control manager class. " alt="" coords="721,519,834,544"/>
+<area shape="rect" id="node43" href="$dd/db4/_t_enc_cavlc_8h.html" title="CAVLC encoder class (header) " alt="" coords="917,372,1014,397"/>
+<area shape="rect" id="node44" href="$d8/d99/_t_enc_search_8h.html" title="encoder search class (header) " alt="" coords="1715,299,1821,324"/>
+<area shape="rect" id="node45" href="$d3/da1/_t_enc_preanalyzer_8h.html" title="source picture analyzer class (header) " alt="" coords="1308,225,1442,251"/>
+<area shape="rect" id="node10" href="$d2/d1a/_common_def_8h.html" title="Defines version information, constants and small in&#45;line functions. " alt="" coords="1144,899,1251,924"/>
+<area shape="rect" id="node13" href="$d7/dca/_type_def_8h.html" title="Define macros, basic types, new types and enumerations. " alt="" coords="1035,972,1117,997"/>
+<area shape="rect" id="node17" href="$d6/de6/_t_com_yuv_8h.html" title="general YUV buffer class (header) " alt="" coords="1595,665,1685,691"/>
+<area shape="rect" id="node22" href="$d2/d07/_t_com_interpolation_filter_8h.html" title="Declaration of TComInterpolationFilter class. " alt="" coords="1756,592,1927,617"/>
+<area shape="rect" id="node23" href="$d5/dc6/_t_com_weight_prediction_8h.html" title="weighting prediction class (header) " alt="" coords="2001,592,2170,617"/>
+<area shape="rect" id="node24" href="$d4/d89/_t_com_pic_8h.html" title="picture class (header) " alt="" coords="1374,519,1461,544"/>
+<area shape="rect" id="node18" href="$db/dc2/_t_com_pic_yuv_8h.html" title="picture YUV buffer class (header) " alt="" coords="1590,745,1698,771"/>
+<area shape="rect" id="node20" href="$d7/d37/_t_com_chroma_format_8h_source.html" title="TComChromaFormat.h" alt="" coords="1947,825,2106,851"/>
+<area shape="rect" id="node21" href="$d2/d47/_context_tables_8h.html" title="Defines constants and tables for SBAC. " alt="" coords="2498,899,2614,924"/>
+<area shape="rect" id="node26" href="$de/d96/_t_com_data_c_u_8h.html" title="CU data structure (header) " alt="" coords="1114,592,1230,617"/>
+<area shape="rect" id="node27" href="$d2/d4d/_t_com_slice_8h.html" title="slice header and SPS class (header) " alt="" coords="1199,665,1297,691"/>
+<area shape="rect" id="node32" href="$d8/d84/_n_a_l_8h_source.html" title="NAL.h" alt="" coords="93,745,152,771"/>
+</map>

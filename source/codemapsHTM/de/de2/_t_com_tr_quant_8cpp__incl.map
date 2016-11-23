@@ -1,0 +1,32 @@
+<map id="Lib/TLibCommon/TComTrQuant.cpp" name="Lib/TLibCommon/TComTrQuant.cpp">
+<area shape="rect" id="node6" href="$d7/dfd/_t_com_tr_quant_8h.html" title="transform and quantization class (header) " alt="" coords="719,152,836,177"/>
+<area shape="rect" id="node20" href="$d2/d47/_context_tables_8h.html" title="Defines constants and tables for SBAC. " alt="" coords="247,745,364,771"/>
+<area shape="rect" id="node21" href="$d0/d4b/_debug_8h.html" title="Defines types and objects for environment&#45;variable&#45;based debugging and feature control. " alt="" coords="743,745,815,771"/>
+<area shape="rect" id="node46" href="$d7/da1/_t_com_t_u_8h_source.html" title="TComTU.h" alt="" coords="910,592,997,617"/>
+<area shape="rect" id="node47" href="$d4/d89/_t_com_pic_8h.html" title="picture class (header) " alt="" coords="2775,79,2862,104"/>
+<area shape="rect" id="node7" href="$d2/d1a/_common_def_8h.html" title="Defines version information, constants and small in&#45;line functions. " alt="" coords="2193,899,2300,924"/>
+<area shape="rect" id="node13" href="$d6/de6/_t_com_yuv_8h.html" title="general YUV buffer class (header) " alt="" coords="1190,445,1280,471"/>
+<area shape="rect" id="node18" href="$d7/d37/_t_com_chroma_format_8h_source.html" title="TComChromaFormat.h" alt="" coords="750,665,909,691"/>
+<area shape="rect" id="node34" href="$de/d96/_t_com_data_c_u_8h.html" title="CU data structure (header) " alt="" coords="1981,225,2097,251"/>
+<area shape="rect" id="node11" href="$d7/dca/_type_def_8h.html" title="Define macros, basic types, new types and enumerations. " alt="" coords="2387,972,2469,997"/>
+<area shape="rect" id="node14" href="$db/dc2/_t_com_pic_yuv_8h.html" title="picture YUV buffer class (header) " alt="" coords="1259,592,1368,617"/>
+<area shape="rect" id="node19" href="$d2/d4e/_t_com_rectangle_8h_source.html" title="TComRectangle.h" alt="" coords="889,745,1018,771"/>
+<area shape="rect" id="node16" href="$dd/d85/_t_com_rom_8h.html" title="global variables &amp; functions (header) " alt="" coords="1193,745,1290,771"/>
+<area shape="rect" id="node26" href="$d4/d2c/_s_e_i_8h_source.html" title="SEI.h" alt="" coords="1671,665,1724,691"/>
+<area shape="rect" id="node17" href="$d5/d00/_t_com_wedgelet_8h_source.html" title="TComWedgelet.h" alt="" coords="822,825,947,851"/>
+<area shape="rect" id="node28" href="$db/d13/_m_d5_8h_source.html" title="libmd5/MD5.h" alt="" coords="1802,745,1905,771"/>
+<area shape="rect" id="node31" href="$d1/d52/program__options__lite_8h_source.html" title="TAppCommon/program\l_options_lite.h" alt="" coords="1618,739,1777,777"/>
+<area shape="rect" id="node29" href="$d6/d45/libmd5_8h_source.html" title="libmd5.h" alt="" coords="2244,825,2316,851"/>
+<area shape="rect" id="node35" href="$d3/d13/_t_com_motion_info_8h.html" title="motion information handling classes (header) " alt="" coords="2443,299,2574,324"/>
+<area shape="rect" id="node38" href="$d2/d4d/_t_com_slice_8h.html" title="slice header and SPS class (header) " alt="" coords="2149,592,2246,617"/>
+<area shape="rect" id="node40" href="$d2/dea/_t_com_rd_cost_8h.html" title="RD cost computation classes (header) " alt="" coords="2169,299,2282,324"/>
+<area shape="rect" id="node41" href="$d3/d58/_t_com_pattern_8h.html" title="neighbouring pixel access classes (header) " alt="" coords="2606,372,2717,397"/>
+<area shape="rect" id="node36" href="$da/d2f/_t_com_mv_8h.html" title="motion vector class (header) " alt="" coords="2561,445,2647,471"/>
+<area shape="rect" id="node39" href="$d9/df9/_t_com_list_8h.html" title="general list class (header) " alt="" coords="2234,745,2324,771"/>
+<area shape="rect" id="node42" href="$d2/da9/_t_com_rd_cost_weight_prediction_8h.html" title="RD cost computation namespace (header) " alt="" coords="2415,519,2628,544"/>
+<area shape="rect" id="node43" href="$dc/d04/_t_ren_model_8h_source.html" title="../TLibRenderer/TRenModel.h" alt="" coords="1991,372,2188,397"/>
+<area shape="rect" id="node44" href="$da/d18/_t_ren_image_8h_source.html" title="TRenImage.h" alt="" coords="1528,519,1630,544"/>
+<area shape="rect" id="node45" href="$dc/d9d/_t_ren_single_model_8h_source.html" title="TRenSingleModel.h" alt="" coords="1794,445,1932,471"/>
+<area shape="rect" id="node48" href="$df/d6b/_t_com_pic_sym_8h.html" title="picture symbol class (header) " alt="" coords="2762,152,2876,177"/>
+<area shape="rect" id="node50" href="$d7/dcd/_t_com_bit_stream_8h.html" title="class for handling bitstream (header) " alt="" coords="2930,745,3057,771"/>
+</map>

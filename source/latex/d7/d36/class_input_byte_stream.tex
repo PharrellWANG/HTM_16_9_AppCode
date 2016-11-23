@@ -1,0 +1,74 @@
+\hypertarget{class_input_byte_stream}{}\section{Input\+Byte\+Stream Class Reference}
+\label{class_input_byte_stream}\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_input_byte_stream_a1804631987950a7666072d2d1c43071a}{Input\+Byte\+Stream} (std\+::istream \&istream)
+\item 
+Void \hyperlink{class_input_byte_stream_a7f10425050d4ab289a554ba4dc393b6e}{reset} ()
+\item 
+Bool \hyperlink{class_input_byte_stream_ae4aafbd84cda302960e5f7497bdbd227}{eof\+Before\+N\+Bytes} (U\+Int n)
+\item 
+uint32\+\_\+t \hyperlink{class_input_byte_stream_a48ed506d95bbcbc505b2b077914aa174}{peek\+Bytes} (U\+Int n)
+\item 
+uint8\+\_\+t \hyperlink{class_input_byte_stream_aeb1e7066dd0598ff699fbcdaf4cba65d}{read\+Byte} ()
+\item 
+uint32\+\_\+t \hyperlink{class_input_byte_stream_a39c4f28d59c707f2c1d06603f6eefa0e}{read\+Bytes} (U\+Int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_input_byte_stream_a1804631987950a7666072d2d1c43071a}\label{class_input_byte_stream_a1804631987950a7666072d2d1c43071a}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{Input\+Byte\+Stream()}{InputByteStream()}}
+{\footnotesize\ttfamily Input\+Byte\+Stream\+::\+Input\+Byte\+Stream (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{istream }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a bytestream reader that will extract bytes from istream.
+
+NB, it isn\textquotesingle{}t safe to access istream while in use by a \hyperlink{class_input_byte_stream}{Input\+Byte\+Stream}.
+
+Side-\/effects\+: the exception mask of istream is set to eofbit 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_input_byte_stream_ae4aafbd84cda302960e5f7497bdbd227}\label{class_input_byte_stream_ae4aafbd84cda302960e5f7497bdbd227}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!eof\+Before\+N\+Bytes@{eof\+Before\+N\+Bytes}}
+\index{eof\+Before\+N\+Bytes@{eof\+Before\+N\+Bytes}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{eof\+Before\+N\+Bytes()}{eofBeforeNBytes()}}
+{\footnotesize\ttfamily Bool Input\+Byte\+Stream\+::eof\+Before\+N\+Bytes (\begin{DoxyParamCaption}\item[{U\+Int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+returns true if an E\+OF will be encountered within the next n bytes. \mbox{\Hypertarget{class_input_byte_stream_a48ed506d95bbcbc505b2b077914aa174}\label{class_input_byte_stream_a48ed506d95bbcbc505b2b077914aa174}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!peek\+Bytes@{peek\+Bytes}}
+\index{peek\+Bytes@{peek\+Bytes}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{peek\+Bytes()}{peekBytes()}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Byte\+Stream\+::peek\+Bytes (\begin{DoxyParamCaption}\item[{U\+Int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+return the next n bytes in the stream without advancing the stream pointer.
+
+Returns\+: an unsigned integer representing an n byte bigendian word.
+
+If an attempt is made to read past E\+OF, an n-\/byte word is returned, but the portion that required input bytes beyond E\+OF is undefined. \mbox{\Hypertarget{class_input_byte_stream_aeb1e7066dd0598ff699fbcdaf4cba65d}\label{class_input_byte_stream_aeb1e7066dd0598ff699fbcdaf4cba65d}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!read\+Byte@{read\+Byte}}
+\index{read\+Byte@{read\+Byte}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{read\+Byte()}{readByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t Input\+Byte\+Stream\+::read\+Byte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+consume and return one byte from the input.
+
+If bytestream is already at E\+OF prior to a call to \hyperlink{class_input_byte_stream_aeb1e7066dd0598ff699fbcdaf4cba65d}{read\+Byte()}, an exception std\+::ios\+\_\+base\+::failure is thrown. \mbox{\Hypertarget{class_input_byte_stream_a39c4f28d59c707f2c1d06603f6eefa0e}\label{class_input_byte_stream_a39c4f28d59c707f2c1d06603f6eefa0e}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!read\+Bytes@{read\+Bytes}}
+\index{read\+Bytes@{read\+Bytes}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{read\+Bytes()}{readBytes()}}
+{\footnotesize\ttfamily uint32\+\_\+t Input\+Byte\+Stream\+::read\+Bytes (\begin{DoxyParamCaption}\item[{U\+Int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+consume and return n bytes from the input. n bytes from bytestream are interpreted as bigendian when assembling the return value. \mbox{\Hypertarget{class_input_byte_stream_a7f10425050d4ab289a554ba4dc393b6e}\label{class_input_byte_stream_a7f10425050d4ab289a554ba4dc393b6e}} 
+\index{Input\+Byte\+Stream@{Input\+Byte\+Stream}!reset@{reset}}
+\index{reset@{reset}!Input\+Byte\+Stream@{Input\+Byte\+Stream}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily Void Input\+Byte\+Stream\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reset the internal state. Must be called if input stream is modified externally to this class 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Decoder/\hyperlink{_annex_bread_8h}{Annex\+Bread.\+h}\end{DoxyCompactItemize}

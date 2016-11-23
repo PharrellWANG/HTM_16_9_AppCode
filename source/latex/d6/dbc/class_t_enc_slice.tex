@@ -1,0 +1,178 @@
+\hypertarget{class_t_enc_slice}{}\section{T\+Enc\+Slice Class Reference}
+\label{class_t_enc_slice}\index{T\+Enc\+Slice@{T\+Enc\+Slice}}
+
+
+slice encoder class  
+
+
+
+
+{\ttfamily \#include $<$T\+Enc\+Slice.\+h$>$}
+
+
+
+Inheritance diagram for T\+Enc\+Slice\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{db/d0d/class_t_enc_slice__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+Enc\+Slice\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{d9/d02/class_t_enc_slice__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a97f23366a5bac19670b9cbea3195aa2a}\label{class_t_enc_slice_a97f23366a5bac19670b9cbea3195aa2a}} 
+\hyperlink{class_t_enc_cu}{T\+Enc\+Cu} $\ast$ \hyperlink{class_t_enc_slice_a97f23366a5bac19670b9cbea3195aa2a}{get\+C\+U\+Encoder} ()
+\begin{DoxyCompactList}\small\item\em CU encoder. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_slice_a9ed458ff379c498313ea1cf61137d175}\label{class_t_enc_slice_a9ed458ff379c498313ea1cf61137d175}} 
+U\+Int {\bfseries get\+Slice\+Idx} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a2df1ce2fb9b28d5a5d8f4498b5ceb658}\label{class_t_enc_slice_a2df1ce2fb9b28d5a5d8f4498b5ceb658}} 
+Void {\bfseries set\+Slice\+Idx} (U\+Int i)
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a3863b7c2ba5227e89297a54cac4d8302}\label{class_t_enc_slice_a3863b7c2ba5227e89297a54cac4d8302}} 
+\hyperlink{_type_def_8h_a8fc5fd31653a387f7430d29863620f71}{Slice\+Type} {\bfseries get\+Enc\+C\+A\+B\+A\+C\+Table\+Idx} () const
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a922ee306ecbc62fab4b232b759add77e}\label{class_t_enc_slice_a922ee306ecbc62fab4b232b759add77e}} 
+Void {\bfseries create} (Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} chroma\+Format, U\+Int i\+Max\+C\+U\+Width, U\+Int i\+Max\+C\+U\+Height, U\+Char uh\+Total\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a60fd5ff9dcbd8074b59b9c70e54d8c0c}\label{class_t_enc_slice_a60fd5ff9dcbd8074b59b9c70e54d8c0c}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a6d4541b0d8f61d7874b17d318977c340}\label{class_t_enc_slice_a6d4541b0d8f61d7874b17d318977c340}} 
+Void {\bfseries init} (\hyperlink{class_t_enc_top}{T\+Enc\+Top} $\ast$pc\+Enc\+Top)
+\item 
+Void \hyperlink{class_t_enc_slice_aa1e5df49f326f979da1cc3e249b9f16b}{init\+Enc\+Slice} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic, Int poc\+Last, Int poc\+Curr, Int i\+G\+O\+Pid, \hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$\&rpc\+Slice, \hyperlink{class_t_com_v_p_s}{T\+Com\+V\+PS} $\ast$p\+V\+PS, Int layer\+Id, bool is\+Field)
+\begin{DoxyCompactList}\small\item\em preparation of slice encoding (reference marking, QP and lambda) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_slice_a45d65da87ca8cd283f9933c0b81f41a3}\label{class_t_enc_slice_a45d65da87ca8cd283f9933c0b81f41a3}} 
+Void {\bfseries reset\+QP} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pic, Int slice\+QP, Double lambda)
+\item 
+Void \hyperlink{class_t_enc_slice_a1d51494d1ae81824d3ba5296d7715e8e}{precompress\+Slice} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic)
+\begin{DoxyCompactList}\small\item\em precompress slice for multi-\/loop slice-\/level QP opt. \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_slice_ae2a0de7e3f92ebb669fd50116bf1bbf6}{compress\+Slice} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic, const Bool b\+Compress\+Entire\+Slice, const Bool b\+Fast\+Delta\+QP)
+\begin{DoxyCompactList}\small\item\em analysis stage of slice \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_slice_a83543f39dc671e6ed53ab20f2ecab383}\label{class_t_enc_slice_a83543f39dc671e6ed53ab20f2ecab383}} 
+Void {\bfseries cal\+Cost\+SliceI} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic)
+\item 
+\mbox{\Hypertarget{class_t_enc_slice_a6a775fc893bbe6040004b072a4ef65bc}\label{class_t_enc_slice_a6a775fc893bbe6040004b072a4ef65bc}} 
+Void {\bfseries encode\+Slice} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic, \hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} $\ast$pc\+Substreams, U\+Int \&num\+Bins\+Coded)
+\item 
+Void \hyperlink{class_t_enc_slice_a40b64c2ccca74997abde6c6049158b13}{set\+Search\+Range} (\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$pc\+Slice)
+\begin{DoxyCompactList}\small\item\em set ME range adaptively \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_slice_aa0d1a1bbc6f94db1bd7f5bd13e1a7c82}{x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr} (U\+Int \&start\+Ctu\+Ts\+Addr, U\+Int \&bounding\+Ctu\+Ts\+Addr, \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+slice encoder class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_enc_slice_ae2a0de7e3f92ebb669fd50116bf1bbf6}\label{class_t_enc_slice_ae2a0de7e3f92ebb669fd50116bf1bbf6}} 
+\index{T\+Enc\+Slice@{T\+Enc\+Slice}!compress\+Slice@{compress\+Slice}}
+\index{compress\+Slice@{compress\+Slice}!T\+Enc\+Slice@{T\+Enc\+Slice}}
+\subsubsection{\texorpdfstring{compress\+Slice()}{compressSlice()}}
+{\footnotesize\ttfamily Void T\+Enc\+Slice\+::compress\+Slice (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$}]{pc\+Pic,  }\item[{const Bool}]{b\+Compress\+Entire\+Slice,  }\item[{const Bool}]{b\+Fast\+Delta\+QP }\end{DoxyParamCaption})}
+
+
+
+analysis stage of slice 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc\+Pic} & picture class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_slice_aa1e5df49f326f979da1cc3e249b9f16b}\label{class_t_enc_slice_aa1e5df49f326f979da1cc3e249b9f16b}} 
+\index{T\+Enc\+Slice@{T\+Enc\+Slice}!init\+Enc\+Slice@{init\+Enc\+Slice}}
+\index{init\+Enc\+Slice@{init\+Enc\+Slice}!T\+Enc\+Slice@{T\+Enc\+Slice}}
+\subsubsection{\texorpdfstring{init\+Enc\+Slice()}{initEncSlice()}}
+{\footnotesize\ttfamily Void T\+Enc\+Slice\+::init\+Enc\+Slice (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$}]{pc\+Pic,  }\item[{Int}]{poc\+Last,  }\item[{Int}]{poc\+Curr,  }\item[{Int}]{i\+G\+O\+Pid,  }\item[{\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$\&}]{rpc\+Slice,  }\item[{\hyperlink{class_t_com_v_p_s}{T\+Com\+V\+PS} $\ast$}]{p\+V\+PS,  }\item[{Int}]{layer\+Id,  }\item[{bool}]{is\+Field }\end{DoxyParamCaption})}
+
+
+
+preparation of slice encoding (reference marking, QP and lambda) 
+
+
+\begin{DoxyItemize}
+\item non-\/referenced frame marking
+\item QP computation based on temporal structure
+\item lambda computation based on QP
+\item set temporal layer ID and the parameter sets
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em pc\+Pic} & picture class \\
+\hline
+{\em poc\+Last} & P\+OC of last picture \\
+\hline
+{\em poc\+Curr} & current P\+OC \\
+\hline
+{\em i\+Num\+Pic\+Rcvd} & number of received pictures \\
+\hline
+{\em i\+G\+O\+Pid} & P\+OC offset for hierarchical structure \\
+\hline
+{\em rpc\+Slice} & slice header class \\
+\hline
+{\em is\+Field} & true for field coding \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_slice_a1d51494d1ae81824d3ba5296d7715e8e}\label{class_t_enc_slice_a1d51494d1ae81824d3ba5296d7715e8e}} 
+\index{T\+Enc\+Slice@{T\+Enc\+Slice}!precompress\+Slice@{precompress\+Slice}}
+\index{precompress\+Slice@{precompress\+Slice}!T\+Enc\+Slice@{T\+Enc\+Slice}}
+\subsubsection{\texorpdfstring{precompress\+Slice()}{precompressSlice()}}
+{\footnotesize\ttfamily Void T\+Enc\+Slice\+::precompress\+Slice (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$}]{pc\+Pic }\end{DoxyParamCaption})}
+
+
+
+precompress slice for multi-\/loop slice-\/level QP opt. 
+
+Multi-\/loop slice encoding for different slice QP
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc\+Pic} & picture class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_slice_a40b64c2ccca74997abde6c6049158b13}\label{class_t_enc_slice_a40b64c2ccca74997abde6c6049158b13}} 
+\index{T\+Enc\+Slice@{T\+Enc\+Slice}!set\+Search\+Range@{set\+Search\+Range}}
+\index{set\+Search\+Range@{set\+Search\+Range}!T\+Enc\+Slice@{T\+Enc\+Slice}}
+\subsubsection{\texorpdfstring{set\+Search\+Range()}{setSearchRange()}}
+{\footnotesize\ttfamily Void T\+Enc\+Slice\+::set\+Search\+Range (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$}]{pc\+Slice }\end{DoxyParamCaption})}
+
+
+
+set ME range adaptively 
+
+set adaptive search range based on poc difference \mbox{\Hypertarget{class_t_enc_slice_aa0d1a1bbc6f94db1bd7f5bd13e1a7c82}\label{class_t_enc_slice_aa0d1a1bbc6f94db1bd7f5bd13e1a7c82}} 
+\index{T\+Enc\+Slice@{T\+Enc\+Slice}!x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr@{x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr}}
+\index{x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr@{x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr}!T\+Enc\+Slice@{T\+Enc\+Slice}}
+\subsubsection{\texorpdfstring{x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr()}{xDetermineStartAndBoundingCtuTsAddr()}}
+{\footnotesize\ttfamily Void T\+Enc\+Slice\+::x\+Determine\+Start\+And\+Bounding\+Ctu\+Ts\+Addr (\begin{DoxyParamCaption}\item[{U\+Int \&}]{start\+Ctu\+Ts\+Addr,  }\item[{U\+Int \&}]{bounding\+Ctu\+Ts\+Addr,  }\item[{\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$}]{pc\+Pic }\end{DoxyParamCaption})}
+
+Determines the starting and bounding C\+TU address of current slice / dependent slice 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em start\+Ctu\+Ts\+Addr} & \\
+\hline
+\mbox{\tt out}  & {\em bounding\+Ctu\+Ts\+Addr} & \\
+\hline
+\mbox{\tt in}  & {\em pc\+Pic} & Updates start\+Ctu\+Ts\+Addr, bounding\+Ctu\+Ts\+Addr with appropriate C\+TU address \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_slice_8h}{T\+Enc\+Slice.\+h}\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_slice_8cpp}{T\+Enc\+Slice.\+cpp}\end{DoxyCompactItemize}

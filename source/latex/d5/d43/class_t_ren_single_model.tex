@@ -1,0 +1,68 @@
+\hypertarget{class_t_ren_single_model}{}\section{T\+Ren\+Single\+Model Class Reference}
+\label{class_t_ren_single_model}\index{T\+Ren\+Single\+Model@{T\+Ren\+Single\+Model}}
+
+
+Inheritance diagram for T\+Ren\+Single\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{d9/d17/class_t_ren_single_model__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a7c9c52173dba466b48c45112daee3614}\label{class_t_ren_single_model_a7c9c52173dba466b48c45112daee3614}} 
+virtual Void {\bfseries create} (Int i\+Mode, Int i\+Width, Int i\+Height, Int i\+Shift\+Prec, Int $\ast$$\ast$$\ast$aaai\+Sub\+Pel\+Shift\+Table, Int i\+Hole\+Margin, Bool b\+Use\+Org\+Ref, Int i\+Blend\+Mode, Bool b\+Lim\+Output, Bool b\+Early\+Skip)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a7e1ed684969122c44b549fb7abd83ee8}\label{class_t_ren_single_model_a7e1ed684969122c44b549fb7abd83ee8}} 
+virtual Void {\bfseries set\+L\+R\+View} (Int i\+View\+Pos, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$$\ast$api\+Cur\+Video\+Pel, Int $\ast$ai\+Cur\+Video\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Cur\+Depth\+Pel, Int i\+Cur\+Depth\+Stride)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_ad650befb7c38d4871b9d1ddf89f5bad5}\label{class_t_ren_single_model_ad650befb7c38d4871b9d1ddf89f5bad5}} 
+virtual Void {\bfseries setup\+Part} (U\+Int ui\+Hor\+Offset, Int i\+Used\+Height)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a24a8e0336875167747024171ff4cb3e7}\label{class_t_ren_single_model_a24a8e0336875167747024171ff4cb3e7}} 
+virtual Void {\bfseries setup\+Lut} (Int $\ast$$\ast$ppi\+Shift\+Lut\+Left, Int $\ast$$\ast$ppi\+Base\+Shift\+Lut\+Left, Int $\ast$$\ast$ppi\+Shift\+Lut\+Right, Int $\ast$$\ast$ppi\+Base\+Shift\+Lut\+Right, Int i\+Dist\+To\+Left)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a192622d4027122604e6c359d2caeb6b9}\label{class_t_ren_single_model_a192622d4027122604e6c359d2caeb6b9}} 
+virtual Void {\bfseries setup\+Ref\+View} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Org\+Video)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_abe00ed1e93efc80f63545342143e855b}\label{class_t_ren_single_model_abe00ed1e93efc80f63545342143e855b}} 
+virtual Void {\bfseries render\+All} ()=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_ab2d3d56bddfbe157c1680e72d4211d5e}\label{class_t_ren_single_model_ab2d3d56bddfbe157c1680e72d4211d5e}} 
+virtual Void {\bfseries set\+Struct\+Synth\+View\+As\+Ref\+View} ()=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_aeb003bf9b605a9847e0ee9733ccd6b95}\label{class_t_ren_single_model_aeb003bf9b605a9847e0ee9733ccd6b95}} 
+virtual Void {\bfseries reset\+Struct\+Error} ()=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a8730cad4ee871d556e2b579ba98857eb}\label{class_t_ren_single_model_a8730cad4ee871d556e2b579ba98857eb}} 
+virtual Void {\bfseries set\+Lim\+Out\+Struct} (Int i\+Source\+View\+Pos)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a28995d80728d63771c29fecfaacb0afc}\label{class_t_ren_single_model_a28995d80728d63771c29fecfaacb0afc}} 
+virtual Void {\bfseries set\+Depth} (Int i\+View\+Pos, Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org\+Data, Int i\+Org\+Stride)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a6a7c84693f7c1a4fc8459453243a5cf5}\label{class_t_ren_single_model_a6a7c84693f7c1a4fc8459453243a5cf5}} 
+virtual Void {\bfseries set\+Video} (Int i\+View\+Pos, Int i\+Plane, Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_ace95f822c07baebb2d7be574d715895e}\label{class_t_ren_single_model_ace95f822c07baebb2d7be574d715895e}} 
+virtual \hyperlink{_type_def_8h_af461692fb7ede4102bfde31cb744b839}{R\+M\+Dist} {\bfseries get\+Dist\+Depth} (Int i\+View\+Pos, Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org\+Data, Int i\+Org\+Stride)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_a8d461f196729ad910cc5b86172a21186}\label{class_t_ren_single_model_a8d461f196729ad910cc5b86172a21186}} 
+virtual \hyperlink{_type_def_8h_af461692fb7ede4102bfde31cb744b839}{R\+M\+Dist} {\bfseries get\+Dist\+Video} (Int i\+View\+Pos, Int i\+Plane, Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_ae4bac4c1805aa46b2a426ab32b4a2799}\label{class_t_ren_single_model_ae4bac4c1805aa46b2a426ab32b4a2799}} 
+virtual Void {\bfseries get\+Synth\+Video} (Int i\+View\+Pos, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_acc6d8fc0a1713729ed88d80a6f182e1c}\label{class_t_ren_single_model_acc6d8fc0a1713729ed88d80a6f182e1c}} 
+virtual Void {\bfseries get\+Synth\+Depth} (Int i\+View\+Pos, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv)=0
+\item 
+\mbox{\Hypertarget{class_t_ren_single_model_aa5ca7e1d480c98e1d8d99b4e9a5ebfea}\label{class_t_ren_single_model_aa5ca7e1d480c98e1d8d99b4e9a5ebfea}} 
+virtual Void {\bfseries get\+Ref\+Video} (Int i\+View\+Pos, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv)=0
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Renderer/T\+Ren\+Single\+Model.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{class_m_d5}{}\section{M\+D5 Class Reference}
+\label{class_m_d5}\index{M\+D5@{M\+D5}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}{M\+D5} ()
+\item 
+void \hyperlink{class_m_d5_a52c7dbe8d4a57e8c79d4c905205e24d0}{update} (unsigned char $\ast$buf, unsigned len)
+\item 
+void \hyperlink{class_m_d5_a16e5a96e255621d00ff682284cd7b69c}{finalize} (unsigned char digest\mbox{[}M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+TH\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}\label{class_m_d5_afa6155ec36de415ab2dcf5e54b670d13}} 
+\index{M\+D5@{M\+D5}!M\+D5@{M\+D5}}
+\index{M\+D5@{M\+D5}!M\+D5@{M\+D5}}
+\subsubsection{\texorpdfstring{M\+D5()}{MD5()}}
+{\footnotesize\ttfamily M\+D5\+::\+M\+D5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+initialize digest state 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_m_d5_a16e5a96e255621d00ff682284cd7b69c}\label{class_m_d5_a16e5a96e255621d00ff682284cd7b69c}} 
+\index{M\+D5@{M\+D5}!finalize@{finalize}}
+\index{finalize@{finalize}!M\+D5@{M\+D5}}
+\subsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily void M\+D5\+::finalize (\begin{DoxyParamCaption}\item[{unsigned char}]{digest\mbox{[}\+M\+D5\+\_\+\+D\+I\+G\+E\+S\+T\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+L\+E\+N\+G\+T\+H\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+flush any outstanding \hyperlink{class_m_d5}{M\+D5} data, write the digest into digest. \mbox{\Hypertarget{class_m_d5_a52c7dbe8d4a57e8c79d4c905205e24d0}\label{class_m_d5_a52c7dbe8d4a57e8c79d4c905205e24d0}} 
+\index{M\+D5@{M\+D5}!update@{update}}
+\index{update@{update}!M\+D5@{M\+D5}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void M\+D5\+::update (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf,  }\item[{unsigned}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+compute digest over buf of length len. multiple calls may extend the digest over more data. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/libmd5/M\+D5.\+h\end{DoxyCompactItemize}

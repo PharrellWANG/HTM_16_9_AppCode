@@ -1,0 +1,32 @@
+<map id="Lib/TLibCommon/TComMotionInfo.cpp" name="Lib/TLibCommon/TComMotionInfo.cpp">
+<area shape="rect" id="node3" href="$d3/d13/_t_com_motion_info_8h.html" title="motion information handling classes (header) " alt="" coords="429,312,560,337"/>
+<area shape="rect" id="node14" href="$de/d96/_t_com_data_c_u_8h.html" title="CU data structure (header) " alt="" coords="970,239,1086,264"/>
+<area shape="rect" id="node46" href="$d4/d89/_t_com_pic_8h.html" title="picture class (header) " alt="" coords="652,92,740,117"/>
+<area shape="rect" id="node4" href="$d2/d1a/_common_def_8h.html" title="Defines version information, constants and small in&#45;line functions. " alt="" coords="1318,999,1426,1024"/>
+<area shape="rect" id="node11" href="$da/d2f/_t_com_mv_8h.html" title="motion vector class (header) " alt="" coords="736,459,821,484"/>
+<area shape="rect" id="node9" href="$d7/dca/_type_def_8h.html" title="Define macros, basic types, new types and enumerations. " alt="" coords="3462,1072,3544,1097"/>
+<area shape="rect" id="node15" href="$d2/d4d/_t_com_slice_8h.html" title="slice header and SPS class (header) " alt="" coords="1706,679,1803,704"/>
+<area shape="rect" id="node30" href="$d2/dea/_t_com_rd_cost_8h.html" title="RD cost computation classes (header) " alt="" coords="1141,312,1254,337"/>
+<area shape="rect" id="node31" href="$d3/d58/_t_com_pattern_8h.html" title="neighbouring pixel access classes (header) " alt="" coords="1965,385,2077,411"/>
+<area shape="rect" id="node44" href="$d6/de6/_t_com_yuv_8h.html" title="general YUV buffer class (header) " alt="" coords="1008,605,1098,631"/>
+<area shape="rect" id="node18" href="$dd/d85/_t_com_rom_8h.html" title="global variables &amp; functions (header) " alt="" coords="1357,832,1454,857"/>
+<area shape="rect" id="node21" href="$d9/df9/_t_com_list_8h.html" title="general list class (header) " alt="" coords="1243,832,1333,857"/>
+<area shape="rect" id="node23" href="$d7/d37/_t_com_chroma_format_8h_source.html" title="TComChromaFormat.h" alt="" coords="1501,752,1659,777"/>
+<area shape="rect" id="node20" href="$d5/d00/_t_com_wedgelet_8h_source.html" title="TComWedgelet.h" alt="" coords="334,919,458,944"/>
+<area shape="rect" id="node24" href="$d2/d4e/_t_com_rectangle_8h_source.html" title="TComRectangle.h" alt="" coords="989,832,1118,857"/>
+<area shape="rect" id="node25" href="$d2/d47/_context_tables_8h.html" title="Defines constants and tables for SBAC. " alt="" coords="1528,832,1645,857"/>
+<area shape="rect" id="node26" href="$d0/d4b/_debug_8h.html" title="Defines types and objects for environment&#45;variable&#45;based debugging and feature control. " alt="" coords="2507,832,2579,857"/>
+<area shape="rect" id="node32" href="$d2/da9/_t_com_rd_cost_weight_prediction_8h.html" title="RD cost computation namespace (header) " alt="" coords="896,459,1110,484"/>
+<area shape="rect" id="node33" href="$dc/d04/_t_ren_model_8h_source.html" title="../TLibRenderer/TRenModel.h" alt="" coords="1744,385,1942,411"/>
+<area shape="rect" id="node45" href="$d7/da1/_t_com_t_u_8h_source.html" title="TComTU.h" alt="" coords="1183,679,1270,704"/>
+<area shape="rect" id="node34" href="$da/d18/_t_ren_image_8h_source.html" title="TRenImage.h" alt="" coords="1792,532,1894,557"/>
+<area shape="rect" id="node35" href="$db/dc2/_t_com_pic_yuv_8h.html" title="picture YUV buffer class (header) " alt="" coords="1478,679,1682,704"/>
+<area shape="rect" id="node41" href="$dc/d9d/_t_ren_single_model_8h_source.html" title="TRenSingleModel.h" alt="" coords="2400,459,2539,484"/>
+<area shape="rect" id="node40" href="$df/d5a/_t_ren_image_plane_8h_source.html" title="TRenImagePlane.h" alt="" coords="1763,605,1899,631"/>
+<area shape="rect" id="node36" href="$d4/d2c/_s_e_i_8h_source.html" title="SEI.h" alt="" coords="2353,752,2407,777"/>
+<area shape="rect" id="node37" href="$db/d13/_m_d5_8h_source.html" title="libmd5/MD5.h" alt="" coords="2328,832,2432,857"/>
+<area shape="rect" id="node38" href="$d1/d52/program__options__lite_8h_source.html" title="TAppCommon/program\l_options_lite.h" alt="" coords="2603,825,2762,864"/>
+<area shape="rect" id="node42" href="$d7/d54/_t_app_com_cam_para_8h_source.html" title="../TAppCommon/TAppComCam\lPara.h" alt="" coords="3167,912,3375,951"/>
+<area shape="rect" id="node47" href="$df/d6b/_t_com_pic_sym_8h.html" title="picture symbol class (header) " alt="" coords="759,165,873,191"/>
+<area shape="rect" id="node49" href="$d7/dcd/_t_com_bit_stream_8h.html" title="class for handling bitstream (header) " alt="" coords="227,832,354,857"/>
+</map>

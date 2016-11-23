@@ -1,0 +1,100 @@
+\hypertarget{_t_enc_rate_ctrl_8h}{}\section{Lib/\+T\+Lib\+Encoder/\+T\+Enc\+Rate\+Ctrl.h File Reference}
+\label{_t_enc_rate_ctrl_8h}\index{Lib/\+T\+Lib\+Encoder/\+T\+Enc\+Rate\+Ctrl.\+h@{Lib/\+T\+Lib\+Encoder/\+T\+Enc\+Rate\+Ctrl.\+h}}
+
+
+Rate control manager class.  
+
+
+{\ttfamily \#include \char`\"{}../\+T\+Lib\+Common/\+Common\+Def.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+T\+Lib\+Common/\+T\+Com\+Data\+C\+U.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}../\+T\+Lib\+Encoder/\+T\+Enc\+Cfg.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Include dependency graph for T\+Enc\+Rate\+Ctrl.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d8a/_t_enc_rate_ctrl_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d5a/_t_enc_rate_ctrl_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_t_r_c_l_c_u}{T\+R\+C\+L\+CU}
+\item 
+struct \hyperlink{struct_t_r_c_parameter}{T\+R\+C\+Parameter}
+\item 
+class \hyperlink{class_t_enc_r_c_seq}{T\+Enc\+R\+C\+Seq}
+\item 
+class \hyperlink{class_t_enc_r_c_g_o_p}{T\+Enc\+R\+C\+G\+OP}
+\item 
+class \hyperlink{class_t_enc_r_c_pic}{T\+Enc\+R\+C\+Pic}
+\item 
+class \hyperlink{class_t_enc_rate_ctrl}{T\+Enc\+Rate\+Ctrl}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_af5abd28c44c29b7397c84f1fec4b1d84}\label{_t_enc_rate_ctrl_8h_af5abd28c44c29b7397c84f1fec4b1d84}} 
+\#define {\bfseries A\+L\+P\+HA}~6.\+7542;
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a3c0b9279f3bb789b4f5723b3c17eaf0c}\label{_t_enc_rate_ctrl_8h_a3c0b9279f3bb789b4f5723b3c17eaf0c}} 
+\#define {\bfseries B\+E\+T\+A1}~1.\+2517
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a5e33e4ef7e5a5f5f8565818d698301ae}\label{_t_enc_rate_ctrl_8h_a5e33e4ef7e5a5f5f8565818d698301ae}} 
+\#define {\bfseries B\+E\+T\+A2}~1.\+7860
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a84166eddc7c79a054a40fde3185fb960}\label{_t_enc_rate_ctrl_8h_a84166eddc7c79a054a40fde3185fb960}} 
+const Int {\bfseries g\+\_\+\+R\+C\+Invalid\+Q\+P\+Value} = -\/999
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a6837cc184a4f840943bcfcc1ed5c9e0f}\label{_t_enc_rate_ctrl_8h_a6837cc184a4f840943bcfcc1ed5c9e0f}} 
+const Int {\bfseries g\+\_\+\+R\+C\+Smooth\+Window\+Size} = 40
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a2d778edef8a56eb6beea1d0af937ce1a}\label{_t_enc_rate_ctrl_8h_a2d778edef8a56eb6beea1d0af937ce1a}} 
+const Int {\bfseries g\+\_\+\+R\+C\+Max\+Pic\+List\+Size} = 32
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a51c378de110b1efaf7a36e423979087c}\label{_t_enc_rate_ctrl_8h_a51c378de110b1efaf7a36e423979087c}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Weight\+Pic\+Target\+Bit\+In\+G\+OP} = 0.\+9
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a474365ac3b5d3c370d08c1484c374008}\label{_t_enc_rate_ctrl_8h_a474365ac3b5d3c370d08c1484c374008}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Weight\+Pic\+Rarget\+Bit\+In\+Buffer} = 1.\+0 -\/ g\+\_\+\+R\+C\+Weight\+Pic\+Target\+Bit\+In\+G\+OP
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a9c168590ee6dd2831889e6dab1b72ed4}\label{_t_enc_rate_ctrl_8h_a9c168590ee6dd2831889e6dab1b72ed4}} 
+const Int {\bfseries g\+\_\+\+R\+C\+Iteration\+Num} = 20
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a968d6fd129f36acb8d90c90209440538}\label{_t_enc_rate_ctrl_8h_a968d6fd129f36acb8d90c90209440538}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Weight\+History\+Lambda} = 0.\+5
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a266582f07efafd2b84e080871dad0c6a}\label{_t_enc_rate_ctrl_8h_a266582f07efafd2b84e080871dad0c6a}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Weight\+Current\+Lambda} = 1.\+0 -\/ g\+\_\+\+R\+C\+Weight\+History\+Lambda
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a7f97a136b4dc6634529a78930ca30c00}\label{_t_enc_rate_ctrl_8h_a7f97a136b4dc6634529a78930ca30c00}} 
+const Int {\bfseries g\+\_\+\+R\+C\+L\+C\+U\+Smooth\+Window\+Size} = 4
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a1f7c0ce941712ad0c29efd0de0cd2d08}\label{_t_enc_rate_ctrl_8h_a1f7c0ce941712ad0c29efd0de0cd2d08}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Alpha\+Min\+Value} = 0.\+05
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a281c038a18c578207826240836c924d7}\label{_t_enc_rate_ctrl_8h_a281c038a18c578207826240836c924d7}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Alpha\+Max\+Value} = 500.\+0
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_ae33dd4507b2792b4d43837324688495d}\label{_t_enc_rate_ctrl_8h_ae33dd4507b2792b4d43837324688495d}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Beta\+Min\+Value} = -\/3.\+0
+\item 
+\mbox{\Hypertarget{_t_enc_rate_ctrl_8h_a3496fdd37e8d094f3050c7188b2acbe7}\label{_t_enc_rate_ctrl_8h_a3496fdd37e8d094f3050c7188b2acbe7}} 
+const Double {\bfseries g\+\_\+\+R\+C\+Beta\+Max\+Value} = -\/0.\+1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Rate control manager class. 
+

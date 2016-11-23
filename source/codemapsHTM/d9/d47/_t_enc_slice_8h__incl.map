@@ -1,0 +1,39 @@
+<map id="Lib/TLibEncoder/TEncSlice.h" name="Lib/TLibEncoder/TEncSlice.h">
+<area shape="rect" id="node2" href="$d2/d1a/_common_def_8h.html" title="Defines version information, constants and small in&#45;line functions. " alt="" coords="1506,1132,1697,1157"/>
+<area shape="rect" id="node9" href="$d9/df9/_t_com_list_8h.html" title="general list class (header) " alt="" coords="2445,1052,2618,1077"/>
+<area shape="rect" id="node12" href="$d4/d89/_t_com_pic_8h.html" title="picture class (header) " alt="" coords="1335,459,1506,484"/>
+<area shape="rect" id="node29" href="$db/dc2/_t_com_pic_yuv_8h.html" title="picture YUV buffer class (header) " alt="" coords="602,825,805,851"/>
+<area shape="rect" id="node35" href="$d6/d95/_t_enc_cu_8h.html" title="Coding Unit (CU) encoder class (header) " alt="" coords="1823,79,1904,104"/>
+<area shape="rect" id="node47" href="$da/d0a/_t_enc_rate_ctrl_8h.html" title="Rate control manager class. " alt="" coords="2562,532,2674,557"/>
+<area shape="rect" id="node49" href="$d2/d26/_weight_pred_analysis_8h.html" title="weighted prediction encoder class " alt="" coords="2333,152,2484,177"/>
+<area shape="rect" id="node7" href="$d7/dca/_type_def_8h.html" title="Define macros, basic types, new types and enumerations. " alt="" coords="1516,1205,1598,1231"/>
+<area shape="rect" id="node13" href="$df/d6b/_t_com_pic_sym_8h.html" title="picture symbol class (header) " alt="" coords="1690,532,1804,557"/>
+<area shape="rect" id="node33" href="$d7/dcd/_t_com_bit_stream_8h.html" title="class for handling bitstream (header) " alt="" coords="456,532,583,557"/>
+<area shape="rect" id="node15" href="$d2/d4d/_t_com_slice_8h.html" title="slice header and SPS class (header) " alt="" coords="1730,825,1828,851"/>
+<area shape="rect" id="node24" href="$de/d96/_t_com_data_c_u_8h.html" title="CU data structure (header) " alt="" coords="1925,605,2041,631"/>
+<area shape="rect" id="node17" href="$dd/d85/_t_com_rom_8h.html" title="global variables &amp; functions (header) " alt="" coords="567,972,664,997"/>
+<area shape="rect" id="node20" href="$d7/d37/_t_com_chroma_format_8h_source.html" title="TComChromaFormat.h" alt="" coords="804,899,962,924"/>
+<area shape="rect" id="node19" href="$d5/d00/_t_com_wedgelet_8h_source.html" title="TComWedgelet.h" alt="" coords="882,1052,1007,1077"/>
+<area shape="rect" id="node21" href="$d2/d4e/_t_com_rectangle_8h_source.html" title="TComRectangle.h" alt="" coords="1132,972,1261,997"/>
+<area shape="rect" id="node22" href="$d2/d47/_context_tables_8h.html" title="Defines constants and tables for SBAC. " alt="" coords="991,972,1108,997"/>
+<area shape="rect" id="node23" href="$d0/d4b/_debug_8h.html" title="Defines types and objects for environment&#45;variable&#45;based debugging and feature control. " alt="" coords="735,1052,807,1077"/>
+<area shape="rect" id="node25" href="$d3/d13/_t_com_motion_info_8h.html" title="motion information handling classes (header) " alt="" coords="2180,679,2311,704"/>
+<area shape="rect" id="node26" href="$d2/dea/_t_com_rd_cost_8h.html" title="RD cost computation classes (header) " alt="" coords="1892,679,2005,704"/>
+<area shape="rect" id="node27" href="$d3/d58/_t_com_pattern_8h.html" title="neighbouring pixel access classes (header) " alt="" coords="2045,752,2156,777"/>
+<area shape="rect" id="node28" href="$d6/de6/_t_com_yuv_8h.html" title="general YUV buffer class (header) " alt="" coords="1202,752,1292,777"/>
+<area shape="rect" id="node30" href="$d4/d2c/_s_e_i_8h_source.html" title="SEI.h" alt="" coords="284,972,338,997"/>
+<area shape="rect" id="node31" href="$db/d13/_m_d5_8h_source.html" title="libmd5/MD5.h" alt="" coords="370,1052,474,1077"/>
+<area shape="rect" id="node32" href="$d1/d52/program__options__lite_8h_source.html" title="TAppCommon/program\l_options_lite.h" alt="" coords="135,1045,295,1084"/>
+<area shape="rect" id="node36" href="$d4/d9a/_t_com_prediction_8h.html" title="prediction class (header) " alt="" coords="1945,379,2157,404"/>
+<area shape="rect" id="node39" href="$d7/dfd/_t_com_tr_quant_8h.html" title="transform and quantization class (header) " alt="" coords="1060,532,1261,557"/>
+<area shape="rect" id="node40" href="$d1/d7a/_t_com_bit_counter_8h.html" title="Class for counting bits (header) " alt="" coords="285,299,500,324"/>
+<area shape="rect" id="node41" href="$d1/d40/_t_enc_entropy_8h.html" title="entropy encoder class (header) " alt="" coords="1336,299,1444,324"/>
+<area shape="rect" id="node44" href="$d8/d99/_t_enc_search_8h.html" title="encoder search class (header) " alt="" coords="1420,152,1525,177"/>
+<area shape="rect" id="node37" href="$d2/d07/_t_com_interpolation_filter_8h.html" title="Declaration of TComInterpolationFilter class. " alt="" coords="2090,899,2261,924"/>
+<area shape="rect" id="node38" href="$d5/dc6/_t_com_weight_prediction_8h.html" title="weighting prediction class (header) " alt="" coords="2257,459,2427,484"/>
+<area shape="rect" id="node42" href="$dd/d24/_context_model_8h.html" title="context model class (header) " alt="" coords="1012,459,1210,484"/>
+<area shape="rect" id="node43" href="$d9/dfc/_t_com_sample_adaptive_offset_8h.html" title="sample adaptive offset class (header) " alt="" coords="1385,372,1624,411"/>
+<area shape="rect" id="node45" href="$da/d96/_t_enc_sbac_8h.html" title="Context&#45;adaptive entropy encoder class (header) " alt="" coords="947,225,1041,251"/>
+<area shape="rect" id="node46" href="$d0/d24/_t_enc_cfg_8h.html" title="encoder configuration class (header) " alt="" coords="2429,752,2513,777"/>
+<area shape="rect" id="node50" href="$dd/db4/_t_enc_cavlc_8h.html" title="CAVLC encoder class (header) " alt="" coords="1339,225,1436,251"/>
+</map>

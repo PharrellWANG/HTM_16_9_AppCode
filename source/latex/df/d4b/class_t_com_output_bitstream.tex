@@ -1,0 +1,205 @@
+\hypertarget{class_t_com_output_bitstream}{}\section{T\+Com\+Output\+Bitstream Class Reference}
+\label{class_t_com_output_bitstream}\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+
+
+{\ttfamily \#include $<$T\+Com\+Bit\+Stream.\+h$>$}
+
+
+
+Inheritance diagram for T\+Com\+Output\+Bitstream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{d8/da3/class_t_com_output_bitstream__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+Com\+Output\+Bitstream\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{d7/d16/class_t_com_output_bitstream__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Void \hyperlink{class_t_com_output_bitstream_ae7470ca7d0deab9c5f7c327e17f0bce0}{reset\+Bits} ()
+\item 
+Int \hyperlink{class_t_com_output_bitstream_a1c5b3ca146b4c2828f2fde6a89bd8bf1}{get\+Num\+Bits\+Until\+Byte\+Aligned} () const
+\item 
+U\+Int \hyperlink{class_t_com_output_bitstream_a6adef3de1456ef6b024fcd432aa781fc}{get\+Number\+Of\+Written\+Bits} () const
+\item 
+std\+::vector$<$ uint8\+\_\+t $>$ \& \hyperlink{class_t_com_output_bitstream_aba619d657e7772f3736a15d4d03706d6}{get\+F\+I\+FO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_output_bitstream_a66bda207843363df540fbcd2167f567e}\label{class_t_com_output_bitstream_a66bda207843363df540fbcd2167f567e}} 
+U\+Char {\bfseries get\+Held\+Bits} ()
+\item 
+const std\+::vector$<$ uint8\+\_\+t $>$ \& \hyperlink{class_t_com_output_bitstream_a9b50f1e205ae3927803142d5cf74932c}{get\+F\+I\+FO} () const
+\end{DoxyCompactItemize}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_com_output_bitstream_a9b96f12947371caf73bbc102c09fa3bc}{T\+Com\+Output\+Bitstream} ()
+\begin{DoxyCompactList}\small\item\em this value is always msb-\/aligned, bigendian. \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_com_output_bitstream_a804f4dcb6c5182a8d360d68ac849a85a}{write} (U\+Int ui\+Bits, U\+Int ui\+Number\+Of\+Bits)
+\item 
+Void \hyperlink{class_t_com_output_bitstream_a5e2f3821fe5bb5adcf2df7895ee40ef5}{write\+Align\+One} ()
+\item 
+Void \hyperlink{class_t_com_output_bitstream_a44084ff25ad330d205b4ffff714b3df0}{write\+Align\+Zero} ()
+\item 
+U\+Char $\ast$ \hyperlink{class_t_com_output_bitstream_a5cad8768ff2ebd63d447500bd1d67848}{get\+Byte\+Stream} () const
+\item 
+U\+Int \hyperlink{class_t_com_output_bitstream_af38a55f59d7cf832844961a9a2d3ff5a}{get\+Byte\+Stream\+Length} ()
+\item 
+Void \hyperlink{class_t_com_output_bitstream_a7eef394424aa099a7e93a184163620de}{clear} ()
+\item 
+Void \hyperlink{class_t_com_output_bitstream_a2a2fc7f96529112e47950a7404a4713e}{insert\+At} (const \hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} \&src, U\+Int pos)
+\item 
+Void \hyperlink{class_t_com_output_bitstream_ad6e51419b95e94857b333cf1f5c997c9}{add\+Substream} (\hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} $\ast$pc\+Substream)
+\item 
+\mbox{\Hypertarget{class_t_com_output_bitstream_aeb49745ebaceac82f0b4d14ca9ce00f8}\label{class_t_com_output_bitstream_aeb49745ebaceac82f0b4d14ca9ce00f8}} 
+Void {\bfseries write\+Byte\+Alignment} ()
+\item 
+\mbox{\Hypertarget{class_t_com_output_bitstream_a20f9963cf95535ea50b992dcd56be077}\label{class_t_com_output_bitstream_a20f9963cf95535ea50b992dcd56be077}} 
+Int \hyperlink{class_t_com_output_bitstream_a20f9963cf95535ea50b992dcd56be077}{count\+Start\+Code\+Emulations} ()
+\begin{DoxyCompactList}\small\item\em returns the number of start code emulations contained in the current buffer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Model of a writable bitstream that accumulates bits to produce a bytestream. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_com_output_bitstream_a9b96f12947371caf73bbc102c09fa3bc}\label{class_t_com_output_bitstream_a9b96f12947371caf73bbc102c09fa3bc}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{T\+Com\+Output\+Bitstream()}{TComOutputBitstream()}}
+{\footnotesize\ttfamily T\+Com\+Output\+Bitstream\+::\+T\+Com\+Output\+Bitstream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this value is always msb-\/aligned, bigendian. 
+
+the bits held and not flushed to bytestream. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_output_bitstream_ad6e51419b95e94857b333cf1f5c997c9}\label{class_t_com_output_bitstream_ad6e51419b95e94857b333cf1f5c997c9}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!add\+Substream@{add\+Substream}}
+\index{add\+Substream@{add\+Substream}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{add\+Substream()}{addSubstream()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::add\+Substream (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} $\ast$}]{pc\+Substream }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item add substream to the end of the current bitstream
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em pc\+Substream} & substream to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_output_bitstream_a7eef394424aa099a7e93a184163620de}\label{class_t_com_output_bitstream_a7eef394424aa099a7e93a184163620de}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!clear@{clear}}
+\index{clear@{clear}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Reset all internal state. \mbox{\Hypertarget{class_t_com_output_bitstream_a5cad8768ff2ebd63d447500bd1d67848}\label{class_t_com_output_bitstream_a5cad8768ff2ebd63d447500bd1d67848}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+Byte\+Stream@{get\+Byte\+Stream}}
+\index{get\+Byte\+Stream@{get\+Byte\+Stream}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+Byte\+Stream()}{getByteStream()}}
+{\footnotesize\ttfamily U\+Char $\ast$ T\+Com\+Output\+Bitstream\+::get\+Byte\+Stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Return a pointer to the start of the byte-\/stream buffer. Pointer is valid until the next write/flush/reset call. NB, data is arranged such that subsequent bytes in the bytestream are stored in ascending addresses. \mbox{\Hypertarget{class_t_com_output_bitstream_af38a55f59d7cf832844961a9a2d3ff5a}\label{class_t_com_output_bitstream_af38a55f59d7cf832844961a9a2d3ff5a}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+Byte\+Stream\+Length@{get\+Byte\+Stream\+Length}}
+\index{get\+Byte\+Stream\+Length@{get\+Byte\+Stream\+Length}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+Byte\+Stream\+Length()}{getByteStreamLength()}}
+{\footnotesize\ttfamily U\+Int T\+Com\+Output\+Bitstream\+::get\+Byte\+Stream\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Return the number of valid bytes available from \hyperlink{class_t_com_output_bitstream_a5cad8768ff2ebd63d447500bd1d67848}{get\+Byte\+Stream()} \mbox{\Hypertarget{class_t_com_output_bitstream_aba619d657e7772f3736a15d4d03706d6}\label{class_t_com_output_bitstream_aba619d657e7772f3736a15d4d03706d6}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+F\+I\+FO@{get\+F\+I\+FO}}
+\index{get\+F\+I\+FO@{get\+F\+I\+FO}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+F\+I\+F\+O()}{getFIFO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$uint8\+\_\+t$>$\& T\+Com\+Output\+Bitstream\+::get\+F\+I\+FO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a reference to the internal fifo \mbox{\Hypertarget{class_t_com_output_bitstream_a9b50f1e205ae3927803142d5cf74932c}\label{class_t_com_output_bitstream_a9b50f1e205ae3927803142d5cf74932c}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+F\+I\+FO@{get\+F\+I\+FO}}
+\index{get\+F\+I\+FO@{get\+F\+I\+FO}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+F\+I\+F\+O()}{getFIFO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const std\+::vector$<$uint8\+\_\+t$>$\& T\+Com\+Output\+Bitstream\+::get\+F\+I\+FO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a reference to the internal fifo \mbox{\Hypertarget{class_t_com_output_bitstream_a6adef3de1456ef6b024fcd432aa781fc}\label{class_t_com_output_bitstream_a6adef3de1456ef6b024fcd432aa781fc}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+Number\+Of\+Written\+Bits@{get\+Number\+Of\+Written\+Bits}}
+\index{get\+Number\+Of\+Written\+Bits@{get\+Number\+Of\+Written\+Bits}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+Number\+Of\+Written\+Bits()}{getNumberOfWrittenBits()}}
+{\footnotesize\ttfamily U\+Int T\+Com\+Output\+Bitstream\+::get\+Number\+Of\+Written\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Return the number of bits that have been written since the last \hyperlink{class_t_com_output_bitstream_a7eef394424aa099a7e93a184163620de}{clear()} 
+
+Implements \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+\mbox{\Hypertarget{class_t_com_output_bitstream_a1c5b3ca146b4c2828f2fde6a89bd8bf1}\label{class_t_com_output_bitstream_a1c5b3ca146b4c2828f2fde6a89bd8bf1}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!get\+Num\+Bits\+Until\+Byte\+Aligned@{get\+Num\+Bits\+Until\+Byte\+Aligned}}
+\index{get\+Num\+Bits\+Until\+Byte\+Aligned@{get\+Num\+Bits\+Until\+Byte\+Aligned}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{get\+Num\+Bits\+Until\+Byte\+Aligned()}{getNumBitsUntilByteAligned()}}
+{\footnotesize\ttfamily Int T\+Com\+Output\+Bitstream\+::get\+Num\+Bits\+Until\+Byte\+Aligned (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+returns the number of bits that need to be written to achieve byte alignment. 
+
+Implements \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+\mbox{\Hypertarget{class_t_com_output_bitstream_a2a2fc7f96529112e47950a7404a4713e}\label{class_t_com_output_bitstream_a2a2fc7f96529112e47950a7404a4713e}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!insert\+At@{insert\+At}}
+\index{insert\+At@{insert\+At}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{insert\+At()}{insertAt()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::insert\+At (\begin{DoxyParamCaption}\item[{const \hyperlink{class_t_com_output_bitstream}{T\+Com\+Output\+Bitstream} \&}]{src,  }\item[{U\+Int}]{pos }\end{DoxyParamCaption})}
+
+insert the contents of the bytealigned (and flushed) bitstream src into this at byte position pos. \mbox{\Hypertarget{class_t_com_output_bitstream_ae7470ca7d0deab9c5f7c327e17f0bce0}\label{class_t_com_output_bitstream_ae7470ca7d0deab9c5f7c327e17f0bce0}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!reset\+Bits@{reset\+Bits}}
+\index{reset\+Bits@{reset\+Bits}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{reset\+Bits()}{resetBits()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::reset\+Bits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+this function should never be called 
+
+Implements \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+\mbox{\Hypertarget{class_t_com_output_bitstream_a804f4dcb6c5182a8d360d68ac849a85a}\label{class_t_com_output_bitstream_a804f4dcb6c5182a8d360d68ac849a85a}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!write@{write}}
+\index{write@{write}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::write (\begin{DoxyParamCaption}\item[{U\+Int}]{ui\+Bits,  }\item[{U\+Int}]{ui\+Number\+Of\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+append ui\+Number\+Of\+Bits least significant bits of ui\+Bits to the current bitstream 
+
+Implements \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+\mbox{\Hypertarget{class_t_com_output_bitstream_a5e2f3821fe5bb5adcf2df7895ee40ef5}\label{class_t_com_output_bitstream_a5e2f3821fe5bb5adcf2df7895ee40ef5}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!write\+Align\+One@{write\+Align\+One}}
+\index{write\+Align\+One@{write\+Align\+One}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{write\+Align\+One()}{writeAlignOne()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::write\+Align\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+insert one bits until the bitstream is byte-\/aligned 
+
+Reimplemented from \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+\mbox{\Hypertarget{class_t_com_output_bitstream_a44084ff25ad330d205b4ffff714b3df0}\label{class_t_com_output_bitstream_a44084ff25ad330d205b4ffff714b3df0}} 
+\index{T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}!write\+Align\+Zero@{write\+Align\+Zero}}
+\index{write\+Align\+Zero@{write\+Align\+Zero}!T\+Com\+Output\+Bitstream@{T\+Com\+Output\+Bitstream}}
+\subsubsection{\texorpdfstring{write\+Align\+Zero()}{writeAlignZero()}}
+{\footnotesize\ttfamily Void T\+Com\+Output\+Bitstream\+::write\+Align\+Zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+insert zero bits until the bitstream is byte-\/aligned 
+
+Reimplemented from \hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_bit_stream_8h}{T\+Com\+Bit\+Stream.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_bit_stream_8cpp}{T\+Com\+Bit\+Stream.\+cpp}\end{DoxyCompactItemize}

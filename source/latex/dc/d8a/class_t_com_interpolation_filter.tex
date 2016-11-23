@@ -1,0 +1,101 @@
+\hypertarget{class_t_com_interpolation_filter}{}\section{T\+Com\+Interpolation\+Filter Class Reference}
+\label{class_t_com_interpolation_filter}\index{T\+Com\+Interpolation\+Filter@{T\+Com\+Interpolation\+Filter}}
+
+
+Interpolation filter class.  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Interpolation\+Filter.\+h$>$}
+
+\begin{DoxyCompactItemize}
+\item 
+Void \hyperlink{class_t_com_interpolation_filter_a37c22c38efbf42d24b058b3538e13c0e}{filter\+Hor} (const Component\+ID comp\+ID, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$src, Int src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$dst, Int dst\+Stride, Int width, Int height, Int frac, Bool is\+Last, const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} fmt, const Int bit\+Depth, Bool filter\+Type=false)
+\begin{DoxyCompactList}\small\item\em Filter a block of Luma/\+Chroma samples (horizontal) \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_com_interpolation_filter_ad0dae7f8afc95ecc913cbd0fa091750b}{filter\+Ver} (const Component\+ID comp\+ID, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$src, Int src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$dst, Int dst\+Stride, Int width, Int height, Int frac, Bool is\+First, Bool is\+Last, const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} fmt, const Int bit\+Depth, Bool filter\+Type=false)
+\begin{DoxyCompactList}\small\item\em Filter a block of Luma/\+Chroma samples (vertical) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interpolation filter class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_interpolation_filter_a37c22c38efbf42d24b058b3538e13c0e}\label{class_t_com_interpolation_filter_a37c22c38efbf42d24b058b3538e13c0e}} 
+\index{T\+Com\+Interpolation\+Filter@{T\+Com\+Interpolation\+Filter}!filter\+Hor@{filter\+Hor}}
+\index{filter\+Hor@{filter\+Hor}!T\+Com\+Interpolation\+Filter@{T\+Com\+Interpolation\+Filter}}
+\subsubsection{\texorpdfstring{filter\+Hor()}{filterHor()}}
+{\footnotesize\ttfamily Void T\+Com\+Interpolation\+Filter\+::filter\+Hor (\begin{DoxyParamCaption}\item[{const Component\+ID}]{comp\+ID,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{src,  }\item[{Int}]{src\+Stride,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{dst,  }\item[{Int}]{dst\+Stride,  }\item[{Int}]{width,  }\item[{Int}]{height,  }\item[{Int}]{frac,  }\item[{Bool}]{is\+Last,  }\item[{const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{fmt,  }\item[{const Int}]{bit\+Depth,  }\item[{Bool}]{filter\+Type = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Filter a block of Luma/\+Chroma samples (horizontal) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp\+ID} & Chroma component ID \\
+\hline
+{\em src} & Pointer to source samples \\
+\hline
+{\em src\+Stride} & Stride of source samples \\
+\hline
+{\em dst} & Pointer to destination samples \\
+\hline
+{\em dst\+Stride} & Stride of destination samples \\
+\hline
+{\em width} & Width of block \\
+\hline
+{\em height} & Height of block \\
+\hline
+{\em frac} & Fractional sample offset \\
+\hline
+{\em is\+Last} & Flag indicating whether it is the last filtering operation \\
+\hline
+{\em fmt} & Chroma format \\
+\hline
+{\em bit\+Depth} & Bit depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_interpolation_filter_ad0dae7f8afc95ecc913cbd0fa091750b}\label{class_t_com_interpolation_filter_ad0dae7f8afc95ecc913cbd0fa091750b}} 
+\index{T\+Com\+Interpolation\+Filter@{T\+Com\+Interpolation\+Filter}!filter\+Ver@{filter\+Ver}}
+\index{filter\+Ver@{filter\+Ver}!T\+Com\+Interpolation\+Filter@{T\+Com\+Interpolation\+Filter}}
+\subsubsection{\texorpdfstring{filter\+Ver()}{filterVer()}}
+{\footnotesize\ttfamily Void T\+Com\+Interpolation\+Filter\+::filter\+Ver (\begin{DoxyParamCaption}\item[{const Component\+ID}]{comp\+ID,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{src,  }\item[{Int}]{src\+Stride,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{dst,  }\item[{Int}]{dst\+Stride,  }\item[{Int}]{width,  }\item[{Int}]{height,  }\item[{Int}]{frac,  }\item[{Bool}]{is\+First,  }\item[{Bool}]{is\+Last,  }\item[{const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{fmt,  }\item[{const Int}]{bit\+Depth,  }\item[{Bool}]{filter\+Type = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Filter a block of Luma/\+Chroma samples (vertical) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp\+ID} & Colour component ID \\
+\hline
+{\em src} & Pointer to source samples \\
+\hline
+{\em src\+Stride} & Stride of source samples \\
+\hline
+{\em dst} & Pointer to destination samples \\
+\hline
+{\em dst\+Stride} & Stride of destination samples \\
+\hline
+{\em width} & Width of block \\
+\hline
+{\em height} & Height of block \\
+\hline
+{\em frac} & Fractional sample offset \\
+\hline
+{\em is\+First} & Flag indicating whether it is the first filtering operation \\
+\hline
+{\em is\+Last} & Flag indicating whether it is the last filtering operation \\
+\hline
+{\em fmt} & Chroma format \\
+\hline
+{\em bit\+Depth} & Bit depth \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_interpolation_filter_8h}{T\+Com\+Interpolation\+Filter.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_interpolation_filter_8cpp}{T\+Com\+Interpolation\+Filter.\+cpp}\end{DoxyCompactItemize}

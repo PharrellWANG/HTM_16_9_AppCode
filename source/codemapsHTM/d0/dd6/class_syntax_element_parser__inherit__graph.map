@@ -1,0 +1,6 @@
+<map id="SyntaxElementParser" name="SyntaxElementParser">
+<area shape="rect" id="node2" href="$d1/dfa/class_a_u_d_reader.html" title="AUDReader" alt="" coords="5,79,99,104"/>
+<area shape="rect" id="node3" href="$d5/db9/class_f_d_reader.html" title="FDReader" alt="" coords="123,79,205,104"/>
+<area shape="rect" id="node4" href="$d7/d17/class_s_e_i_reader.html" title="SEIReader" alt="" coords="230,79,317,104"/>
+<area shape="rect" id="node5" href="$d7/de1/class_t_dec_cavlc.html" title="CAVLC decoder class. " alt="" coords="341,79,427,104"/>
+</map>

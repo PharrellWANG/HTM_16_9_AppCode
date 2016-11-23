@@ -1,0 +1,68 @@
+\hypertarget{class_runtime_error}{}\section{Runtime\+Error Class Reference}
+\label{class_runtime_error}\index{Runtime\+Error@{Runtime\+Error}}
+
+
+This class serves the same purpose as std\+::runtime\+\_\+error, but it can be more convenient to use.  
+
+
+
+
+{\ttfamily \#include $<$Runtime\+Error.\+h$>$}
+
+
+
+Inheritance diagram for Runtime\+Error\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d57/class_runtime_error__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Runtime\+Error\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{d3/d6d/class_runtime_error__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_runtime_error_a7f870aa3e981b604d68555bbfbb7b13e}\label{class_runtime_error_a7f870aa3e981b604d68555bbfbb7b13e}} 
+const char $\ast$ \hyperlink{class_runtime_error_a7f870aa3e981b604d68555bbfbb7b13e}{what} () const  throw ( )
+\begin{DoxyCompactList}\small\item\em Implementation of the std\+::exception\+::what method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_runtime_error_a5020b04a2a7fac8b1dbfbfe4a30055b0}{output\+What} (std\+::ostream \&o) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class serves the same purpose as std\+::runtime\+\_\+error, but it can be more convenient to use. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_runtime_error_a5020b04a2a7fac8b1dbfbfe4a30055b0}\label{class_runtime_error_a5020b04a2a7fac8b1dbfbfe4a30055b0}} 
+\index{Runtime\+Error@{Runtime\+Error}!output\+What@{output\+What}}
+\index{output\+What@{output\+What}!Runtime\+Error@{Runtime\+Error}}
+\subsubsection{\texorpdfstring{output\+What()}{outputWhat()}}
+{\footnotesize\ttfamily virtual void Runtime\+Error\+::output\+What (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+The implementing class implements this method to customize the what output 
+\begin{DoxyParams}{Parameters}
+{\em o} & The what stream is outputted to this parameter \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_mismatched_indexes_exception_a139455007e7a5bb092650d4f2929068a}{Mismatched\+Indexes\+Exception}, \hyperlink{class_meta_log_parse_exception_a18d40347b5a6eeef08b2c0d51a248898}{Meta\+Log\+Parse\+Exception}, \hyperlink{class_non_contiguous_q_p_set_exception_a0b3c362380db281c07b3c8a016a73c32}{Non\+Contiguous\+Q\+P\+Set\+Exception}, \hyperlink{class_targets_parse_exception_a8a1d505082502689960f60572ca4238a}{Targets\+Parse\+Exception}, \hyperlink{class_initial_adjustment_parameter_parse_exception_a4ca2931ba18ec5cecb76b7891aa9d2eb}{Initial\+Adjustment\+Parameter\+Parse\+Exception}, \hyperlink{class_p_o_c_parse_exception_a10ddedc5f13b259d4eeda78273e2ad4a}{P\+O\+C\+Parse\+Exception}, and \hyperlink{class_wrong_number_of_arguments_exception_aea3df412ea5cb97aa284b258021532c2}{Wrong\+Number\+Of\+Arguments\+Exception}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+App/utils/\+Bitrate\+Targeting/Runtime\+Error.\+h\end{DoxyCompactItemize}

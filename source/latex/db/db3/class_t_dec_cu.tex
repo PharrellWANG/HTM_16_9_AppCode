@@ -1,0 +1,216 @@
+\hypertarget{class_t_dec_cu}{}\section{T\+Dec\+Cu Class Reference}
+\label{class_t_dec_cu}\index{T\+Dec\+Cu@{T\+Dec\+Cu}}
+
+
+CU decoder class.  
+
+
+
+
+{\ttfamily \#include $<$T\+Dec\+Cu.\+h$>$}
+
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a147e0d4fd0df9b9032c4b5748280a1a8}\label{class_t_dec_cu_a147e0d4fd0df9b9032c4b5748280a1a8}} 
+Bool {\bfseries getd\+Q\+P\+Flag} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a027b9acbba4ae1231de2539b24b438d5}\label{class_t_dec_cu_a027b9acbba4ae1231de2539b24b438d5}} 
+Void {\bfseries setd\+Q\+P\+Flag} (Bool b)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a1e6769959e1bbb2aa42e5e1ddbb2c637}\label{class_t_dec_cu_a1e6769959e1bbb2aa42e5e1ddbb2c637}} 
+Bool {\bfseries get\+Is\+Chroma\+Qp\+Adj\+Coded} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a9dd0083f7468cc8047430fe74e30af56}\label{class_t_dec_cu_a9dd0083f7468cc8047430fe74e30af56}} 
+Void {\bfseries set\+Is\+Chroma\+Qp\+Adj\+Coded} (Bool b)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a281f6dbb880300578ae9893ecfda6414}\label{class_t_dec_cu_a281f6dbb880300578ae9893ecfda6414}} 
+Void \hyperlink{class_t_dec_cu_a281f6dbb880300578ae9893ecfda6414}{init} (\hyperlink{class_t_dec_entropy}{T\+Dec\+Entropy} $\ast$pc\+Entropy\+Decoder, \hyperlink{class_t_com_tr_quant}{T\+Com\+Tr\+Quant} $\ast$pc\+Tr\+Quant, \hyperlink{class_t_com_prediction}{T\+Com\+Prediction} $\ast$pc\+Prediction)
+\begin{DoxyCompactList}\small\item\em initialize access channels \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_dec_cu_a1223633054f980c5ad9db3f080bbc5e7}{create} (U\+Int ui\+Max\+Depth, U\+Int ui\+Max\+Width, U\+Int ui\+Max\+Height, \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} chroma\+Format\+I\+DC)
+\begin{DoxyCompactList}\small\item\em create internal buffers \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_dec_cu_a074df825dece343ec4655ce4961e012b}\label{class_t_dec_cu_a074df825dece343ec4655ce4961e012b}} 
+Void \hyperlink{class_t_dec_cu_a074df825dece343ec4655ce4961e012b}{destroy} ()
+\begin{DoxyCompactList}\small\item\em destroy internal buffers \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_dec_cu_ae96ea338b90781036b4b36f0d50a7881}{decode\+Ctu} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$p\+Ctu, Bool \&is\+Last\+Ctu\+Of\+Slice\+Segment)
+\begin{DoxyCompactList}\small\item\em decode Ctu information \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_dec_cu_a752e843a7f239ae07309bb9e057b3705}{decompress\+Ctu} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$p\+Ctu)
+\begin{DoxyCompactList}\small\item\em reconstruct Ctu information \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_dec_cu_a1b6468a75f24c8ffd5d8028f757afe7d}\label{class_t_dec_cu_a1b6468a75f24c8ffd5d8028f757afe7d}} 
+Void \hyperlink{class_t_dec_cu_a1b6468a75f24c8ffd5d8028f757afe7d}{x\+Decode\+CU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const U\+Int ui\+Abs\+Part\+Idx, const U\+Int ui\+Depth, Bool \&is\+Last\+Ctu\+Of\+Slice\+Segment)
+\begin{DoxyCompactList}\small\item\em decode CU block recursively \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_dec_cu_a2cc52920765d1bdc8f323840abcb76fc}\label{class_t_dec_cu_a2cc52920765d1bdc8f323840abcb76fc}} 
+Void {\bfseries x\+Finish\+Decode\+CU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Depth, Bool \&is\+Last\+Ctu\+Of\+Slice\+Segment)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_af8513ba9af911a74da89a485adb4c284}\label{class_t_dec_cu_af8513ba9af911a74da89a485adb4c284}} 
+Bool \hyperlink{class_t_dec_cu_af8513ba9af911a74da89a485adb4c284}{x\+Decode\+Slice\+End} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)
+\begin{DoxyCompactList}\small\item\em decode end-\/of-\/slice flag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_dec_cu_a574e45d196437ca2842b73ce5e40d24b}\label{class_t_dec_cu_a574e45d196437ca2842b73ce5e40d24b}} 
+Void {\bfseries x\+Decompress\+CU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$p\+Ctu, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_ab0813e0c7bc2d5101a348453e189bfed}\label{class_t_dec_cu_ab0813e0c7bc2d5101a348453e189bfed}} 
+Void {\bfseries x\+Recon\+Inter} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a8e79db710c7df73cd133f9168b8e5399}\label{class_t_dec_cu_a8e79db710c7df73cd133f9168b8e5399}} 
+Void {\bfseries x\+Recon\+Intra\+QT} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a7b175aafdf27827c3ef836b530c5e17d}\label{class_t_dec_cu_a7b175aafdf27827c3ef836b530c5e17d}} 
+Void {\bfseries x\+Intra\+Rec\+Blk} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, const Component\+ID component, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+Void \hyperlink{class_t_dec_cu_a4321e8f7ea152651bf335019f4b3b4a6}{x\+Intra\+Rec\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, const Channel\+Type ch\+Type, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+Void \hyperlink{class_t_dec_cu_aeed7b263063000066618da30fc8dd1f4}{x\+Recon\+P\+CM} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a44a9cf98e14e82f30c720a2b92a05aec}\label{class_t_dec_cu_a44a9cf98e14e82f30c720a2b92a05aec}} 
+Void {\bfseries x\+Decode\+Inter\+Texture} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Depth)
+\item 
+Void \hyperlink{class_t_dec_cu_a96fde1daad45b7fd22f37e6fe04709a8}{x\+Decode\+P\+C\+M\+Texture} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, const U\+Int ui\+Part\+Idx, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+P\+CM, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Reco, const U\+Int ui\+Stride, const U\+Int ui\+Width, const U\+Int ui\+Height, const Component\+ID comp\+ID)
+\item 
+\mbox{\Hypertarget{class_t_dec_cu_a355a7a2f336d39e0f0e195afd1fac08b}\label{class_t_dec_cu_a355a7a2f336d39e0f0e195afd1fac08b}} 
+Void {\bfseries x\+Copy\+To\+Pic} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic, U\+Int ui\+Zorder\+Idx, U\+Int ui\+Depth)
+\item 
+Void \hyperlink{class_t_dec_cu_a9f3b17ff136b9c917ccb8445255fb551}{x\+Fill\+P\+C\+M\+Buffer} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$p\+CU, U\+Int depth)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+CU decoder class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_dec_cu_a1223633054f980c5ad9db3f080bbc5e7}\label{class_t_dec_cu_a1223633054f980c5ad9db3f080bbc5e7}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!create@{create}}
+\index{create@{create}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::create (\begin{DoxyParamCaption}\item[{U\+Int}]{ui\+Max\+Depth,  }\item[{U\+Int}]{ui\+Max\+Width,  }\item[{U\+Int}]{ui\+Max\+Height,  }\item[{\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format}}]{chroma\+Format\+I\+DC }\end{DoxyParamCaption})}
+
+
+
+create internal buffers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Max\+Depth} & total number of allowable depth \\
+\hline
+{\em ui\+Max\+Width} & largest CU width \\
+\hline
+{\em ui\+Max\+Height} & largest CU height \\
+\hline
+{\em chroma\+Format\+I\+DC} & chroma format \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_dec_cu_ae96ea338b90781036b4b36f0d50a7881}\label{class_t_dec_cu_ae96ea338b90781036b4b36f0d50a7881}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!decode\+Ctu@{decode\+Ctu}}
+\index{decode\+Ctu@{decode\+Ctu}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{decode\+Ctu()}{decodeCtu()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::decode\+Ctu (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{p\+Ctu,  }\item[{Bool \&}]{is\+Last\+Ctu\+Of\+Slice\+Segment }\end{DoxyParamCaption})}
+
+
+
+decode Ctu information 
+
+Parse a C\+TU. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ctu} & \mbox{[}in/out\mbox{]} pointer to C\+TU data structure \\
+\hline
+{\em is\+Last\+Ctu\+Of\+Slice\+Segment} & \mbox{[}out\mbox{]} true, if last C\+TU of the slice segment \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_dec_cu_a752e843a7f239ae07309bb9e057b3705}\label{class_t_dec_cu_a752e843a7f239ae07309bb9e057b3705}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!decompress\+Ctu@{decompress\+Ctu}}
+\index{decompress\+Ctu@{decompress\+Ctu}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{decompress\+Ctu()}{decompressCtu()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::decompress\+Ctu (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{p\+Ctu }\end{DoxyParamCaption})}
+
+
+
+reconstruct Ctu information 
+
+Decoding process for a C\+TU. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ctu} & \mbox{[}in/out\mbox{]} pointer to C\+TU data structure \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_dec_cu_a96fde1daad45b7fd22f37e6fe04709a8}\label{class_t_dec_cu_a96fde1daad45b7fd22f37e6fe04709a8}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!x\+Decode\+P\+C\+M\+Texture@{x\+Decode\+P\+C\+M\+Texture}}
+\index{x\+Decode\+P\+C\+M\+Texture@{x\+Decode\+P\+C\+M\+Texture}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{x\+Decode\+P\+C\+M\+Texture()}{xDecodePCMTexture()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::x\+Decode\+P\+C\+M\+Texture (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{const U\+Int}]{ui\+Part\+Idx,  }\item[{const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{pi\+P\+CM,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{pi\+Reco,  }\item[{const U\+Int}]{ui\+Stride,  }\item[{const U\+Int}]{ui\+Width,  }\item[{const U\+Int}]{ui\+Height,  }\item[{const Component\+ID}]{comp\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for deriving reconstructed luma/chroma samples of a P\+CM mode CU. 
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & pointer to current CU \\
+\hline
+{\em ui\+Part\+Idx} & part index \\
+\hline
+{\em pi\+P\+CM} & pointer to P\+CM code arrays \\
+\hline
+{\em pi\+Reco} & pointer to reconstructed sample arrays \\
+\hline
+{\em ui\+Stride} & stride of reconstructed sample arrays \\
+\hline
+{\em ui\+Width} & CU width \\
+\hline
+{\em ui\+Height} & CU height \\
+\hline
+{\em comp\+ID} & colour component ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_dec_cu_a9f3b17ff136b9c917ccb8445255fb551}\label{class_t_dec_cu_a9f3b17ff136b9c917ccb8445255fb551}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!x\+Fill\+P\+C\+M\+Buffer@{x\+Fill\+P\+C\+M\+Buffer}}
+\index{x\+Fill\+P\+C\+M\+Buffer@{x\+Fill\+P\+C\+M\+Buffer}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{x\+Fill\+P\+C\+M\+Buffer()}{xFillPCMBuffer()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::x\+Fill\+P\+C\+M\+Buffer (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{p\+CU,  }\item[{U\+Int}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for filling the P\+CM buffer of a CU using its reconstructed sample array 
+\begin{DoxyParams}{Parameters}
+{\em p\+CU} & pointer to current CU \\
+\hline
+{\em depth} & CU Depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_dec_cu_a4321e8f7ea152651bf335019f4b3b4a6}\label{class_t_dec_cu_a4321e8f7ea152651bf335019f4b3b4a6}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!x\+Intra\+Rec\+QT@{x\+Intra\+Rec\+QT}}
+\index{x\+Intra\+Rec\+QT@{x\+Intra\+Rec\+QT}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{x\+Intra\+Rec\+Q\+T()}{xIntraRecQT()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::x\+Intra\+Rec\+QT (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Reco\+Yuv,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Pred\+Yuv,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Resi\+Yuv,  }\item[{const Channel\+Type}]{ch\+Type,  }\item[{\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&}]{r\+Tu }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for deriving reconstructed P\+U/\+CU chroma samples with Q\+Tree structure 
+\begin{DoxyParams}{Parameters}
+{\em pc\+Reco\+Yuv} & pointer to reconstructed sample arrays \\
+\hline
+{\em pc\+Pred\+Yuv} & pointer to prediction sample arrays \\
+\hline
+{\em pc\+Resi\+Yuv} & pointer to residue sample arrays \\
+\hline
+{\em ch\+Type} & texture channel type (luma/chroma) \\
+\hline
+{\em r\+Tu} & reference to transform data\\
+\hline
+\end{DoxyParams}
+\textbackslash{} This function derives reconstructed P\+U/\+CU chroma samples with Q\+Tree recursive structure \mbox{\Hypertarget{class_t_dec_cu_aeed7b263063000066618da30fc8dd1f4}\label{class_t_dec_cu_aeed7b263063000066618da30fc8dd1f4}} 
+\index{T\+Dec\+Cu@{T\+Dec\+Cu}!x\+Recon\+P\+CM@{x\+Recon\+P\+CM}}
+\index{x\+Recon\+P\+CM@{x\+Recon\+P\+CM}!T\+Dec\+Cu@{T\+Dec\+Cu}}
+\subsubsection{\texorpdfstring{x\+Recon\+P\+C\+M()}{xReconPCM()}}
+{\footnotesize\ttfamily Void T\+Dec\+Cu\+::x\+Recon\+P\+CM (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int}]{ui\+Depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for reconstructing a P\+CM mode CU. 
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & pointer to current CU \\
+\hline
+{\em ui\+Depth} & CU Depth \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Decoder/\hyperlink{_t_dec_cu_8h}{T\+Dec\+Cu.\+h}\item 
+Lib/\+T\+Lib\+Decoder/\hyperlink{_t_dec_cu_8cpp}{T\+Dec\+Cu.\+cpp}\end{DoxyCompactItemize}

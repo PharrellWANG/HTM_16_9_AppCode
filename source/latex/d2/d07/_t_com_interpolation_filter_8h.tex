@@ -1,0 +1,60 @@
+\hypertarget{_t_com_interpolation_filter_8h}{}\section{Lib/\+T\+Lib\+Common/\+T\+Com\+Interpolation\+Filter.h File Reference}
+\label{_t_com_interpolation_filter_8h}\index{Lib/\+T\+Lib\+Common/\+T\+Com\+Interpolation\+Filter.\+h@{Lib/\+T\+Lib\+Common/\+T\+Com\+Interpolation\+Filter.\+h}}
+
+
+Declaration of \hyperlink{class_t_com_interpolation_filter}{T\+Com\+Interpolation\+Filter} class.  
+
+
+{\ttfamily \#include \char`\"{}Common\+Def.\+h\char`\"{}}\newline
+Include dependency graph for T\+Com\+Interpolation\+Filter.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d0/d6b/_t_com_interpolation_filter_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d49/_t_com_interpolation_filter_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_t_com_interpolation_filter}{T\+Com\+Interpolation\+Filter}
+\begin{DoxyCompactList}\small\item\em Interpolation filter class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_a8bbaffab8d43300d51ea140bfccf40b7}\label{_t_com_interpolation_filter_8h_a8bbaffab8d43300d51ea140bfccf40b7}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_a8bbaffab8d43300d51ea140bfccf40b7}{N\+T\+A\+P\+S\+\_\+\+L\+U\+M\+A\+\_\+\+A\+RP}~2
+\begin{DoxyCompactList}\small\item\em Number of taps for luma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_ac53bba13010f82e8af9fc11ecccbe14e}\label{_t_com_interpolation_filter_8h_ac53bba13010f82e8af9fc11ecccbe14e}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_ac53bba13010f82e8af9fc11ecccbe14e}{N\+T\+A\+P\+S\+\_\+\+C\+H\+R\+O\+M\+A\+\_\+\+A\+RP}~2
+\begin{DoxyCompactList}\small\item\em Number of taps for chroma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_a81106c910e693dbac23b5143d389d587}\label{_t_com_interpolation_filter_8h_a81106c910e693dbac23b5143d389d587}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_a81106c910e693dbac23b5143d389d587}{N\+T\+A\+P\+S\+\_\+\+L\+U\+MA}~8
+\begin{DoxyCompactList}\small\item\em Number of taps for luma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_a9f9a2786e32f6f02c0150738dc5f3853}\label{_t_com_interpolation_filter_8h_a9f9a2786e32f6f02c0150738dc5f3853}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_a9f9a2786e32f6f02c0150738dc5f3853}{N\+T\+A\+P\+S\+\_\+\+C\+H\+R\+O\+MA}~4
+\begin{DoxyCompactList}\small\item\em Number of taps for chroma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_aef59c550b45cba746964f3be34f31caa}\label{_t_com_interpolation_filter_8h_aef59c550b45cba746964f3be34f31caa}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_aef59c550b45cba746964f3be34f31caa}{I\+F\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+R\+EC}~14
+\begin{DoxyCompactList}\small\item\em Number of bits for internal precision. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_ae567391434fac07da371c6cb860f2601}\label{_t_com_interpolation_filter_8h_ae567391434fac07da371c6cb860f2601}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_ae567391434fac07da371c6cb860f2601}{I\+F\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+EC}~6
+\begin{DoxyCompactList}\small\item\em Log2 of sum of filter taps. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_t_com_interpolation_filter_8h_a97675faf3a08fc4732c1a353989b7b06}\label{_t_com_interpolation_filter_8h_a97675faf3a08fc4732c1a353989b7b06}} 
+\#define \hyperlink{_t_com_interpolation_filter_8h_a97675faf3a08fc4732c1a353989b7b06}{I\+F\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+O\+F\+FS}~(1$<$$<$(\hyperlink{_t_com_interpolation_filter_8h_aef59c550b45cba746964f3be34f31caa}{I\+F\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+R\+EC}-\/1))
+\begin{DoxyCompactList}\small\item\em Offset used internally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+
+\subsection{Detailed Description}
+Declaration of \hyperlink{class_t_com_interpolation_filter}{T\+Com\+Interpolation\+Filter} class. 
+

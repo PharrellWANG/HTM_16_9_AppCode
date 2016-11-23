@@ -1,0 +1,392 @@
+\hypertarget{class_t_enc_search}{}\section{T\+Enc\+Search Class Reference}
+\label{class_t_enc_search}\index{T\+Enc\+Search@{T\+Enc\+Search}}
+
+
+encoder search class  
+
+
+
+
+{\ttfamily \#include $<$T\+Enc\+Search.\+h$>$}
+
+
+
+Inheritance diagram for T\+Enc\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{d8/d70/class_t_enc_search__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+Enc\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{dc/da7/class_t_enc_search__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_t_enc_search_1_1_int_t_z_search_struct}{Int\+T\+Z\+Search\+Struct}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a9a241d711b0c24254a6709859c147995}\label{class_t_enc_search_a9a241d711b0c24254a6709859c147995}} 
+Void \hyperlink{class_t_enc_search_a9a241d711b0c24254a6709859c147995}{set\+Adaptive\+Search\+Range} (Int i\+Dir, Int i\+Ref\+Idx, Int i\+Search\+Range)
+\begin{DoxyCompactList}\small\item\em set ME search range \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a25a8a7ec7897fd02355c12f9eda16322}\label{class_t_enc_search_a25a8a7ec7897fd02355c12f9eda16322}} 
+Void {\bfseries set\+Dist\+Param\+Comp} (Component\+ID comp\+Idx)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a1c08159ee170a7a44bdedfddc3d34240}\label{class_t_enc_search_a1c08159ee170a7a44bdedfddc3d34240}} 
+\hyperlink{class_t_enc_cfg}{T\+Enc\+Cfg} $\ast$ {\bfseries m\+\_\+pc\+Enc\+Cfg}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_adfb4b444e9f502934212bf11795d0db8}\label{class_t_enc_search_adfb4b444e9f502934212bf11795d0db8}} 
+\hyperlink{class_t_com_tr_quant}{T\+Com\+Tr\+Quant} $\ast$ {\bfseries m\+\_\+pc\+Tr\+Quant}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a044ef57c6a7d45cd5f79c08b96bdb60b}\label{class_t_enc_search_a044ef57c6a7d45cd5f79c08b96bdb60b}} 
+\hyperlink{class_t_com_rd_cost}{T\+Com\+Rd\+Cost} $\ast$ {\bfseries m\+\_\+pc\+Rd\+Cost}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_aac93e6ef3e8393eed6ff9eae21078baa}\label{class_t_enc_search_aac93e6ef3e8393eed6ff9eae21078baa}} 
+\hyperlink{class_t_enc_entropy}{T\+Enc\+Entropy} $\ast$ {\bfseries m\+\_\+pc\+Entropy\+Coder}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ad8a24a1e770b0dd6cbfaf3ee685e2345}\label{class_t_enc_search_ad8a24a1e770b0dd6cbfaf3ee685e2345}} 
+Int {\bfseries m\+\_\+i\+Search\+Range}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a8883d6354b08534a05af841abbc727a4}\label{class_t_enc_search_a8883d6354b08534a05af841abbc727a4}} 
+Int {\bfseries m\+\_\+bipred\+Search\+Range}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a62b25e9986cb57275cd0275e64cb416b}\label{class_t_enc_search_a62b25e9986cb57275cd0275e64cb416b}} 
+\hyperlink{_type_def_8h_a8aca966885e6dbeca4cabfc3530a9bde}{M\+E\+Search\+Method} {\bfseries m\+\_\+motion\+Estimation\+Search\+Method}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a5ad9c90682bb6dc6e3b8f7779abff3c8}\label{class_t_enc_search_a5ad9c90682bb6dc6e3b8f7779abff3c8}} 
+Int {\bfseries m\+\_\+aai\+Adapt\+SR} \mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+R\+E\+F\+\_\+\+L\+I\+S\+T\+\_\+\+A\+D\+A\+P\+T\+\_\+\+SR\mbox{]}\mbox{[}M\+A\+X\+\_\+\+I\+D\+X\+\_\+\+A\+D\+A\+P\+T\+\_\+\+SR\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ae59a52399c01013f7e539cbe50f78b03}\label{class_t_enc_search_ae59a52399c01013f7e539cbe50f78b03}} 
+\hyperlink{class_t_com_mv}{T\+Com\+Mv} {\bfseries m\+\_\+ac\+Mv\+Predictors} \mbox{[}N\+U\+M\+\_\+\+M\+V\+\_\+\+P\+R\+E\+D\+I\+C\+T\+O\+RS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a632e39089e14b43e4d22da8a48d1ecca}\label{class_t_enc_search_a632e39089e14b43e4d22da8a48d1ecca}} 
+\hyperlink{class_t_enc_sbac}{T\+Enc\+Sbac} $\ast$$\ast$$\ast$ {\bfseries m\+\_\+pppc\+R\+D\+Sbac\+Coder}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a2787f7e7308f345487d17d9b58c0e2b4}\label{class_t_enc_search_a2787f7e7308f345487d17d9b58c0e2b4}} 
+\hyperlink{class_t_enc_sbac}{T\+Enc\+Sbac} $\ast$ {\bfseries m\+\_\+pc\+R\+D\+Go\+On\+Sbac\+Coder}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a023e59ec1af97d556d41d21b48171066}\label{class_t_enc_search_a023e59ec1af97d556d41d21b48171066}} 
+\hyperlink{class_dist_param}{Dist\+Param} {\bfseries m\+\_\+c\+Dist\+Param}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ad63c9e77e9871427e295fbfa0a342346}\label{class_t_enc_search_ad63c9e77e9871427e295fbfa0a342346}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries m\+\_\+p\+Temp\+Pel}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a019d2afdd7e84fc9d9cc96f468892afd}\label{class_t_enc_search_a019d2afdd7e84fc9d9cc96f468892afd}} 
+U\+Int {\bfseries m\+\_\+aui\+M\+V\+P\+Idx\+Cost} \mbox{[}A\+M\+V\+P\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+A\+N\+DS+1\mbox{]}\mbox{[}A\+M\+V\+P\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+A\+N\+DS+1\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a212f1bf9701ab649f386041a0a242aba}\label{class_t_enc_search_a212f1bf9701ab649f386041a0a242aba}} 
+\hyperlink{class_t_com_mv}{T\+Com\+Mv} {\bfseries m\+\_\+integer\+Mv2\+Nx2N} \mbox{[}N\+U\+M\+\_\+\+R\+E\+F\+\_\+\+P\+I\+C\+\_\+\+L\+I\+S\+T\+\_\+01\mbox{]}\mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+R\+EF\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af4fe12bb35ff99d4b540da95b062109d}\label{class_t_enc_search_af4fe12bb35ff99d4b540da95b062109d}} 
+Bool {\bfseries m\+\_\+is\+Initialized}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a8c79480d15b9a46ab1e7bf03fdf23334}\label{class_t_enc_search_a8c79480d15b9a46ab1e7bf03fdf23334}} 
+Void {\bfseries init} (\hyperlink{class_t_enc_cfg}{T\+Enc\+Cfg} $\ast$pc\+Enc\+Cfg, \hyperlink{class_t_com_tr_quant}{T\+Com\+Tr\+Quant} $\ast$pc\+Tr\+Quant, Int i\+Search\+Range, Int bipred\+Search\+Range, \hyperlink{_type_def_8h_a8aca966885e6dbeca4cabfc3530a9bde}{M\+E\+Search\+Method} motion\+Estimation\+Search\+Method, const U\+Int max\+C\+U\+Width, const U\+Int max\+C\+U\+Height, const U\+Int max\+Total\+C\+U\+Depth, \hyperlink{class_t_enc_entropy}{T\+Enc\+Entropy} $\ast$pc\+Entropy\+Coder, \hyperlink{class_t_com_rd_cost}{T\+Com\+Rd\+Cost} $\ast$pc\+Rd\+Cost, \hyperlink{class_t_enc_sbac}{T\+Enc\+Sbac} $\ast$$\ast$$\ast$pppc\+R\+D\+Sbac\+Coder, \hyperlink{class_t_enc_sbac}{T\+Enc\+Sbac} $\ast$pc\+R\+D\+Go\+On\+Sbac\+Coder)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a68d1770d9bacc2c901755736ccedf825}\label{class_t_enc_search_a68d1770d9bacc2c901755736ccedf825}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a7321ab22fd9b87ee57e0922fceeef01f}\label{class_t_enc_search_a7321ab22fd9b87ee57e0922fceeef01f}} 
+Void {\bfseries est\+Intra\+Pred\+Luma\+QT} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} resi\+Luma\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+R\+E\+S\+I\+D\+U\+A\+L\+\_\+\+T\+Y\+P\+ES\mbox{]}\mbox{[}M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE $\ast$M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE\mbox{]})
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af1d1463ba1d691858ba04bdc09954929}\label{class_t_enc_search_af1d1463ba1d691858ba04bdc09954929}} 
+Void {\bfseries est\+Intra\+Pred\+Chroma\+QT} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} resi\+Luma\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+R\+E\+S\+I\+D\+U\+A\+L\+\_\+\+T\+Y\+P\+ES\mbox{]}\mbox{[}M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE $\ast$M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE\mbox{]} D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug))
+\item 
+Void \hyperlink{class_t_enc_search_a60b4d9f294aa8b0c1d03f4be57e707b5}{pred\+Inter\+Search} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug), Bool b\+Use\+Res=false)
+\begin{DoxyCompactList}\small\item\em encoder estimation -\/ inter prediction (non-\/skip) \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_search_abf4bab027ce2425740115f3b59fe7a1a}{encode\+Res\+And\+Calc\+Rd\+Inter\+CU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Org, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Pred, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Resi, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Resi\+Best, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Rec, Bool b\+Skip\+Residual D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug))
+\begin{DoxyCompactList}\small\item\em encode residual and compute rd-\/cost for inter mode \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_search_a70fe868f4c1120520e3bf5b65747aece}{x\+Enc\+P\+CM} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+P\+CM, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Pred, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Resi, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Reco, U\+Int ui\+Stride, U\+Int ui\+Width, U\+Int ui\+Height, const Component\+ID comp\+ID)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_aea7a68b3dfe4fc000ca33e217ab86247}\label{class_t_enc_search_aea7a68b3dfe4fc000ca33e217ab86247}} 
+Void \hyperlink{class_t_enc_search_aea7a68b3dfe4fc000ca33e217ab86247}{I\+P\+C\+M\+Search} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$rpc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$rpc\+Resi\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$rpc\+Reco\+Yuv)
+\begin{DoxyCompactList}\small\item\em Function for P\+CM mode estimation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_search_a4d091f305579aa4358f20753ad883ebe}\label{class_t_enc_search_a4d091f305579aa4358f20753ad883ebe}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \hyperlink{class_t_enc_search_a4d091f305579aa4358f20753ad883ebe}{x\+Pattern\+Refinement} (\hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$pc\+Pattern\+Key, \hyperlink{class_t_com_mv}{T\+Com\+Mv} base\+Ref\+Mv, Int i\+Frac, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Frac, Bool b\+Allow\+Use\+Of\+Hadamard)
+\begin{DoxyCompactList}\small\item\em sub-\/function for motion vector refinement used in fractional-\/pel accuracy \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_search_a7f7634c3239c74c5ea27f1fc21e26c9b}\label{class_t_enc_search_a7f7634c3239c74c5ea27f1fc21e26c9b}} 
+\+\_\+\+\_\+inline Void {\bfseries x\+T\+Z\+Search\+Help} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, \hyperlink{struct_t_enc_search_1_1_int_t_z_search_struct}{Int\+T\+Z\+Search\+Struct} \&rc\+Struct, const Int i\+SearchX, const Int i\+SearchY, const U\+Char uc\+Point\+Nr, const U\+Int ui\+Distance)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af4f6e4db0236e10de2c9fb617fd9d2ee}\label{class_t_enc_search_af4f6e4db0236e10de2c9fb617fd9d2ee}} 
+\+\_\+\+\_\+inline Void {\bfseries x\+T\+Z2\+Point\+Search} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, \hyperlink{struct_t_enc_search_1_1_int_t_z_search_struct}{Int\+T\+Z\+Search\+Struct} \&rc\+Struct, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_acbe2042bddda88473d76d482eee5a2e7}\label{class_t_enc_search_acbe2042bddda88473d76d482eee5a2e7}} 
+\+\_\+\+\_\+inline Void {\bfseries x\+T\+Z8\+Point\+Square\+Search} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, \hyperlink{struct_t_enc_search_1_1_int_t_z_search_struct}{Int\+T\+Z\+Search\+Struct} \&rc\+Struct, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, const Int i\+StartX, const Int i\+StartY, const Int i\+Dist)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a84038123a9334739f152ff665adf9eea}\label{class_t_enc_search_a84038123a9334739f152ff665adf9eea}} 
+\+\_\+\+\_\+inline Void {\bfseries x\+T\+Z8\+Point\+Diamond\+Search} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, \hyperlink{struct_t_enc_search_1_1_int_t_z_search_struct}{Int\+T\+Z\+Search\+Struct} \&rc\+Struct, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, const Int i\+StartX, const Int i\+StartY, const Int i\+Dist, const Bool b\+Check\+Corners\+At\+Dist1)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a7ccdff7f326d105523523efc82191f20}\label{class_t_enc_search_a7ccdff7f326d105523523efc82191f20}} 
+Void {\bfseries x\+Get\+Inter\+Prediction\+Error} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Org, Int i\+Part\+Idx, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+S\+AD, Bool Hadamard)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af6595e09c65bf861b9da8d619156b0e0}\label{class_t_enc_search_af6595e09c65bf861b9da8d619156b0e0}} 
+Void {\bfseries x\+Enc\+Subdiv\+Cbf\+QT} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Bool b\+Luma, Bool b\+Chroma)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af5497bb4fbff600b592bd1ae01a161a6}\label{class_t_enc_search_af5497bb4fbff600b592bd1ae01a161a6}} 
+Void {\bfseries x\+Enc\+Coeff\+QT} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Component\+ID component, Bool b\+Real\+Coeff)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af9bf26aee7130eb3384ae6c1764ab776}\label{class_t_enc_search_af9bf26aee7130eb3384ae6c1764ab776}} 
+Void {\bfseries x\+Enc\+Intra\+Header} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Tr\+Depth, U\+Int ui\+Abs\+Part\+Idx, Bool b\+Luma, Bool b\+Chroma)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a290258b7ee11570b47dd0fb2163231b9}\label{class_t_enc_search_a290258b7ee11570b47dd0fb2163231b9}} 
+U\+Int {\bfseries x\+Get\+Intra\+Bits\+QT} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Bool b\+Luma, Bool b\+Chroma, Bool b\+Real\+Coeff)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a4e64ba62a4a3fe4a2203eae5ad113d34}\label{class_t_enc_search_a4e64ba62a4a3fe4a2203eae5ad113d34}} 
+U\+Int {\bfseries x\+Get\+Intra\+Bits\+Q\+T\+Chroma} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Component\+ID comp\+ID, Bool b\+Real\+Coeff)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_aad0dded10b80e54c486c87b5d0a8a388}\label{class_t_enc_search_aad0dded10b80e54c486c87b5d0a8a388}} 
+Void {\bfseries x\+Intra\+Coding\+T\+U\+Block} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} resi\+Luma\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+R\+E\+S\+I\+D\+U\+A\+L\+\_\+\+T\+Y\+P\+ES\mbox{]}\mbox{[}M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE $\ast$M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE\mbox{]}, const Bool check\+Cross\+C\+Prediction, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Dist, const Component\+ID comp\+ID, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Int default0\+Save1\+Load2=0)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_adacaaa315da446a44ff423acf64d873f}\label{class_t_enc_search_adacaaa315da446a44ff423acf64d873f}} 
+Void {\bfseries x\+Recur\+Intra\+Coding\+Luma\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} resi\+Luma\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+R\+E\+S\+I\+D\+U\+A\+L\+\_\+\+T\+Y\+P\+ES\mbox{]}\mbox{[}M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE $\ast$M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE\mbox{]}, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+DistY, Double \&d\+R\+D\+Cost, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ad3ca31a5b31996c3fb4287248e2cdebe}\label{class_t_enc_search_ad3ca31a5b31996c3fb4287248e2cdebe}} 
+Void {\bfseries x\+Set\+Intra\+Result\+Luma\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_abe22698a1638141c5c093d28032f5cd3}\label{class_t_enc_search_abe22698a1638141c5c093d28032f5cd3}} 
+Void {\bfseries x\+Store\+Cross\+Component\+Prediction\+Result} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Resi\+Luma, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Best\+Luma, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Int x\+Offset, const Int y\+Offset, const Int stride\+Resi, const Int stride\+Best)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a5217e637ee0f8fb96295087075dda414}\label{class_t_enc_search_a5217e637ee0f8fb96295087075dda414}} 
+S\+Char {\bfseries x\+Calc\+Cross\+Component\+Prediction\+Alpha} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Component\+ID comp\+ID, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+ResiL, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+ResiC, const Int width, const Int height, const Int strideL, const Int strideC)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a68e9c5677bca4bd92d39e2651d161d68}\label{class_t_enc_search_a68e9c5677bca4bd92d39e2651d161d68}} 
+Void {\bfseries x\+Recur\+Intra\+Chroma\+Coding\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Pred\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi\+Yuv, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} resi\+Luma\mbox{[}N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+T\+O\+R\+E\+D\+\_\+\+R\+E\+S\+I\+D\+U\+A\+L\+\_\+\+T\+Y\+P\+ES\mbox{]}\mbox{[}M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE $\ast$M\+A\+X\+\_\+\+C\+U\+\_\+\+S\+I\+ZE\mbox{]}, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Dist, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug))
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a5f60d7d055017f6d58164138fbad7320}\label{class_t_enc_search_a5f60d7d055017f6d58164138fbad7320}} 
+Void {\bfseries x\+Set\+Intra\+Result\+Chroma\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a38d909901427f6b78b90a41d7325c11b}\label{class_t_enc_search_a38d909901427f6b78b90a41d7325c11b}} 
+Void {\bfseries x\+Store\+Intra\+Result\+QT} (const Component\+ID comp\+ID, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ab9f4b43285cbd256457a71391d7d04d3}\label{class_t_enc_search_ab9f4b43285cbd256457a71391d7d04d3}} 
+Void {\bfseries x\+Load\+Intra\+Result\+QT} (const Component\+ID comp\+ID, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a789df6ca7868aebac2cfef4a18c0085b}\label{class_t_enc_search_a789df6ca7868aebac2cfef4a18c0085b}} 
+Void {\bfseries x\+Estimate\+Mv\+Pred\+A\+M\+VP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, U\+Int ui\+Part\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, Int i\+Ref\+Idx, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Pred, Bool b\+Filled=false, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} $\ast$pui\+Dist\+BiP=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a832d1e84cdfe49cf3af0411a73293fe8}\label{class_t_enc_search_a832d1e84cdfe49cf3af0411a73293fe8}} 
+Void {\bfseries x\+Check\+Best\+M\+VP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_mv}{T\+Com\+Mv} c\+Mv, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Pred, Int \&ri\+M\+V\+P\+Idx, U\+Int \&rui\+Bits, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Cost)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a8ac7bf001f386eaa5d2016322d5a9239}\label{class_t_enc_search_a8ac7bf001f386eaa5d2016322d5a9239}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} {\bfseries x\+Get\+Template\+Cost} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Org\+Yuv, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Template\+Cand, \hyperlink{class_t_com_mv}{T\+Com\+Mv} c\+Mv\+Cand, Int i\+M\+V\+P\+Idx, Int i\+M\+V\+P\+Num, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, Int i\+Ref\+Idx, Int i\+SizeX, Int i\+SizeY)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a129772ff349ac9f3cf8daf58de65ddb7}\label{class_t_enc_search_a129772ff349ac9f3cf8daf58de65ddb7}} 
+Void {\bfseries x\+Copy\+A\+M\+V\+P\+Info} (\hyperlink{_t_com_motion_info_8h_a4dfe7465dec69a9356d5166304173f8c}{A\+M\+V\+P\+Info} $\ast$p\+Src, \hyperlink{_t_com_motion_info_8h_a4dfe7465dec69a9356d5166304173f8c}{A\+M\+V\+P\+Info} $\ast$p\+Dst)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_af431070fe6c522dd88cadda1463db5bc}\label{class_t_enc_search_af431070fe6c522dd88cadda1463db5bc}} 
+U\+Int {\bfseries x\+Get\+Mvp\+Idx\+Bits} (Int i\+Idx, Int i\+Num)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a3ed3f1269d6715e512631e1e1c3a7a4b}\label{class_t_enc_search_a3ed3f1269d6715e512631e1e1c3a7a4b}} 
+Void {\bfseries x\+Get\+Blk\+Bits} (\hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} e\+C\+U\+Mode, Bool b\+P\+Slice, Int i\+Part\+Idx, U\+Int ui\+Last\+Mode, U\+Int ui\+Blk\+Bit\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a2f8bbacb7f1610c8954c316e980c00a6}\label{class_t_enc_search_a2f8bbacb7f1610c8954c316e980c00a6}} 
+Void \hyperlink{class_t_enc_search_a2f8bbacb7f1610c8954c316e980c00a6}{x\+Merge\+Estimation} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Org, Int i\+Part\+Idx, U\+Int \&ui\+Inter\+Dir, \hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} $\ast$pac\+Mv\+Field, U\+Int \&ui\+Merge\+Index, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Cost, \hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} $\ast$c\+Mv\+Field\+Neighbours, U\+Char $\ast$uh\+Inter\+Dir\+Neighbours, Int \&num\+Valid\+Merge\+Cand)
+\begin{DoxyCompactList}\small\item\em estimation of best merge coding \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_search_a05aee80be3bc090cfb755630520379b9}{x\+Restrict\+Bipred\+Merge\+Cand} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int pu\+Idx, \hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} $\ast$mv\+Field\+Neighbours, U\+Char $\ast$inter\+Dir\+Neighbours, Int num\+Valid\+Merge\+Cand)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a3fa1f98d0e7f63439d030225098106c6}\label{class_t_enc_search_a3fa1f98d0e7f63439d030225098106c6}} 
+Void {\bfseries x\+Motion\+Estimation} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Org, Int i\+Part\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$pc\+Mv\+Pred, Int i\+Ref\+Idx\+Pred, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv, U\+Int \&rui\+Bits, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Cost, Bool b\+Bi=false)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ad4707216c3f5e7afa431257c442a2136}\label{class_t_enc_search_ad4707216c3f5e7afa431257c442a2136}} 
+Void {\bfseries x\+T\+Z\+Search} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$const pi\+RefY, const Int i\+Ref\+Stride, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+S\+AD, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const p\+Integer\+Mv2\+Nx2\+N\+Pred, const Bool b\+Extended\+Settings)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_acf9bc4cb8abd7f24b58e17d54b583603}\label{class_t_enc_search_acf9bc4cb8abd7f24b58e17d54b583603}} 
+Void {\bfseries x\+T\+Z\+Search\+Selective} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$const pi\+RefY, const Int i\+Ref\+Stride, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+S\+AD, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const p\+Integer\+Mv2\+Nx2\+N\+Pred)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a613a9bc22519f42bd07b28d51f131707}\label{class_t_enc_search_a613a9bc22519f42bd07b28d51f131707}} 
+Void {\bfseries x\+Set\+Search\+Range} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&c\+Mv\+Pred, const Int i\+Srch\+Rng, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Srch\+Rng\+LT, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Srch\+Rng\+RB)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a1cdc1535c8a268b0d0e573859aeb107d}\label{class_t_enc_search_a1cdc1535c8a268b0d0e573859aeb107d}} 
+Void {\bfseries x\+Pattern\+Search\+Fast} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$const pi\+RefY, const Int i\+Ref\+Stride, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+S\+AD, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const p\+Integer\+Mv2\+Nx2\+N\+Pred)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a648cca301d76e854c280696164cc7bb8}\label{class_t_enc_search_a648cca301d76e854c280696164cc7bb8}} 
+Void {\bfseries x\+Pattern\+Search} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+RefY, const Int i\+Ref\+Stride, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+LT, const \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$const pc\+Mv\+Srch\+Rng\+RB, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+S\+AD)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ab9c82fbfd7d91177a23ef76435d72c50}\label{class_t_enc_search_ab9c82fbfd7d91177a23ef76435d72c50}} 
+Void {\bfseries x\+Pattern\+Search\+Frac\+D\+IF} (Bool b\+Is\+Lossless\+Coded, \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$pc\+Pattern\+Key, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+RefY, Int i\+Ref\+Stride, \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$pc\+Mv\+Int, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Half, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Qter, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Cost)
+\item 
+Void \hyperlink{class_t_enc_search_a019d17f625b726f411f7fd36559b8db2}{x\+Ext\+D\+I\+F\+Up\+SamplingH} (\hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$pc\+Pattern)
+\begin{DoxyCompactList}\small\item\em Generate half-\/sample interpolated block. \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_enc_search_a72f639ab83aa97205773779742132706}{x\+Ext\+D\+I\+F\+Up\+SamplingQ} (\hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$pc\+Pattern\+Key, \hyperlink{class_t_com_mv}{T\+Com\+Mv} half\+Pel\+Ref)
+\begin{DoxyCompactList}\small\item\em Generate quarter-\/sample interpolated blocks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_enc_search_a18a292a165cd0ab5264c817eebb7f061}\label{class_t_enc_search_a18a292a165cd0ab5264c817eebb7f061}} 
+Void {\bfseries x\+Encode\+Inter\+Residual\+QT} (const Component\+ID comp\+ID, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_ac8702d95afdc05c0eea72945cc1f4383}\label{class_t_enc_search_ac8702d95afdc05c0eea72945cc1f4383}} 
+Void {\bfseries x\+Estimate\+Inter\+Residual\+QT} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi, Double \&rd\+Cost, U\+Int \&rui\+Bits, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} \&rui\+Dist, \hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} $\ast$pui\+Zero\+Dist, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug))
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a84f92105bf0cdba3c4ef9920a8c26f52}\label{class_t_enc_search_a84f92105bf0cdba3c4ef9920a8c26f52}} 
+Void {\bfseries x\+Set\+Inter\+Residual\+Q\+T\+Data} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Resi, Bool b\+Spatial, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_a658b12c710a325279d9a9011e905d930}\label{class_t_enc_search_a658b12c710a325279d9a9011e905d930}} 
+U\+Int {\bfseries x\+Mode\+Bits\+Intra} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Mode, U\+Int ui\+Part\+Offset, U\+Int ui\+Depth, const Channel\+Type comp\+ID)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_aa08da60bf76db4fc042cd5190ff24bea}\label{class_t_enc_search_aa08da60bf76db4fc042cd5190ff24bea}} 
+U\+Int {\bfseries x\+Update\+Cand\+List} (U\+Int ui\+Mode, Double ui\+Cost, U\+Int ui\+Fast\+Cand\+Num, U\+Int $\ast$Cand\+Mode\+List, Double $\ast$Cand\+Cost\+List)
+\item 
+Void \hyperlink{class_t_enc_search_a5756a573787655c2a6d2c4bb7c264366}{x\+Add\+Symbol\+Bits\+Inter} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int \&rui\+Bits)
+\item 
+\mbox{\Hypertarget{class_t_enc_search_aeb5c18baab21909fa89ab41d1664320c}\label{class_t_enc_search_aeb5c18baab21909fa89ab41d1664320c}} 
+Void \hyperlink{class_t_enc_search_aeb5c18baab21909fa89ab41d1664320c}{set\+Wp\+Scaling\+Dist\+Param} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, Int i\+Ref\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List\+Cur)
+\begin{DoxyCompactList}\small\item\em set wp tables \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+encoder search class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_enc_search_abf4bab027ce2425740115f3b59fe7a1a}\label{class_t_enc_search_abf4bab027ce2425740115f3b59fe7a1a}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!encode\+Res\+And\+Calc\+Rd\+Inter\+CU@{encode\+Res\+And\+Calc\+Rd\+Inter\+CU}}
+\index{encode\+Res\+And\+Calc\+Rd\+Inter\+CU@{encode\+Res\+And\+Calc\+Rd\+Inter\+CU}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{encode\+Res\+And\+Calc\+Rd\+Inter\+C\+U()}{encodeResAndCalcRdInterCU()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::encode\+Res\+And\+Calc\+Rd\+Inter\+CU (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Yuv\+Org,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Yuv\+Pred,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Yuv\+Resi,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Yuv\+Resi\+Best,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Yuv\+Rec,  }\item[{Bool b\+Skip\+Residual }]{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+REs\+Debug }\end{DoxyParamCaption})}
+
+
+
+encode residual and compute rd-\/cost for inter mode 
+
+encode residual and calculate rate-\/distortion for a CU block \mbox{\Hypertarget{class_t_enc_search_a60b4d9f294aa8b0c1d03f4be57e707b5}\label{class_t_enc_search_a60b4d9f294aa8b0c1d03f4be57e707b5}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!pred\+Inter\+Search@{pred\+Inter\+Search}}
+\index{pred\+Inter\+Search@{pred\+Inter\+Search}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{pred\+Inter\+Search()}{predInterSearch()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::pred\+Inter\+Search (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Org\+Yuv,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Pred\+Yuv,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{pc\+Resi\+Yuv,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Reco\+Yuv }]{D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+REs\+Debug,  }\item[{Bool}]{b\+Use\+Res = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+encoder estimation -\/ inter prediction (non-\/skip) 
+
+search of the best candidate for inter prediction \mbox{\Hypertarget{class_t_enc_search_a5756a573787655c2a6d2c4bb7c264366}\label{class_t_enc_search_a5756a573787655c2a6d2c4bb7c264366}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!x\+Add\+Symbol\+Bits\+Inter@{x\+Add\+Symbol\+Bits\+Inter}}
+\index{x\+Add\+Symbol\+Bits\+Inter@{x\+Add\+Symbol\+Bits\+Inter}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{x\+Add\+Symbol\+Bits\+Inter()}{xAddSymbolBitsInter()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::x\+Add\+Symbol\+Bits\+Inter (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int \&}]{rui\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+add inter-\/prediction syntax elements for a CU block 
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & \\
+\hline
+{\em ui\+Qp} & \\
+\hline
+{\em ui\+Tr\+Mode} & \\
+\hline
+{\em rui\+Bits} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_enc_search_a70fe868f4c1120520e3bf5b65747aece}\label{class_t_enc_search_a70fe868f4c1120520e3bf5b65747aece}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!x\+Enc\+P\+CM@{x\+Enc\+P\+CM}}
+\index{x\+Enc\+P\+CM@{x\+Enc\+P\+CM}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{x\+Enc\+P\+C\+M()}{xEncPCM()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::x\+Enc\+P\+CM (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int}]{ui\+Abs\+Part\+Idx,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Org,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+P\+CM,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Pred,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Resi,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Reco,  }\item[{U\+Int}]{ui\+Stride,  }\item[{U\+Int}]{ui\+Width,  }\item[{U\+Int}]{ui\+Height,  }\item[{const Component\+ID}]{comp\+ID }\end{DoxyParamCaption})}
+
+Function for encoding and reconstructing luma/chroma samples of a P\+CM mode CU. 
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & pointer to current CU \\
+\hline
+{\em ui\+Abs\+Part\+Idx} & part index \\
+\hline
+{\em p\+Org} & pointer to original sample arrays \\
+\hline
+{\em p\+P\+CM} & pointer to P\+CM code arrays \\
+\hline
+{\em p\+Pred} & pointer to prediction signal arrays \\
+\hline
+{\em p\+Resi} & pointer to residual signal arrays \\
+\hline
+{\em p\+Reco} & pointer to reconstructed sample arrays \\
+\hline
+{\em ui\+Stride} & stride of the original/prediction/residual sample arrays \\
+\hline
+{\em ui\+Width} & block width \\
+\hline
+{\em ui\+Height} & block height \\
+\hline
+{\em comp\+ID} & texture component type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_search_a019d17f625b726f411f7fd36559b8db2}\label{class_t_enc_search_a019d17f625b726f411f7fd36559b8db2}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!x\+Ext\+D\+I\+F\+Up\+SamplingH@{x\+Ext\+D\+I\+F\+Up\+SamplingH}}
+\index{x\+Ext\+D\+I\+F\+Up\+SamplingH@{x\+Ext\+D\+I\+F\+Up\+SamplingH}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{x\+Ext\+D\+I\+F\+Up\+Sampling\+H()}{xExtDIFUpSamplingH()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::x\+Ext\+D\+I\+F\+Up\+SamplingH (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$}]{pattern }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generate half-\/sample interpolated block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & Reference picture R\+OI \\
+\hline
+{\em bi\+Pred} & Flag indicating whether block is for biprediction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_search_a72f639ab83aa97205773779742132706}\label{class_t_enc_search_a72f639ab83aa97205773779742132706}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!x\+Ext\+D\+I\+F\+Up\+SamplingQ@{x\+Ext\+D\+I\+F\+Up\+SamplingQ}}
+\index{x\+Ext\+D\+I\+F\+Up\+SamplingQ@{x\+Ext\+D\+I\+F\+Up\+SamplingQ}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{x\+Ext\+D\+I\+F\+Up\+Sampling\+Q()}{xExtDIFUpSamplingQ()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::x\+Ext\+D\+I\+F\+Up\+SamplingQ (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$}]{pattern,  }\item[{\hyperlink{class_t_com_mv}{T\+Com\+Mv}}]{half\+Pel\+Ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generate quarter-\/sample interpolated blocks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & Reference picture R\+OI \\
+\hline
+{\em half\+Pel\+Ref} & Half-\/pel mv \\
+\hline
+{\em bi\+Pred} & Flag indicating whether block is for biprediction \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_enc_search_a05aee80be3bc090cfb755630520379b9}\label{class_t_enc_search_a05aee80be3bc090cfb755630520379b9}} 
+\index{T\+Enc\+Search@{T\+Enc\+Search}!x\+Restrict\+Bipred\+Merge\+Cand@{x\+Restrict\+Bipred\+Merge\+Cand}}
+\index{x\+Restrict\+Bipred\+Merge\+Cand@{x\+Restrict\+Bipred\+Merge\+Cand}!T\+Enc\+Search@{T\+Enc\+Search}}
+\subsubsection{\texorpdfstring{x\+Restrict\+Bipred\+Merge\+Cand()}{xRestrictBipredMergeCand()}}
+{\footnotesize\ttfamily Void T\+Enc\+Search\+::x\+Restrict\+Bipred\+Merge\+Cand (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int}]{pu\+Idx,  }\item[{\hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} $\ast$}]{mv\+Field\+Neighbours,  }\item[{U\+Char $\ast$}]{inter\+Dir\+Neighbours,  }\item[{Int}]{num\+Valid\+Merge\+Cand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+convert bi-\/pred merge candidates to uni-\/pred 
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & \\
+\hline
+{\em pu\+Idx} & \\
+\hline
+{\em mv\+Field\+Neighbours} & \\
+\hline
+{\em inter\+Dir\+Neighbours} & \\
+\hline
+{\em num\+Valid\+Merge\+Cand} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_search_8h}{T\+Enc\+Search.\+h}\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_search_8cpp}{T\+Enc\+Search.\+cpp}\end{DoxyCompactItemize}

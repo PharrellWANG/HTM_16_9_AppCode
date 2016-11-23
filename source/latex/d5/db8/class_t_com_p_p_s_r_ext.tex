@@ -1,0 +1,67 @@
+\hypertarget{class_t_com_p_p_s_r_ext}{}\section{T\+Com\+P\+P\+S\+R\+Ext Class Reference}
+\label{class_t_com_p_p_s_r_ext}\index{T\+Com\+P\+P\+S\+R\+Ext@{T\+Com\+P\+P\+S\+R\+Ext}}
+
+
+P\+PS R\+Ext class.  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Slice.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a2babf25f7238b95d333341f2751a8ee4}\label{class_t_com_p_p_s_r_ext_a2babf25f7238b95d333341f2751a8ee4}} 
+Bool {\bfseries settings\+Differ\+From\+Defaults} (const bool b\+Transform\+Skip\+Enabled\+Flag) const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a9b59cf9c9dd18754d1633e996e516cd4}\label{class_t_com_p_p_s_r_ext_a9b59cf9c9dd18754d1633e996e516cd4}} 
+U\+Int {\bfseries get\+Log2\+Max\+Transform\+Skip\+Block\+Size} () const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a782d7349ef1ca9429baa3a3229659b13}\label{class_t_com_p_p_s_r_ext_a782d7349ef1ca9429baa3a3229659b13}} 
+Void {\bfseries set\+Log2\+Max\+Transform\+Skip\+Block\+Size} (U\+Int u)
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_ab69e35fd246a2d8d06c0b85c79318009}\label{class_t_com_p_p_s_r_ext_ab69e35fd246a2d8d06c0b85c79318009}} 
+Bool {\bfseries get\+Cross\+Component\+Prediction\+Enabled\+Flag} () const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a67c8f8de90b8aba7289ca11b1d6b6095}\label{class_t_com_p_p_s_r_ext_a67c8f8de90b8aba7289ca11b1d6b6095}} 
+Void {\bfseries set\+Cross\+Component\+Prediction\+Enabled\+Flag} (Bool value)
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a8aa941f003292e514e6a980cc416f47e}\label{class_t_com_p_p_s_r_ext_a8aa941f003292e514e6a980cc416f47e}} 
+Void {\bfseries clear\+Chroma\+Qp\+Offset\+List} ()
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_ac510c7bc1994d57a1c3cd7a2f9cdbdf2}\label{class_t_com_p_p_s_r_ext_ac510c7bc1994d57a1c3cd7a2f9cdbdf2}} 
+U\+Int {\bfseries get\+Diff\+Cu\+Chroma\+Qp\+Offset\+Depth} () const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_ae4aebf02cb44020c0275c755b2208ae9}\label{class_t_com_p_p_s_r_ext_ae4aebf02cb44020c0275c755b2208ae9}} 
+Void {\bfseries set\+Diff\+Cu\+Chroma\+Qp\+Offset\+Depth} (U\+Int u)
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a30ec8cd317bc7fae1200051b0aed513f}\label{class_t_com_p_p_s_r_ext_a30ec8cd317bc7fae1200051b0aed513f}} 
+Bool {\bfseries get\+Chroma\+Qp\+Offset\+List\+Enabled\+Flag} () const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_ace144b2d0c9de0082d8492c1bfbcdd08}\label{class_t_com_p_p_s_r_ext_ace144b2d0c9de0082d8492c1bfbcdd08}} 
+Int {\bfseries get\+Chroma\+Qp\+Offset\+List\+Len} () const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_af123bd35162dd81f824601cdd16d5747}\label{class_t_com_p_p_s_r_ext_af123bd35162dd81f824601cdd16d5747}} 
+const \hyperlink{struct_chroma_qp_adj}{Chroma\+Qp\+Adj} \& {\bfseries get\+Chroma\+Qp\+Offset\+List\+Entry} (Int cu\+Chroma\+Qp\+Offset\+Idx\+Plus1) const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_acc3e91bac2ec52f3214ea5356b5848f7}\label{class_t_com_p_p_s_r_ext_acc3e91bac2ec52f3214ea5356b5848f7}} 
+Void {\bfseries set\+Chroma\+Qp\+Offset\+List\+Entry} (Int cu\+Chroma\+Qp\+Offset\+Idx\+Plus1, Int cb\+Offset, Int cr\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_a4a5c5eea1ae135a3cc2ce49245161dff}\label{class_t_com_p_p_s_r_ext_a4a5c5eea1ae135a3cc2ce49245161dff}} 
+U\+Int {\bfseries get\+Log2\+Sao\+Offset\+Scale} (Channel\+Type type) const
+\item 
+\mbox{\Hypertarget{class_t_com_p_p_s_r_ext_ac132a3f9069adb1ead5f1ce372401f10}\label{class_t_com_p_p_s_r_ext_ac132a3f9069adb1ead5f1ce372401f10}} 
+Void {\bfseries set\+Log2\+Sao\+Offset\+Scale} (Channel\+Type type, U\+Int ui\+Bit\+Shift)
+\end{DoxyCompactItemize}
+{\bf }\par
+
+
+
+\subsection{Detailed Description}
+P\+PS R\+Ext class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_slice_8h}{T\+Com\+Slice.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_slice_8cpp}{T\+Com\+Slice.\+cpp}\end{DoxyCompactItemize}

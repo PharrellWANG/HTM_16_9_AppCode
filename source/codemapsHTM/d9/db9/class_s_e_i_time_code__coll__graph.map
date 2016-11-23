@@ -1,0 +1,5 @@
+<map id="SEITimeCode" name="SEITimeCode">
+<area shape="rect" id="node2" href="$d5/d77/class_s_e_i.html" title="SEI" alt="" coords="205,199,248,225"/>
+<area shape="rect" id="node6" href="$d1/d43/class_s_e_i_scalable_nesting.html" title="SEIScalableNesting" alt="" coords="481,380,620,405"/>
+<area shape="rect" id="node9" href="$db/d63/struct_t_com_s_e_i_time_set.html" title="TComSEITimeSet" alt="" coords="5,199,134,225"/>
+</map>

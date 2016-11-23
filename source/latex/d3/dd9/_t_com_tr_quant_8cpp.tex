@@ -1,0 +1,266 @@
+\hypertarget{_t_com_tr_quant_8cpp}{}\section{Lib/\+T\+Lib\+Common/\+T\+Com\+Tr\+Quant.cpp File Reference}
+\label{_t_com_tr_quant_8cpp}\index{Lib/\+T\+Lib\+Common/\+T\+Com\+Tr\+Quant.\+cpp@{Lib/\+T\+Lib\+Common/\+T\+Com\+Tr\+Quant.\+cpp}}
+
+
+transform and quantization class  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}T\+Com\+Tr\+Quant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Com\+Pic.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Context\+Tables.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Com\+T\+U.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Debug.\+h\char`\"{}}\newline
+Include dependency graph for T\+Com\+Tr\+Quant.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/de2/_t_com_tr_quant_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structcoeff_group_r_d_stats}{coeff\+Group\+R\+D\+Stats}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_ac057f0a5d60a06162102b48f5133b99e}\label{_t_com_tr_quant_8cpp_ac057f0a5d60a06162102b48f5133b99e}} 
+\#define \hyperlink{_t_com_tr_quant_8cpp_ac057f0a5d60a06162102b48f5133b99e}{R\+D\+O\+Q\+\_\+\+C\+H\+R\+O\+MA}~1
+\begin{DoxyCompactList}\small\item\em use of R\+D\+OQ in chroma \end{DoxyCompactList}\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_ab88380f809f45763b82f889616cf7062}{partial\+Butterfly4} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line)
+\item 
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_ac5263edcb8d1aa9d07b21780a13f355c}\label{_t_com_tr_quant_8cpp_ac5263edcb8d1aa9d07b21780a13f355c}} 
+Void {\bfseries fast\+Forward\+Dst} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$block, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$coeff, Int shift)
+\item 
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_a67b3f3d69c87d0f17d6bef52a73d4199}\label{_t_com_tr_quant_8cpp_a67b3f3d69c87d0f17d6bef52a73d4199}} 
+Void {\bfseries fast\+Inverse\+Dst} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$tmp, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$block, Int shift, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Minimum, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Maximum)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_abe778c8e5da9f755a41b3f0f6edb4401}{partial\+Butterfly\+Inverse4} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Minimum, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Maximum)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_aff40038a3266ca2e101ce2451cf221c0}{partial\+Butterfly8} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_aa7cfe741f909b721f17a515d1ac7dedb}{partial\+Butterfly\+Inverse8} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Minimum, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Maximum)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_a3feebb9035b273d99ca62b44466f92e4}{partial\+Butterfly16} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_ad26173061713a3cd25d2b241ac9e186c}{partial\+Butterfly\+Inverse16} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Minimum, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Maximum)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_aa838b6d0229920d68470856b13af0d75}{partial\+Butterfly32} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_a5f23e9cb6eb69ec15a0c380cd3cb2f51}{partial\+Butterfly\+Inverse32} (\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$src, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$dst, Int shift, Int line, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Minimum, const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} output\+Maximum)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_a6ab9cf42e9b3817880f3599b8247d234}{x\+Tr\+MxN} (Int bit\+Depth, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$block, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$coeff, Int i\+Width, Int i\+Height, Bool use\+D\+ST, const Int max\+Log2\+Tr\+Dynamic\+Range)
+\item 
+Void \hyperlink{_t_com_tr_quant_8cpp_a56121cad7dce1c7b2b18e641b83c4e5e}{x\+I\+Tr\+MxN} (Int bit\+Depth, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$coeff, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$block, Int i\+Width, Int i\+Height, Bool use\+D\+ST, const Int max\+Log2\+Tr\+Dynamic\+Range)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+transform and quantization class 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_a3feebb9035b273d99ca62b44466f92e4}\label{_t_com_tr_quant_8cpp_a3feebb9035b273d99ca62b44466f92e4}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly16@{partial\+Butterfly16}}
+\index{partial\+Butterfly16@{partial\+Butterfly16}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly16()}{partialButterfly16()}}
+{\footnotesize\ttfamily Void partial\+Butterfly16 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line }\end{DoxyParamCaption})}
+
+16x16 forward transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (residual) \\
+\hline
+{\em dst} & output data (transform coefficients) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_aa838b6d0229920d68470856b13af0d75}\label{_t_com_tr_quant_8cpp_aa838b6d0229920d68470856b13af0d75}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly32@{partial\+Butterfly32}}
+\index{partial\+Butterfly32@{partial\+Butterfly32}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly32()}{partialButterfly32()}}
+{\footnotesize\ttfamily Void partial\+Butterfly32 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line }\end{DoxyParamCaption})}
+
+32x32 forward transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (residual) \\
+\hline
+{\em dst} & output data (transform coefficients) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_ab88380f809f45763b82f889616cf7062}\label{_t_com_tr_quant_8cpp_ab88380f809f45763b82f889616cf7062}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly4@{partial\+Butterfly4}}
+\index{partial\+Butterfly4@{partial\+Butterfly4}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly4()}{partialButterfly4()}}
+{\footnotesize\ttfamily Void partial\+Butterfly4 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line }\end{DoxyParamCaption})}
+
+4x4 forward transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (residual) \\
+\hline
+{\em dst} & output data (transform coefficients) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_aff40038a3266ca2e101ce2451cf221c0}\label{_t_com_tr_quant_8cpp_aff40038a3266ca2e101ce2451cf221c0}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly8@{partial\+Butterfly8}}
+\index{partial\+Butterfly8@{partial\+Butterfly8}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly8()}{partialButterfly8()}}
+{\footnotesize\ttfamily Void partial\+Butterfly8 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line }\end{DoxyParamCaption})}
+
+8x8 forward transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (residual) \\
+\hline
+{\em dst} & output data (transform coefficients) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_ad26173061713a3cd25d2b241ac9e186c}\label{_t_com_tr_quant_8cpp_ad26173061713a3cd25d2b241ac9e186c}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly\+Inverse16@{partial\+Butterfly\+Inverse16}}
+\index{partial\+Butterfly\+Inverse16@{partial\+Butterfly\+Inverse16}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly\+Inverse16()}{partialButterflyInverse16()}}
+{\footnotesize\ttfamily Void partial\+Butterfly\+Inverse16 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Minimum,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Maximum }\end{DoxyParamCaption})}
+
+16x16 inverse transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (transform coefficients) \\
+\hline
+{\em dst} & output data (residual) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+{\em output\+Minimum} & minimum for clipping \\
+\hline
+{\em output\+Maximum} & maximum for clipping \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_a5f23e9cb6eb69ec15a0c380cd3cb2f51}\label{_t_com_tr_quant_8cpp_a5f23e9cb6eb69ec15a0c380cd3cb2f51}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly\+Inverse32@{partial\+Butterfly\+Inverse32}}
+\index{partial\+Butterfly\+Inverse32@{partial\+Butterfly\+Inverse32}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly\+Inverse32()}{partialButterflyInverse32()}}
+{\footnotesize\ttfamily Void partial\+Butterfly\+Inverse32 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Minimum,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Maximum }\end{DoxyParamCaption})}
+
+32x32 inverse transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (transform coefficients) \\
+\hline
+{\em dst} & output data (residual) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+{\em output\+Minimum} & minimum for clipping \\
+\hline
+{\em output\+Maximum} & maximum for clipping \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_abe778c8e5da9f755a41b3f0f6edb4401}\label{_t_com_tr_quant_8cpp_abe778c8e5da9f755a41b3f0f6edb4401}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly\+Inverse4@{partial\+Butterfly\+Inverse4}}
+\index{partial\+Butterfly\+Inverse4@{partial\+Butterfly\+Inverse4}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly\+Inverse4()}{partialButterflyInverse4()}}
+{\footnotesize\ttfamily Void partial\+Butterfly\+Inverse4 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Minimum,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Maximum }\end{DoxyParamCaption})}
+
+4x4 inverse transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (transform coefficients) \\
+\hline
+{\em dst} & output data (residual) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+{\em output\+Minimum} & minimum for clipping \\
+\hline
+{\em output\+Maximum} & maximum for clipping \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_aa7cfe741f909b721f17a515d1ac7dedb}\label{_t_com_tr_quant_8cpp_aa7cfe741f909b721f17a515d1ac7dedb}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!partial\+Butterfly\+Inverse8@{partial\+Butterfly\+Inverse8}}
+\index{partial\+Butterfly\+Inverse8@{partial\+Butterfly\+Inverse8}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{partial\+Butterfly\+Inverse8()}{partialButterflyInverse8()}}
+{\footnotesize\ttfamily Void partial\+Butterfly\+Inverse8 (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{src,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{dst,  }\item[{Int}]{shift,  }\item[{Int}]{line,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Minimum,  }\item[{const \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff}}]{output\+Maximum }\end{DoxyParamCaption})}
+
+8x8 inverse transform implemented using partial butterfly structure (1D) 
+\begin{DoxyParams}{Parameters}
+{\em src} & input data (transform coefficients) \\
+\hline
+{\em dst} & output data (residual) \\
+\hline
+{\em shift} & specifies right shift after 1D transform \\
+\hline
+{\em line} & \\
+\hline
+{\em output\+Minimum} & minimum for clipping \\
+\hline
+{\em output\+Maximum} & maximum for clipping \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_a56121cad7dce1c7b2b18e641b83c4e5e}\label{_t_com_tr_quant_8cpp_a56121cad7dce1c7b2b18e641b83c4e5e}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!x\+I\+Tr\+MxN@{x\+I\+Tr\+MxN}}
+\index{x\+I\+Tr\+MxN@{x\+I\+Tr\+MxN}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{x\+I\+Tr\+Mx\+N()}{xITrMxN()}}
+{\footnotesize\ttfamily Void x\+I\+Tr\+MxN (\begin{DoxyParamCaption}\item[{Int}]{bit\+Depth,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{coeff,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{block,  }\item[{Int}]{i\+Width,  }\item[{Int}]{i\+Height,  }\item[{Bool}]{use\+D\+ST,  }\item[{const Int}]{max\+Log2\+Tr\+Dynamic\+Range }\end{DoxyParamCaption})}
+
+MxN inverse transform (2D) 
+\begin{DoxyParams}{Parameters}
+{\em bit\+Depth} & \mbox{[}in\mbox{]} bit depth \\
+\hline
+{\em coeff} & \mbox{[}in\mbox{]} transform coefficients \\
+\hline
+{\em block} & \mbox{[}out\mbox{]} residual block \\
+\hline
+{\em i\+Width} & \mbox{[}in\mbox{]} width of transform \\
+\hline
+{\em i\+Height} & \mbox{[}in\mbox{]} height of transform \\
+\hline
+{\em use\+D\+ST} & \mbox{[}in\mbox{]} \\
+\hline
+{\em max\+Log2\+Tr\+Dynamic\+Range} & \mbox{[}in\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_t_com_tr_quant_8cpp_a6ab9cf42e9b3817880f3599b8247d234}\label{_t_com_tr_quant_8cpp_a6ab9cf42e9b3817880f3599b8247d234}} 
+\index{T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}!x\+Tr\+MxN@{x\+Tr\+MxN}}
+\index{x\+Tr\+MxN@{x\+Tr\+MxN}!T\+Com\+Tr\+Quant.\+cpp@{T\+Com\+Tr\+Quant.\+cpp}}
+\subsubsection{\texorpdfstring{x\+Tr\+Mx\+N()}{xTrMxN()}}
+{\footnotesize\ttfamily Void x\+Tr\+MxN (\begin{DoxyParamCaption}\item[{Int}]{bit\+Depth,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{block,  }\item[{\hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$}]{coeff,  }\item[{Int}]{i\+Width,  }\item[{Int}]{i\+Height,  }\item[{Bool}]{use\+D\+ST,  }\item[{const Int}]{max\+Log2\+Tr\+Dynamic\+Range }\end{DoxyParamCaption})}
+
+MxN forward transform (2D) 
+\begin{DoxyParams}{Parameters}
+{\em bit\+Depth} & \mbox{[}in\mbox{]} bit depth \\
+\hline
+{\em block} & \mbox{[}in\mbox{]} residual block \\
+\hline
+{\em coeff} & \mbox{[}out\mbox{]} transform coefficients \\
+\hline
+{\em i\+Width} & \mbox{[}in\mbox{]} width of transform \\
+\hline
+{\em i\+Height} & \mbox{[}in\mbox{]} height of transform \\
+\hline
+{\em use\+D\+ST} & \mbox{[}in\mbox{]} \\
+\hline
+{\em max\+Log2\+Tr\+Dynamic\+Range} & \mbox{[}in\mbox{]} \\
+\hline
+\end{DoxyParams}

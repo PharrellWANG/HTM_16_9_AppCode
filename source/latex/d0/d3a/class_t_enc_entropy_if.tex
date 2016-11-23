@@ -1,0 +1,149 @@
+\hypertarget{class_t_enc_entropy_if}{}\section{T\+Enc\+Entropy\+If Class Reference}
+\label{class_t_enc_entropy_if}\index{T\+Enc\+Entropy\+If@{T\+Enc\+Entropy\+If}}
+
+
+entropy encoder pure class  
+
+
+
+
+{\ttfamily \#include $<$T\+Enc\+Entropy.\+h$>$}
+
+
+
+Inheritance diagram for T\+Enc\+Entropy\+If\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{da/d87/class_t_enc_entropy_if__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_aa7021d32258ed76e2dd49165266da9e7}\label{class_t_enc_entropy_if_aa7021d32258ed76e2dd49165266da9e7}} 
+virtual Void {\bfseries reset\+Entropy} (const \hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$p\+Slice)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a59432a20451e00972632cce79846c6d6}\label{class_t_enc_entropy_if_a59432a20451e00972632cce79846c6d6}} 
+virtual \hyperlink{_type_def_8h_a8fc5fd31653a387f7430d29863620f71}{Slice\+Type} {\bfseries determine\+Cabac\+Init\+Idx} (const \hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$p\+Slice)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_abeca15304dc7673a879d7a1db51b017a}\label{class_t_enc_entropy_if_abeca15304dc7673a879d7a1db51b017a}} 
+virtual Void {\bfseries set\+Bitstream} (\hyperlink{class_t_com_bit_if}{T\+Com\+Bit\+If} $\ast$p)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_abf39203d4bfab1951f37b30c306ee584}\label{class_t_enc_entropy_if_abf39203d4bfab1951f37b30c306ee584}} 
+virtual Void {\bfseries reset\+Bits} ()=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_aa39f61c750036ef6c76e3586b43825ee}\label{class_t_enc_entropy_if_aa39f61c750036ef6c76e3586b43825ee}} 
+virtual U\+Int {\bfseries get\+Number\+Of\+Written\+Bits} ()=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a00152437c8535a425319ad40b074004c}\label{class_t_enc_entropy_if_a00152437c8535a425319ad40b074004c}} 
+virtual Void {\bfseries code\+V\+PS} (const \hyperlink{class_t_com_v_p_s}{T\+Com\+V\+PS} $\ast$pc\+V\+PS)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ad4b83fd4f50c20ab27290239928c13a6}\label{class_t_enc_entropy_if_ad4b83fd4f50c20ab27290239928c13a6}} 
+virtual Void {\bfseries code\+S\+PS} (const \hyperlink{class_t_com_s_p_s}{T\+Com\+S\+PS} $\ast$pc\+S\+PS)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_aa43716eb376c2739e883afb57a7b4d0c}\label{class_t_enc_entropy_if_aa43716eb376c2739e883afb57a7b4d0c}} 
+virtual Void {\bfseries code\+P\+PS} (const \hyperlink{class_t_com_p_p_s}{T\+Com\+P\+PS} $\ast$pc\+P\+PS)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a1d3d8764cc34e672cd1a5d0e0ce3b728}\label{class_t_enc_entropy_if_a1d3d8764cc34e672cd1a5d0e0ce3b728}} 
+virtual Void {\bfseries code\+Slice\+Header} (\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$pc\+Slice)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a7bd9d1ab9aa9498c12b89eb80851b425}\label{class_t_enc_entropy_if_a7bd9d1ab9aa9498c12b89eb80851b425}} 
+virtual Void {\bfseries code\+Tiles\+W\+P\+P\+Entry\+Point} (\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$p\+Slice)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a589a77f8500489d0772888b3ccfd8f59}\label{class_t_enc_entropy_if_a589a77f8500489d0772888b3ccfd8f59}} 
+virtual Void {\bfseries code\+Terminating\+Bit} (U\+Int uils\+Last)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a68f105170927c66a1c99a89f564a8b9b}\label{class_t_enc_entropy_if_a68f105170927c66a1c99a89f564a8b9b}} 
+virtual Void {\bfseries code\+Slice\+Finish} ()=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ae66a2748c2a9529210c59b1538232b33}\label{class_t_enc_entropy_if_ae66a2748c2a9529210c59b1538232b33}} 
+virtual Void {\bfseries code\+M\+V\+P\+Idx} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+List)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a4808c8f28b6c243bc3afdb7bf7f1c193}\label{class_t_enc_entropy_if_a4808c8f28b6c243bc3afdb7bf7f1c193}} 
+virtual Void {\bfseries code\+C\+U\+Transquant\+Bypass\+Flag} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a886316ac57705981aa2a022aff764cb7}\label{class_t_enc_entropy_if_a886316ac57705981aa2a022aff764cb7}} 
+virtual Void {\bfseries code\+Skip\+Flag} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a1607dbac9182c8e2f6c01b7cfdcc35d6}\label{class_t_enc_entropy_if_a1607dbac9182c8e2f6c01b7cfdcc35d6}} 
+virtual Void {\bfseries code\+Merge\+Flag} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_aac07298a28857e63c100148b10f29ba7}\label{class_t_enc_entropy_if_aac07298a28857e63c100148b10f29ba7}} 
+virtual Void {\bfseries code\+Merge\+Index} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_abcd76e294c0ebeefe21016d7bd8e830f}\label{class_t_enc_entropy_if_abcd76e294c0ebeefe21016d7bd8e830f}} 
+virtual Void {\bfseries code\+Split\+Flag} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Depth)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a3e6fed1ed0c4133aec520f5b94df4420}\label{class_t_enc_entropy_if_a3e6fed1ed0c4133aec520f5b94df4420}} 
+virtual Void {\bfseries code\+Part\+Size} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Depth)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a375317046730a1c66f66873b8514a0af}\label{class_t_enc_entropy_if_a375317046730a1c66f66873b8514a0af}} 
+virtual Void {\bfseries code\+Pred\+Mode} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a81b334d3b20b90f738362fe525f25df1}\label{class_t_enc_entropy_if_a81b334d3b20b90f738362fe525f25df1}} 
+virtual Void {\bfseries code\+I\+P\+C\+M\+Info} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_af2127065888b4759fd9ba993c7d3c27f}\label{class_t_enc_entropy_if_af2127065888b4759fd9ba993c7d3c27f}} 
+virtual Void {\bfseries code\+Transform\+Subdiv\+Flag} (U\+Int ui\+Symbol, U\+Int ui\+Ctx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a86b4fb6aca4332baa3fec4d8ac30c1cf}\label{class_t_enc_entropy_if_a86b4fb6aca4332baa3fec4d8ac30c1cf}} 
+virtual Void {\bfseries code\+Qt\+Cbf} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Component\+ID comp\+ID, const Bool lowest\+Level)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a1ea43a39bc716b4504e178a8498aa940}\label{class_t_enc_entropy_if_a1ea43a39bc716b4504e178a8498aa940}} 
+virtual Void {\bfseries code\+Qt\+Root\+Cbf} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ad4e67ddf14ffc2340dbc89a0afe11154}\label{class_t_enc_entropy_if_ad4e67ddf14ffc2340dbc89a0afe11154}} 
+virtual Void {\bfseries code\+Qt\+Cbf\+Zero} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Channel\+Type ch\+Type)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ad58b36c6d812985f7c65789979cb4851}\label{class_t_enc_entropy_if_ad58b36c6d812985f7c65789979cb4851}} 
+virtual Void {\bfseries code\+Qt\+Root\+Cbf\+Zero} ()=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a6d4e867f47ed66b59b6a94a79774294b}\label{class_t_enc_entropy_if_a6d4e867f47ed66b59b6a94a79774294b}} 
+virtual Void {\bfseries code\+Intra\+Dir\+Luma\+Ang} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, Bool is\+Multiple\+PU)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ad26b1fce1402531080b45697ef879831}\label{class_t_enc_entropy_if_ad26b1fce1402531080b45697ef879831}} 
+virtual Void {\bfseries code\+Intra\+Dir\+Chroma} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a41dd41854200a782e57a01a3bd34864b}\label{class_t_enc_entropy_if_a41dd41854200a782e57a01a3bd34864b}} 
+virtual Void {\bfseries code\+Inter\+Dir} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_af61e7e3e8e6265fe1e079e30d870a9ee}\label{class_t_enc_entropy_if_af61e7e3e8e6265fe1e079e30d870a9ee}} 
+virtual Void {\bfseries code\+Ref\+Frm\+Idx} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+List)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ae14b91d7939ecef8e2a75a9bcf0987e4}\label{class_t_enc_entropy_if_ae14b91d7939ecef8e2a75a9bcf0987e4}} 
+virtual Void {\bfseries code\+Mvd} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+List)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a706327c638b4b89dc15bc22452775ffe}\label{class_t_enc_entropy_if_a706327c638b4b89dc15bc22452775ffe}} 
+virtual Void {\bfseries code\+Cross\+Component\+Prediction} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Component\+ID comp\+ID)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a4a2a2d42c3078b7c30f64550c60d29c8}\label{class_t_enc_entropy_if_a4a2a2d42c3078b7c30f64550c60d29c8}} 
+virtual Void {\bfseries code\+Delta\+QP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a561086ab8038a6b09429632f135a878b}\label{class_t_enc_entropy_if_a561086ab8038a6b09429632f135a878b}} 
+virtual Void {\bfseries code\+Chroma\+Qp\+Adjustment} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a233bdffd7be3ef05af7fc46809e3161e}\label{class_t_enc_entropy_if_a233bdffd7be3ef05af7fc46809e3161e}} 
+virtual Void {\bfseries code\+Coeff\+NxN} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, \hyperlink{_type_def_8h_a5bdd3b17d14ed1978c366d2d958c0300}{T\+Coeff} $\ast$pc\+Coef, const Component\+ID comp\+ID)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a1c30c520a9ea5e2a3fb65e07fc33fa96}\label{class_t_enc_entropy_if_a1c30c520a9ea5e2a3fb65e07fc33fa96}} 
+virtual Void {\bfseries code\+Transform\+Skip\+Flags} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, Component\+ID component)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_a135cc66c5b6475a4c5cf2af34768516c}\label{class_t_enc_entropy_if_a135cc66c5b6475a4c5cf2af34768516c}} 
+virtual Void {\bfseries code\+S\+A\+O\+Blk\+Param} (\hyperlink{struct_s_a_o_blk_param}{S\+A\+O\+Blk\+Param} \&sao\+Blk\+Param, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&bit\+Depths, Bool $\ast$slice\+Enabled, Bool left\+Merge\+Avail, Bool above\+Merge\+Avail, Bool only\+Est\+Merge\+Info=false)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_af04356f3b72d2cd8c7b09446e0513ac1}\label{class_t_enc_entropy_if_af04356f3b72d2cd8c7b09446e0513ac1}} 
+virtual Void {\bfseries est\+Bit} (\hyperlink{structest_bits_sbac_struct}{est\+Bits\+Sbac\+Struct} $\ast$pc\+Est\+Bits\+Sbac, Int width, Int height, Channel\+Type ch\+Type)=0
+\item 
+\mbox{\Hypertarget{class_t_enc_entropy_if_ad49a1d393b2afa54bb1c3f5607ca2fb3}\label{class_t_enc_entropy_if_ad49a1d393b2afa54bb1c3f5607ca2fb3}} 
+virtual Void {\bfseries code\+Explicit\+Rdpcm\+Mode} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Component\+ID comp\+ID)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+entropy encoder pure class 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Encoder/\hyperlink{_t_enc_entropy_8h}{T\+Enc\+Entropy.\+h}\end{DoxyCompactItemize}

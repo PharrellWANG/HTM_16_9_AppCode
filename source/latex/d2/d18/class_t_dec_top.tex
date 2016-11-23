@@ -1,0 +1,106 @@
+\hypertarget{class_t_dec_top}{}\section{T\+Dec\+Top Class Reference}
+\label{class_t_dec_top}\index{T\+Dec\+Top@{T\+Dec\+Top}}
+
+
+decoder class  
+
+
+
+
+{\ttfamily \#include $<$T\+Dec\+Top.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a2ebbc264b370222cb61c4c8f76619eac}\label{class_t_dec_top_a2ebbc264b370222cb61c4c8f76619eac}} 
+Void {\bfseries set\+Decoded\+Picture\+Hash\+S\+E\+I\+Enabled} (Int enabled)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_afc9af9448f6b2af23822b56184778d90}\label{class_t_dec_top_afc9af9448f6b2af23822b56184778d90}} 
+Bool {\bfseries get\+No\+Output\+Prior\+Pics\+Flag} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a6d3f4f1d3814dd6ddec60503c4eda615}\label{class_t_dec_top_a6d3f4f1d3814dd6ddec60503c4eda615}} 
+Void {\bfseries set\+No\+Output\+Prior\+Pics\+Flag} (Bool val)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a97777e2f178163e525bc486b1bd616be}\label{class_t_dec_top_a97777e2f178163e525bc486b1bd616be}} 
+Void {\bfseries set\+First\+Slice\+In\+Picture} (bool val)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a6ae1029b5b7bed12e34bb2c1a97de000}\label{class_t_dec_top_a6ae1029b5b7bed12e34bb2c1a97de000}} 
+Bool {\bfseries get\+First\+Slice\+In\+Sequence} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a52e16ebf7c330422b8a1ef59edd7a4df}\label{class_t_dec_top_a52e16ebf7c330422b8a1ef59edd7a4df}} 
+Void {\bfseries set\+First\+Slice\+In\+Sequence} (bool val)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a3d2b19ca3e13ba7eec3b7189b5900d26}\label{class_t_dec_top_a3d2b19ca3e13ba7eec3b7189b5900d26}} 
+Void {\bfseries set\+Decoded\+S\+E\+I\+Message\+Output\+Stream} (std\+::ostream $\ast$p\+Op\+Stream)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a99957942a297b36fab610d1e8979bed3}\label{class_t_dec_top_a99957942a297b36fab610d1e8979bed3}} 
+U\+Int {\bfseries get\+Number\+Of\+Checksum\+Errors\+Detected} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_dec_top_ac5209b1c7600d5a55859305599183e14}\label{class_t_dec_top_ac5209b1c7600d5a55859305599183e14}} 
+Void {\bfseries x\+Update\+Previous\+Tid0\+P\+OC} (\hyperlink{class_t_com_slice}{T\+Com\+Slice} $\ast$p\+Slice)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_dec_top_af1955adfe6ec39c7a89dcefebaef910c}\label{class_t_dec_top_af1955adfe6ec39c7a89dcefebaef910c}} 
+\hyperlink{class_t_dec_top_af1955adfe6ec39c7a89dcefebaef910c}{T\+Dec\+Top} ()
+\begin{DoxyCompactList}\small\item\em Buffered up prefix \hyperlink{class_s_e_i}{S\+EI} N\+AL Units. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_dec_top_a4fb11d1e7ca3ca08a808525f1f588d90}\label{class_t_dec_top_a4fb11d1e7ca3ca08a808525f1f588d90}} 
+Void {\bfseries create} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a1a9b36dbcb531fbcc6e8cefe74a36960}\label{class_t_dec_top_a1a9b36dbcb531fbcc6e8cefe74a36960}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a2574080644f6c07ac647f31a0ccd88c7}\label{class_t_dec_top_a2574080644f6c07ac647f31a0ccd88c7}} 
+Void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a70cf3d883d75b7d5d5300f81414c089b}\label{class_t_dec_top_a70cf3d883d75b7d5d5300f81414c089b}} 
+Bool {\bfseries decode} (\hyperlink{class_input_n_a_l_unit}{Input\+N\+A\+L\+Unit} \&nalu, Int \&i\+Skip\+Frame, Int \&i\+P\+O\+C\+Last\+Display)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a1cb4402c975ad5a119fb2c52a9fff044}\label{class_t_dec_top_a1cb4402c975ad5a119fb2c52a9fff044}} 
+Void {\bfseries delete\+Pic\+Buffer} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a49bb446e283fd48dfe2b8b05b7989dc1}\label{class_t_dec_top_a49bb446e283fd48dfe2b8b05b7989dc1}} 
+Void {\bfseries execute\+Loop\+Filters} (Int \&poc, \hyperlink{class_t_com_list}{T\+Com\+List}$<$ \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$$>$ $\ast$\&rpc\+List\+Pic)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a8f1ff6b21081c1e104b3d1cfbfca96f9}\label{class_t_dec_top_a8f1ff6b21081c1e104b3d1cfbfca96f9}} 
+Void {\bfseries check\+No\+Output\+Prior\+Pics} (\hyperlink{class_t_com_list}{T\+Com\+List}$<$ \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$$>$ $\ast$rpc\+List\+Pic)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a3d8580f3f3b537470fd7908e2561a494}\label{class_t_dec_top_a3d8580f3f3b537470fd7908e2561a494}} 
+Void {\bfseries x\+Get\+New\+Pic\+Buffer} (const \hyperlink{class_t_com_s_p_s}{T\+Com\+S\+PS} \&sps, const \hyperlink{class_t_com_p_p_s}{T\+Com\+P\+PS} \&pps, \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$\&rpc\+Pic, const U\+Int temporal\+Layer)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_af9aa0f1ebe1741866f420c6723d1ba24}\label{class_t_dec_top_af9aa0f1ebe1741866f420c6723d1ba24}} 
+Void {\bfseries x\+Create\+Lost\+Picture} (Int i\+Lost\+P\+OC)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a7e29189d5a5211d51d6c0feb74e125bc}\label{class_t_dec_top_a7e29189d5a5211d51d6c0feb74e125bc}} 
+Void {\bfseries x\+Activate\+Parameter\+Sets} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a5df82ab296c866fc7f35db550c830190}\label{class_t_dec_top_a5df82ab296c866fc7f35db550c830190}} 
+Bool {\bfseries x\+Decode\+Slice} (\hyperlink{class_input_n_a_l_unit}{Input\+N\+A\+L\+Unit} \&nalu, Int \&i\+Skip\+Frame, Int i\+P\+O\+C\+Last\+Display)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a673e02893b06e2c1687ff4cd6a614c97}\label{class_t_dec_top_a673e02893b06e2c1687ff4cd6a614c97}} 
+Void {\bfseries x\+Decode\+V\+PS} (const std\+::vector$<$ U\+Char $>$ \&nalu\+Data)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a50e697909db969c0572c89a85857da19}\label{class_t_dec_top_a50e697909db969c0572c89a85857da19}} 
+Void {\bfseries x\+Decode\+S\+PS} (const std\+::vector$<$ U\+Char $>$ \&nalu\+Data)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_af3bfe0ef52e7bd58df74fd310cccf13b}\label{class_t_dec_top_af3bfe0ef52e7bd58df74fd310cccf13b}} 
+Void {\bfseries x\+Decode\+P\+PS} (const std\+::vector$<$ U\+Char $>$ \&nalu\+Data)
+\item 
+\mbox{\Hypertarget{class_t_dec_top_a406a7d6a9ee5976d3470fc257c6a2b58}\label{class_t_dec_top_a406a7d6a9ee5976d3470fc257c6a2b58}} 
+Void {\bfseries x\+Parse\+Prefix\+S\+E\+Imessages} ()
+\item 
+\mbox{\Hypertarget{class_t_dec_top_abeac33c1bd5f2b500b519306d9c25422}\label{class_t_dec_top_abeac33c1bd5f2b500b519306d9c25422}} 
+Void {\bfseries x\+Parse\+Prefix\+S\+E\+Is\+For\+Unknown\+V\+C\+L\+Nal} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+decoder class 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Decoder/\hyperlink{_t_dec_top_8h}{T\+Dec\+Top.\+h}\item 
+Lib/\+T\+Lib\+Decoder/\hyperlink{_t_dec_top_8cpp}{T\+Dec\+Top.\+cpp}\end{DoxyCompactItemize}

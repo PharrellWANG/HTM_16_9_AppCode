@@ -1,0 +1,182 @@
+\hypertarget{class_t_app_com_cam_para}{}\section{T\+App\+Com\+Cam\+Para Class Reference}
+\label{class_t_app_com_cam_para}\index{T\+App\+Com\+Cam\+Para@{T\+App\+Com\+Cam\+Para}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a8a242088adae8e94a2b8e1a0f99cd219}\label{class_t_app_com_cam_para_a8a242088adae8e94a2b8e1a0f99cd219}} 
+Void {\bfseries init} (U\+Int ui\+Num\+Base\+Views, U\+Int ui\+Input\+Bit\+Depth, U\+Int ui\+Coded\+Cam\+Pars\+Precision, U\+Int ui\+Start\+Frame\+Id, U\+Int ui\+Num\+Frames, T\+Char $\ast$pch\+Cfg\+File\+Name, T\+Char $\ast$pch\+Base\+View\+Numbers, T\+Char $\ast$pch\+Synth\+View\+Numbers, std\+::vector$<$ Int $>$ $\ast$pai\+Synth\+View\+Numbers, Int i\+Log2\+Precision)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a9dd336d322b2be6e9e871e7ca966f093}\label{class_t_app_com_cam_para_a9dd336d322b2be6e9e871e7ca966f093}} 
+Void {\bfseries init} (U\+Int ui\+Input\+Bit\+Depth, U\+Int ui\+Start\+Frame\+Id, U\+Int ui\+Num\+Frames, T\+Char $\ast$pch\+Cfg\+File\+Name, T\+Char $\ast$pch\+Synth\+View\+Numbers, std\+::vector$<$ Int $>$ $\ast$pai\+Synth\+View\+Numbers, Int i\+Log2\+Precision)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ac6c146fcd2aba624ce92f9c71f50462f}\label{class_t_app_com_cam_para_ac6c146fcd2aba624ce92f9c71f50462f}} 
+Void {\bfseries check} (Bool b\+Check\+View\+Range, Bool b\+Check\+Frame\+Range)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a02836a9d44b43fc7f40feef15407d49f}\label{class_t_app_com_cam_para_a02836a9d44b43fc7f40feef15407d49f}} 
+Void {\bfseries update} (U\+Int ui\+Frame\+Id)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a84b02674d0bf631c9a01ba3810efebaf}\label{class_t_app_com_cam_para_a84b02674d0bf631c9a01ba3810efebaf}} 
+Int {\bfseries synth\+Rel\+Num2\+Idx} (Int i\+Rel\+Num)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a28cfe00a4626a684e495c1d6201615b5}\label{class_t_app_com_cam_para_a28cfe00a4626a684e495c1d6201615b5}} 
+Bool {\bfseries get\+Left\+Right\+Base\+View} (Int i\+Synth\+View\+Idx, Int \&ri\+Left\+View\+Idx, Int \&ri\+Right\+View\+Idx, Int \&ri\+Rel\+Dist\+To\+Left, Bool \&rb\+Is\+Base\+View)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a87cbdc821ef5868ee4a26d709542dd8d}\label{class_t_app_com_cam_para_a87cbdc821ef5868ee4a26d709542dd8d}} 
+Int {\bfseries get\+Rel\+Dist\+Left} (Int i\+Synth\+View\+Idx, Int i\+Left\+View\+Idx, Int i\+Right\+View\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aac9559fc9c73655d4192c5e58eb53e0a}\label{class_t_app_com_cam_para_aac9559fc9c73655d4192c5e58eb53e0a}} 
+U\+Int {\bfseries get\+Cur\+Frame\+Id} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a5f01375731e992fedff570a2f5f72142}\label{class_t_app_com_cam_para_a5f01375731e992fedff570a2f5f72142}} 
+Void {\bfseries set\+Disp\+Coeff} (U\+Int ui\+Start\+Frame\+Id, Int i\+View\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a63ee097b2c1c12760191fc9ddd0fa855}\label{class_t_app_com_cam_para_a63ee097b2c1c12760191fc9ddd0fa855}} 
+Double {\bfseries get\+Disp\+Coeff} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a951cea4d21e101346926afbe4f9f1f3e}\label{class_t_app_com_cam_para_a951cea4d21e101346926afbe4f9f1f3e}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Base\+View\+Numbers} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ada1de704849945a415e96ed58068bdce}\label{class_t_app_com_cam_para_ada1de704849945a415e96ed58068bdce}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Sorted\+Base\+View\+Numbers} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a99924597fbf074b6b49a322bcd170b95}\label{class_t_app_com_cam_para_a99924597fbf074b6b49a322bcd170b95}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Synth\+View\+Numbers} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a2ddab02c44c0bb26d97bd5153d86a6c3}\label{class_t_app_com_cam_para_a2ddab02c44c0bb26d97bd5153d86a6c3}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Rel\+Synth\+View\+Numbers} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a9da1de054cd908206d9e137bf5a55f23}\label{class_t_app_com_cam_para_a9da1de054cd908206d9e137bf5a55f23}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Base\+Id2\+Sorted\+Id} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a31cfbddcb7f8166762693606a1d5d80c}\label{class_t_app_com_cam_para_a31cfbddcb7f8166762693606a1d5d80c}} 
+std\+::vector$<$ Int $>$ \& {\bfseries get\+Base\+Sorted\+Id2\+Id} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aa58807ba71bbd44c1a702309bc90ef80}\label{class_t_app_com_cam_para_aa58807ba71bbd44c1a702309bc90ef80}} 
+Double $\ast$$\ast$$\ast$ {\bfseries get\+Base\+View\+Shift\+ParameterD} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ad858e15d1300e5672a6e030c5544700d}\label{class_t_app_com_cam_para_ad858e15d1300e5672a6e030c5544700d}} 
+Int $\ast$$\ast$$\ast$ {\bfseries get\+Base\+View\+Shift\+ParameterI} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a5651a4823fb0b4911ff11d02583102e7}\label{class_t_app_com_cam_para_a5651a4823fb0b4911ff11d02583102e7}} 
+Double $\ast$$\ast$$\ast$$\ast$ {\bfseries get\+Synth\+View\+Shift\+L\+U\+TD} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ae8542f736081b84fd90f85df540f523c}\label{class_t_app_com_cam_para_ae8542f736081b84fd90f85df540f523c}} 
+Double $\ast$$\ast$$\ast$$\ast$ {\bfseries get\+Base\+View\+Shift\+L\+U\+TD} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a704770af6b5b617ab834fa6e7f8d3448}\label{class_t_app_com_cam_para_a704770af6b5b617ab834fa6e7f8d3448}} 
+Int $\ast$$\ast$$\ast$$\ast$ {\bfseries get\+Synth\+View\+Shift\+L\+U\+TI} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a5d165e3c7690c24eb3ba2ae9f43c32cf}\label{class_t_app_com_cam_para_a5d165e3c7690c24eb3ba2ae9f43c32cf}} 
+Int $\ast$$\ast$$\ast$$\ast$ {\bfseries get\+Base\+View\+Shift\+L\+U\+TI} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a88d91c694fddae263926fd4966a0bb6b}\label{class_t_app_com_cam_para_a88d91c694fddae263926fd4966a0bb6b}} 
+Bool {\bfseries get\+Varying\+Camera\+Parameters} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a1377c6c07c9f94f87f5716fdba837972}\label{class_t_app_com_cam_para_a1377c6c07c9f94f87f5716fdba837972}} 
+U\+Int {\bfseries get\+Cam\+Pars\+Coded\+Precision} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ab7cc26dc9e955d17b73d497a7ea8890e}\label{class_t_app_com_cam_para_ab7cc26dc9e955d17b73d497a7ea8890e}} 
+Int $\ast$$\ast$ {\bfseries get\+Coded\+Scale} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ad6ec02fc84a317d29077170864d083de}\label{class_t_app_com_cam_para_ad6ec02fc84a317d29077170864d083de}} 
+Int $\ast$$\ast$ {\bfseries get\+Coded\+Offset} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aaa3e07af5cbad081d74991748e7a52cf}\label{class_t_app_com_cam_para_aaa3e07af5cbad081d74991748e7a52cf}} 
+static Void {\bfseries convert\+Number\+String} (T\+Char $\ast$pch\+View\+Number\+String, std\+::vector$<$ Int $>$ \&rai\+View\+Numbers, Double d\+View\+Num\+Prec)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ae46d48a75c84da85524edea7f280320a}\label{class_t_app_com_cam_para_ae46d48a75c84da85524edea7f280320a}} 
+Void {\bfseries x\+Create\+L\+U\+Ts} (U\+Int ui\+Number\+Source\+Views, U\+Int ui\+Number\+Target\+Views, Double $\ast$$\ast$$\ast$$\ast$\&rad\+L\+UT, Int $\ast$$\ast$$\ast$$\ast$\&rai\+L\+UT, Double $\ast$$\ast$$\ast$\&rad\+Shift\+Params, Int64 $\ast$$\ast$$\ast$\&rai\+Shift\+Params)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aa09642dc49b783bff93e04adb0de94a9}\label{class_t_app_com_cam_para_aa09642dc49b783bff93e04adb0de94a9}} 
+Void {\bfseries x\+Create2d\+Array} (U\+Int ui\+Num1\+Ids, U\+Int ui\+Num2\+Ids, Int $\ast$$\ast$\&raai\+Array)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a6532f8637ce03349ebaabf6d0f31b094}\label{class_t_app_com_cam_para_a6532f8637ce03349ebaabf6d0f31b094}} 
+Void {\bfseries x\+Init2d\+Array} (U\+Int ui\+Num1\+Ids, U\+Int ui\+Num2\+Ids, Int $\ast$$\ast$\&raai\+Array, Int i\+Value)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a00d2ae7b5e3565654db5863d2ae02e5c}\label{class_t_app_com_cam_para_a00d2ae7b5e3565654db5863d2ae02e5c}} 
+{\footnotesize template$<$class T $>$ }\\Void {\bfseries x\+Delete\+Array} (T $\ast$\&rpt, U\+Int ui\+Size1, U\+Int ui\+Size2, U\+Int ui\+Size3)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a1f0f1757c1c684f13c508ec5c46d2007}\label{class_t_app_com_cam_para_a1f0f1757c1c684f13c508ec5c46d2007}} 
+{\footnotesize template$<$class T $>$ }\\Void {\bfseries x\+Delete\+Array} (T $\ast$\&rpt, U\+Int ui\+Size1, U\+Int ui\+Size2)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a3aa84565608c0125645181e8c52ebae8}\label{class_t_app_com_cam_para_a3aa84565608c0125645181e8c52ebae8}} 
+{\footnotesize template$<$class T $>$ }\\Void {\bfseries x\+Delete\+Array} (T $\ast$\&rpt, U\+Int ui\+Size)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_abef63b0c4669e1a0c9034f5dbd400a60}\label{class_t_app_com_cam_para_abef63b0c4669e1a0c9034f5dbd400a60}} 
+Void {\bfseries x\+Read\+Camera\+Parameter\+File} (T\+Char $\ast$pch\+Cfg\+File\+Name)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a798c522b6d04164e16928e7628926f3c}\label{class_t_app_com_cam_para_a798c522b6d04164e16928e7628926f3c}} 
+Bool {\bfseries x\+Get\+Camera\+Data\+Row} (Int i\+View, U\+Int ui\+Frame, U\+Int \&rui\+Found\+Line)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_af6767c1a5b9797d68a03c905599159ed}\label{class_t_app_com_cam_para_af6767c1a5b9797d68a03c905599159ed}} 
+Void {\bfseries x\+Get\+Sorted\+View\+List} (const std\+::vector$<$ Int $>$ \&rai\+Views, std\+::vector$<$ Int $>$ \&rai\+Sorted\+Views, std\+::vector$<$ Int $>$ \&rai\+Id2\+Sorted\+Id, std\+::vector$<$ Int $>$ \&rai\+Sorted\+Id2\+Id)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ae393f95ccff16057b963fee96a93bcc2}\label{class_t_app_com_cam_para_ae393f95ccff16057b963fee96a93bcc2}} 
+Void {\bfseries x\+Get\+View\+Order\+Indices} (const std\+::vector$<$ Int $>$ \&rai\+Id2\+Sorted\+Id, std\+::vector$<$ Int $>$ \&rai\+V\+O\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a5b7d5f8e228e256a10607532de64eba4}\label{class_t_app_com_cam_para_a5b7d5f8e228e256a10607532de64eba4}} 
+Bool {\bfseries x\+Get\+Cam\+Pars\+Change\+Flag} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ac1cc29a9edc3d572795ea4bdc85f6408}\label{class_t_app_com_cam_para_ac1cc29a9edc3d572795ea4bdc85f6408}} 
+Int {\bfseries x\+Get\+Base\+View\+Id} (Int i\+Base\+View)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a7c3e2d0ffa17ec7c8aed9781facc5a39}\label{class_t_app_com_cam_para_a7c3e2d0ffa17ec7c8aed9781facc5a39}} 
+Int {\bfseries x\+Get\+View\+Id} (std\+::vector$<$ Int $>$ ai\+View\+List, Int i\+Base\+View)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aad26e0f55875b5b34c97ef9cd40a9648}\label{class_t_app_com_cam_para_aad26e0f55875b5b34c97ef9cd40a9648}} 
+Bool {\bfseries x\+Get\+Left\+Right\+View} (Int i\+View, std\+::vector$<$ Int $>$ ai\+Sorted\+Views, Int \&ri\+Left\+View, Int \&ri\+Right\+View, Int \&ri\+Left\+Sorted\+View\+Idx, Int \&ri\+Right\+Sorted\+View\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a130f21a108ac1513780134ed4785b885}\label{class_t_app_com_cam_para_a130f21a108ac1513780134ed4785b885}} 
+Void {\bfseries x\+Get\+Prev\+And\+Next\+Base\+View} (Int i\+Source\+View\+Num, Int i\+Target\+View\+Num, Int \&ri\+Prev\+Base\+View\+Num, Int \&ri\+Next\+Base\+View\+Num)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a35c4085582e5361d7e88132b35c70cbc}\label{class_t_app_com_cam_para_a35c4085582e5361d7e88132b35c70cbc}} 
+Void {\bfseries x\+Get\+Z\+Near\+Z\+Far} (Int i\+View, U\+Int ui\+Frame, Double \&rd\+Z\+Near, Double \&rd\+Z\+Far)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ab875d1e9ff6c9b338852925ce3a21d7a}\label{class_t_app_com_cam_para_ab875d1e9ff6c9b338852925ce3a21d7a}} 
+Void {\bfseries x\+Get\+Geometry\+Data} (Int d\+View, U\+Int ui\+Frame, Double \&rd\+Focal\+Length, Double \&rd\+Position, Double \&rd\+Camera\+Shift, Bool \&rb\+Interpolated)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a22addf1c5948926bfebc4418cf530948}\label{class_t_app_com_cam_para_a22addf1c5948926bfebc4418cf530948}} 
+Void {\bfseries x\+Setup\+Base\+Views\+From\+Coded} ()
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ab30f32adf2b5bafb494e1fb53fbcc7c1}\label{class_t_app_com_cam_para_ab30f32adf2b5bafb494e1fb53fbcc7c1}} 
+Void {\bfseries x\+Setup\+Base\+Views} (T\+Char $\ast$pch\+Base\+View\+Numbers, U\+Int ui\+Num\+Base\+Views)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a801b4a1cd1c8dff4d200ad323d0c18d1}\label{class_t_app_com_cam_para_a801b4a1cd1c8dff4d200ad323d0c18d1}} 
+Bool {\bfseries x\+Is\+In} (std\+::vector$<$ Int $>$ \&r\+Vec, Int i\+Number)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ac51dc6b7231f41e032c84120ecd01781}\label{class_t_app_com_cam_para_ac51dc6b7231f41e032c84120ecd01781}} 
+Bool {\bfseries x\+Get\+Shift\+Parameter\+Real} (U\+Int ui\+Source\+View, U\+Int ui\+Target\+View, U\+Int ui\+Frame, Bool b\+External, Bool b\+By\+Idx, Double \&rd\+Scale, Double \&rd\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_aac4d5718fe7112b860499c5348f8db54}\label{class_t_app_com_cam_para_aac4d5718fe7112b860499c5348f8db54}} 
+Void {\bfseries x\+Get\+Shift\+Parameter\+Coded} (U\+Int ui\+Source\+View, U\+Int ui\+Target\+View, U\+Int ui\+Frame, Bool b\+By\+Idx, Int \&ri\+Scale, Int \&ri\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a644f92b0f8b3e15579e49088a5ffb5fc}\label{class_t_app_com_cam_para_a644f92b0f8b3e15579e49088a5ffb5fc}} 
+Void {\bfseries x\+Get\+Shift\+Parameter\+Int} (U\+Int ui\+Source\+View, U\+Int ui\+Target\+View, U\+Int ui\+Frame, Bool b\+External, Bool b\+By\+Idx, Int64 \&ri\+Scale, Int64 \&ri\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_adc0e0d2a97f750d638cf39df3229c756}\label{class_t_app_com_cam_para_adc0e0d2a97f750d638cf39df3229c756}} 
+Void {\bfseries x\+Get\+Coded\+Camera\+Data} (U\+Int ui\+Source\+View, U\+Int ui\+Target\+View, Bool b\+By\+Idx, U\+Int ui\+Frame, Int \&ri\+Scale, Int \&ri\+Offset, Int \&ri\+Precision)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a6c98605e118c53067f9344e4239c68d6}\label{class_t_app_com_cam_para_a6c98605e118c53067f9344e4239c68d6}} 
+Void {\bfseries x\+Set\+Coded\+Scale\+Offset} (U\+Int ui\+Frame)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_a23e3d01def98c04d1fdf16db6137402d}\label{class_t_app_com_cam_para_a23e3d01def98c04d1fdf16db6137402d}} 
+Void {\bfseries x\+Set\+Shift\+Parameters\+And\+L\+UT} (U\+Int ui\+Num\+View\+Dim1, U\+Int ui\+Num\+View\+Dim2, U\+Int ui\+Frame, Bool b\+External\+Reference, Double $\ast$$\ast$$\ast$$\ast$\&rad\+L\+UT, Int $\ast$$\ast$$\ast$$\ast$\&rai\+L\+UT, Double $\ast$$\ast$$\ast$\&rad\+Shift\+Params, Int64 $\ast$$\ast$$\ast$\&rai\+Shift\+Params)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ad2ab4187296117b1ad3c8a178f529eb8}\label{class_t_app_com_cam_para_ad2ab4187296117b1ad3c8a178f529eb8}} 
+Void {\bfseries x\+Set\+Shift\+Parameters\+And\+L\+UT} (U\+Int ui\+Frame)
+\item 
+\mbox{\Hypertarget{class_t_app_com_cam_para_ac06c7f1be0bd1f390b1cab2ba83d0f64}\label{class_t_app_com_cam_para_ac06c7f1be0bd1f390b1cab2ba83d0f64}} 
+Void {\bfseries x\+Get\+Camera\+Shifts} (U\+Int ui\+Source\+View, U\+Int ui\+Target\+View, U\+Int ui\+Frame, Double \&rd\+Cam\+Pos\+Shift, Double \&rd\+Pic\+Pos\+Shift)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+App\+Common/T\+App\+Com\+Cam\+Para.\+h\item 
+Lib/\+T\+App\+Common/T\+App\+Com\+Cam\+Para.\+cpp\end{DoxyCompactItemize}

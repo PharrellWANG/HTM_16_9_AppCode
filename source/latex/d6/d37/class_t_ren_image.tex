@@ -1,0 +1,77 @@
+\hypertarget{class_t_ren_image}{}\section{T\+Ren\+Image$<$ T $>$ Class Template Reference}
+\label{class_t_ren_image}\index{T\+Ren\+Image$<$ T $>$@{T\+Ren\+Image$<$ T $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a43a987cdb83ddc3cca0f8c775e1fbecf}\label{class_t_ren_image_a43a987cdb83ddc3cca0f8c775e1fbecf}} 
+{\bfseries T\+Ren\+Image} (\hyperlink{class_t_ren_image}{T\+Ren\+Image} \&rc\+Input\+Image)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_aca7a826a2cda0f0e779cbd3e51f66189}\label{class_t_ren_image_aca7a826a2cda0f0e779cbd3e51f66189}} 
+{\bfseries T\+Ren\+Image} (U\+Int ui\+Width, U\+Int ui\+Height, U\+Int ui\+Num\+Planes, U\+Int ui\+Num\+Q\+Planes)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_adafb56091124eaaadbb13ffb9318e47f}\label{class_t_ren_image_adafb56091124eaaadbb13ffb9318e47f}} 
+{\bfseries T\+Ren\+Image} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+In, Bool b\+First\+Plane\+Only=false)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_aaf82980b6bbc049d054ab43e271c8ea7}\label{class_t_ren_image_aaf82980b6bbc049d054ab43e271c8ea7}} 
+Void {\bfseries allocate\+Planes} (U\+Int ui\+Width, U\+Int ui\+Height, U\+Int ui\+Num\+Full\+Planes, U\+Int ui\+Num\+Quater\+Planes)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ae501375f937ee53f02752cff32261a7f}\label{class_t_ren_image_ae501375f937ee53f02752cff32261a7f}} 
+\hyperlink{class_t_ren_image}{T\+Ren\+Image} $\ast$ {\bfseries create} ()
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a0183d37f0b02b786df81ecfd1db67861}\label{class_t_ren_image_a0183d37f0b02b786df81ecfd1db67861}} 
+Void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_t_ren_image_aa5fb543f063a59750f46c2bbf51c5424}\label{class_t_ren_image_aa5fb543f063a59750f46c2bbf51c5424}} 
+\hyperlink{class_t_ren_image_plane}{T\+Ren\+Image\+Plane}$<$ T $>$ $\ast$ {\bfseries get\+Plane} (U\+Int ui\+Plane\+Number) const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ad24a342cfc2c70698d57a0bbda64d65b}\label{class_t_ren_image_ad24a342cfc2c70698d57a0bbda64d65b}} 
+\hyperlink{class_t_ren_image_plane}{T\+Ren\+Image\+Plane}$<$ T $>$ $\ast$$\ast$ {\bfseries get\+Planes} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_adefd016342b471fda0f4451cf365358d}\label{class_t_ren_image_adefd016342b471fda0f4451cf365358d}} 
+Void {\bfseries get\+Data\+And\+Strides} (T $\ast$$\ast$ppt\+Data, Int $\ast$pi\+Strides) const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a5e028f609c350022c50aa73e7dfa5e39}\label{class_t_ren_image_a5e028f609c350022c50aa73e7dfa5e39}} 
+Void {\bfseries get\+Width\+And\+Height} (Int $\ast$pi\+Widths, Int $\ast$pi\+Heights) const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ae03b15d1b0334e8b7fd0b45f6c35e576}\label{class_t_ren_image_ae03b15d1b0334e8b7fd0b45f6c35e576}} 
+U\+Int {\bfseries get\+Number\+Of\+Planes} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_af7afd8c77942c6794ec41a2edae7148b}\label{class_t_ren_image_af7afd8c77942c6794ec41a2edae7148b}} 
+U\+Int {\bfseries get\+Number\+Of\+Quater\+Planes} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a6c6b986395df3baa8bb656b14665b4f2}\label{class_t_ren_image_a6c6b986395df3baa8bb656b14665b4f2}} 
+U\+Int {\bfseries get\+Number\+Of\+Full\+Planes} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ab8d3a19c8ac4c608fed5f4729fe51792}\label{class_t_ren_image_ab8d3a19c8ac4c608fed5f4729fe51792}} 
+Bool {\bfseries is420} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ac471694c3db5492500e9a9738e13f9f8}\label{class_t_ren_image_ac471694c3db5492500e9a9738e13f9f8}} 
+Bool {\bfseries is444} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a83a31ea8f3a41bf1db1ed86d74498416}\label{class_t_ren_image_a83a31ea8f3a41bf1db1ed86d74498416}} 
+Bool {\bfseries is400} () const
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ab27a93b9d91bd0f832d80bae94058279}\label{class_t_ren_image_ab27a93b9d91bd0f832d80bae94058279}} 
+Void {\bfseries assign} (Int i\+Val)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a40d48086594236c9bd25fabbd8895c9f}\label{class_t_ren_image_a40d48086594236c9bd25fabbd8895c9f}} 
+{\footnotesize template$<$typename S $>$ }\\Void {\bfseries assign} (\hyperlink{class_t_ren_image}{T\+Ren\+Image}$<$ S $>$ $\ast$pc\+Src\+Image)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_ac96feff30458673cf9c9b3a8c7c1e3ba}\label{class_t_ren_image_ac96feff30458673cf9c9b3a8c7c1e3ba}} 
+Void {\bfseries set\+Data} (\hyperlink{class_t_ren_image}{T\+Ren\+Image} $\ast$pc\+Input\+Image, Bool b\+Clean)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a60d5211d0ff0d1cef745898b25495786}\label{class_t_ren_image_a60d5211d0ff0d1cef745898b25495786}} 
+Void {\bfseries extend\+Margin} ()
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a29118294e1ae953e383828e73c994937}\label{class_t_ren_image_a29118294e1ae953e383828e73c994937}} 
+Void {\bfseries devide} (Double d\+Devisor)
+\item 
+\mbox{\Hypertarget{class_t_ren_image_a2c3b3e1000b8f27278db8c8a3f334473}\label{class_t_ren_image_a2c3b3e1000b8f27278db8c8a3f334473}} 
+{\footnotesize template$<$$>$ }\\{\bfseries T\+Ren\+Image} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv, Bool b\+First\+Plane\+Only)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Renderer/T\+Ren\+Image.\+h\item 
+Lib/\+T\+Lib\+Renderer/T\+Ren\+Image.\+cpp\end{DoxyCompactItemize}

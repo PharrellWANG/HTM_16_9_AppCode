@@ -1,0 +1,109 @@
+\hypertarget{class_t_app_dec_cfg}{}\section{T\+App\+Dec\+Cfg Class Reference}
+\label{class_t_app_dec_cfg}\index{T\+App\+Dec\+Cfg@{T\+App\+Dec\+Cfg}}
+
+
+Decoder configuration class.  
+
+
+
+
+{\ttfamily \#include $<$T\+App\+Dec\+Cfg.\+h$>$}
+
+
+
+Inheritance diagram for T\+App\+Dec\+Cfg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{d9/de8/class_t_app_dec_cfg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+App\+Dec\+Cfg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/dc2/class_t_app_dec_cfg__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+{\bf }\par
+\begin{DoxyCompactItemize}
+\item 
+Bool \hyperlink{class_t_app_dec_cfg_a838166e6f987ee444b97f9f244770132}{parse\+Cfg} (Int argc, T\+Char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em initialize option class from configuration \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a7aecc540040bea15545aa0e9b2a87b73}\label{class_t_app_dec_cfg_a7aecc540040bea15545aa0e9b2a87b73}} 
+std\+::string \hyperlink{class_t_app_dec_cfg_a7aecc540040bea15545aa0e9b2a87b73}{m\+\_\+bitstream\+File\+Name}
+\begin{DoxyCompactList}\small\item\em input bitstream file name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a278334f882a0a48b0cb14a2d3e90dbec}\label{class_t_app_dec_cfg_a278334f882a0a48b0cb14a2d3e90dbec}} 
+std\+::string \hyperlink{class_t_app_dec_cfg_a278334f882a0a48b0cb14a2d3e90dbec}{m\+\_\+recon\+File\+Name}
+\begin{DoxyCompactList}\small\item\em output reconstruction file name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a3665b663132840bf4334db6b78348173}\label{class_t_app_dec_cfg_a3665b663132840bf4334db6b78348173}} 
+Int \hyperlink{class_t_app_dec_cfg_a3665b663132840bf4334db6b78348173}{m\+\_\+i\+Skip\+Frame}
+\begin{DoxyCompactList}\small\item\em counter for frames prior to the random access point to skip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a1f7d011ec47a153b247aca128a6c253e}\label{class_t_app_dec_cfg_a1f7d011ec47a153b247aca128a6c253e}} 
+Int \hyperlink{class_t_app_dec_cfg_a1f7d011ec47a153b247aca128a6c253e}{m\+\_\+output\+Bit\+Depth} \mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+T\+Y\+PE\mbox{]}
+\begin{DoxyCompactList}\small\item\em bit depth used for writing output \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a4450c66b2fd4fa17f6612ab17d509223}\label{class_t_app_dec_cfg_a4450c66b2fd4fa17f6612ab17d509223}} 
+Input\+Colour\+Space\+Conversion {\bfseries m\+\_\+output\+Colour\+Space\+Convert}
+\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_adfbca0a39ab597d661d79699add3c176}\label{class_t_app_dec_cfg_adfbca0a39ab597d661d79699add3c176}} 
+Int \hyperlink{class_t_app_dec_cfg_adfbca0a39ab597d661d79699add3c176}{m\+\_\+i\+Max\+Temporal\+Layer}
+\begin{DoxyCompactList}\small\item\em maximum temporal layer to be decoded \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a305eaca1ee22d9d5ed58c42c98fd1cc2}\label{class_t_app_dec_cfg_a305eaca1ee22d9d5ed58c42c98fd1cc2}} 
+Int \hyperlink{class_t_app_dec_cfg_a305eaca1ee22d9d5ed58c42c98fd1cc2}{m\+\_\+decoded\+Picture\+Hash\+S\+E\+I\+Enabled}
+\begin{DoxyCompactList}\small\item\em Checksum(3)/\+C\+RC(2)/\+M\+D5(1)/disable(0) acting on decoded picture hash \hyperlink{class_s_e_i}{S\+EI} message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_ab7a15e455ed67daf2bcadee72d0f5b75}\label{class_t_app_dec_cfg_ab7a15e455ed67daf2bcadee72d0f5b75}} 
+Bool \hyperlink{class_t_app_dec_cfg_ab7a15e455ed67daf2bcadee72d0f5b75}{m\+\_\+decoded\+No\+Display\+S\+E\+I\+Enabled}
+\begin{DoxyCompactList}\small\item\em Enable(true)/disable(false) writing only pictures that get displayed based on the no display \hyperlink{class_s_e_i}{S\+EI} message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_afa502d8af1679bde9baf41e35e791d13}\label{class_t_app_dec_cfg_afa502d8af1679bde9baf41e35e791d13}} 
+std\+::string \hyperlink{class_t_app_dec_cfg_afa502d8af1679bde9baf41e35e791d13}{m\+\_\+colour\+Remap\+S\+E\+I\+File\+Name}
+\begin{DoxyCompactList}\small\item\em output Colour Remapping file name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a36f70e3c8762abf741aa35784393bcb7}\label{class_t_app_dec_cfg_a36f70e3c8762abf741aa35784393bcb7}} 
+std\+::vector$<$ Int $>$ \hyperlink{class_t_app_dec_cfg_a36f70e3c8762abf741aa35784393bcb7}{m\+\_\+target\+Dec\+Layer\+Id\+Set}
+\begin{DoxyCompactList}\small\item\em set of Layer\+Ids to be included in the sub-\/bitstream extraction process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_a3f9086645457585320bbdf4573e256db}\label{class_t_app_dec_cfg_a3f9086645457585320bbdf4573e256db}} 
+Int \hyperlink{class_t_app_dec_cfg_a3f9086645457585320bbdf4573e256db}{m\+\_\+respect\+Def\+Disp\+Window}
+\begin{DoxyCompactList}\small\item\em Only output content inside the default display window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_acccb4938fe59bbff920dd56a4c3f2045}\label{class_t_app_dec_cfg_acccb4938fe59bbff920dd56a4c3f2045}} 
+std\+::string \hyperlink{class_t_app_dec_cfg_acccb4938fe59bbff920dd56a4c3f2045}{m\+\_\+output\+Decoded\+S\+E\+I\+Messages\+Filename}
+\begin{DoxyCompactList}\small\item\em filename to output decoded \hyperlink{class_s_e_i}{S\+EI} messages to. If \textquotesingle{}-\/\textquotesingle{}, then use stdout. If empty, do not output details. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_app_dec_cfg_ab90b455b765ae85dca5ad192d9f2b573}\label{class_t_app_dec_cfg_ab90b455b765ae85dca5ad192d9f2b573}} 
+Bool \hyperlink{class_t_app_dec_cfg_ab90b455b765ae85dca5ad192d9f2b573}{m\+\_\+b\+Clip\+Output\+Video\+To\+Rec709\+Range}
+\begin{DoxyCompactList}\small\item\em If true, clip the output video to the Rec 709 range on saving. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Decoder configuration class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_app_dec_cfg_a838166e6f987ee444b97f9f244770132}\label{class_t_app_dec_cfg_a838166e6f987ee444b97f9f244770132}} 
+\index{T\+App\+Dec\+Cfg@{T\+App\+Dec\+Cfg}!parse\+Cfg@{parse\+Cfg}}
+\index{parse\+Cfg@{parse\+Cfg}!T\+App\+Dec\+Cfg@{T\+App\+Dec\+Cfg}}
+\subsubsection{\texorpdfstring{parse\+Cfg()}{parseCfg()}}
+{\footnotesize\ttfamily Bool T\+App\+Dec\+Cfg\+::parse\+Cfg (\begin{DoxyParamCaption}\item[{Int}]{argc,  }\item[{T\+Char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+initialize option class from configuration 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & number of arguments \\
+\hline
+{\em argv} & array of arguments \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+App/\+T\+App\+Decoder/\hyperlink{_t_app_dec_cfg_8h}{T\+App\+Dec\+Cfg.\+h}\item 
+App/\+T\+App\+Decoder/\hyperlink{_t_app_dec_cfg_8cpp}{T\+App\+Dec\+Cfg.\+cpp}\end{DoxyCompactItemize}

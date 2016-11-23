@@ -1,0 +1,17 @@
+<map id="Lib/TLibDecoder/SyntaxElementParser.h" name="Lib/TLibDecoder/SyntaxElementParser.h">
+<area shape="rect" id="node2" href="$de/d2e/_t_dec_c_a_v_l_c_8h.html" title="CAVLC decoder class (header) " alt="" coords="477,99,686,124"/>
+<area shape="rect" id="node15" href="$d2/da9/_s_e_iread_8cpp.html" title="reading funtionality for SEI messages " alt="" coords="710,99,906,124"/>
+<area shape="rect" id="node16" href="$d6/d1d/_syntax_element_parser_8cpp.html" title="Parsing functionality high level syntax. " alt="" coords="930,92,1142,131"/>
+<area shape="rect" id="node3" href="$d2/d63/_t_extr_top_8h_source.html" title="Lib/TLibExtractor/TExtrTop.h" alt="" coords="137,179,327,204"/>
+<area shape="rect" id="node8" href="$d2/d86/_t_dec_c_a_v_l_c_8cpp.html" title="CAVLC decoder class. " alt="" coords="351,179,574,204"/>
+<area shape="rect" id="node9" href="$de/dab/_t_dec_gop_8cpp.html" title="GOP decoder class. " alt="" coords="599,179,804,204"/>
+<area shape="rect" id="node10" href="$d1/d57/_t_dec_top_8h.html" title="decoder class (header) " alt="" coords="828,179,1015,204"/>
+<area shape="rect" id="node4" href="$d4/dbd/_t_app_extr_top_8h.html" title="Extractor application class (header) " alt="" coords="78,252,269,291"/>
+<area shape="rect" id="node7" href="$d0/da0/_t_extr_top_8cpp.html" title="extractor class " alt="" coords="292,259,497,284"/>
+<area shape="rect" id="node5" href="$d8/d42/extrmain_8cpp.html" title="Extractor application main. " alt="" coords="5,345,218,371"/>
+<area shape="rect" id="node6" href="$d2/d91/_t_app_extr_top_8cpp.html" title="Extractor application class. " alt="" coords="243,339,434,377"/>
+<area shape="rect" id="node11" href="$dd/d66/_t_app_dec_top_8h.html" title="Decoder application class (header) " alt="" coords="636,259,857,284"/>
+<area shape="rect" id="node14" href="$da/dfc/_t_dec_top_8cpp.html" title="decoder class " alt="" coords="880,259,1082,284"/>
+<area shape="rect" id="node12" href="$d7/d8b/decmain_8cpp.html" title="Decoder application main. " alt="" coords="550,345,759,371"/>
+<area shape="rect" id="node13" href="$d7/d8e/_t_app_dec_top_8cpp.html" title="Decoder application class. " alt="" coords="784,345,1019,371"/>
+</map>

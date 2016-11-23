@@ -1,0 +1,247 @@
+\hypertarget{class_t_com_loop_filter}{}\section{T\+Com\+Loop\+Filter Class Reference}
+\label{class_t_com_loop_filter}\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+
+
+deblocking filter class  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Loop\+Filter.\+h$>$}
+
+
+
+Collaboration diagram for T\+Com\+Loop\+Filter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{d1/d9a/class_t_com_loop_filter__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_ae9b8a496c08a8ab251d04202f885a506}\label{class_t_com_loop_filter_ae9b8a496c08a8ab251d04202f885a506}} 
+static Int {\bfseries get\+Beta} (Int qp)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a833a2fce04e41fc628747ce8e328d836}\label{class_t_com_loop_filter_a833a2fce04e41fc628747ce8e328d836}} 
+U\+Int {\bfseries x\+Calc\+Bs\+Idx} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int abs\+Z\+Idx\+In\+Ctu, Deblock\+Edge\+Dir edge\+Dir, Int i\+Edge\+Idx, Int i\+Base\+Unit\+Idx, const struct \hyperlink{struct_t_com_rectangle}{T\+Com\+Rectangle} $\ast$rect=N\+U\+LL)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+static const U\+Char {\bfseries sm\+\_\+tc\+Table} \mbox{[}54\mbox{]}
+\item 
+static const U\+Char {\bfseries sm\+\_\+beta\+Table} \mbox{[}52\mbox{]}
+\item 
+Void \hyperlink{class_t_com_loop_filter_a15915a5d41a74e4194af29f770b99a3d}{x\+Deblock\+CU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Zorder\+Idx, U\+Int ui\+Depth, Deblock\+Edge\+Dir edge\+Dir)
+\begin{DoxyCompactList}\small\item\em C\+U-\/level deblocking function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a341c6c7c7528beac22527a5b903709c4}\label{class_t_com_loop_filter_a341c6c7c7528beac22527a5b903709c4}} 
+Void {\bfseries x\+Set\+Loopfilter\+Param} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Zorder\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a9bce279c15d6d0f3214081cc796610ba}\label{class_t_com_loop_filter_a9bce279c15d6d0f3214081cc796610ba}} 
+Void {\bfseries x\+Set\+Edgefilter\+TU} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a9b6460744594120affd1b2a643c9091f}\label{class_t_com_loop_filter_a9b6460744594120affd1b2a643c9091f}} 
+Void {\bfseries x\+Set\+Edgefilter\+PU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Zorder\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a26eeeb3f9cb40e9cc239afab2c066864}\label{class_t_com_loop_filter_a26eeeb3f9cb40e9cc239afab2c066864}} 
+Void {\bfseries x\+Get\+Boundary\+Strength\+Single} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$p\+Ctu, Deblock\+Edge\+Dir edge\+Dir, U\+Int ui\+Part\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a1c2b054e6d23a752ec6cd79bfe60bfd0}\label{class_t_com_loop_filter_a1c2b054e6d23a752ec6cd79bfe60bfd0}} 
+Void {\bfseries x\+Set\+Edgefilter\+Multiple} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Zorder\+Idx, U\+Int ui\+Depth, Deblock\+Edge\+Dir edge\+Dir, Int i\+Edge\+Idx, Bool b\+Value, U\+Int ui\+Width\+In\+Base\+Units=0, U\+Int ui\+Height\+In\+Base\+Units=0, const \hyperlink{struct_t_com_rectangle}{T\+Com\+Rectangle} $\ast$rect=0)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_aefe0982634437078f939ae07ab397596}\label{class_t_com_loop_filter_aefe0982634437078f939ae07ab397596}} 
+Void {\bfseries x\+Edge\+Filter\+Luma} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const U\+Int ui\+Abs\+Zorder\+Idx, const U\+Int ui\+Depth, const Deblock\+Edge\+Dir edge\+Dir, const Int i\+Edge)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_aa2c3a17cf94a658d907ad7b67e29d154}\label{class_t_com_loop_filter_aa2c3a17cf94a658d907ad7b67e29d154}} 
+Void {\bfseries x\+Edge\+Filter\+Chroma} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$const pc\+CU, const U\+Int ui\+Abs\+Zorder\+Idx, const U\+Int ui\+Depth, const Deblock\+Edge\+Dir edge\+Dir, const Int i\+Edge)
+\item 
+\+\_\+\+\_\+inline Void \hyperlink{class_t_com_loop_filter_a3caad5884d5fd7aaf54faa0c4b00ca29}{x\+Pel\+Filter\+Luma} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Src, Int i\+Offset, Int tc, Bool sw, Bool b\+Part\+P\+No\+Filter, Bool b\+Part\+Q\+No\+Filter, Int i\+Thr\+Cut, Bool b\+Filter\+SecondP, Bool b\+Filter\+SecondQ, const Int bit\+Depth\+Luma)
+\item 
+\+\_\+\+\_\+inline Void \hyperlink{class_t_com_loop_filter_a610728047ee14dc06ecaf40b77e5f0ba}{x\+Pel\+Filter\+Chroma} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Src, Int i\+Offset, Int tc, Bool b\+Part\+P\+No\+Filter, Bool b\+Part\+Q\+No\+Filter, const Int bit\+Depth\+Chroma)
+\item 
+\+\_\+\+\_\+inline Bool \hyperlink{class_t_com_loop_filter_abda3d54527317184fe88b377e1b89885}{x\+Use\+Strong\+Filtering} (Int offset, Int d, Int beta, Int tc, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Src)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a9962843128522e7a58a7930af003cd2f}\label{class_t_com_loop_filter_a9962843128522e7a58a7930af003cd2f}} 
+\+\_\+\+\_\+inline Int {\bfseries x\+Calc\+DP} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Src, Int i\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a3652488c97ffec93500d5f86685bf88e}\label{class_t_com_loop_filter_a3652488c97ffec93500d5f86685bf88e}} 
+\+\_\+\+\_\+inline Int {\bfseries x\+Calc\+DQ} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Src, Int i\+Offset)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a87e2f4e740c16a044c7837ef491c3353}\label{class_t_com_loop_filter_a87e2f4e740c16a044c7837ef491c3353}} 
+Void {\bfseries create} (U\+Int ui\+Max\+C\+U\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a9fe0a2eaeadc0b34efcc91083bce5641}\label{class_t_com_loop_filter_a9fe0a2eaeadc0b34efcc91083bce5641}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_com_loop_filter_a714ba8dc0dfbac4328ec597560f14e1f}\label{class_t_com_loop_filter_a714ba8dc0dfbac4328ec597560f14e1f}} 
+Void \hyperlink{class_t_com_loop_filter_a714ba8dc0dfbac4328ec597560f14e1f}{set\+Cfg} (Bool b\+L\+F\+Cross\+Tile\+Boundary)
+\begin{DoxyCompactList}\small\item\em set configuration \end{DoxyCompactList}\item 
+Void \hyperlink{class_t_com_loop_filter_ab4038985585a766477b8f58afdfbb2ff}{loop\+Filter\+Pic} (\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$pc\+Pic)
+\begin{DoxyCompactList}\small\item\em picture-\/level deblocking filter \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+deblocking filter class 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_loop_filter_ab4038985585a766477b8f58afdfbb2ff}\label{class_t_com_loop_filter_ab4038985585a766477b8f58afdfbb2ff}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!loop\+Filter\+Pic@{loop\+Filter\+Pic}}
+\index{loop\+Filter\+Pic@{loop\+Filter\+Pic}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{loop\+Filter\+Pic()}{loopFilterPic()}}
+{\footnotesize\ttfamily Void T\+Com\+Loop\+Filter\+::loop\+Filter\+Pic (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$}]{pc\+Pic }\end{DoxyParamCaption})}
+
+
+
+picture-\/level deblocking filter 
+
+
+\begin{DoxyItemize}
+\item call deblocking function for every CU
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em pc\+Pic} & picture class (\hyperlink{class_t_com_pic}{T\+Com\+Pic}) pointer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_loop_filter_a15915a5d41a74e4194af29f770b99a3d}\label{class_t_com_loop_filter_a15915a5d41a74e4194af29f770b99a3d}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!x\+Deblock\+CU@{x\+Deblock\+CU}}
+\index{x\+Deblock\+CU@{x\+Deblock\+CU}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{x\+Deblock\+C\+U()}{xDeblockCU()}}
+{\footnotesize\ttfamily Void T\+Com\+Loop\+Filter\+::x\+Deblock\+CU (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int}]{ui\+Abs\+Zorder\+Idx,  }\item[{U\+Int}]{ui\+Depth,  }\item[{Deblock\+Edge\+Dir}]{edge\+Dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+C\+U-\/level deblocking function. 
+
+Deblocking filter process in C\+U-\/based (the same function as conventional\textquotesingle{}s)
+
+
+\begin{DoxyParams}{Parameters}
+{\em pc\+CU} & Pointer to C\+T\+U/\+CU structure \\
+\hline
+{\em ui\+Abs\+Zorder\+Idx} & Position in CU \\
+\hline
+{\em ui\+Depth} & Depth in CU \\
+\hline
+{\em edge\+Dir} & the direction of the edge in block boundary (horizontal/vertical), which is added newly \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_loop_filter_a610728047ee14dc06ecaf40b77e5f0ba}\label{class_t_com_loop_filter_a610728047ee14dc06ecaf40b77e5f0ba}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!x\+Pel\+Filter\+Chroma@{x\+Pel\+Filter\+Chroma}}
+\index{x\+Pel\+Filter\+Chroma@{x\+Pel\+Filter\+Chroma}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{x\+Pel\+Filter\+Chroma()}{xPelFilterChroma()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+inline Void T\+Com\+Loop\+Filter\+::x\+Pel\+Filter\+Chroma (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{pi\+Src,  }\item[{Int}]{i\+Offset,  }\item[{Int}]{tc,  }\item[{Bool}]{b\+Part\+P\+No\+Filter,  }\item[{Bool}]{b\+Part\+Q\+No\+Filter,  }\item[{const Int}]{bit\+Depth\+Chroma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyItemize}
+\item Deblocking of one line/column for the chrominance component
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em pi\+Src} & pointer to picture data \\
+\hline
+{\em i\+Offset} & offset value for picture data \\
+\hline
+{\em tc} & tc value \\
+\hline
+{\em b\+Part\+P\+No\+Filter} & indicator to disable filtering on partP \\
+\hline
+{\em b\+Part\+Q\+No\+Filter} & indicator to disable filtering on partQ \\
+\hline
+{\em bit\+Depth\+Chroma} & chroma bit depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_loop_filter_a3caad5884d5fd7aaf54faa0c4b00ca29}\label{class_t_com_loop_filter_a3caad5884d5fd7aaf54faa0c4b00ca29}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!x\+Pel\+Filter\+Luma@{x\+Pel\+Filter\+Luma}}
+\index{x\+Pel\+Filter\+Luma@{x\+Pel\+Filter\+Luma}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{x\+Pel\+Filter\+Luma()}{xPelFilterLuma()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+inline Void T\+Com\+Loop\+Filter\+::x\+Pel\+Filter\+Luma (\begin{DoxyParamCaption}\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{pi\+Src,  }\item[{Int}]{i\+Offset,  }\item[{Int}]{tc,  }\item[{Bool}]{sw,  }\item[{Bool}]{b\+Part\+P\+No\+Filter,  }\item[{Bool}]{b\+Part\+Q\+No\+Filter,  }\item[{Int}]{i\+Thr\+Cut,  }\item[{Bool}]{b\+Filter\+SecondP,  }\item[{Bool}]{b\+Filter\+SecondQ,  }\item[{const Int}]{bit\+Depth\+Luma }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyItemize}
+\item Deblocking for the luminance component with strong or weak filter
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em pi\+Src} & pointer to picture data \\
+\hline
+{\em i\+Offset} & offset value for picture data \\
+\hline
+{\em tc} & tc value \\
+\hline
+{\em sw} & decision strong/weak filter \\
+\hline
+{\em b\+Part\+P\+No\+Filter} & indicator to disable filtering on partP \\
+\hline
+{\em b\+Part\+Q\+No\+Filter} & indicator to disable filtering on partQ \\
+\hline
+{\em i\+Thr\+Cut} & threshold value for weak filter decision \\
+\hline
+{\em b\+Filter\+SecondP} & decision weak filter/no filter for partP \\
+\hline
+{\em b\+Filter\+SecondQ} & decision weak filter/no filter for partQ \\
+\hline
+{\em bit\+Depth\+Luma} & luma bit depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_loop_filter_abda3d54527317184fe88b377e1b89885}\label{class_t_com_loop_filter_abda3d54527317184fe88b377e1b89885}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!x\+Use\+Strong\+Filtering@{x\+Use\+Strong\+Filtering}}
+\index{x\+Use\+Strong\+Filtering@{x\+Use\+Strong\+Filtering}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{x\+Use\+Strong\+Filtering()}{xUseStrongFiltering()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+inline Bool T\+Com\+Loop\+Filter\+::x\+Use\+Strong\+Filtering (\begin{DoxyParamCaption}\item[{Int}]{offset,  }\item[{Int}]{d,  }\item[{Int}]{beta,  }\item[{Int}]{tc,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{pi\+Src }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyItemize}
+\item Decision between strong and weak filter
+\end{DoxyItemize}
+\begin{DoxyParams}{Parameters}
+{\em offset} & offset value for picture data \\
+\hline
+{\em d} & d value \\
+\hline
+{\em beta} & beta value \\
+\hline
+{\em tc} & tc value \\
+\hline
+{\em pi\+Src} & pointer to picture data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_t_com_loop_filter_a6a0d0fac9d793acfe68ba145d9d80021}\label{class_t_com_loop_filter_a6a0d0fac9d793acfe68ba145d9d80021}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!sm\+\_\+beta\+Table@{sm\+\_\+beta\+Table}}
+\index{sm\+\_\+beta\+Table@{sm\+\_\+beta\+Table}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{sm\+\_\+beta\+Table}{sm\_betaTable}}
+{\footnotesize\ttfamily const U\+Char T\+Com\+Loop\+Filter\+::sm\+\_\+beta\+Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,7,8,9,10,11,12,13,14,15,16,17,18,20,22,24,26,28,30,32,34,36,38,40,42,44
+      ,46,48,50,52,54,56,58,60,62,64
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_t_com_loop_filter_a20f67069ab66d912792981c5b12f6262}\label{class_t_com_loop_filter_a20f67069ab66d912792981c5b12f6262}} 
+\index{T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}!sm\+\_\+tc\+Table@{sm\+\_\+tc\+Table}}
+\index{sm\+\_\+tc\+Table@{sm\+\_\+tc\+Table}!T\+Com\+Loop\+Filter@{T\+Com\+Loop\+Filter}}
+\subsubsection{\texorpdfstring{sm\+\_\+tc\+Table}{sm\_tcTable}}
+{\footnotesize\ttfamily const U\+Char T\+Com\+Loop\+Filter\+::sm\+\_\+tc\+Table\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\{
+  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,6,6,7,8,9,10,11,13,14,16,
+      18,20,22,24
+\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_loop_filter_8h}{T\+Com\+Loop\+Filter.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_loop_filter_8cpp}{T\+Com\+Loop\+Filter.\+cpp}\end{DoxyCompactItemize}

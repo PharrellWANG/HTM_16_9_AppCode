@@ -1,0 +1,323 @@
+\hypertarget{class_t_com_prediction}{}\section{T\+Com\+Prediction Class Reference}
+\label{class_t_com_prediction}\index{T\+Com\+Prediction@{T\+Com\+Prediction}}
+
+
+Inheritance diagram for T\+Com\+Prediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{df/d6b/class_t_com_prediction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for T\+Com\+Prediction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d4c/class_t_com_prediction__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_aa748b39ae8eec82b420f14bbaa9f6247}\label{class_t_com_prediction_aa748b39ae8eec82b420f14bbaa9f6247}} 
+\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} {\bfseries get\+Chroma\+Format} () const
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a1f488c406d98b7021911fff473ab4f6f}\label{class_t_com_prediction_a1f488c406d98b7021911fff473ab4f6f}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} {\bfseries pred\+Intra\+Get\+Pred\+Val\+DC} (const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src, Int i\+Src\+Stride, U\+Int i\+Width, U\+Int i\+Height, Bool b\+Above, Bool b\+Left)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a0dfab5a7f1128873d83771268eb59c28}\label{class_t_com_prediction_a0dfab5a7f1128873d83771268eb59c28}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries get\+Predictor\+Ptr} (const Component\+ID comp\+ID, const Bool b\+Use\+Filtered\+Predictions)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a8c6f0c257e0a12a1c91af172e8620afc}\label{class_t_com_prediction_a8c6f0c257e0a12a1c91af172e8620afc}} 
+Void {\bfseries x\+Get\+L\+L\+S\+Prediction} (const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src0, Int i\+Src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Dst0, Int i\+Dst\+Stride, U\+Int ui\+Width, U\+Int ui\+Height, U\+Int ui\+Ext0, const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} ch\+Fmt D\+E\+B\+U\+G\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+N\+\_\+\+D\+E\+C\+L\+A\+RE(s\+Debug))
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a85b0d7ab30241360da93a247a8f12c51}\label{class_t_com_prediction_a85b0d7ab30241360da93a247a8f12c51}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ {\bfseries m\+\_\+pi\+Yuv\+Ext} \mbox{[}M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT\mbox{]}\mbox{[}N\+U\+M\+\_\+\+P\+R\+E\+D\+\_\+\+B\+UF\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a8fa1bc346a0d23e8745d4b4a57fa35a0}\label{class_t_com_prediction_a8fa1bc346a0d23e8745d4b4a57fa35a0}} 
+Int {\bfseries m\+\_\+i\+Yuv\+Ext\+Size}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a35c79c38bb41850cf32758afc13b3ea9}\label{class_t_com_prediction_a35c79c38bb41850cf32758afc13b3ea9}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+ac\+Yuv\+Pred} \mbox{[}N\+U\+M\+\_\+\+R\+E\+F\+\_\+\+P\+I\+C\+\_\+\+L\+I\+S\+T\+\_\+01\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_aee1368ba40a14d9e38adf92f05513e89}\label{class_t_com_prediction_aee1368ba40a14d9e38adf92f05513e89}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+c\+Yuv\+Pred\+Temp}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a234e454cfdce74d4fa5fc1b8dd248f48}\label{class_t_com_prediction_a234e454cfdce74d4fa5fc1b8dd248f48}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+ac\+Yuv\+Pred\+Base} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a3fcc3c7e22282e32f488b3c309fc6b1c}\label{class_t_com_prediction_a3fcc3c7e22282e32f488b3c309fc6b1c}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+filtered\+Block} \mbox{[}L\+U\+M\+A\+\_\+\+I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+U\+B\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+O\+S\+I\+T\+I\+O\+NS\mbox{]}\mbox{[}L\+U\+M\+A\+\_\+\+I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+U\+B\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+O\+S\+I\+T\+I\+O\+NS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a6b66291a117ac1e801f2145d90510e28}\label{class_t_com_prediction_a6b66291a117ac1e801f2145d90510e28}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+filtered\+Block\+Tmp} \mbox{[}L\+U\+M\+A\+\_\+\+I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+S\+U\+B\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+P\+O\+S\+I\+T\+I\+O\+NS\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a31fbf134f36b81e78e0d4fb313c7c240}\label{class_t_com_prediction_a31fbf134f36b81e78e0d4fb313c7c240}} 
+\hyperlink{class_t_com_interpolation_filter}{T\+Com\+Interpolation\+Filter} {\bfseries m\+\_\+if}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a2b228320a4833355b988c4faa0920d79}\label{class_t_com_prediction_a2b228320a4833355b988c4faa0920d79}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ \hyperlink{class_t_com_prediction_a2b228320a4833355b988c4faa0920d79}{m\+\_\+p\+Luma\+Rec\+Buffer}
+\begin{DoxyCompactList}\small\item\em array for downsampled reconstructed luma sample \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_prediction_a114a5eb8eeef27c05cdc91fc8ccd3c73}\label{class_t_com_prediction_a114a5eb8eeef27c05cdc91fc8ccd3c73}} 
+Int \hyperlink{class_t_com_prediction_a114a5eb8eeef27c05cdc91fc8ccd3c73}{m\+\_\+i\+Luma\+Rec\+Stride}
+\begin{DoxyCompactList}\small\item\em stride of \hyperlink{class_t_com_prediction_a2b228320a4833355b988c4faa0920d79}{m\+\_\+p\+Luma\+Rec\+Buffer} array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_prediction_aada29d53577ba75623711e6a38bfd3bf}\label{class_t_com_prediction_aada29d53577ba75623711e6a38bfd3bf}} 
+U\+Int {\bfseries m\+\_\+uia\+Shift} \mbox{[}64\mbox{]}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_aa23b255780f12bd0900b9b4c7b34dd53}\label{class_t_com_prediction_aa23b255780f12bd0900b9b4c7b34dd53}} 
+Int $\ast$ \hyperlink{class_t_com_prediction_aa23b255780f12bd0900b9b4c7b34dd53}{m\+\_\+p\+Depth\+Block}
+\begin{DoxyCompactList}\small\item\em Store a depth block, local variable, to prevent memory allocation every time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_prediction_a222f0967ddbc528092d83e57fcc46896}\label{class_t_com_prediction_a222f0967ddbc528092d83e57fcc46896}} 
+\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} {\bfseries m\+\_\+c\+Yuv\+Depth\+On\+Vsp}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_aedd02d40e0007a7814e072c5c90e5931}\label{class_t_com_prediction_aedd02d40e0007a7814e072c5c90e5931}} 
+Void \hyperlink{class_t_com_prediction_aedd02d40e0007a7814e072c5c90e5931}{init\+Intra\+Pattern\+Ch\+Type} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Component\+ID comp\+ID, const Bool b\+Filter\+Ref\+Samples)
+\begin{DoxyCompactList}\small\item\em set parameters from CU data for accessing intra data \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_prediction_a9ce2a5ad89e5e362cfd931343b3ac2ee}\label{class_t_com_prediction_a9ce2a5ad89e5e362cfd931343b3ac2ee}} 
+static Bool {\bfseries filtering\+Intra\+Reference\+Samples} (const Component\+ID comp\+ID, U\+Int ui\+Dir\+Mode, U\+Int ui\+Tu\+Ch\+Width, U\+Int ui\+Tu\+Ch\+Height, const \hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} ch\+Fmt, const Bool intra\+Reference\+Smoothing\+Disabled)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+Void \hyperlink{class_t_com_prediction_a726160946b2c5cb38e26afb9fc73833f}{x\+Pred\+Intra\+Ang} (Int bit\+Depth, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src, Int src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Dst, Int dst\+Stride, U\+Int width, U\+Int height, Channel\+Type channel\+Type, U\+Int dir\+Mode, const Bool b\+Enable\+Edge\+Filters)
+\item 
+Void \hyperlink{class_t_com_prediction_a4eee3804ca1fc40cbcfb43b395601bc5}{x\+Pred\+Intra\+Planar} (const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src, Int src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$rp\+Dst, Int dst\+Stride, U\+Int width, U\+Int height)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_ad820111ee91c8e8eba0631ec99fb9683}\label{class_t_com_prediction_ad820111ee91c8e8eba0631ec99fb9683}} 
+Void {\bfseries x\+Pred\+Inter\+Uni\+A\+RP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$\&rpc\+Yuv\+Pred, Bool bi)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a595fd5a729f94df85f03d23a4d93e3e9}\label{class_t_com_prediction_a595fd5a729f94df85f03d23a4d93e3e9}} 
+Void {\bfseries x\+Pred\+Inter\+Uni\+A\+R\+Pview\+Ref} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$\&rpc\+Yuv\+Pred, Bool bi)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_aa14c079ec7e6d334eb69455ff827c7c8}\label{class_t_com_prediction_aa14c079ec7e6d334eb69455ff827c7c8}} 
+Bool {\bfseries x\+Check\+Bi\+Interview\+A\+RP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Base\+Ref\+Pic\+List, \hyperlink{class_t_com_pic}{T\+Com\+Pic} $\ast$\&pc\+Pic\+Yuv\+Curr\+T\+Ref, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&c\+Base\+T\+MV, Int \&i\+Curr\+T\+Ref\+Poc)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a7073ca519fb2598055df00fe0cf811b3}\label{class_t_com_prediction_a7073ca519fb2598055df00fe0cf811b3}} 
+Void {\bfseries x\+Pred\+Inter\+Uni} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Pred, Bool bi=false)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a398e854da5cb3496ac80cb20b23b2b52}\label{class_t_com_prediction_a398e854da5cb3496ac80cb20b23b2b52}} 
+Void {\bfseries x\+Pred\+Inter\+Bi} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Pred)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a7023a45b55a9cd75ea6e8ddf44c36089}\label{class_t_com_prediction_a7023a45b55a9cd75ea6e8ddf44c36089}} 
+Void {\bfseries x\+Pred\+Inter\+Uni\+V\+SP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$\&rpc\+Yuv\+Pred, Bool bi=false)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_afe349a531758e12241ec9bd73a799dc3}\label{class_t_com_prediction_afe349a531758e12241ec9bd73a799dc3}} 
+Void {\bfseries x\+Pred\+Inter\+Bi\+V\+SP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$\&rpc\+Yuv\+Pred)
+\item 
+Void \hyperlink{class_t_com_prediction_a7a9e256d00059c789e8d4502a0047a63}{x\+Pred\+Inter\+Blk} (const Component\+ID comp\+ID, \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$cu, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$ref\+Pic, U\+Int part\+Addr, \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$mv, Int width, Int height, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$dst\+Pic, Bool bi, const Int bit\+Depth, Bool filter\+Type=false, Bool b\+I\+C\+Flag=false)
+\begin{DoxyCompactList}\small\item\em Generate motion-\/compensated block. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_t_com_prediction_aec9a87eb23d5cb3114147e1fe31347bc}\label{class_t_com_prediction_aec9a87eb23d5cb3114147e1fe31347bc}} 
+Void {\bfseries x\+Pred\+Inter\+Uni\+Sub\+PU} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$cu, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$\&rpc\+Yuv\+Pred, Bool bi, Int width\+Sub\+PU=4, Int height\+Sub\+PU=4)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_ab55321d5d8bcdcf5b8afc1dd1ec95fa9}\label{class_t_com_prediction_ab55321d5d8bcdcf5b8afc1dd1ec95fa9}} 
+Void {\bfseries x\+Weighted\+Average} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src0, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Src1, Int i\+Ref\+Idx0, Int i\+Ref\+Idx1, U\+Int ui\+Part\+Addr, Int i\+Width, Int i\+Height, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Dst, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&clip\+Bit\+Depths)
+\item 
+Void \hyperlink{class_t_com_prediction_a4538f283309c75fe30bd8ea44c5cfed7}{x\+Get\+L\+L\+S\+I\+C\+Prediction} (const Component\+ID comp\+ID, \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$p\+Mv, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$p\+Ref\+Pic, Int \&a, Int \&b, const Int bit\+Depth)
+\item 
+Void \hyperlink{class_t_com_prediction_ad48e4196c150d1ded310988525d2b864}{x\+D\+C\+Pred\+Filtering} (const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src, Int i\+Src\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Dst, Int i\+Dst\+Stride, Int i\+Width, Int i\+Height, Channel\+Type channel\+Type)
+\item 
+Bool \hyperlink{class_t_com_prediction_ad9c1d83073b2ba0554d7ab9e8eafe7cf}{x\+Check\+Identical\+Motion} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int Part\+Addr)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_ad0ce2ab8f81517f5671b96cf65ef2387}\label{class_t_com_prediction_ad0ce2ab8f81517f5671b96cf65ef2387}} 
+Bool {\bfseries x\+Check\+Two\+S\+P\+Motion} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int Part\+Addr0, U\+Int Part\+Addr1)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a353dc63e490356d9d36159cedfadd868}\label{class_t_com_prediction_a353dc63e490356d9d36159cedfadd868}} 
+Void {\bfseries x\+Get\+Sub\+P\+U\+Addr\+And\+Merge} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Addr, Int i\+S\+P\+Width, Int i\+S\+P\+Height, Int i\+Num\+S\+P\+In\+One\+Line, Int i\+Num\+SP, U\+Int $\ast$ui\+Merged\+S\+PW, U\+Int $\ast$ui\+Merged\+S\+PH, U\+Int $\ast$ui\+S\+P\+Addr)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a9b96e2800ce97c8c34636dee0c7e98fa}\label{class_t_com_prediction_a9b96e2800ce97c8c34636dee0c7e98fa}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a03373e23889fecf4fb2e41f629cd7000}\label{class_t_com_prediction_a03373e23889fecf4fb2e41f629cd7000}} 
+Void {\bfseries init\+Temp\+Buff} (\hyperlink{_type_def_8h_a4a6c51c10f2eb04abc7209db7caff39f}{Chroma\+Format} chroma\+Format\+I\+DC)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a81590583e0fa897d8257659323bc1924}\label{class_t_com_prediction_a81590583e0fa897d8257659323bc1924}} 
+Void {\bfseries motion\+Compensation} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv\+Pred, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List=\hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384a4750af3c3dcdffb256d98e4ad103e675}{R\+E\+F\+\_\+\+P\+I\+C\+\_\+\+L\+I\+S\+T\+\_\+X}, Int i\+Part\+Idx=-\/1)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_acb7359806133d2280dc421d5eafe4d2e}\label{class_t_com_prediction_acb7359806133d2280dc421d5eafe4d2e}} 
+Void {\bfseries get\+Mv\+Pred\+A\+M\+VP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Part\+Idx, U\+Int ui\+Part\+Addr, \hyperlink{_type_def_8h_a93cea48eb9dcfd661168dee82e41b384}{Ref\+Pic\+List} e\+Ref\+Pic\+List, \hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv\+Pred)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a0a599de6e25e450a1a0b59c96f18d590}\label{class_t_com_prediction_a0a599de6e25e450a1a0b59c96f18d590}} 
+Void {\bfseries pred\+Intra\+Ang} (const Component\+ID comp\+ID, U\+Int ui\+Dir\+Mode, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org, U\+Int ui\+Org\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Pred, U\+Int ui\+Stride, \hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const Bool b\+Use\+Filtered\+Pred\+Samples, const Bool b\+Use\+Lossless\+D\+P\+CM=false)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_ab83de3cc1bc0fba2589a9a47700b63ae}\label{class_t_com_prediction_ab83de3cc1bc0fba2589a9a47700b63ae}} 
+\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} {\bfseries pred\+Intra\+Get\+Pred\+Val\+DC} (const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Src, Int i\+Src\+Stride, U\+Int i\+Width, U\+Int i\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a9e3e4687c7cf6306719d7770a6bd9b0c}\label{class_t_com_prediction_a9e3e4687c7cf6306719d7770a6bd9b0c}} 
+Void {\bfseries pred\+Intra\+Luma\+Dmm} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, Dmm\+ID dmm\+Type, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Pred, U\+Int ui\+Stride, Int i\+Width, Int i\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a8e73e0ac213b1493df66ec7a0a286bad}\label{class_t_com_prediction_a8e73e0ac213b1493df66ec7a0a286bad}} 
+Void {\bfseries pred\+Contour\+From\+Tex} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, Bool $\ast$seg\+Pattern)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a89af8ba0aab9618ce4e6eca09664c5d1}\label{class_t_com_prediction_a89af8ba0aab9618ce4e6eca09664c5d1}} 
+Void {\bfseries pred\+Bi\+Seg\+D\+Cs} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, U\+Int ui\+Width, U\+Int ui\+Height, Bool $\ast$bi\+Seg\+Pattern, Int pattern\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} \&pred\+D\+C1, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} \&pred\+D\+C2)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a4a80010e4dba0f3a479016d777e67ef0}\label{class_t_com_prediction_a4a80010e4dba0f3a479016d777e67ef0}} 
+Void {\bfseries assign\+Bi\+Seg\+D\+Cs} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ptr\+Dst, U\+Int dst\+Stride, Bool $\ast$bi\+Seg\+Pattern, Int pattern\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} val\+D\+C1, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} val\+D\+C2)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_ab14ebbab06cedfb3164b8234ab4a8c55}\label{class_t_com_prediction_ab14ebbab06cedfb3164b8234ab4a8c55}} 
+Void {\bfseries pred\+Constant\+S\+DC} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$ptr\+Src, U\+Int src\+Stride, U\+Int ui\+Size, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} \&pred\+DC)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a40faf6aca875f29838a0e772e8fe03af}\label{class_t_com_prediction_a40faf6aca875f29838a0e772e8fe03af}} 
+\hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} {\bfseries get\+Partition\+Size\+From\+Depth} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Depth\+Pels, U\+Int ui\+Depth\+Stride, U\+Int ui\+Size, \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$\&pc\+CU)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a7d113b4f4ef13002c64ca810f08f0515}\label{class_t_com_prediction_a7d113b4f4ef13002c64ca810f08f0515}} 
+Bool {\bfseries get\+Segment\+Mask\+From\+Depth} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Depth\+Pels, U\+Int ui\+Depth\+Stride, U\+Int ui\+Width, U\+Int ui\+Height, Bool $\ast$p\+Mask, \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$\&pc\+CU)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a26f3e29114f250d18e6300d6df5424c4}\label{class_t_com_prediction_a26f3e29114f250d18e6300d6df5424c4}} 
+Void {\bfseries combine\+Segments\+With\+Mask} (\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$p\+In\+Yuv\mbox{[}2\mbox{]}, \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$p\+Out\+Yuv, Bool $\ast$p\+Mask, U\+Int ui\+Width, U\+Int ui\+Height, U\+Int ui\+Part\+Addr, U\+Int part\+Size, Int bit\+DepthY)
+\item 
+\mbox{\Hypertarget{class_t_com_prediction_a0141614dcf5d0becf3dbf16ff7bec3d6}\label{class_t_com_prediction_a0141614dcf5d0becf3dbf16ff7bec3d6}} 
+static Bool {\bfseries Use\+D\+P\+C\+M\+For\+First\+Pass\+Intra\+Estimation} (\hyperlink{class_t_com_t_u}{T\+Com\+TU} \&r\+Tu, const U\+Int ui\+Dir\+Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_prediction_ad9c1d83073b2ba0554d7ab9e8eafe7cf}\label{class_t_com_prediction_ad9c1d83073b2ba0554d7ab9e8eafe7cf}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+Check\+Identical\+Motion@{x\+Check\+Identical\+Motion}}
+\index{x\+Check\+Identical\+Motion@{x\+Check\+Identical\+Motion}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+Check\+Identical\+Motion()}{xCheckIdenticalMotion()}}
+{\footnotesize\ttfamily Bool T\+Com\+Prediction\+::x\+Check\+Identical\+Motion (\begin{DoxyParamCaption}\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{U\+Int}]{Part\+Addr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Check for identical motion in both motion vector direction of a bi-\/directional predicted CU \begin{DoxyReturn}{Returns}
+true, if motion vectors and reference pictures match 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_t_com_prediction_ad48e4196c150d1ded310988525d2b864}\label{class_t_com_prediction_ad48e4196c150d1ded310988525d2b864}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+D\+C\+Pred\+Filtering@{x\+D\+C\+Pred\+Filtering}}
+\index{x\+D\+C\+Pred\+Filtering@{x\+D\+C\+Pred\+Filtering}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+D\+C\+Pred\+Filtering()}{xDCPredFiltering()}}
+{\footnotesize\ttfamily Void T\+Com\+Prediction\+::x\+D\+C\+Pred\+Filtering (\begin{DoxyParamCaption}\item[{const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Src,  }\item[{Int}]{i\+Src\+Stride,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Dst,  }\item[{Int}]{i\+Dst\+Stride,  }\item[{Int}]{i\+Width,  }\item[{Int}]{i\+Height,  }\item[{Channel\+Type}]{channel\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for filtering intra DC predictor. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Src} & pointer to reconstructed sample array \\
+\hline
+{\em i\+Src\+Stride} & the stride of the reconstructed sample array \\
+\hline
+{\em p\+Dst} & reference to pointer for the prediction sample array \\
+\hline
+{\em i\+Dst\+Stride} & the stride of the prediction sample array \\
+\hline
+{\em i\+Width} & the width of the block \\
+\hline
+{\em i\+Height} & the height of the block \\
+\hline
+{\em channel\+Type} & type of pel array (luma, chroma)\\
+\hline
+\end{DoxyParams}
+This function performs filtering left and top edges of the prediction samples for DC mode (intra coding). \mbox{\Hypertarget{class_t_com_prediction_a4538f283309c75fe30bd8ea44c5cfed7}\label{class_t_com_prediction_a4538f283309c75fe30bd8ea44c5cfed7}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+Get\+L\+L\+S\+I\+C\+Prediction@{x\+Get\+L\+L\+S\+I\+C\+Prediction}}
+\index{x\+Get\+L\+L\+S\+I\+C\+Prediction@{x\+Get\+L\+L\+S\+I\+C\+Prediction}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+Get\+L\+L\+S\+I\+C\+Prediction()}{xGetLLSICPrediction()}}
+{\footnotesize\ttfamily Void T\+Com\+Prediction\+::x\+Get\+L\+L\+S\+I\+C\+Prediction (\begin{DoxyParamCaption}\item[{const Component\+ID}]{comp\+ID,  }\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{pc\+CU,  }\item[{\hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$}]{p\+Mv,  }\item[{\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$}]{p\+Ref\+Pic,  }\item[{Int \&}]{a,  }\item[{Int \&}]{b,  }\item[{const Int}]{bit\+Depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for deriving LM illumination compensation. \mbox{\Hypertarget{class_t_com_prediction_a7a9e256d00059c789e8d4502a0047a63}\label{class_t_com_prediction_a7a9e256d00059c789e8d4502a0047a63}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+Pred\+Inter\+Blk@{x\+Pred\+Inter\+Blk}}
+\index{x\+Pred\+Inter\+Blk@{x\+Pred\+Inter\+Blk}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+Pred\+Inter\+Blk()}{xPredInterBlk()}}
+{\footnotesize\ttfamily Void T\+Com\+Prediction\+::x\+Pred\+Inter\+Blk (\begin{DoxyParamCaption}\item[{const Component\+ID}]{comp\+ID,  }\item[{\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$}]{cu,  }\item[{\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$}]{ref\+Pic,  }\item[{U\+Int}]{part\+Addr,  }\item[{\hyperlink{class_t_com_mv}{T\+Com\+Mv} $\ast$}]{mv,  }\item[{Int}]{width,  }\item[{Int}]{height,  }\item[{\hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$}]{dst\+Pic,  }\item[{Bool}]{bi,  }\item[{const Int}]{bit\+Depth,  }\item[{Bool}]{filter\+Type = {\ttfamily false},  }\item[{Bool}]{b\+I\+C\+Flag = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Generate motion-\/compensated block. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comp\+ID} & Colour component ID \\
+\hline
+{\em cu} & Pointer to current CU \\
+\hline
+{\em ref\+Pic} & Pointer to reference picture \\
+\hline
+{\em part\+Addr} & Address of block within CU \\
+\hline
+{\em mv} & Motion vector \\
+\hline
+{\em width} & Width of block \\
+\hline
+{\em height} & Height of block \\
+\hline
+{\em dst\+Pic} & Pointer to destination picture \\
+\hline
+{\em bi} & Flag indicating whether bipred is used \\
+\hline
+{\em bit\+Depth} & Bit depth \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_t_com_prediction_a726160946b2c5cb38e26afb9fc73833f}\label{class_t_com_prediction_a726160946b2c5cb38e26afb9fc73833f}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+Pred\+Intra\+Ang@{x\+Pred\+Intra\+Ang}}
+\index{x\+Pred\+Intra\+Ang@{x\+Pred\+Intra\+Ang}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+Pred\+Intra\+Ang()}{xPredIntraAng()}}
+{\footnotesize\ttfamily Void T\+Com\+Prediction\+::x\+Pred\+Intra\+Ang (\begin{DoxyParamCaption}\item[{Int}]{bit\+Depth,  }\item[{const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Src,  }\item[{Int}]{src\+Stride,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+True\+Dst,  }\item[{Int}]{dst\+Stride\+True,  }\item[{U\+Int}]{ui\+Width,  }\item[{U\+Int}]{ui\+Height,  }\item[{Channel\+Type}]{channel\+Type,  }\item[{U\+Int}]{dir\+Mode,  }\item[{const Bool}]{b\+Enable\+Edge\+Filters }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for deriving the simplified angular intra predictions. 
+\begin{DoxyParams}{Parameters}
+{\em bit\+Depth} & bit depth \\
+\hline
+{\em p\+Src} & pointer to reconstructed sample array \\
+\hline
+{\em src\+Stride} & the stride of the reconstructed sample array \\
+\hline
+{\em p\+True\+Dst} & reference to pointer for the prediction sample array \\
+\hline
+{\em dst\+Stride\+True} & the stride of the prediction sample array \\
+\hline
+{\em ui\+Width} & the width of the block \\
+\hline
+{\em ui\+Height} & the height of the block \\
+\hline
+{\em channel\+Type} & type of pel array (luma/chroma) \\
+\hline
+{\em format} & chroma format \\
+\hline
+{\em dir\+Mode} & the intra prediction mode index \\
+\hline
+{\em blk\+Above\+Available} & boolean indication if the block above is available \\
+\hline
+{\em blk\+Left\+Available} & boolean indication if the block to the left is available \\
+\hline
+{\em b\+Enable\+Edge\+Filters} & indication whether to enable edge filters\\
+\hline
+\end{DoxyParams}
+This function derives the prediction samples for the angular mode based on the prediction direction indicated by the prediction mode index. The prediction direction is given by the displacement of the bottom row of the block and the reference row above the block in the case of vertical prediction or displacement of the rightmost column of the block and reference column left from the block in the case of the horizontal prediction. The displacement is signalled at 1/32 pixel accuracy. When projection of the predicted pixel falls inbetween reference samples, the predicted value for the pixel is linearly interpolated from the reference samples. All reference samples are taken from the extended main reference. \mbox{\Hypertarget{class_t_com_prediction_a4eee3804ca1fc40cbcfb43b395601bc5}\label{class_t_com_prediction_a4eee3804ca1fc40cbcfb43b395601bc5}} 
+\index{T\+Com\+Prediction@{T\+Com\+Prediction}!x\+Pred\+Intra\+Planar@{x\+Pred\+Intra\+Planar}}
+\index{x\+Pred\+Intra\+Planar@{x\+Pred\+Intra\+Planar}!T\+Com\+Prediction@{T\+Com\+Prediction}}
+\subsubsection{\texorpdfstring{x\+Pred\+Intra\+Planar()}{xPredIntraPlanar()}}
+{\footnotesize\ttfamily Void T\+Com\+Prediction\+::x\+Pred\+Intra\+Planar (\begin{DoxyParamCaption}\item[{const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{p\+Src,  }\item[{Int}]{src\+Stride,  }\item[{\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$}]{rp\+Dst,  }\item[{Int}]{dst\+Stride,  }\item[{U\+Int}]{width,  }\item[{U\+Int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Function for deriving planar intra prediction. 
+\begin{DoxyParams}{Parameters}
+{\em p\+Src} & pointer to reconstructed sample array \\
+\hline
+{\em src\+Stride} & the stride of the reconstructed sample array \\
+\hline
+{\em rp\+Dst} & reference to pointer for the prediction sample array \\
+\hline
+{\em dst\+Stride} & the stride of the prediction sample array \\
+\hline
+{\em width} & the width of the block \\
+\hline
+{\em height} & the height of the block \\
+\hline
+{\em channel\+Type} & type of pel array (luma, chroma) \\
+\hline
+{\em format} & chroma format\\
+\hline
+\end{DoxyParams}
+This function derives the prediction samples for planar mode (intra coding). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_prediction_8h}{T\+Com\+Prediction.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_pattern_8cpp}{T\+Com\+Pattern.\+cpp}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_prediction_8cpp}{T\+Com\+Prediction.\+cpp}\end{DoxyCompactItemize}

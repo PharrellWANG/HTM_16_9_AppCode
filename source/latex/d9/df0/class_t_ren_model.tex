@@ -1,0 +1,55 @@
+\hypertarget{class_t_ren_model}{}\section{T\+Ren\+Model Class Reference}
+\label{class_t_ren_model}\index{T\+Ren\+Model@{T\+Ren\+Model}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_t_ren_model_a50bf8b561b598829d604c82d18638cce}{T\+Ren\+Model} ()
+\item 
+\mbox{\Hypertarget{class_t_ren_model_ac17b5a7a2f7679eac538ad0967d224b2}\label{class_t_ren_model_ac17b5a7a2f7679eac538ad0967d224b2}} 
+Void {\bfseries create} (Int i\+Num\+Of\+Base\+Views, Int i\+Num\+Of\+Models, Int i\+Width, Int i\+Height, Int i\+Shift\+Prec, Int i\+Hole\+Margin, Bool b\+Lim\+Output, Bool b\+Early\+Skip)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_ab55f38600c7907f21efe5d638f26aa57}\label{class_t_ren_model_ab55f38600c7907f21efe5d638f26aa57}} 
+Void {\bfseries create\+Single\+Model} (Int i\+Base\+View\+Num, Int i\+Content, Int i\+Model\+Num, Int i\+Left\+View\+Num, Int i\+Right\+View\+Num, Bool b\+Use\+Org\+Ref, Int i\+Blend\+Mode)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_a5a61a7e853792aaf58949f9a56fd649d}\label{class_t_ren_model_a5a61a7e853792aaf58949f9a56fd649d}} 
+Void {\bfseries set\+Base\+View} (Int i\+View\+Num, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Video\+Data, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Depth\+Data, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Org\+Video\+Data, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Org\+Depth\+Data)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_a911f86a5b65025f6f6ec7be9b7bea43b}\label{class_t_ren_model_a911f86a5b65025f6f6ec7be9b7bea43b}} 
+Void {\bfseries set\+Single\+Model} (Int i\+Model\+Num, Int $\ast$$\ast$ppi\+Shift\+Lut\+Left, Int $\ast$$\ast$ppi\+Base\+Shift\+Lut\+Left, Int $\ast$$\ast$ppi\+Shift\+Lut\+Right, Int $\ast$$\ast$ppi\+Base\+Shift\+Lut\+Right, Int i\+Dist\+To\+Left, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Ref\+View, Int cur\+View\+Idx=V\+I\+E\+W\+P\+O\+S\+\_\+\+I\+N\+V\+A\+L\+ID)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_ad4e2e45fe8440561a2a339073d9b8ce5}\label{class_t_ren_model_ad4e2e45fe8440561a2a339073d9b8ce5}} 
+Void {\bfseries setup\+Part} (U\+Int ui\+Hor\+Off, Int i\+Used\+Height)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_aa60482ca4804a9ee7467447ac0c36a61}\label{class_t_ren_model_aa60482ca4804a9ee7467447ac0c36a61}} 
+Void {\bfseries set\+Error\+Mode} (Int i\+View, Int i\+Content, Int i\+Plane)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_ab1d7f9710a45a64b0bc53994c10a9b1d}\label{class_t_ren_model_ab1d7f9710a45a64b0bc53994c10a9b1d}} 
+Int64 {\bfseries get\+Dist} (Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org\+Data, Int i\+Org\+Stride)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_aa38a4aa144606a037682a7292cba48dd}\label{class_t_ren_model_aa38a4aa144606a037682a7292cba48dd}} 
+Void {\bfseries set\+Data} (Int i\+Start\+PosX, Int i\+Start\+PosY, Int i\+Width, Int i\+Height, Int i\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+New\+Data)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_af4380bdf6e47aea3907cca4101403f44}\label{class_t_ren_model_af4380bdf6e47aea3907cca4101403f44}} 
+Void {\bfseries get\+Synth\+Video} (Int i\+Model\+Num, Int i\+View\+Num, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Synth\+Video)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_ac8453e29ddd2be135ad30eef3e8f3f0b}\label{class_t_ren_model_ac8453e29ddd2be135ad30eef3e8f3f0b}} 
+Void {\bfseries get\+Synth\+Depth} (Int i\+Model\+Num, Int i\+View\+Num, \hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Pic\+Yuv\+Synth\+Depth)
+\item 
+\mbox{\Hypertarget{class_t_ren_model_aee19d9e94b0a2e3ca9a8e4d7186eabdd}\label{class_t_ren_model_aee19d9e94b0a2e3ca9a8e4d7186eabdd}} 
+Void {\bfseries get\+Total\+S\+SE} (Int64 \&ri\+S\+S\+EY, Int64 \&ri\+S\+S\+EU, Int64 \&ri\+S\+S\+EV)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_t_ren_model_a50bf8b561b598829d604c82d18638cce}\label{class_t_ren_model_a50bf8b561b598829d604c82d18638cce}} 
+\index{T\+Ren\+Model@{T\+Ren\+Model}!T\+Ren\+Model@{T\+Ren\+Model}}
+\index{T\+Ren\+Model@{T\+Ren\+Model}!T\+Ren\+Model@{T\+Ren\+Model}}
+\subsubsection{\texorpdfstring{T\+Ren\+Model()}{TRenModel()}}
+{\footnotesize\ttfamily T\+Ren\+Model\+::\+T\+Ren\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Current Setup data /// 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Renderer/T\+Ren\+Model.\+h\item 
+Lib/\+T\+Lib\+Renderer/T\+Ren\+Model.\+cpp\end{DoxyCompactItemize}

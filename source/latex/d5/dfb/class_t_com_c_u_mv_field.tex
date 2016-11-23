@@ -1,0 +1,103 @@
+\hypertarget{class_t_com_c_u_mv_field}{}\section{T\+Com\+C\+U\+Mv\+Field Class Reference}
+\label{class_t_com_c_u_mv_field}\index{T\+Com\+C\+U\+Mv\+Field@{T\+Com\+C\+U\+Mv\+Field}}
+
+
+class for motion information in one CU  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Motion\+Info.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a289e5f3f0ce07f695fcd566a20f26d8d}\label{class_t_com_c_u_mv_field_a289e5f3f0ce07f695fcd566a20f26d8d}} 
+\hyperlink{class_t_com_mv}{T\+Com\+Mv} const  \& {\bfseries get\+Mv} (Int i\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a7ee899b48321d4a03888e94871b0fea7}\label{class_t_com_c_u_mv_field_a7ee899b48321d4a03888e94871b0fea7}} 
+\hyperlink{class_t_com_mv}{T\+Com\+Mv} const  \& {\bfseries get\+Mvd} (Int i\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_aba21a5bca7a53b92766ff4c3bfc0b16f}\label{class_t_com_c_u_mv_field_aba21a5bca7a53b92766ff4c3bfc0b16f}} 
+Int {\bfseries get\+Ref\+Idx} (Int i\+Idx) const
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_ade093161258af55a7d9c65195684619d}\label{class_t_com_c_u_mv_field_ade093161258af55a7d9c65195684619d}} 
+\hyperlink{_t_com_motion_info_8h_a4dfe7465dec69a9356d5166304173f8c}{A\+M\+V\+P\+Info} $\ast$ {\bfseries get\+A\+M\+V\+P\+Info} ()
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a7db249b5d4a80926595e0bedafdafff8}\label{class_t_com_c_u_mv_field_a7db249b5d4a80926595e0bedafdafff8}} 
+Void {\bfseries set\+Mv} (Int i\+Idx, \hyperlink{class_t_com_mv}{T\+Com\+Mv} const \&rc\+Mv)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_ab4b28a29867820f75ad594732ab36b4f}\label{class_t_com_c_u_mv_field_ab4b28a29867820f75ad594732ab36b4f}} 
+Void {\bfseries set\+Ref\+Idx} (Int i\+Idx, Int i\+Ref\+Idx)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_ada099536226b785cfbe1bcb18b560572}\label{class_t_com_c_u_mv_field_ada099536226b785cfbe1bcb18b560572}} 
+Void {\bfseries set\+Num\+Partition} (Int i\+Num\+Part)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a4a12f59df4b0fa791c82e53487faca8e}\label{class_t_com_c_u_mv_field_a4a12f59df4b0fa791c82e53487faca8e}} 
+Void {\bfseries link\+To\+With\+Offset} (\hyperlink{class_t_com_c_u_mv_field}{T\+Com\+C\+U\+Mv\+Field} const $\ast$src, Int offset)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a497c34b0ef11d48bad0a83c487cfffdd}\label{class_t_com_c_u_mv_field_a497c34b0ef11d48bad0a83c487cfffdd}} 
+Void {\bfseries create} (U\+Int ui\+Num\+Partition)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_aabd2ad99ca5944c9d3621ee8cc5fa395}\label{class_t_com_c_u_mv_field_aabd2ad99ca5944c9d3621ee8cc5fa395}} 
+Void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a0b3da499c0b3c59df93113f9218d23c8}\label{class_t_com_c_u_mv_field_a0b3da499c0b3c59df93113f9218d23c8}} 
+Void {\bfseries clear\+Mv\+Field} ()
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_ad48933c6dc49dd6965416cacba8072c5}\label{class_t_com_c_u_mv_field_ad48933c6dc49dd6965416cacba8072c5}} 
+Void {\bfseries copy\+From} (\hyperlink{class_t_com_c_u_mv_field}{T\+Com\+C\+U\+Mv\+Field} const $\ast$pc\+C\+U\+Mv\+Field\+Src, Int i\+Num\+Part\+Src, Int i\+Part\+Addr\+Dst)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a89a9a69c77cfb985c0d6f2a79561f2a6}\label{class_t_com_c_u_mv_field_a89a9a69c77cfb985c0d6f2a79561f2a6}} 
+Void {\bfseries copy\+To} (\hyperlink{class_t_com_c_u_mv_field}{T\+Com\+C\+U\+Mv\+Field} $\ast$pc\+C\+U\+Mv\+Field\+Dst, Int i\+Part\+Addr\+Dst) const
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a674925fa54f1f8af4532a09ce3dfe24b}\label{class_t_com_c_u_mv_field_a674925fa54f1f8af4532a09ce3dfe24b}} 
+Void {\bfseries copy\+To} (\hyperlink{class_t_com_c_u_mv_field}{T\+Com\+C\+U\+Mv\+Field} $\ast$pc\+C\+U\+Mv\+Field\+Dst, Int i\+Part\+Addr\+Dst, U\+Int ui\+Offset, U\+Int ui\+Num\+Part) const
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a62d818c35146d83da5ac477e096fbecf}\label{class_t_com_c_u_mv_field_a62d818c35146d83da5ac477e096fbecf}} 
+Void {\bfseries set\+All\+Mv} (\hyperlink{class_t_com_mv}{T\+Com\+Mv} const \&rc\+Mv, \hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} e\+C\+U\+Mode, Int i\+Part\+Addr, U\+Int ui\+Depth, Int i\+Part\+Idx=0)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a3f177a52af15826620826c67607a1390}\label{class_t_com_c_u_mv_field_a3f177a52af15826620826c67607a1390}} 
+Void {\bfseries set\+All\+Mvd} (\hyperlink{class_t_com_mv}{T\+Com\+Mv} const \&rc\+Mvd, \hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} e\+C\+U\+Mode, Int i\+Part\+Addr, U\+Int ui\+Depth, Int i\+Part\+Idx=0)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_af05197cef1e2813fe55db938d4383d13}\label{class_t_com_c_u_mv_field_af05197cef1e2813fe55db938d4383d13}} 
+Void {\bfseries set\+All\+Ref\+Idx} (Int i\+Ref\+Idx, \hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} e\+Mb\+Mode, Int i\+Part\+Addr, U\+Int ui\+Depth, Int i\+Part\+Idx=0)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a9adfed6589ce3fd585b9c90a58012fc0}\label{class_t_com_c_u_mv_field_a9adfed6589ce3fd585b9c90a58012fc0}} 
+Void {\bfseries set\+All\+Mv\+Field} (\hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} const \&mv\+Field, \hyperlink{_type_def_8h_a0093b7809f3cfae06fda9d67441267bd}{Part\+Size} e\+Mb\+Mode, Int i\+Part\+Addr, U\+Int ui\+Depth, Int i\+Part\+Idx=0)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_af256f3fbd8f6e9e23487415345c6daad}\label{class_t_com_c_u_mv_field_af256f3fbd8f6e9e23487415345c6daad}} 
+Void {\bfseries set\+Mv\+Field\+SP} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Idx, \hyperlink{class_t_com_mv_field}{T\+Com\+Mv\+Field} c\+Mv\+Field, Int i\+Width, Int i\+Height)
+\item 
+Void \hyperlink{class_t_com_c_u_mv_field_a645ec19d78c32698e522dacc305792df}{compress} (S\+Char $\ast$pe\+Pred\+Mode, Int scale)
+\item 
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_aa5a89d48a83b709f066994572f98408d}\label{class_t_com_c_u_mv_field_aa5a89d48a83b709f066994572f98408d}} 
+Void {\bfseries print} (S\+Char $\ast$pe\+Pred\+Mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class for motion information in one CU 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_t_com_c_u_mv_field_a645ec19d78c32698e522dacc305792df}\label{class_t_com_c_u_mv_field_a645ec19d78c32698e522dacc305792df}} 
+\index{T\+Com\+C\+U\+Mv\+Field@{T\+Com\+C\+U\+Mv\+Field}!compress@{compress}}
+\index{compress@{compress}!T\+Com\+C\+U\+Mv\+Field@{T\+Com\+C\+U\+Mv\+Field}}
+\subsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily Void T\+Com\+C\+U\+Mv\+Field\+::compress (\begin{DoxyParamCaption}\item[{S\+Char $\ast$}]{pe\+Pred\+Mode,  }\item[{Int}]{scale }\end{DoxyParamCaption})}
+
+Subsampling of the stored prediction mode, reference index and motion vector 
+\begin{DoxyParams}{Parameters}
+{\em pe\+Pred\+Mode} & Pointer to prediction modes \\
+\hline
+{\em scale} & Factor by which to subsample motion information \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_motion_info_8h}{T\+Com\+Motion\+Info.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_motion_info_8cpp}{T\+Com\+Motion\+Info.\+cpp}\end{DoxyCompactItemize}

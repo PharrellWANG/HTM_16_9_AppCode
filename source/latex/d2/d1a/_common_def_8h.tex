@@ -1,0 +1,172 @@
+\hypertarget{_common_def_8h}{}\section{Lib/\+T\+Lib\+Common/\+Common\+Def.h File Reference}
+\label{_common_def_8h}\index{Lib/\+T\+Lib\+Common/\+Common\+Def.\+h@{Lib/\+T\+Lib\+Common/\+Common\+Def.\+h}}
+
+
+Defines version information, constants and small in-\/line functions.  
+
+
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include \char`\"{}Type\+Def.\+h\char`\"{}}\newline
+Include dependency graph for Common\+Def.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/ddf/_common_def_8h__incl}
+\end{center}
+\end{figure}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_common_def_8h_ae6c73d93b5ac92fe89d1b88319d1ee74}\label{_common_def_8h_ae6c73d93b5ac92fe89d1b88319d1ee74}} 
+\#define \hyperlink{_common_def_8h_ae6c73d93b5ac92fe89d1b88319d1ee74}{N\+V\+\_\+\+V\+E\+R\+S\+I\+ON}~\char`\"{}16.\+2\char`\"{}
+\begin{DoxyCompactList}\small\item\em Current software version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_ab0dfbdb2db28e6f33d883a71d153c284}\label{_common_def_8h_ab0dfbdb2db28e6f33d883a71d153c284}} 
+\#define {\bfseries H\+M\+\_\+\+V\+E\+R\+S\+I\+ON}~\char`\"{}16.\+9\char`\"{}
+\item 
+\mbox{\Hypertarget{_common_def_8h_abc675608d8dc48dd02c998db939a6653}\label{_common_def_8h_abc675608d8dc48dd02c998db939a6653}} 
+\#define {\bfseries N\+V\+M\+\_\+\+C\+O\+M\+P\+I\+L\+E\+D\+BY}~\char`\"{}\mbox{[}Unk-\/C\+XX\mbox{]}\char`\"{}
+\item 
+\mbox{\Hypertarget{_common_def_8h_a8593a6a15361c2857d8d84ffdca91a04}\label{_common_def_8h_a8593a6a15361c2857d8d84ffdca91a04}} 
+\#define {\bfseries N\+V\+M\+\_\+\+O\+N\+OS}~\char`\"{}\mbox{[}Unk-\/OS\mbox{]}\char`\"{}
+\item 
+\mbox{\Hypertarget{_common_def_8h_a5885e0efa4ac12fa5d2456fd437c9cbe}\label{_common_def_8h_a5885e0efa4ac12fa5d2456fd437c9cbe}} 
+\#define \hyperlink{_common_def_8h_a5885e0efa4ac12fa5d2456fd437c9cbe}{N\+V\+M\+\_\+\+B\+I\+TS}~\char`\"{}\mbox{[}\%d bit\mbox{]} \char`\"{}, (sizeof(Void$\ast$) == 8 ? 64 \+: 32)
+\begin{DoxyCompactList}\small\item\em used for checking 64-\/bit O/S \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{_common_def_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\#define {\bfseries N\+U\+LL}~0
+\item 
+\mbox{\Hypertarget{_common_def_8h_af55df1cde73d2fbc6ea389adee687492}\label{_common_def_8h_af55df1cde73d2fbc6ea389adee687492}} 
+\#define \hyperlink{_common_def_8h_af55df1cde73d2fbc6ea389adee687492}{D\+A\+T\+A\+\_\+\+A\+L\+I\+GN}~1
+\begin{DoxyCompactList}\small\item\em use 32-\/bit aligned malloc/free \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_ab2e4e1768418ff5b9eec6fc99206c601}\label{_common_def_8h_ab2e4e1768418ff5b9eec6fc99206c601}} 
+\#define {\bfseries x\+Malloc}(type,  len)~malloc   ( sizeof(type)$\ast$(len) )
+\item 
+\mbox{\Hypertarget{_common_def_8h_acb5d8c131a494d7675d9e67c991c7ca1}\label{_common_def_8h_acb5d8c131a494d7675d9e67c991c7ca1}} 
+\#define {\bfseries x\+Free}(ptr)~free     ( ptr )
+\item 
+\#define {\bfseries F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0}(M\+E\+S\+S\+A\+GE,  E\+X\+I\+T\+C\+O\+DE)
+\item 
+\#define {\bfseries A\+OF}(exp)
+\item 
+\#define {\bfseries A\+OT}(exp)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a09f79a9315fc4929202fc55a63848589}\label{_common_def_8h_a09f79a9315fc4929202fc55a63848589}} 
+\#define {\bfseries Remove\+Bit\+Increment}(exp)~( exp $>$$>$ ( R\+E\+N\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH -\/ 8 ) )
+\item 
+\mbox{\Hypertarget{_common_def_8h_a84f6ce2b7826921b5db7a7f2345f09aa}\label{_common_def_8h_a84f6ce2b7826921b5db7a7f2345f09aa}} 
+\#define {\bfseries M\+R\+G\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+A\+N\+D\+S\+\_\+\+M\+EM}~(M\+R\+G\+\_\+\+M\+A\+X\+\_\+\+N\+U\+M\+\_\+\+C\+A\+N\+DS+1)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a1358ff0d9395c173eb16352d5d42b3b9}\label{_common_def_8h_a1358ff0d9395c173eb16352d5d42b3b9}} 
+\#define {\bfseries P\+I\+C\+Y\+U\+V\+\_\+\+P\+AD}~16
+\item 
+\mbox{\Hypertarget{_common_def_8h_ad0c29f17fe28ce4aa5d586329d068902}\label{_common_def_8h_ad0c29f17fe28ce4aa5d586329d068902}} 
+\#define {\bfseries R\+E\+N\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}~8
+\item 
+\mbox{\Hypertarget{_common_def_8h_a4963f200050e98fe61f5ccdb76ae962a}\label{_common_def_8h_a4963f200050e98fe61f5ccdb76ae962a}} 
+\#define {\bfseries R\+E\+N\+\_\+\+L\+U\+M\+A\+\_\+\+M\+A\+R\+G\+IN}~( P\+I\+C\+Y\+U\+V\+\_\+\+P\+AD + 1 )
+\item 
+\mbox{\Hypertarget{_common_def_8h_aa7ca6223f1c7934b8614b12b598d1f84}\label{_common_def_8h_aa7ca6223f1c7934b8614b12b598d1f84}} 
+\#define {\bfseries R\+E\+N\+\_\+\+V\+D\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+EC}~8
+\item 
+\mbox{\Hypertarget{_common_def_8h_a37c851f1c0f516ba14708ac3e4092a40}\label{_common_def_8h_a37c851f1c0f516ba14708ac3e4092a40}} 
+\#define {\bfseries R\+E\+N\+\_\+\+I\+S\+\_\+\+F\+I\+L\+L\+ED}~( 1 $<$$<$ R\+E\+N\+\_\+\+V\+D\+W\+E\+I\+G\+H\+T\+\_\+\+P\+R\+EC )
+\item 
+\mbox{\Hypertarget{_common_def_8h_ae028480a44570b046e93e43257d6ba0e}\label{_common_def_8h_ae028480a44570b046e93e43257d6ba0e}} 
+\#define {\bfseries R\+E\+N\+\_\+\+U\+S\+E\+D\+\_\+\+P\+EL}~( (1 $<$$<$ R\+E\+N\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH) -\/ 1 )
+\item 
+\mbox{\Hypertarget{_common_def_8h_a53eae20c696f8ac8a4411c23d8547b85}\label{_common_def_8h_a53eae20c696f8ac8a4411c23d8547b85}} 
+\#define {\bfseries R\+E\+N\+\_\+\+U\+N\+U\+S\+E\+D\+\_\+\+P\+EL}~0
+\item 
+\mbox{\Hypertarget{_common_def_8h_af7b6f80d9f4522178287e96ac944d407}\label{_common_def_8h_af7b6f80d9f4522178287e96ac944d407}} 
+\#define {\bfseries R\+E\+N\+\_\+\+I\+S\+\_\+\+H\+O\+LE}~0
+\item 
+\mbox{\Hypertarget{_common_def_8h_af7dde14a8d6848b3d7068bbf25f3b2d7}\label{_common_def_8h_af7dde14a8d6848b3d7068bbf25f3b2d7}} 
+\#define {\bfseries E\+N\+C\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH}~R\+E\+N\+\_\+\+B\+I\+T\+\_\+\+D\+E\+P\+TH
+\item 
+\mbox{\Hypertarget{_common_def_8h_a840a14ae1554fd6483e4a5b8e3ee35d9}\label{_common_def_8h_a840a14ae1554fd6483e4a5b8e3ee35d9}} 
+\#define \hyperlink{_common_def_8h_a840a14ae1554fd6483e4a5b8e3ee35d9}{L\+O\+G2\+\_\+\+D\+I\+S\+P\+\_\+\+P\+R\+E\+C\+\_\+\+L\+UT}~2
+\begin{DoxyCompactList}\small\item\em log2 of disparity precision used in integer disparity L\+U\+Ts \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_a49692b2b3e1207c08547714acb93d22a}\label{_common_def_8h_a49692b2b3e1207c08547714acb93d22a}} 
+\#define \hyperlink{_common_def_8h_a49692b2b3e1207c08547714acb93d22a}{S\+T\+D\+\_\+\+C\+A\+M\+\_\+\+P\+A\+R\+A\+M\+E\+T\+E\+R\+S\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON}~5
+\begin{DoxyCompactList}\small\item\em quarter luma sample accuarcy for derived disparities (as default) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_a9d440463d25db297a7ef3276b29e0606}\label{_common_def_8h_a9d440463d25db297a7ef3276b29e0606}} 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{_common_def_8h_a9d440463d25db297a7ef3276b29e0606}{Clip3} (const T min\+Val, const T max\+Val, const T a)
+\begin{DoxyCompactList}\small\item\em general min/max clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_a4170c78c22483c3cf4f25759538a1c5b}\label{_common_def_8h_a4170c78c22483c3cf4f25759538a1c5b}} 
+{\footnotesize template$<$typename T $>$ }\\T {\bfseries Clip\+BD} (const T x, const Int bit\+Depth)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a96cd333e3d457f8a70b6136f93ccdb9c}\label{_common_def_8h_a96cd333e3d457f8a70b6136f93ccdb9c}} 
+{\footnotesize template$<$typename T $>$ }\\Void \hyperlink{_common_def_8h_a96cd333e3d457f8a70b6136f93ccdb9c}{Check3} (T min\+Val, T max\+Val, T a)
+\begin{DoxyCompactList}\small\item\em general min/max clip \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_common_def_8h_a5f699880fe222ad6f75a3455bb69b50a}\label{_common_def_8h_a5f699880fe222ad6f75a3455bb69b50a}} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type {\bfseries left\+Shift} (const Value\+Type value, const Int shift)
+\item 
+\mbox{\Hypertarget{_common_def_8h_ab43acd90f4557897680a8d793316f532}\label{_common_def_8h_ab43acd90f4557897680a8d793316f532}} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type {\bfseries right\+Shift} (const Value\+Type value, const Int shift)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a74185b5d1442b217538725a2ab554ba1}\label{_common_def_8h_a74185b5d1442b217538725a2ab554ba1}} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type {\bfseries left\+Shift\+\_\+round} (const Value\+Type value, const Int shift)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a71e235f3ec2665ab47cf408b35d0f075}\label{_common_def_8h_a71e235f3ec2665ab47cf408b35d0f075}} 
+{\footnotesize template$<$typename Value\+Type $>$ }\\Value\+Type {\bfseries right\+Shift\+\_\+round} (const Value\+Type value, const Int shift)
+\item 
+\mbox{\Hypertarget{_common_def_8h_a9625323135e9a9b2afc6d6e67e8c93f4}\label{_common_def_8h_a9625323135e9a9b2afc6d6e67e8c93f4}} 
+{\footnotesize template$<$typename T $>$ }\\\+\_\+\+\_\+inline T {\bfseries g\+Sign} (const T \&t)
+\item 
+\mbox{\Hypertarget{_common_def_8h_ae5852dc7ad000222611e9064e77902a2}\label{_common_def_8h_ae5852dc7ad000222611e9064e77902a2}} 
+{\footnotesize template$<$typename T $>$ }\\\+\_\+\+\_\+inline T {\bfseries g\+Ceil\+Log2} (T val)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines version information, constants and small in-\/line functions. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_common_def_8h_a36dc8f73d52186445790c61b12f1f745}\label{_common_def_8h_a36dc8f73d52186445790c61b12f1f745}} 
+\index{Common\+Def.\+h@{Common\+Def.\+h}!A\+OF@{A\+OF}}
+\index{A\+OF@{A\+OF}!Common\+Def.\+h@{Common\+Def.\+h}}
+\subsubsection{\texorpdfstring{A\+OF}{AOF}}
+{\footnotesize\ttfamily \#define A\+OF(\begin{DoxyParamCaption}\item[{}]{exp }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                   \(\backslash\)
+  if( !( exp ) )                    \(\backslash\)
+\{                                 \(\backslash\)
+  assert( 0 );                    \(\backslash\)
+\}                                 \(\backslash\)
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{_common_def_8h_a2d3ffbe0f81b57fe8679aa060b2c3376}\label{_common_def_8h_a2d3ffbe0f81b57fe8679aa060b2c3376}} 
+\index{Common\+Def.\+h@{Common\+Def.\+h}!A\+OT@{A\+OT}}
+\index{A\+OT@{A\+OT}!Common\+Def.\+h@{Common\+Def.\+h}}
+\subsubsection{\texorpdfstring{A\+OT}{AOT}}
+{\footnotesize\ttfamily \#define A\+OT(\begin{DoxyParamCaption}\item[{}]{exp }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                             \(\backslash\)
+  if( ( exp ) )               \(\backslash\)
+\{                           \(\backslash\)
+  assert( 0 );              \(\backslash\)
+\}                           \(\backslash\)
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{_common_def_8h_a89f1666f4e0d5ce558ac73b9a9cfdd15}\label{_common_def_8h_a89f1666f4e0d5ce558ac73b9a9cfdd15}} 
+\index{Common\+Def.\+h@{Common\+Def.\+h}!F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0@{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0}}
+\index{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0@{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0}!Common\+Def.\+h@{Common\+Def.\+h}}
+\subsubsection{\texorpdfstring{F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0}{FATAL\_ERROR\_0}}
+{\footnotesize\ttfamily \#define F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+O\+R\+\_\+0(\begin{DoxyParamCaption}\item[{}]{M\+E\+S\+S\+A\+GE,  }\item[{}]{E\+X\+I\+T\+C\+O\+DE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                             \(\backslash\)
+  printf(MESSAGE);                                            \(\backslash\)
+  exit(EXITCODE);                                             \(\backslash\)
+\}
+\end{DoxyCode}

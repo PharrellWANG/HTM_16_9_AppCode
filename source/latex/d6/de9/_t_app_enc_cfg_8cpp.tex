@@ -1,0 +1,110 @@
+\hypertarget{_t_app_enc_cfg_8cpp}{}\section{App/\+T\+App\+Encoder/\+T\+App\+Enc\+Cfg.cpp File Reference}
+\label{_t_app_enc_cfg_8cpp}\index{App/\+T\+App\+Encoder/\+T\+App\+Enc\+Cfg.\+cpp@{App/\+T\+App\+Encoder/\+T\+App\+Enc\+Cfg.\+cpp}}
+
+
+Handle encoder configuration parameters.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include \char`\"{}T\+Lib\+Common/\+T\+Com\+Rom.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+App\+Enc\+Cfg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+App\+Common/program\+\_\+options\+\_\+lite.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}T\+Lib\+Encoder/\+T\+Enc\+Rate\+Ctrl.\+h\char`\"{}}\newline
+Include dependency graph for T\+App\+Enc\+Cfg.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d9d/_t_app_enc_cfg_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries Map\+Str\+To\+Profile}
+\item 
+struct {\bfseries Map\+Str\+To\+Extended\+Profile}
+\item 
+struct {\bfseries Map\+Str\+To\+Tier}
+\item 
+struct {\bfseries Map\+Str\+To\+Level}
+\item 
+struct {\bfseries Map\+Str\+To\+Cost\+Mode}
+\item 
+struct {\bfseries Map\+Str\+To\+Scaling\+List\+Mode}
+\item 
+struct \hyperlink{struct_s_multi_value_input}{S\+Multi\+Value\+Input$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_a7472710d657723f26dc3c1190487023e}\label{_t_app_enc_cfg_8cpp_a7472710d657723f26dc3c1190487023e}} 
+\#define {\bfseries M\+A\+C\+R\+O\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+H\+E\+L\+P\+ER}(val)~\#val
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_a764e4b9c6b654f7577c8457f6e8fb09a}\label{_t_app_enc_cfg_8cpp_a764e4b9c6b654f7577c8457f6e8fb09a}} 
+\#define {\bfseries M\+A\+C\+R\+O\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+NG}(val)~M\+A\+C\+R\+O\+\_\+\+T\+O\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+H\+E\+L\+P\+ER(val)
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_a2cf5b6bea028f0aeeaa0127c3ed95e26}\label{_t_app_enc_cfg_8cpp_a2cf5b6bea028f0aeeaa0127c3ed95e26}} 
+\#define {\bfseries x\+Confirm\+Para}(a,  b)~check\+\_\+failed $\vert$= confirm\+Para(a,b)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_a3aedc01fa3a5494ae513e94aa9522899}\label{_t_app_enc_cfg_8cpp_a3aedc01fa3a5494ae513e94aa9522899}} 
+enum {\bfseries Extended\+Profile\+Name} \{ \newline
+{\bfseries N\+O\+NE} = 0, 
+{\bfseries M\+A\+IN} = 1, 
+{\bfseries M\+A\+I\+N10} = 2, 
+{\bfseries M\+A\+I\+N\+S\+T\+I\+L\+L\+P\+I\+C\+T\+U\+RE} = 3, 
+\newline
+{\bfseries M\+A\+I\+N\+R\+E\+XT} = 4, 
+{\bfseries H\+I\+G\+H\+T\+H\+R\+O\+U\+G\+H\+P\+U\+T\+R\+E\+XT} = 5, 
+{\bfseries M\+O\+N\+O\+C\+H\+R\+O\+M\+E\+\_\+8} = 1008, 
+{\bfseries M\+O\+N\+O\+C\+H\+R\+O\+M\+E\+\_\+12} = 1012, 
+\newline
+{\bfseries M\+O\+N\+O\+C\+H\+R\+O\+M\+E\+\_\+16} = 1016, 
+{\bfseries M\+A\+I\+N\+\_\+12} = 1112, 
+{\bfseries M\+A\+I\+N\+\_\+422\+\_\+10} = 1210, 
+{\bfseries M\+A\+I\+N\+\_\+422\+\_\+12} = 1212, 
+\newline
+{\bfseries M\+A\+I\+N\+\_\+444} = 1308, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+10} = 1310, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+12} = 1312, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+16} = 1316, 
+\newline
+{\bfseries M\+A\+I\+N\+\_\+\+I\+N\+T\+RA} = 2108, 
+{\bfseries M\+A\+I\+N\+\_\+10\+\_\+\+I\+N\+T\+RA} = 2110, 
+{\bfseries M\+A\+I\+N\+\_\+12\+\_\+\+I\+N\+T\+RA} = 2112, 
+{\bfseries M\+A\+I\+N\+\_\+422\+\_\+10\+\_\+\+I\+N\+T\+RA} = 2210, 
+\newline
+{\bfseries M\+A\+I\+N\+\_\+422\+\_\+12\+\_\+\+I\+N\+T\+RA} = 2212, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+\+I\+N\+T\+RA} = 2308, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+10\+\_\+\+I\+N\+T\+RA} = 2310, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+12\+\_\+\+I\+N\+T\+RA} = 2312, 
+\newline
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+16\+\_\+\+I\+N\+T\+RA} = 2316, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+\+S\+T\+I\+L\+L\+\_\+\+P\+I\+C\+T\+U\+RE} = 11308, 
+{\bfseries M\+A\+I\+N\+\_\+444\+\_\+16\+\_\+\+S\+T\+I\+L\+L\+\_\+\+P\+I\+C\+T\+U\+RE} = 12316
+ \}
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_a49cba684f7056e04db99d0d26be12db2}\label{_t_app_enc_cfg_8cpp_a49cba684f7056e04db99d0d26be12db2}} 
+std\+::istringstream \& {\bfseries operator$>$$>$} (std\+::istringstream \&in, \hyperlink{struct_g_o_p_entry}{G\+O\+P\+Entry} \&entry)
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_ae82d6e51ee1c67937ba04824ae3357b0}\label{_t_app_enc_cfg_8cpp_ae82d6e51ee1c67937ba04824ae3357b0}} 
+Bool {\bfseries confirm\+Para} (Bool bflag, const T\+Char $\ast$message)
+\item 
+\mbox{\Hypertarget{_t_app_enc_cfg_8cpp_ac2d91b6e2dcab36fa9683fda703898d2}\label{_t_app_enc_cfg_8cpp_ac2d91b6e2dcab36fa9683fda703898d2}} 
+const T\+Char $\ast$ {\bfseries profile\+To\+String} (const Profile\+::\+Name profile)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle encoder configuration parameters. 
+

@@ -1,0 +1,208 @@
+\hypertarget{class_t_com_rd_cost}{}\section{T\+Com\+Rd\+Cost Class Reference}
+\label{class_t_com_rd_cost}\index{T\+Com\+Rd\+Cost@{T\+Com\+Rd\+Cost}}
+
+
+RD cost computation class.  
+
+
+
+
+{\ttfamily \#include $<$T\+Com\+Rd\+Cost.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a6fc1b9bf8387869062457d695a02c432}\label{class_t_com_rd_cost_a6fc1b9bf8387869062457d695a02c432}} 
+Double {\bfseries calc\+Rd\+Cost64} (U\+Int64 ui\+Bits, Dist64 ui\+Distortion, Bool b\+Flag=false, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func=D\+F\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a4580de47a4964c5baf586816bea448b6}\label{class_t_com_rd_cost_a4580de47a4964c5baf586816bea448b6}} 
+Void {\bfseries set\+Distortion\+Weight} (const Component\+ID comp\+ID, const Double distortion\+Weight)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af22c42a2a1f60e0037ef63f5b9d25c41}\label{class_t_com_rd_cost_af22c42a2a1f60e0037ef63f5b9d25c41}} 
+Void {\bfseries set\+Frame\+Lambda} (Double d\+Lambda)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af1dba5636a1176cd9ef443c1ae688c32}\label{class_t_com_rd_cost_af1dba5636a1176cd9ef443c1ae688c32}} 
+Double {\bfseries get\+Sqrt\+Lambda} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_aebab02844683472be2c87266248ad303}\label{class_t_com_rd_cost_aebab02844683472be2c87266248ad303}} 
+Void {\bfseries set\+Disparity\+Coeff} (Double d\+Disparity\+Coeff)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a3a5d2540b9e83cd3fbdd20dbd87dd98f}\label{class_t_com_rd_cost_a3a5d2540b9e83cd3fbdd20dbd87dd98f}} 
+Double {\bfseries get\+Disparity\+Coeff} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a2b1a80d86014bb6a70f18f47b50cddd2}\label{class_t_com_rd_cost_a2b1a80d86014bb6a70f18f47b50cddd2}} 
+Double {\bfseries get\+Lambda} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a871489fd2200b885f66f76a62fdca28c}\label{class_t_com_rd_cost_a871489fd2200b885f66f76a62fdca28c}} 
+Double {\bfseries get\+Chroma\+Weight} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a502731bf175254a1d25619459229c2d3}\label{class_t_com_rd_cost_a502731bf175254a1d25619459229c2d3}} 
+Void {\bfseries set\+Cost\+Mode} (Cost\+Mode m)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a4bf86fee8413ab6fce69e975212d5ba8}\label{class_t_com_rd_cost_a4bf86fee8413ab6fce69e975212d5ba8}} 
+Void {\bfseries set\+Use\+Mask} (Bool b)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a86df589a5c1a17561352e3a1b30eedb1}\label{class_t_com_rd_cost_a86df589a5c1a17561352e3a1b30eedb1}} 
+Void {\bfseries select\+Motion\+Lambda} (Bool b\+Sad, Int i\+Add, Bool b\+Is\+Transquant\+Bypass)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a1c853bb499d6898b9dea2e8f9ca09d03}\label{class_t_com_rd_cost_a1c853bb499d6898b9dea2e8f9ca09d03}} 
+Void {\bfseries set\+Predictor} (\hyperlink{class_t_com_mv}{T\+Com\+Mv} \&rc\+Mv)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_aaf17781b4630eca1bd1c2d5f27117669}\label{class_t_com_rd_cost_aaf17781b4630eca1bd1c2d5f27117669}} 
+Void {\bfseries set\+Cost\+Scale} (Int i\+Cost\+Scale)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af2ca840bbc51b04c2b1e3452eac1ea99}\label{class_t_com_rd_cost_af2ca840bbc51b04c2b1e3452eac1ea99}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} {\bfseries get\+Cost} (U\+Int b)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ad112d2c057568cc6fc95a9a4935ddd8a}\label{class_t_com_rd_cost_ad112d2c057568cc6fc95a9a4935ddd8a}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} {\bfseries get\+Cost\+Of\+Vector\+With\+Predictor} (const Int x, const Int y)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ab5cb37e438f6707979fbb74be36c9a57}\label{class_t_com_rd_cost_ab5cb37e438f6707979fbb74be36c9a57}} 
+U\+Int {\bfseries get\+Bits\+Of\+Vector\+With\+Predictor} (const Int x, const Int y)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a15c20b82fb573e5c0db77ef592430f4c}\label{class_t_com_rd_cost_a15c20b82fb573e5c0db77ef592430f4c}} 
+Void {\bfseries set\+Ren\+Model} (\hyperlink{class_t_ren_model}{T\+Ren\+Model} $\ast$pc\+Ren\+Model)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a99f397ae6ec8fd6692c888c8e066e4d0}\label{class_t_com_rd_cost_a99f397ae6ec8fd6692c888c8e066e4d0}} 
+\hyperlink{class_t_ren_model}{T\+Ren\+Model} $\ast$ {\bfseries get\+Ren\+Model} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_aae864af2e6bf63e30a4c8bcaee22a4ba}\label{class_t_com_rd_cost_aae864af2e6bf63e30a4c8bcaee22a4ba}} 
+Void {\bfseries set\+Frame\+Lambda\+V\+SO} (Double d\+Lambda)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a2b0ae5c3ee8455eb2fdfba20eebcebea}\label{class_t_com_rd_cost_a2b0ae5c3ee8455eb2fdfba20eebcebea}} 
+Void {\bfseries set\+Use\+V\+SO} (Bool b\+In)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a1ea5ca0b7eeac028d011c8c70b34ffe9}\label{class_t_com_rd_cost_a1ea5ca0b7eeac028d011c8c70b34ffe9}} 
+Bool {\bfseries get\+Use\+V\+SO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ae0b97e8070a6e3fa0106d67204a5a297}\label{class_t_com_rd_cost_ae0b97e8070a6e3fa0106d67204a5a297}} 
+Bool {\bfseries get\+Use\+Ren\+Model} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af3295fbada15b39205089a4190f8f5d1}\label{class_t_com_rd_cost_af3295fbada15b39205089a4190f8f5d1}} 
+Void {\bfseries set\+Use\+Lambda\+Scale\+V\+SO} (Bool b\+In)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_aa6b17b7f6e103dd3ab4bf338ec935a53}\label{class_t_com_rd_cost_aa6b17b7f6e103dd3ab4bf338ec935a53}} 
+Bool {\bfseries get\+Use\+Lambda\+Scale\+V\+SO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a75b4a2f7e4157a188214e065c74cf12c}\label{class_t_com_rd_cost_a75b4a2f7e4157a188214e065c74cf12c}} 
+U\+Int {\bfseries get\+V\+S\+O\+Mode} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_aa7c64e1fd36376337aad4fbceff10fe9}\label{class_t_com_rd_cost_aa7c64e1fd36376337aad4fbceff10fe9}} 
+Double {\bfseries get\+Sqrt\+Lambda\+V\+SO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af4df712b89d92065f8f94679775bb6b6}\label{class_t_com_rd_cost_af4df712b89d92065f8f94679775bb6b6}} 
+Double {\bfseries get\+Lambda\+V\+SO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a46bfd1f3c226c0d8a8ad7a3fadd756b1}\label{class_t_com_rd_cost_a46bfd1f3c226c0d8a8ad7a3fadd756b1}} 
+Bool {\bfseries get\+Use\+Estimated\+V\+SD} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a855b1432afefa68705d82d88c1f3bdd3}\label{class_t_com_rd_cost_a855b1432afefa68705d82d88c1f3bdd3}} 
+Void {\bfseries set\+Use\+Estimated\+V\+SD} (Bool b\+In)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a70a95008c0d199b55db0edac445a5094}\label{class_t_com_rd_cost_a70a95008c0d199b55db0edac445a5094}} 
+\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$ {\bfseries get\+Video\+Rec\+Pic\+Yuv} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ab7b35e344c4e217671378a4bbf369240}\label{class_t_com_rd_cost_ab7b35e344c4e217671378a4bbf369240}} 
+Void {\bfseries set\+Video\+Rec\+Pic\+Yuv} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Video\+Rec\+Pic\+Yuv)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_afa1344eae2fc54b763d563f39fa0e1a2}\label{class_t_com_rd_cost_afa1344eae2fc54b763d563f39fa0e1a2}} 
+\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$ {\bfseries get\+Depth\+Pic\+Yuv} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a77b1874d9ba580d08bade715f7f1966d}\label{class_t_com_rd_cost_a77b1874d9ba580d08bade715f7f1966d}} 
+Void {\bfseries set\+Depth\+Pic\+Yuv} (\hyperlink{class_t_com_pic_yuv}{T\+Com\+Pic\+Yuv} $\ast$pc\+Depth\+Pic\+Yuv)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a89abf6cdea6fb4cde17f87a71494a8fa}\label{class_t_com_rd_cost_a89abf6cdea6fb4cde17f87a71494a8fa}} 
+Void {\bfseries set\+Use\+W\+V\+SO} (Bool b\+In)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a2580d3cedfa38702bff50af3f4c442c0}\label{class_t_com_rd_cost_a2580d3cedfa38702bff50af3f4c442c0}} 
+Bool {\bfseries get\+Use\+W\+V\+SO} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a11194b4df9f6d344adaa334a57cc12c1}\label{class_t_com_rd_cost_a11194b4df9f6d344adaa334a57cc12c1}} 
+Void {\bfseries set\+D\+Weight} (Int i\+D\+Weight)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a377bc972e749debdacd62e3c3555e71a}\label{class_t_com_rd_cost_a377bc972e749debdacd62e3c3555e71a}} 
+Int {\bfseries get\+D\+Weight} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a50fed49f341e2250836266d52ab19c8d}\label{class_t_com_rd_cost_a50fed49f341e2250836266d52ab19c8d}} 
+Void {\bfseries set\+V\+S\+O\+Weight} (Int i\+V\+S\+O\+Weight)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ae2258dd6f5c5f009088074e2d083cf31}\label{class_t_com_rd_cost_ae2258dd6f5c5f009088074e2d083cf31}} 
+Int {\bfseries get\+V\+S\+O\+Weight} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a5021614841fa1c2561c272eb6df12975}\label{class_t_com_rd_cost_a5021614841fa1c2561c272eb6df12975}} 
+Void {\bfseries set\+V\+S\+D\+Weight} (Int i\+V\+S\+D\+Weight)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a1845c63ed8950d250d88f5eac1db7d53}\label{class_t_com_rd_cost_a1845c63ed8950d250d88f5eac1db7d53}} 
+Int {\bfseries get\+V\+S\+D\+Weight} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a07ef20f52c976f9154cd950c754ef23a}\label{class_t_com_rd_cost_a07ef20f52c976f9154cd950c754ef23a}} 
+Double {\bfseries calc\+Rd\+Cost} (Double num\+Bits, \hyperlink{_type_def_8h_a507835e5fb717ea5af4e8b075c8cbede}{Dist} int\+Distortion, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func=D\+F\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a574bc80780c426d63ae96b1b3c904d8f}\label{class_t_com_rd_cost_a574bc80780c426d63ae96b1b3c904d8f}} 
+Void {\bfseries set\+Lambda} (Double d\+Lambda, const \hyperlink{struct_bit_depths}{Bit\+Depths} \&bit\+Depths)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a3281224638d4defac623c1ceee1ac68e}\label{class_t_com_rd_cost_a3281224638d4defac623c1ceee1ac68e}} 
+Void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a308d676e9f6d66356e4446c746ae8d45}\label{class_t_com_rd_cost_a308d676e9f6d66356e4446c746ae8d45}} 
+Void {\bfseries set\+Dist\+Param} (U\+Int ui\+Blk\+Width, U\+Int ui\+Blk\+Height, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func, \hyperlink{class_dist_param}{Dist\+Param} \&rc\+Dist\+Param)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a3615af5c9616c56924fd37338a76823b}\label{class_t_com_rd_cost_a3615af5c9616c56924fd37338a76823b}} 
+Void {\bfseries set\+Dist\+Param} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+RefY, Int i\+Ref\+Stride, \hyperlink{class_dist_param}{Dist\+Param} \&rc\+Dist\+Param)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a5947b47ae354cb6df97387ae39489834}\label{class_t_com_rd_cost_a5947b47ae354cb6df97387ae39489834}} 
+Void {\bfseries set\+Dist\+Param} (const \hyperlink{class_t_com_pattern}{T\+Com\+Pattern} $\ast$const pc\+Pattern\+Key, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+RefY, Int i\+Ref\+Stride, Int i\+Step, \hyperlink{class_dist_param}{Dist\+Param} \&rc\+Dist\+Param, Bool b\+H\+A\+D\+ME=false)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ae98c04b497b4092d01272ef1b7edc2ca}\label{class_t_com_rd_cost_ae98c04b497b4092d01272ef1b7edc2ca}} 
+Void {\bfseries set\+Dist\+Param} (\hyperlink{class_dist_param}{Dist\+Param} \&rc\+DP, Int bit\+Depth, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p1, Int i\+Stride1, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p2, Int i\+Stride2, Int i\+Width, Int i\+Height, Bool b\+Hadamard=false)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a3032d9785d976e4788d58c2fb4a293c3}\label{class_t_com_rd_cost_a3032d9785d976e4788d58c2fb4a293c3}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} {\bfseries calc\+H\+AD} (Int bit\+Depth, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi0, Int i\+Stride0, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi1, Int i\+Stride1, Int i\+Width, Int i\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a0886223bc10af6539915a65868ffdf71}\label{class_t_com_rd_cost_a0886223bc10af6539915a65868ffdf71}} 
+U\+Int {\bfseries calc\+V\+AR} (\hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi0, Int stride, Int width, Int height, Int cu\+Depth, U\+Int max\+Cu\+Width)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a7dcc3ba0cd948ed8e28b1683cb024357}\label{class_t_com_rd_cost_a7dcc3ba0cd948ed8e28b1683cb024357}} 
+\hyperlink{_type_def_8h_aed82b23ef6849d0bc3d95c92102d5b50}{Distortion} {\bfseries get\+Dist\+Part} (Int bit\+Depth, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Cur, Int i\+Cur\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org, Int i\+Org\+Stride, U\+Int ui\+Blk\+Width, U\+Int ui\+Blk\+Height, const Component\+ID comp\+ID, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func=\hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8a02dd0fe46fdd40822e75f94bcd350e18}{D\+F\+\_\+\+S\+SE})
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a2bfb26ed8eea66bfd2e5a694483eca90}\label{class_t_com_rd_cost_a2bfb26ed8eea66bfd2e5a694483eca90}} 
+U\+Int {\bfseries get\+Dist\+Part\+V\+SD} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+Cu, U\+Int ui\+Part\+Offset, Int bit\+Depth, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Cur, Int i\+Cur\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org, Int i\+Org\+Stride, U\+Int ui\+Blk\+Width, U\+Int ui\+Blk\+Height, Bool b\+Had, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func=\hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8a939d54d44725c6e63ad22af43bc9efee}{D\+F\+\_\+\+V\+SD})
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af44c46ab7ae998f3fb8e76eb574d49fd}\label{class_t_com_rd_cost_af44c46ab7ae998f3fb8e76eb574d49fd}} 
+Void {\bfseries set\+Ren\+Model\+Data} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Index, const \hyperlink{class_t_com_yuv}{T\+Com\+Yuv} $\ast$pc\+Yuv, const \hyperlink{class_t_com_t_u_recurse}{T\+Com\+T\+U\+Recurse} $\ast$tu\+Recurse\+With\+PU)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a58bb6398b5b93ea3aa5668b0d4952c6c}\label{class_t_com_rd_cost_a58bb6398b5b93ea3aa5668b0d4952c6c}} 
+Void {\bfseries set\+Ren\+Model\+Data} (const \hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Index, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Data, Int i\+Stride, Int i\+Blk\+Width, Int i\+Blk\+Height)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a194f2d90ee696e88907224a3436191ac}\label{class_t_com_rd_cost_a194f2d90ee696e88907224a3436191ac}} 
+Void {\bfseries set\+Lambda\+V\+SO} (Double d\+Lambda)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af754a964ad6b28c7495dc211ca6b5b4e}\label{class_t_com_rd_cost_af754a964ad6b28c7495dc211ca6b5b4e}} 
+Void {\bfseries set\+V\+S\+O\+Mode} (U\+Int ui\+In)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_af2b70e9f32cf3700fb1bf08cd9deb064}\label{class_t_com_rd_cost_af2b70e9f32cf3700fb1bf08cd9deb064}} 
+Void {\bfseries set\+Allow\+Neg\+Dist} (Bool b\+Allow\+Neg\+Dist)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a252ef747f449a0ce9d95f4393f771118}\label{class_t_com_rd_cost_a252ef747f449a0ce9d95f4393f771118}} 
+\hyperlink{_type_def_8h_a507835e5fb717ea5af4e8b075c8cbede}{Dist} {\bfseries get\+Dist\+Part\+V\+SO} (\hyperlink{class_t_com_data_c_u}{T\+Com\+Data\+CU} $\ast$pc\+CU, U\+Int ui\+Abs\+Part\+Index, Int bitd\+Depth, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Cur, Int i\+Cur\+Stride, \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$pi\+Org, Int i\+Org\+Stride, U\+Int ui\+Blk\+Width, U\+Int ui\+Blk\+Height, Bool b\+S\+AD)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ae0e5eac1046d8324c878a67dbf171e5a}\label{class_t_com_rd_cost_ae0e5eac1046d8324c878a67dbf171e5a}} 
+Double {\bfseries calc\+Rd\+Cost\+V\+SO} (U\+Int ui\+Bits, \hyperlink{_type_def_8h_a507835e5fb717ea5af4e8b075c8cbede}{Dist} ui\+Distortion, Bool b\+Flag=false, \hyperlink{_type_def_8h_ac19dbe1a542fc0c0bc8a94fcc55907c8}{D\+Func} e\+D\+Func=D\+F\+\_\+\+D\+E\+F\+A\+U\+LT)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_ac3d49589fe985e4c5235541f40e6f2e8}\label{class_t_com_rd_cost_ac3d49589fe985e4c5235541f40e6f2e8}} 
+static U\+Int {\bfseries x\+Get\+Exp\+Golomb\+Number\+Of\+Bits} (Int i\+Val)
+\item 
+\mbox{\Hypertarget{class_t_com_rd_cost_a2aa58149fc667dc46353b3056997b55e}\label{class_t_com_rd_cost_a2aa58149fc667dc46353b3056997b55e}} 
+static U\+Int {\bfseries get\+V\+S\+D\+Estimate} (Int d\+DM, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Org, Int i\+Org\+Stride, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Vir\+Rec, const \hyperlink{_type_def_8h_af92141699657699b4b547be0c8517541}{Pel} $\ast$p\+Vir\+Org, Int i\+Vir\+Stride, Int x, Int y)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+RD cost computation class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_rd_cost_8h}{T\+Com\+Rd\+Cost.\+h}\item 
+Lib/\+T\+Lib\+Common/\hyperlink{_t_com_rd_cost_8cpp}{T\+Com\+Rd\+Cost.\+cpp}\end{DoxyCompactItemize}
