@@ -53,7 +53,7 @@ int main(int argc, char* argv[])
 {
   TAppEncTop  cTAppEncTop;
 
-  // print information
+  // print information--->
   fprintf( stdout, "\n" );
 #if NH_MV
   fprintf( stdout, "3D-HTM Software: Encoder Version [%s] based on HM Version [%s]", NV_VERSION, HM_VERSION );  
