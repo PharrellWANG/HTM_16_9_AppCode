@@ -1893,9 +1893,9 @@ private:
 class TComSPS
 {
 private:
-  Int              m_SPSId;
-  Int              m_VPSId;
-  ChromaFormat     m_chromaFormatIdc;
+  Int              m_SPSId;//>>>>>>>>>>--------> this is the SPS identifier
+  Int              m_VPSId;//>>>>>>>>>>--------> the index to identify the associated VPS
+  ChromaFormat     m_chromaFormatIdc;//
 
   UInt             m_uiMaxTLayers;           // maximum number of temporal layers
 
@@ -1927,25 +1927,25 @@ private:
   Bool             m_usePCM;
   UInt             m_pcmLog2MaxSize;
   UInt             m_uiPCMLog2MinSize;
-  Bool             m_useAMP;
+  Bool             m_useAMP;//>>>>>>>>>>--------> AMP: asymmetric motion partitioning
 
   // Parameter
   BitDepths        m_bitDepths;
   Int              m_qpBDOffset[MAX_NUM_CHANNEL_TYPE];
   Int              m_pcmBitDepths[MAX_NUM_CHANNEL_TYPE];
-  Bool             m_bPCMFilterDisableFlag;
+  Bool             m_bPCMFilterDisableFlag;//>>>>>>>>>>--------> (Pulse Code Modulation) PCM filter disable flag
 
-  UInt             m_uiBitsForPOC;
+  UInt             m_uiBitsForPOC;//>>>>>>>>>>--------> picture order count (POC)
   UInt             m_numLongTermRefPicSPS;
 #if NH_MV
   Int              m_numShortTermRefPicSets;
 #endif
-  UInt             m_ltRefPicPocLsbSps[MAX_NUM_LONG_TERM_REF_PICS];
+  UInt             m_ltRefPicPocLsbSps[MAX_NUM_LONG_TERM_REF_PICS];//>>>>>>>>>>--------> ????
   Bool             m_usedByCurrPicLtSPSFlag[MAX_NUM_LONG_TERM_REF_PICS];
   // Max physical transform size
   UInt             m_uiMaxTrSize;
 
-  Bool             m_bUseSAO;
+  Bool             m_bUseSAO; //>>>>>>>>>>--------> use Sample Adaptive Offset or not
 
   Bool             m_bTemporalIdNestingFlag; // temporal_id_nesting_flag
 

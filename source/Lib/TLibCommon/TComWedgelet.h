@@ -57,7 +57,7 @@ enum DmmID
 
 __inline DmmID getDmmType( Int intraMode ) 
 { 
-    Int dmmType = intraMode-DMM_OFFSET; 
+    Int dmmType = intraMode-DMM_OFFSET; //>>>>>>>>>------> DMM_OFFSET = 36+1 = 37
     return (dmmType >= 0 && dmmType < NUM_DMM) ? (DmmID)dmmType : DMM_NO_IDX; 
 }
 __inline Bool isDmmMode( Int intraMode ) { return ((UInt)getDmmType( intraMode ) < NUM_DMM); }
