@@ -46,7 +46,8 @@
 #define DMM_OFFSET     (NUM_INTRA_MODE+1) // offset for DMM and RBC mode numbers
 #define DMM_MIN_SIZE                   4  // min. block size for DMM and RBC modes
 #define DMM_MAX_SIZE                  32  // max. block size for DMM and RBC modes
-
+////>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>depth modelling mode(DMM)
+///<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>region boundary chain(RBC)
 enum DmmID
 {
   DMM1_IDX = 0,

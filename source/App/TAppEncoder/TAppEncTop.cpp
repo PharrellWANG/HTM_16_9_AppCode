@@ -941,7 +941,22 @@ Void TAppEncTop::xInitLib(Bool isFieldCoding)
  */
 Void TAppEncTop::encode()
 {
-  fstream bitstreamFile(m_bitstreamFileName.c_str(), fstream::binary | fstream::out);
+  fstream bitstreamFile(m_bitstreamFileName.c_str(), fstream::binary | fstream::out);//binary: opens the file in binary mode, instead of text mode; out: opens the file in write mode.
+  //>>>1.
+  //In C++11 standard it's explicitly stated that .c_str() shall return
+  //pointer to the internal buffer which is used by std::string.
+  // type(m_bitstreamFileName) == std::string
+  //>>>2.
+  //fstream::binary | fstream::out==> setting a fstream class wiht open mode as binary, and write into it.
+  //I guess it is related to the stream.bit output file of encoder.
+  //>>>3.
+  //if failed to open the bitstream file, "bitstreamFile" = 0, hence will enter the block below,
+  //else won't enter the following block
+  //>>>4.
+  //file streams are associated with files either on construction, or by calling member open.
+  //obviously, here, the two things are associated on construction.
+  //bitstreamFile is an object of fstream class. Object of this class maintain a filebuf object as their internal stream buffer.
+  //which performs input/output operations on the file they are associated with.
   if (!bitstreamFile)
   {
     fprintf(stderr, "\nfailed to open bitstream file `%s' for writing\n", m_bitstreamFileName.c_str());
@@ -951,7 +966,7 @@ Void TAppEncTop::encode()
 #if !NH_3D
   TComPicYuv*       pcPicYuvOrg = new TComPicYuv;
 #endif
-  TComPicYuv*       pcPicYuvRec = NULL;
+  TComPicYuv*       pcPicYuvRec = NULL;//class pointer to the rec .yuv files
 
   // initialize internal class & member variables
   xInitLibCfg();

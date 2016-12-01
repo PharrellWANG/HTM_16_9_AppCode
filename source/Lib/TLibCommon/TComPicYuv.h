@@ -80,15 +80,20 @@ private:
 
   Bool  m_bIsBorderExtended;
 #if NH_3D_IV_MERGE
-  Int   m_iBaseUnitWidth;       ///< Width of Base Unit (with maximum depth or minimum size, m_iCuWidth >> Max. Depth)
+  Int   m_iBaseUnitWidth;       ///< Width of Base Unit (with maximum depth or minimum size, m_iCuWidth >> Max. Depth) //? Base Unit??
   Int   m_iBaseUnitHeight;      ///< Height of Base Unit (with maximum depth or minimum size, m_iCuHeight >> Max. Depth)
-  Int   m_iNumCuInWidth;
+  Int   m_iNumCuInWidth;   //number of CUs in width
   Int   m_iCuWidth;             ///< Width of Coding Unit (CU)
   Int   m_iCuHeight;            ///< Height of Coding Unit (CU)
 #endif
 
 #if NH_3D_VSO
-  Void  xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidth, Int iHeight, Pel iVal );
+  Void  xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidthY, Int iHeight, Pel iVal );
+  //dst         destination image plane
+  //stride444   distance between vertically adjacent pixels of dst.
+  //img         pointer to image to be transformed
+  //stride      distance between vertically adjacent pixels of img.
+  //source stride????---->iSourceStride looks like the span of the address of the entile row of a picture.
 #endif
 
 public:
@@ -131,7 +136,7 @@ public:
 
   Int           getStride         (const ComponentID id) const { return ((m_picWidth     ) + (m_marginX  <<1)) >> getComponentScaleX(id); }
 private:
-  Int           getStride         (const ChannelType id) const { return ((m_picWidth     ) + (m_marginX  <<1)) >> getChannelTypeScaleX(id); }
+  Int           getStride         (const ChannelType id) const { return ((m_picWidth     ) + (m_marginX  <<1)) >> getChannelTypeScaleX(id); }//>>>stride looks like == totalWidth/2
 public:
   Int           getTotalHeight    (const ComponentID id) const { return ((m_picHeight    ) + (m_marginY  <<1)) >> getComponentScaleY(id); }
 

@@ -98,18 +98,18 @@ Void TComPicYuv::createWithoutCUInfo ( const Int picWidth,                 ///< 
 
   m_iNumCuInWidth   = picWidth / m_iCuWidth;
   m_iNumCuInWidth  += ( picHeight % m_iCuWidth ) ? 1 : 0;
-  // Check if m_iBaseUnitWidth and m_iBaseUnitHeight need to be derived here
+  // Check if m_iBaseUnitWidth and m_iBaseUnitHeight need to be derived here//>>>?????????????????????
 #endif
 
   m_chromaFormatIDC   = chromaFormatIDC;
   m_marginX          = (bUseMargin?maxCUWidth:0) + 16;   // for 16-byte alignment
   m_marginY          = (bUseMargin?maxCUHeight:0) + 16;  // margin for 8-tap filter and infinite padding
-  m_bIsBorderExtended = false;
+  m_bIsBorderExtended = false;//>>>>>>??????????????
 
   // assign the picture arrays and set up the ptr to the top left of the original picture
-  for(UInt comp=0; comp<getNumberValidComponents(); comp++)
+  for(UInt comp=0; comp<getNumberValidComponents(); comp++)//>>> getNumberValidComponents here returns 3.
   {
-    const ComponentID ch=ComponentID(comp);
+    const ComponentID ch=ComponentID(comp);//comp from 0 to 1 to 2, loop thru Y TO U TO V.
     m_apiPicBuf[comp] = (Pel*)xMalloc( Pel, getStride(ch) * getTotalHeight(ch));
     m_piPicOrg[comp]  = m_apiPicBuf[comp] + (m_marginY >> getComponentScaleY(ch)) * getStride(ch) + (m_marginX >> getComponentScaleX(ch));
   }
@@ -146,7 +146,7 @@ Void TComPicYuv::create ( const Int picWidth,                 ///< picture width
 #endif
 
 
-  const Int numCuInWidth  = m_picWidth  / maxCUWidth  + (m_picWidth  % maxCUWidth  != 0);
+  const Int numCuInWidth  = m_picWidth  / maxCUWidth  + (m_picWidth  % maxCUWidth  != 0);  //>>>(m_picWidth  % maxCUWidth  != 0)---> means if there's any fragment left, then we treat the fragment as one unit, and increment the "m_picWidth  / maxCUWidth" by one.
   const Int numCuInHeight = m_picHeight / maxCUHeight + (m_picHeight % maxCUHeight != 0);
   for(Int chan=0; chan<MAX_NUM_CHANNEL_TYPE; chan++)
   {
@@ -165,7 +165,7 @@ Void TComPicYuv::create ( const Int picWidth,                 ///< picture width
       }
     }
 
-    m_subCuOffsetInBuffer[chan] = new Int[(size_t)1 << (2 * maxCUDepth)];
+    m_subCuOffsetInBuffer[chan] = new Int[(size_t)1 << (2 * maxCUDepth)];// size_t: unsigned interger //>>>but this line means what?????
 
     const Int numSubBlockPartitions=(1<<maxCUDepth);
     const Int minSubBlockHeight    =(ctuHeight >> maxCUDepth);
@@ -393,7 +393,7 @@ Void TComPicYuv::xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidth, Int
     {
       piPelSource[iXPos] = iVal; 
     }
-    piPelSource += iSourceStride; 
+    piPelSource += iSourceStride; //name of the array means the pointer to teh first element of an array-----> iSourceStride looks like the span of the address of the entile row of a picture.
   }
 }
 #endif
