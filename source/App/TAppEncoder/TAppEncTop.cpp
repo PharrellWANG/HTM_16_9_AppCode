@@ -941,6 +941,7 @@ Void TAppEncTop::xInitLib(Bool isFieldCoding)
  */
 Void TAppEncTop::encode()
 {
+  //----->>>>>>>create the stream.bit file for writing the bitstream file
   fstream bitstreamFile(m_bitstreamFileName.c_str(), fstream::binary | fstream::out);//binary: opens the file in binary mode, instead of text mode; out: opens the file in write mode.
   //>>>1.
   //In C++11 standard it's explicitly stated that .c_str() shall return
