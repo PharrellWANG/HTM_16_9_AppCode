@@ -204,13 +204,19 @@ static const Int RVM_VCEGAM10_M =                                   4;
 
 static const Int FAST_UDI_MAX_RDMODE_NUM =                         35; ///< maximum number of RD comparison in fast-UDI estimation loop
 
+//=====*************************=======
+//=====================================
 static const Int NUM_INTRA_MODE =                                  36;
+//-------|||||||------------------------------------------------------------------------------------------------------------------------
 static const Int PLANAR_IDX =                                       0;
 static const Int VER_IDX =                                         26; ///< index for intra VERTICAL   mode
 static const Int HOR_IDX =                                         10; ///< index for intra HORIZONTAL mode
 static const Int DC_IDX =                                           1; ///< index for intra DC mode
+//-------|||||||------------------------------------------------------------------------------------------------------------------------
 static const Int NUM_CHROMA_MODE =                                  5; ///< total number of chroma modes
 static const Int DM_CHROMA_IDX =                                   36; ///< chroma mode index for derived from luma intra mode
+//=====================================
+//=====*************************=======
 
 static const Int MDCS_ANGLE_LIMIT =                                 4; ///< 0 = Horizontal/vertical only, 1 = Horizontal/vertical +/- 1, 2 = Horizontal/vertical +/- 2 etc...
 static const Int MDCS_MAXIMUM_WIDTH =                               8; ///< (measured in pixels) TUs with width greater than this can only use diagonal scan

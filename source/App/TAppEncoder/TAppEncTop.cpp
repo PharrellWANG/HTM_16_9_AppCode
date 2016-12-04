@@ -104,17 +104,17 @@ Void TAppEncTop::xInitLibCfg()
   vps.setMaxTLayers                       ( maxTempLayer );
   if ( maxTempLayer )
   {
-    vps.setTemporalNestingFlag(true);
+    vps.setTemporalNestingFlag(true);//------>>>> the temporal nesting flag in SPS is set to be true--> indicates that : all pictures with temporal id greater than 0 are sub-layer switching points.
   }
-  vps.setMaxLayersMinus1( m_numberOfLayers - 1);
-  for(Int i = 0; i < MAX_TLAYER; i++)
+  vps.setMaxLayersMinus1( m_numberOfLayers - 1);//>>>>>number of layers to encode
+  for(Int i = 0; i < MAX_TLAYER; i++) //>>>>>>>>>>>>>>>maximun number of temporal layers = 7 (const)
   {
     Int maxNumReOrderPics  = 0; 
     Int maxDecPicBuffering = 0;
-    for (Int j = 0; j < m_numberOfLayers; j++)
+    for (Int j = 0; j < m_numberOfLayers; j++)//,.>>>>>>>>>>>>>>>> 6
     {
       maxNumReOrderPics  = max( maxNumReOrderPics,  m_numReorderPicsMvc    [ j ][ i ] );     
-      maxDecPicBuffering = max( maxDecPicBuffering, m_maxDecPicBufferingMvc[ j ][ i ] );     
+      maxDecPicBuffering = max( maxDecPicBuffering, m_maxDecPicBufferingMvc[ j ][ i ] );  //>>>>total number of pictures in the decoded picture buffer.
     }
 
     vps.setNumReorderPics                 ( maxNumReOrderPics  ,i );
@@ -148,7 +148,7 @@ Void TAppEncTop::xInitLibCfg()
   xSetCamPara              ( vps ); 
 #endif
 #if NH_3D_VSO || NH_3D
-  m_ivPicLists.setVPS      ( &vps );
+  m_ivPicLists.setVPS      ( &vps ); //////////< picture buffers of encoder instances
 #endif
 #if NH_3D_DLT
   xDeriveDltArray          ( vps, &dlt );
@@ -185,9 +185,9 @@ Void TAppEncTop::xInitLibCfg()
 
 #if NH_3D
   // Set 3d tool parameters
-  for (Int d = 0; d < 2; d++)
+  for (Int d = 0; d < 2; d++)//>>>>>>>>>>>>>>>>>> d==0 --> view    while    d==1 --> depth
   {  
-    m_sps3dExtension.setIvDiMcEnabledFlag          ( d, m_ivMvPredFlag[d]       );
+    m_sps3dExtension.setIvDiMcEnabledFlag          ( d, m_ivMvPredFlag[d]       );//>>maybe ivMv==>Inter view motion vector prediction???
     m_sps3dExtension.setIvMvScalEnabledFlag       ( d, m_ivMvScalingFlag[d]    );
     if (d == 0 )
     {    
@@ -214,8 +214,8 @@ Void TAppEncTop::xInitLibCfg()
   /// Create encoders and set profiles profiles
   for(Int layerIdInVps = 0; layerIdInVps < m_numberOfLayers; layerIdInVps++)
   {
-    m_frameRcvd                 .push_back(0);
-    m_acTEncTopList             .push_back(new TEncTop); 
+    m_frameRcvd                 .push_back(0);//>>>>>>>>>>number of received frames
+    m_acTEncTopList             .push_back(new TEncTop); //>>>>>>>>>encoder class per layer
     m_acTVideoIOYuvInputFileList.push_back(new TVideoIOYuv);
     m_acTVideoIOYuvReconFileList.push_back(new TVideoIOYuv);
 #if NH_3D    
@@ -410,7 +410,7 @@ Void TAppEncTop::xInitLibCfg()
 
   //====== Loop/Deblock Filter ========
 #if NH_MV
-  m_cTEncTop.setLoopFilterDisable                                 ( m_bLoopFilterDisable[layerIdInVps]);
+  m_cTEncTop.setLoopFilterDisable                                 ( m_bLoopFilterDisable[layerIdInVps]);//>>>>>disable for depth layers
 #else
   m_cTEncTop.setLoopFilterDisable                                 ( m_bLoopFilterDisable       );
 #endif
