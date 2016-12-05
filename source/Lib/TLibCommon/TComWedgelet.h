@@ -55,14 +55,27 @@ enum DmmID
   NUM_DMM  = 2,
   DMM_NO_IDX = MAX_UINT
 };
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
 
 __inline DmmID getDmmType( Int intraMode ) 
 { 
     Int dmmType = intraMode-DMM_OFFSET; //>>>>>>>>>------> DMM_OFFSET = 36+1 = 37
     return (dmmType >= 0 && dmmType < NUM_DMM) ? (DmmID)dmmType : DMM_NO_IDX; 
 }
-__inline Bool isDmmMode( Int intraMode ) { return ((UInt)getDmmType( intraMode ) < NUM_DMM); }
-
+///---------------------->>>>>>>>>>>>>>>>>
+///---------------------->>>>>>>>>>>>>>>>>
+__inline Bool isDmmMode( Int intraMode )
+{
+  return (
+          (UInt)
+          getDmmType( intraMode ) < NUM_DMM
+          );
+}
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
+///---------------------->>>>>>>>>>>>>>>>>///---------------------->>>>>>>>>>>>>>>>>
 
 // Wedgelets
 #define DMM_NO_WEDGE_IDX       MAX_UINT

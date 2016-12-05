@@ -208,10 +208,12 @@ static const Int FAST_UDI_MAX_RDMODE_NUM =                         35; ///< maxi
 //=====================================
 static const Int NUM_INTRA_MODE =                                  36;
 //-------|||||||------------------------------------------------------------------------------------------------------------------------
+///---------------------->>>>>>>>>>>>>>>>>
 static const Int PLANAR_IDX =                                       0;
 static const Int VER_IDX =                                         26; ///< index for intra VERTICAL   mode
 static const Int HOR_IDX =                                         10; ///< index for intra HORIZONTAL mode
 static const Int DC_IDX =                                           1; ///< index for intra DC mode
+///---------------------->>>>>>>>>>>>>>>>>
 //-------|||||||------------------------------------------------------------------------------------------------------------------------
 static const Int NUM_CHROMA_MODE =                                  5; ///< total number of chroma modes
 static const Int DM_CHROMA_IDX =                                   36; ///< chroma mode index for derived from luma intra mode
