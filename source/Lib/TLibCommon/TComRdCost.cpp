@@ -62,15 +62,9 @@ TComRdCost::~TComRdCost()
 }
 
 // Calculate RD functions
-#if NH_3D_VSO
 Double TComRdCost::calcRdCost( Double numBits, Dist intDistortion, DFunc eDFunc )
 {
   Double distortion = (Double) intDistortion;
-#else
-Double TComRdCost::calcRdCost( Double numBits, Double distortion, DFunc eDFunc )
-{
-#endif
-  
   Double lambda = 1.0;
 
   switch ( eDFunc )
@@ -3626,3 +3620,17 @@ Void TComRdCost::setAllowNegDist( Bool bAllowNegDist )
 #endif
 
 //! \}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
