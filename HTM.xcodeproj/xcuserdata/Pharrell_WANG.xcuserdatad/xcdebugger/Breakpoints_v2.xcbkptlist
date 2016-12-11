@@ -9,45 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "source/App/TAppEncoder/encmain.cpp"
-            timestampString = "502885204.670543"
+            filePath = "source/Lib/TLibEncoder/TEncCu.cpp"
+            timestampString = "503154234.484743"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "main(int argc, char* argv[])"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "source/Lib/TLibEncoder/TEncCu.h"
-            timestampString = "503146725.907914"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
-            landmarkName = "xCheckRDCostIntra ( TComDataCU *&amp;rpcBestCU, TComDataCU *&amp;rpcTempCU, PartSize ePartSize DEBUG_STRING_FN_DECLARE(sDebug) #if NH_3D_ENC_DEPTH , Bool bOnlyIVP"
-            landmarkType = "6">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "source/App/TAppEncoder/TAppEncTop.cpp"
-            timestampString = "503146953.896342"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1100"
-            endingLineNumber = "1100"
-            landmarkName = "TAppEncTop::encode()"
+            startingLineNumber = "2788"
+            endingLineNumber = "2788"
+            landmarkName = "TEncCu::xCheckRDCostIntra( TComDataCU *&amp;rpcBestCU, TComDataCU *&amp;rpcTempCU, PartSize eSize DEBUG_STRING_FN_DECLARE(sDebug)//&lt;==&gt; std::string &amp;sDebug #if NH_3D_ENC_DEPTH , Bool bOnlyIVP"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,77 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "source/Lib/TLibEncoder/TEncCu.cpp"
-            timestampString = "503147407.260612"
+            timestampString = "503156739.113596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "297"
-            endingLineNumber = "297"
-            landmarkName = "TEncCu::compressCtu( TComDataCU* pCtu )"
+            startingLineNumber = "2822"
+            endingLineNumber = "2822"
+            landmarkName = "TEncCu::xCheckRDCostIntra( TComDataCU *&amp;rpcBestCU, TComDataCU *&amp;rpcTempCU, PartSize eSize DEBUG_STRING_FN_DECLARE(sDebug)//&lt;==&gt; std::string &amp;sDebug #if NH_3D_ENC_DEPTH , Bool bOnlyIVP"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "source/Lib/TLibEncoder/TEncCu.cpp"
-            timestampString = "503147412.149489"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1306"
-            endingLineNumber = "1306"
-            landmarkName = "TEncCu::xCompressCU( TComDataCU*&amp; rpcBestCU, TComDataCU*&amp; rpcTempCU, const UInt uiDepth )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "source/Lib/TLibCommon/TComPicYuv.h"
-            timestampString = "503148863.09006"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "class TComPicYuv"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TComPicYuv::getWidth(ComponentID) const"
-                  moduleName = "TAppEncoder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Pharrell_WANG/XcodeProj/HTM_16_9/source/Lib/TLibCommon/../TLibRenderer/../TLibCommon/TComPicYuv.h"
-                  timestampString = "503148868.554958"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TComPicYuv::getChromaFormat() const"
-                  moduleName = "TAppEncoder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Pharrell_WANG/XcodeProj/HTM_16_9/source/Lib/TLibCommon/TComPicYuv.h"
-                  timestampString = "503148868.556447"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "12">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

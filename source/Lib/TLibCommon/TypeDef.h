@@ -420,10 +420,10 @@
 #else
 # define DISTORTION_PRECISION_ADJUSTMENT(x) (x)
 #endif
-#if DEBUG_STRING
+#if DEBUG_STRING// When enabled, prints out final decision debug info at encoder and decoder
   #define DEBUG_STRING_PASS_INTO(name) , name
   #define DEBUG_STRING_PASS_INTO_OPTIONAL(name, exp) , (exp==0)?0:name
-  #define DEBUG_STRING_FN_DECLARE(name) , std::string &name
+  #define DEBUG_STRING_FN_DECLARE(name) , std::string &name//>>
   #define DEBUG_STRING_FN_DECLAREP(name) , std::string *name
   #define DEBUG_STRING_NEW(name) std::string name;
   #define DEBUG_STRING_OUTPUT(os, name) os << name;

@@ -2780,13 +2780,13 @@ Void TEncCu::xCheckRDCostDIS( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, Pa
 Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
                                 TComDataCU *&rpcTempCU,
                                 PartSize     eSize
-                                DEBUG_STRING_FN_DECLARE(sDebug)
+                                DEBUG_STRING_FN_DECLARE(sDebug)//<==> std::string &sDebug
 #if NH_3D_ENC_DEPTH
-                              , Bool bOnlyIVP
+                              , Bool bOnlyIVP   //ONLY use "Inter View Prediction"
 #endif
                               )
 {
-  DEBUG_STRING_NEW(sTest)
+  DEBUG_STRING_NEW(sTest)//<==> std::string sTest;
 
   if(getFastDeltaQp())
   {

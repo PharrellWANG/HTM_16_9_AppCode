@@ -90,15 +90,15 @@ private:
 #if NH_3D_VSO
   Void  xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidthY, Int iHeight, Pel iVal );
   //dst         destination image plane
-  //stride444   distance bet ween vertically adjacent pixels of dst.
+  //stride444   distance between vertically adjacent pixels of dst.
   //img         pointer to image to be transformed
   //stride      distance between vertically adjacent pixels of img.
   //source stride????---->iSourceStride looks like the span of the address of the entile row of a picture.
 #endif
 
 public:
-               TComPicYuv         ();
-  virtual     ~TComPicYuv         ();
+               TComPicYuv         (); //constructor
+  virtual     ~TComPicYuv         (); //virtual destructor
 
   // ------------------------------------------------------------------------------------------------
   //  Memory management

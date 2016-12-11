@@ -393,7 +393,7 @@ Void TComPicYuv::xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidth, Int
     {
       piPelSource[iXPos] = iVal; 
     }
-    piPelSource += iSourceStride; //name of the array means the pointer to teh first element of an array-----> iSourceStride looks like the span of the address of the entile row of a picture.
+    piPelSource += iSourceStride; //name of the array means the pointer to the first element of an array-----> iSourceStride looks like the span of the address of the entile row of a picture.
   }
 }
 #endif
