@@ -60,7 +60,7 @@ private:
   //  YUV buffer
   // ------------------------------------------------------------------------------------------------
 
-  Pel*  m_apiPicBuf[MAX_NUM_COMPONENT];             ///< Buffer (including margin)
+  Pel*  m_apiPicBuf[MAX_NUM_COMPONENT];             ///< Buffer (including margin)//>>>>>>pointer to short int, pixel type
 
   Pel*  m_piPicOrg[MAX_NUM_COMPONENT];              ///< m_apiPicBufY + m_iMarginLuma*getStride() + m_iMarginLuma
 
@@ -82,7 +82,7 @@ private:
 #if NH_3D_IV_MERGE
   Int   m_iBaseUnitWidth;       ///< Width of Base Unit (with maximum depth or minimum size, m_iCuWidth >> Max. Depth) //? Base Unit??
   Int   m_iBaseUnitHeight;      ///< Height of Base Unit (with maximum depth or minimum size, m_iCuHeight >> Max. Depth)
-  Int   m_iNumCuInWidth;   //number of CUs in width
+  Int   m_iNumCuInWidth;        ///<<<<<<<<<<<<<<<<<<<<<<<<<<<<<number of CUs in width
   Int   m_iCuWidth;             ///< Width of Coding Unit (CU)
   Int   m_iCuHeight;            ///< Height of Coding Unit (CU)
 #endif
@@ -90,7 +90,7 @@ private:
 #if NH_3D_VSO
   Void  xSetPels( Pel* piPelSource , Int iSourceStride, Int iWidthY, Int iHeight, Pel iVal );
   //dst         destination image plane
-  //stride444   distance between vertically adjacent pixels of dst.
+  //stride444   distance bet ween vertically adjacent pixels of dst.
   //img         pointer to image to be transformed
   //stride      distance between vertically adjacent pixels of img.
   //source stride????---->iSourceStride looks like the span of the address of the entile row of a picture.
