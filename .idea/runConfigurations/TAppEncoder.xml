@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TAppEncoder" type="AppleRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/baseCfg_3view+depth.cfg  -c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/qpCfg_Nview+depth_QP25.cfg -c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/seqCfg_Newspaper.cfg" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="HTM" TARGET_NAME="TAppEncoder" CONFIG_NAME="Debug" SCHEME_NAME="TAppEncoder" RUN_TARGET_PROJECT_NAME="HTM" RUN_TARGET_NAME="TAppEncoder" MAKE_ACTIVE="TRUE">
+    <envs />
+    <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+      <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+    </EXTENSION>
+    <method />
+  </configuration>
+</component>
