@@ -63,15 +63,15 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "-c /Users/Pharrell_WANG/XcodeProj/HTM_16_9/forXcodeDebugging/baseCfg_3view+depth.cfg "
+            argument = "-c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/baseCfg_3view+depth.cfg "
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-c /Users/Pharrell_WANG/XcodeProj/HTM_16_9/forXcodeDebugging/qpCfg_Nview+depth_QP25.cfg"
+            argument = "-c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/qpCfg_Nview+depth_QP25.cfg"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-c /Users/Pharrell_WANG/XcodeProj/HTM_16_9/forXcodeDebugging/seqCfg_Newspaper.cfg"
+            argument = "-c /Users/Pharrell_WANG/XcodeProj/for_HTM_debugging/seqCfg_Newspaper.cfg"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
