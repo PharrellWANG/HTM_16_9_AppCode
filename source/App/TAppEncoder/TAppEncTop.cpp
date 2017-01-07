@@ -2542,7 +2542,7 @@ Void TAppEncTop::xDeriveDltArray( TComVPS& vps, TComDLT* dlt )
       }
       
       // bit map branch
-      uiNumBitsBitMap = 1 << m_inputBitDepth[CHANNEL_TYPE_LUMA];
+      uiNumBitsBitMap = (UInt) (1 << m_inputBitDepth[CHANNEL_TYPE_LUMA]);
       
       // determine bDltBitMapFlag
       bDltBitMapRepFlag = (uiNumBitsBitMap > uiNumBitsNonBitMap) ? false : true;
