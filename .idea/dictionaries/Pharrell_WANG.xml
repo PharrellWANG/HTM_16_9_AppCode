@@ -1,9 +1,12 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Pharrell_WANG">
     <words>
+      <w>bitdepth</w>
       <w>bitstream</w>
       <w>encmain</w>
       <w>filebuf</w>
+      <w>maxval</w>
+      <w>minval</w>
     </words>
   </dictionary>
 </component>

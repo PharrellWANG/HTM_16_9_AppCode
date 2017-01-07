@@ -104,7 +104,7 @@ Void TComPicYuv::createWithoutCUInfo ( const Int picWidth,                 ///< 
   m_chromaFormatIDC   = chromaFormatIDC;
   m_marginX          = (bUseMargin?maxCUWidth:0) + 16;   // for 16-byte alignment
   m_marginY          = (bUseMargin?maxCUHeight:0) + 16;  // margin for 8-tap filter and infinite padding
-  m_bIsBorderExtended = false;//>>>>>>??????????????
+  m_bIsBorderExtended = false;// ？
 
   // assign the picture arrays and set up the ptr to the top left of the original picture
   for(UInt comp=0; comp<getNumberValidComponents(); comp++)//>>> getNumberValidComponents here returns 3.
@@ -114,7 +114,7 @@ Void TComPicYuv::createWithoutCUInfo ( const Int picWidth,                 ///< 
     m_piPicOrg[comp]  = m_apiPicBuf[comp] + (m_marginY >> getComponentScaleY(ch)) * getStride(ch) + (m_marginX >> getComponentScaleX(ch));
   }
   // initialize pointers for unused components to NULL
-  for(UInt comp=getNumberValidComponents();comp<MAX_NUM_COMPONENT; comp++)
+  for(UInt comp=getNumberValidComponents();comp<MAX_NUM_COMPONENT; comp++)  //here "comp" = 3
   {
     m_apiPicBuf[comp] = NULL;
     m_piPicOrg[comp]  = NULL;
@@ -142,11 +142,17 @@ Void TComPicYuv::create ( const Int picWidth,                 ///< picture width
 
 #if NH_3D_IV_MERGE
   m_iBaseUnitWidth  = maxCUWidth  >> maxCUDepth;
+    // 4 = 64 >> 4 ----------> 64/2 /2 /2 /2 = 4
   m_iBaseUnitHeight = maxCUHeight >> maxCUDepth;
+    // 4 = 64 >> 4 ----------> 64/2 /2 /2 /2 = 4
 #endif
 
 
-  const Int numCuInWidth  = m_picWidth  / maxCUWidth  + (m_picWidth  % maxCUWidth  != 0);  //>>>(m_picWidth  % maxCUWidth  != 0)---> means if there's any fragment left, then we treat the fragment as one unit, and increment the "m_picWidth  / maxCUWidth" by one.
+  const Int numCuInWidth  = m_picWidth  / maxCUWidth  + (m_picWidth  % maxCUWidth  != 0);
+    //>>>(m_picWidth  % maxCUWidth  != 0)--->
+    // means if there's any fragment left,
+    // then we treat the fragment as one unit,
+    // and increment the "m_picWidth  / maxCUWidth" by one.
   const Int numCuInHeight = m_picHeight / maxCUHeight + (m_picHeight % maxCUHeight != 0);
   for(Int chan=0; chan<MAX_NUM_CHANNEL_TYPE; chan++)
   {
@@ -165,7 +171,7 @@ Void TComPicYuv::create ( const Int picWidth,                 ///< picture width
       }
     }
 
-    m_subCuOffsetInBuffer[chan] = new Int[(size_t)1 << (2 * maxCUDepth)];// size_t: unsigned interger //>>>but this line means what?????
+    m_subCuOffsetInBuffer[chan] = new Int[(size_t)1 << (2 * maxCUDepth)];// size_t: unsigned integer //>>>but this line means what?????
 
     const Int numSubBlockPartitions=(1<<maxCUDepth);
     const Int minSubBlockHeight    =(ctuHeight >> maxCUDepth);

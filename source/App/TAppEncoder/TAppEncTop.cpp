@@ -1243,7 +1243,8 @@ Void TAppEncTop::xGetBuffer( TComPicYuv*& rpcPicYuvRec)
   {
     rpcPicYuvRec = new TComPicYuv;
 #if NH_3D
-    rpcPicYuvRec->create( m_iSourceWidth, m_iSourceHeight, m_depthFlag[layer] > 0 ? CHROMA_400 : m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
+    rpcPicYuvRec->create( m_iSourceWidth, m_iSourceHeight, m_depthFlag[layer] > 0 ? CHROMA_400 : m_chromaFormatIDC,
+            m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
 #else
     rpcPicYuvRec->create( m_iSourceWidth, m_iSourceHeight, m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
 #endif
@@ -1521,7 +1522,7 @@ Void TAppEncTop::xAnalyzeInputBaseDepth(UInt layer, UInt uiNumFrames, TComVPS* v
   
   TVideoIOYuv* depthVideoFile = new TVideoIOYuv;
   
-  UInt uiMaxDepthValue = ((1 << m_inputBitDepth[CHANNEL_TYPE_LUMA])-1);
+  UInt uiMaxDepthValue = (UInt) ((1 << m_inputBitDepth[CHANNEL_TYPE_LUMA])-1);
   
   std::vector<Bool> abValidDepths(256, false);
   
@@ -2467,7 +2468,7 @@ Void TAppEncTop::xDeriveDltArray( TComVPS& vps, TComDLT* dlt )
     dlt->setUseDLTFlag( layer , isDepth && m_useDLT );
     if( dlt->getUseDLTFlag( layer ) )
     {
-      xAnalyzeInputBaseDepth(layer, max(m_iIntraPeriod[layer], 24), &vps, dlt);
+      xAnalyzeInputBaseDepth(layer, (UInt) max(m_iIntraPeriod[layer], 24), &vps, dlt);
       bDltPresentFlag = bDltPresentFlag || dlt->getUseDLTFlag(layer);
       dlt->setInterViewDltPredEnableFlag(layer, (dlt->getUseDLTFlag(layer) && (layer>1)));
       
@@ -2484,7 +2485,7 @@ Void TAppEncTop::xDeriveDltArray( TComVPS& vps, TComDLT* dlt )
       std::vector<Int> aiIdx2DepthValue_coded(256, 0);
       UInt uiNumDepthValues_coded = 0;
       
-      uiNumDepthValues_coded = dlt->getNumDepthValues(layer);
+      uiNumDepthValues_coded = (UInt) dlt->getNumDepthValues(layer);
       for( UInt ui = 0; ui<uiNumDepthValues_coded; ui++ )
       {
         aiIdx2DepthValue_coded[ui] = dlt->idx2DepthValue(layer, ui);
@@ -2496,7 +2497,7 @@ Void TAppEncTop::xDeriveDltArray( TComVPS& vps, TComDLT* dlt )
         AOF( layer > 1 );
         // assumes ref layer id to be 1
         std::vector<Int> piRefDLT = dlt->idx2DepthValue( 1 );
-        UInt uiRefNum = dlt->getNumDepthValues( 1 );
+        UInt uiRefNum = (UInt) dlt->getNumDepthValues( 1 );
         dlt->getDeltaDLT(layer, piRefDLT, uiRefNum, aiIdx2DepthValue_coded, uiNumDepthValues_coded);
       }
       
@@ -2504,7 +2505,7 @@ Void TAppEncTop::xDeriveDltArray( TComVPS& vps, TComDLT* dlt )
       
       for (UInt d = 1; d < uiNumDepthValues_coded; d++)
       {
-        puiDltDiffValues[d] = aiIdx2DepthValue_coded[d] - aiIdx2DepthValue_coded[d-1];
+        puiDltDiffValues[d] = (UInt) (aiIdx2DepthValue_coded[d] - aiIdx2DepthValue_coded[d-1]);
         
         if ( uiMaxDiff < puiDltDiffValues[d] )
         {

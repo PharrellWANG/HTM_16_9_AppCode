@@ -696,14 +696,14 @@ Bool TVideoIOYuv::read ( TComPicYuv*  pPicYuvUser, TComPicYuv* pPicYuvTrueOrg, c
     }
   }
 
-  const UInt stride444      = pPicYuv->getStride(COMPONENT_Y);
+  const UInt stride444      = (const UInt) pPicYuv->getStride(COMPONENT_Y);
 
   // compute actual YUV width & height excluding padding size
-  const UInt pad_h444       = aiPad[0];
-  const UInt pad_v444       = aiPad[1];
+  const UInt pad_h444       = (const UInt) aiPad[0];
+  const UInt pad_v444       = (const UInt) aiPad[1];
 
-  const UInt width_full444  = pPicYuv->getWidth(COMPONENT_Y);
-  const UInt height_full444 = pPicYuv->getHeight(COMPONENT_Y);
+  const UInt width_full444  = (const UInt) pPicYuv->getWidth(COMPONENT_Y);
+  const UInt height_full444 = (const UInt) pPicYuv->getHeight(COMPONENT_Y);
 
   const UInt width444       = width_full444 - pad_h444;
   const UInt height444      = height_full444 - pad_v444;
@@ -716,10 +716,10 @@ Bool TVideoIOYuv::read ( TComPicYuv*  pPicYuvUser, TComPicYuv* pPicYuvTrueOrg, c
     const Int desired_bitdepth = m_MSBExtendedBitDepth[chType] + m_bitdepthShift[chType];
 
     const Bool b709Compliance=(bClipToRec709) && (m_bitdepthShift[chType] < 0 && desired_bitdepth >= 8);     /* ITU-R BT.709 compliant clipping for converting say 10b to 8b */
-    const Pel minval = b709Compliance? ((   1 << (desired_bitdepth - 8))   ) : 0;
-    const Pel maxval = b709Compliance? ((0xff << (desired_bitdepth - 8)) -1) : (1 << desired_bitdepth) - 1;
+    const Pel minval = (const Pel) (b709Compliance? ((   1 << (desired_bitdepth - 8))   ) : 0);
+    const Pel maxval = (const Pel) (b709Compliance? ((0xff << (desired_bitdepth - 8)) -1) : (1 << desired_bitdepth) - 1);
 
-    if (! readPlane(pPicYuv->getAddr(compID), m_cHandle, is16bit, stride444, width444, height444, pad_h444, pad_v444, compID, pPicYuv->getChromaFormat(), format, m_fileBitdepth[chType]))
+    if (! readPlane(pPicYuv->getAddr(compID), m_cHandle, is16bit, stride444, width444, height444, pad_h444, pad_v444, compID, pPicYuv->getChromaFormat(), format, (const UInt) m_fileBitdepth[chType]))
     {
       return false;
     }
