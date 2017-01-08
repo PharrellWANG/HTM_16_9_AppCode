@@ -380,7 +380,6 @@ Void TEncTop::deletePicBuffer() {
  \retval  accessUnitsOut      list of output access units
  \retval  iNumEncoded         number of encoded pictures
  */
-#if NH_MV
 
 Void TEncTop::encode(   Bool                                    flush,
                         TComPicYuv                              *pcPicYuvOrg,
@@ -391,54 +390,24 @@ Void TEncTop::encode(   Bool                                    flush,
                         Int                                     &iNumEncoded,
                         Int                                     gopId)
 {
-#else
-    Void TEncTop::encode( Bool flush, TComPicYuv* pcPicYuvOrg, TComPicYuv* pcPicYuvTrueOrg, const InputColourSpaceConversion snrCSC, TComList<TComPicYuv*>& rcListPicYuvRecOut, std::list<AccessUnit>& accessUnitsOut, Int& iNumEncoded )
-    {
-#endif
-#if NH_3D
     TComPic *picLastCoded = getPic(getGOPEncoder()->getPocLastCoded());
     if (picLastCoded) {
         picLastCoded->compressMotion(1);
     }
-#endif
-#if NH_MV
+
     if (gopId == 0) {
         m_cGOPEncoder.initGOP(m_iPOCLast, m_iNumPicRcvd, *(m_ivPicLists->getSubDpb(getLayerId(), false)), rcListPicYuvRecOut, accessUnitsOut);
-#else
-        if (pcPicYuvOrg != NULL)
-        {
-          // get original YUV
-          TComPic* pcPicCurr = NULL;
-
-          xGetNewPicBuffer( pcPicCurr );
-          pcPicYuvOrg->copyToPic( pcPicCurr->getPicYuvOrg() );
-          pcPicYuvTrueOrg->copyToPic( pcPicCurr->getPicYuvTrueOrg() );
-
-          // compute image characteristics
-          if ( getUseAdaptiveQP() )
-          {
-            m_cPreanalyzer.xPreanalyze( dynamic_cast<TEncPic*>( pcPicCurr ) );
-          }
-        }
-
-        if ((m_iNumPicRcvd == 0) || (!flush && (m_iPOCLast != 0) && (m_iNumPicRcvd != m_iGOPSize) && (m_iGOPSize != 0)))
-        {
-          iNumEncoded = 0;
-          return;
-        }
-#endif
         if (m_RCEnableRateControl) {
             m_cRateCtrl.initRCGOP(m_iNumPicRcvd);
         }
-#if NH_MV
     }
-    m_cGOPEncoder.compressPicInGOP(m_iPOCLast, m_iNumPicRcvd, *(m_ivPicLists->getSubDpb(getLayerId(), false)), rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, m_printFrameMSE, gopId);
 
-    if (gopId + 1 == m_cGOPEncoder.getGOPSize()) {
-#else
-        // compress GOP
-        m_cGOPEncoder.compressGOP(m_iPOCLast, m_iNumPicRcvd, m_cListPic, rcListPicYuvRecOut, accessUnitsOut, false, false, snrCSC, m_printFrameMSE);
-#endif
+    //compress GOP
+    m_cGOPEncoder.compressPicInGOP(m_iPOCLast, m_iNumPicRcvd, *(m_ivPicLists->getSubDpb(getLayerId(), false)), rcListPicYuvRecOut,
+            accessUnitsOut, false, false, snrCSC, m_printFrameMSE, gopId);
+
+    if (gopId + 1 == m_cGOPEncoder.getGOPSize())
+    {
         if (m_RCEnableRateControl) {
             m_cRateCtrl.destroyRCGOP();
         }
@@ -446,9 +415,7 @@ Void TEncTop::encode(   Bool                                    flush,
         iNumEncoded = m_iNumPicRcvd;
         m_iNumPicRcvd = 0;
         m_uiNumAllPicCoded += iNumEncoded;
-#if NH_MV
     }
-#endif
 }
 
 /**------------------------------------------------
