@@ -1137,15 +1137,16 @@ Void TEncGOP::initGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rcList
   m_iNumPicCoded = 0;
 }
 #endif
-#if NH_MV
-Void TEncGOP::compressPicInGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rcListPic,
-                                TComList<TComPicYuv*>& rcListPicYuvRecOut,  std::list<AccessUnit>& accessUnitsInGOP,
-                                Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const Bool printFrameMSE, Int iGOPid )
-#else
-Void TEncGOP::compressGOP( Int iPOCLast, Int iNumPicRcvd, TComList<TComPic*>& rcListPic,
-                           TComList<TComPicYuv*>& rcListPicYuvRecOut, std::list<AccessUnit>& accessUnitsInGOP,
-                           Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const Bool printFrameMSE )
-#endif
+Void TEncGOP::compressPicInGOP( Int iPOCLast,
+        Int iNumPicRcvd,
+        TComList<TComPic*>& rcListPic,
+        TComList<TComPicYuv*>& rcListPicYuvRecOut,
+        std::list<AccessUnit>& accessUnitsInGOP,
+        Bool isField,
+        Bool isTff,
+        const InputColourSpaceConversion snr_conversion,
+        const Bool printFrameMSE,
+        Int iGOPid )
 {
   // TODO: Split this function up.
 
