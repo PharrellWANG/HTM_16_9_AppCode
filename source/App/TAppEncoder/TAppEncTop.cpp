@@ -218,7 +218,7 @@ Void TAppEncTop::xInitLibCfg()
     m_acTEncTopList             .push_back(new TEncTop); //>>>>>>>>>encoder class per layer
     m_acTVideoIOYuvInputFileList.push_back(new TVideoIOYuv);
     m_acTVideoIOYuvReconFileList.push_back(new TVideoIOYuv);
-#if NH_3D    
+   #if NH_3D
     Int profileIdc = -1; 
     for (Int olsIdx = 0; olsIdx < vps.getNumOutputLayerSets(); olsIdx++ )
     {   
@@ -254,7 +254,7 @@ Void TAppEncTop::xInitLibCfg()
       exit(EXIT_FAILURE);
     }
     m_acTEncTopList[ layerIdInVps ]->setProfileIdc( profileIdc ); 
-#endif
+   #endif
   }
 
 
@@ -1042,10 +1042,10 @@ Void TAppEncTop::encode()
       }
 
       Int frmCnt = 0;
-      while ( !eos[layer] && !(frmCnt == gopSize))
+      while ( !eos[layer] && frmCnt != gopSize)
       {
         // get buffers
-        xGetBuffer(pcPicYuvRec, layer);
+        xGetBuffer(pcPicYuvRec, (UInt) layer);
 
         // read input YUV file        
         m_acTVideoIOYuvInputFileList[layer]->read      ( pcPicYuvOrg, &cPicYuvTrueOrg, ipCSC, m_aiPad, m_InputChromaFormatIDC );
@@ -1072,7 +1072,7 @@ Void TAppEncTop::encode()
     for ( Int gopId=0; gopId < gopSize; gopId++ )
     {
 #if NH_3D_VSO || NH_3D
-      UInt iNextPoc = m_acTEncTopList[0] -> getFrameId( gopId );
+      UInt iNextPoc = (UInt) m_acTEncTopList[0] -> getFrameId( gopId );
       if ( iNextPoc < m_framesToBeEncoded )
       {
         m_cCameraData.update( iNextPoc );

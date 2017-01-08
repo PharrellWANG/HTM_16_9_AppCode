@@ -845,7 +845,8 @@ Distortion TEncSearch::xPatternRefinement( TComPattern* pcPatternKey,
 
   m_pcRdCost->setDistParam( pcPatternKey, m_filteredBlock[0][0].getAddr(COMPONENT_Y), iRefStride, 1, m_cDistParam, m_pcEncCfg->getUseHADME() && bAllowUseOfHadamard );
 
-  const TComMv* pcMvRefine = (iFrac == 2 ? s_acMvRefineH : s_acMvRefineQ);
+  const TComMv *pcMvRefine;
+  pcMvRefine = iFrac == 2 ? s_acMvRefineH : s_acMvRefineQ;
 
   for (UInt i = 0; i < 9; i++)
   {
