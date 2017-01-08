@@ -1,13 +1,17 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Pharrell_WANG">
     <words>
+      <w>bcheck</w>
       <w>bitdepth</w>
       <w>bitstream</w>
+      <w>deblocked</w>
       <w>encmain</w>
       <w>filebuf</w>
+      <w>intra</w>
       <w>maxval</w>
       <w>minval</w>
       <w>rcvd</w>
+      <w>wvso</w>
     </words>
   </dictionary>
 </component>

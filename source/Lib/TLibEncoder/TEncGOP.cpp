@@ -1322,7 +1322,7 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast,
         pcSlice->getTempRefPicLists(rcListPic, m_refPicSetInterLayer0, m_refPicSetInterLayer1, tempRefPicLists, usedAsLongTerm, numPocTotalCurr, true);
 
 
-        xSetRefPicListModificationsMv(tempRefPicLists, pcSlice, iGOPid);
+        xSetRefPicListModificationsMv(tempRefPicLists, pcSlice, (UInt) iGOPid);
 #else
                                                                                                                                 pcSlice->setNumRefIdx(REF_PIC_LIST_0,min(m_pcCfg->getGOPEntry(iGOPid).m_numRefPicsActive,pcSlice->getRPS()->getNumberOfPictures()));
     pcSlice->setNumRefIdx(REF_PIC_LIST_1,min(m_pcCfg->getGOPEntry(iGOPid).m_numRefPicsActive,pcSlice->getRPS()->getNumberOfPictures()));
@@ -1488,7 +1488,7 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast,
             estimatedBits = m_pcRateCtrl->getRCPic()->getTargetBits();
 
 #if KWU_RC_MADPRED_E0227
-                                                                                                                                    if(m_pcCfg->getLayerId() != 0)
+            if(m_pcCfg->getLayerId() != 0)
       {
         m_pcRateCtrl->getRCPic()->setIVPic( m_pcEncTop->getEncTop()->getTEncTop(0)->getRateCtrl()->getRCPic() );
       }
