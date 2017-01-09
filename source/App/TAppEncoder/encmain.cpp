@@ -49,66 +49,65 @@
 // Main function
 // ====================================================================================================================
 
-int main(int argc, char* argv[])
-{
-  TAppEncTop  cTAppEncTop;
+int main(int argc, char *argv[]) {
+    TAppEncTop cTAppEncTop;
 
-  // print information
-  fprintf( stdout, "\n" );
+    // print information
+    fprintf(stdout, "\n\n\n");
 #if NH_MV
-  fprintf( stdout, "3D-HTM Software: Encoder Version [%s] based on HM Version [%s]", NV_VERSION, HM_VERSION );  
+    fprintf(stdout, "3D-HTM Software: Encoder Version [%s] \nbased on \nHM Version [%s]", NV_VERSION, HM_VERSION);
 #else
-  fprintf( stdout, "HM software: Encoder Version [%s] (including RExt)", NV_VERSION );
+    fprintf( stdout, "HM software: Encoder Version [%s] (including RExt)", NV_VERSION );
 #endif
-  fprintf( stdout, NVM_ONOS );
-  fprintf( stdout, NVM_COMPILEDBY );
-  fprintf( stdout, NVM_BITS );
-  fprintf( stdout, "\n\n" );
+    fprintf(stdout, "\n");
+    fprintf(stdout, NVM_ONOS);
+    fprintf(stdout, "\n");
+    fprintf(stdout, NVM_COMPILEDBY);
+    fprintf(stdout, "\n");
+    fprintf(stdout, NVM_BITS);
+    fprintf(stdout, "\n\n\n");
 
-  // create application encoder class
-  cTAppEncTop.create();
+    // create application encoder class
+    cTAppEncTop.create();
 
-  // parse configuration
-  try
-  {
-    if(!cTAppEncTop.parseCfg( argc, argv ))
-    {
-      cTAppEncTop.destroy();
+    // parse configuration
+    try {
+        if (!cTAppEncTop.parseCfg(argc, argv)) {
+            cTAppEncTop.destroy();
 #if ENVIRONMENT_VARIABLE_DEBUG_AND_TEST
-      EnvVar::printEnvVar();
+            EnvVar::printEnvVar();
 #endif
-      return 1;
+            return 1;
+        }
     }
-  }
-  catch (df::program_options_lite::ParseFailure &e)
-  {
-    std::cerr << "Error parsing option \""<< e.arg <<"\" with argument \""<< e.val <<"\"." << std::endl;
-    return 1;
-  }
+    catch (df::program_options_lite::ParseFailure &e) {
+        std::cerr << "Error parsing option \"" << e.arg << "\" with argument \"" << e.val << "\"." << std::endl;
+        return 1;
+    }
 
 #if PRINT_MACRO_VALUES
-  printMacroSettings();
+    printMacroSettings();
 #endif
 
 #if ENVIRONMENT_VARIABLE_DEBUG_AND_TEST
-  EnvVar::printEnvVarInUse();
+    EnvVar::printEnvVarInUse();
 #endif
 
-  // starting time
-  Double dResult;
-  clock_t lBefore = clock();
-  Double x;
-  // call encoding function
-  cTAppEncTop.encode();
+    // starting time
+    Double dResult;
+    clock_t lBefore = clock();
+    Double x;
+    // call encoding function
+    cTAppEncTop.encode();
 
-  // ending time
-  dResult = (Double)(clock()-lBefore) / CLOCKS_PER_SEC;
-  printf("\n Total Time: %12.3f sec.\n", dResult);
+    // ending time
+    dResult = (Double) (clock() - lBefore) / CLOCKS_PER_SEC;
+    printf("\n Total Time: %12.3f sec.\n", dResult);
 
-  // destroy application encoder class
-  cTAppEncTop.destroy();
+    // destroy application encoder class
+    cTAppEncTop.destroy();
 
-  return 0;
+    return 0;
 }
 
 //! \}

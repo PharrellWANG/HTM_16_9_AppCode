@@ -4,13 +4,19 @@
       <w>bcheck</w>
       <w>bitdepth</w>
       <w>bitstream</w>
+      <w>cabac</w>
+      <w>ctus</w>
       <w>deblocked</w>
+      <w>dequantise</w>
       <w>encmain</w>
       <w>filebuf</w>
       <w>intra</w>
       <w>maxval</w>
       <w>minval</w>
+      <w>nalu</w>
       <w>rcvd</w>
+      <w>sbac</w>
+      <w>substreams</w>
       <w>wvso</w>
     </words>
   </dictionary>
