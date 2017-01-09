@@ -5,18 +5,28 @@
       <w>bitdepth</w>
       <w>bitstream</w>
       <w>cabac</w>
+      <w>cand</w>
+      <w>coeff</w>
+      <w>conv</w>
       <w>ctus</w>
       <w>deblocked</w>
       <w>dequantise</w>
       <w>encmain</w>
       <w>filebuf</w>
+      <w>hadamard</w>
       <w>intra</w>
       <w>maxval</w>
+      <w>mesearch</w>
       <w>minval</w>
       <w>nalu</w>
+      <w>pred</w>
+      <w>quadtree</w>
       <w>rcvd</w>
+      <w>reco</w>
+      <w>resi</w>
       <w>sbac</w>
       <w>substreams</w>
+      <w>tcomrectangle</w>
       <w>wvso</w>
     </words>
   </dictionary>
