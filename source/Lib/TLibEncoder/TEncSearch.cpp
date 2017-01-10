@@ -846,7 +846,11 @@ Distortion TEncSearch::xPatternRefinement( TComPattern* pcPatternKey,
   m_pcRdCost->setDistParam( pcPatternKey, m_filteredBlock[0][0].getAddr(COMPONENT_Y), iRefStride, 1, m_cDistParam, m_pcEncCfg->getUseHADME() && bAllowUseOfHadamard );
 
   const TComMv *pcMvRefine;
-  pcMvRefine = iFrac == 2 ? s_acMvRefineH : s_acMvRefineQ;
+    if (iFrac == 2) {
+        pcMvRefine = s_acMvRefineH;
+    } else {
+        pcMvRefine = s_acMvRefineQ;
+    }
 
   for (UInt i = 0; i < 9; i++)
   {
@@ -1513,6 +1517,10 @@ TEncSearch::xRecurIntraCodingLumaQT(TComYuv*    pcOrgYuv,
                                     Distortion& ruiDistY,
 #endif
 #if HHI_RQT_INTRA_SPEEDUP
+//In some examples, residual samples
+//corresponding to a CU may be subdivided into
+//smaller units using a quadtree structure known as
+// “residual quad tree” (RQT).
                                     Bool        bCheckFirst,
 #endif
                                     Double&     dRDCost,
