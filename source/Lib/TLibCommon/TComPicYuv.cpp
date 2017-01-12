@@ -138,7 +138,7 @@ Void TComPicYuv::create ( const Int picWidth,                 ///< picture width
                           const Bool bUseMargin)              ///< if true, then a margin of uiMaxCUWidth+16 and uiMaxCUHeight+16 is created around the image.
 
 {
-  createWithoutCUInfo(picWidth, picHeight, chromaFormatIDC, bUseMargin, maxCUWidth, maxCUHeight);
+  createWithoutCUInfo(picWidth, picHeight, chromaFormatIDC, bUseMargin, maxCUWidth, maxCUHeight);//without max CU Depth
 
 #if NH_3D_IV_MERGE
   m_iBaseUnitWidth  = maxCUWidth  >> maxCUDepth;
