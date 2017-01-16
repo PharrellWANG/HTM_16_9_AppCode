@@ -985,7 +985,10 @@ Void TAppEncTop::encode() {
     while ((m_targetEncLayerIdList.size() != 0) && !allEos) {
         for (Int layer = 0; layer < m_numberOfLayers; layer++) {
 #if NH_3D
+            std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
+
             TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
+
             TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
 #endif
             if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer))) {
@@ -1174,6 +1177,8 @@ Void TAppEncTop::xGetBuffer( TComPicYuv*& rpcPicYuvRec)
 
     // org. buffer
 #if NH_MV
+    std::cout<<"m_cListPicYuvRec["<<layer<<"] = "<<m_cListPicYuvRec[layer]->size()<<std::endl;
+
     if (m_cListPicYuvRec[layer]->size() == (UInt) m_iGOPSize) {
         rpcPicYuvRec = m_cListPicYuvRec[layer]->popFront();
 #else

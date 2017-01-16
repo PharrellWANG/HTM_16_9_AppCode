@@ -349,7 +349,12 @@ static Bool readPlane(Pel* dst,
           {
             for (UInt x = 0; x < width_dest; x++)
             {
+//              std::cout<<"x>>sx = "<<(x>>sx)<<std::endl<<std::endl;
+//              std::cout<<"buf[x>>sx] = "<<buf[x>>sx]<<std::endl<<std::endl;
+
               dst[x] = buf[x>>sx];
+
+//              std::cout<<"dst["<<x<<"] = "<<dst[x]<<std::endl<<std::endl;
             }
           }
           else

@@ -1,6 +1,7 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Pharrell_WANG">
     <words>
+      <w>accessunit</w>
       <w>bcheck</w>
       <w>bitdepth</w>
       <w>bitstream</w>
@@ -11,15 +12,18 @@
       <w>ctus</w>
       <w>deblocked</w>
       <w>dequantise</w>
+      <w>ebsp</w>
       <w>encmain</w>
       <w>filebuf</w>
       <w>hadamard</w>
       <w>hevc</w>
       <w>intra</w>
+      <w>lunit</w>
       <w>maxval</w>
       <w>mesearch</w>
       <w>minval</w>
       <w>nalu</w>
+      <w>nalunit</w>
       <w>pred</w>
       <w>quadtree</w>
       <w>rcvd</w>
@@ -27,6 +31,7 @@
       <w>resi</w>
       <w>sbac</w>
       <w>substreams</w>
+      <w>tcomchromaformat</w>
       <w>tcomrectangle</w>
       <w>wvso</w>
     </words>
