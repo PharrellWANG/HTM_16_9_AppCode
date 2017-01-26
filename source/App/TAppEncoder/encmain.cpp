@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
     // starting time
     Double dResult;
     clock_t lBefore = clock();
-    Double x;
+
     // call encoding function
     cTAppEncTop.encode();
 
