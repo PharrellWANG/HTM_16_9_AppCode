@@ -11,6 +11,7 @@
       <w>conv</w>
       <w>ctus</w>
       <w>deblocked</w>
+      <w>declarep</w>
       <w>dequantise</w>
       <w>ebsp</w>
       <w>encmain</w>
@@ -24,12 +25,14 @@
       <w>minval</w>
       <w>nalu</w>
       <w>nalunit</w>
+      <w>precompress</w>
       <w>pred</w>
       <w>quadtree</w>
       <w>rcvd</w>
       <w>reco</w>
       <w>resi</w>
       <w>sbac</w>
+      <w>substream</w>
       <w>substreams</w>
       <w>tcomchromaformat</w>
       <w>tcomrectangle</w>

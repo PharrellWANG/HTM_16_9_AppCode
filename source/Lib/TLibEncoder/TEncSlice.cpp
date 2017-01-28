@@ -940,24 +940,24 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
       }
       else
       {
-#if KWU_RC_MADPRED_E0227
-          if(pcSlice->getLayerId() != 0 && m_pcCfg->getUseDepthMADPred() && !pcSlice->getIsDepth())
-          {
-            Double zn, zf, focallength, position, camShift;
-            Double basePos;
-            Bool bInterpolated;
-            Int direction = pcSlice->getViewId() - pcCU->getSlice()->getIvPic(false, 0)->getViewId();
-            Int disparity;
-
-            pcEncTop->getCamParam()->xGetZNearZFar(pcEncTop->getCamParam()->getBaseViewNumbers()[pcSlice->getViewIndex()], pcSlice->getPOC(), zn, zf);
-            pcEncTop->getCamParam()->xGetGeometryData(pcEncTop->getCamParam()->getBaseViewNumbers()[0], pcSlice->getPOC(), focallength, basePos, camShift, bInterpolated);
-            pcEncTop->getCamParam()->xGetGeometryData(pcEncTop->getCamParam()->getBaseViewNumbers()[pcSlice->getViewIndex()], pcSlice->getPOC(), focallength, position, camShift, bInterpolated);
-            bpp       = m_pcRateCtrl->getRCPic()->getLCUTargetBppforInterView( m_pcRateCtrl->getPicList(), pcCU,
-              basePos, position, focallength, zn, zf, (direction > 0 ? 1 : -1), &disparity );
-          }
-          else
-          {
-#endif
+//#if KWU_RC_MADPRED_E0227
+//          if(pcSlice->getLayerId() != 0 && m_pcCfg->getUseDepthMADPred() && !pcSlice->getIsDepth())
+//          {
+//            Double zn, zf, focallength, position, camShift;
+//            Double basePos;
+//            Bool bInterpolated;
+//            Int direction = pcSlice->getViewId() - pcCU->getSlice()->getIvPic(false, 0)->getViewId();
+//            Int disparity;
+//
+//            pcEncTop->getCamParam()->xGetZNearZFar(pcEncTop->getCamParam()->getBaseViewNumbers()[pcSlice->getViewIndex()], pcSlice->getPOC(), zn, zf);
+//            pcEncTop->getCamParam()->xGetGeometryData(pcEncTop->getCamParam()->getBaseViewNumbers()[0], pcSlice->getPOC(), focallength, basePos, camShift, bInterpolated);
+//            pcEncTop->getCamParam()->xGetGeometryData(pcEncTop->getCamParam()->getBaseViewNumbers()[pcSlice->getViewIndex()], pcSlice->getPOC(), focallength, position, camShift, bInterpolated);
+//            bpp       = m_pcRateCtrl->getRCPic()->getLCUTargetBppforInterView( m_pcRateCtrl->getPicList(), pcCU,
+//              basePos, position, focallength, zn, zf, (direction > 0 ? 1 : -1), &disparity );
+//          }
+//          else
+//          {
+//#endif
         bpp = m_pcRateCtrl->getRCPic()->getLCUTargetBpp(pcSlice->getSliceType());
         if ( pcPic->getSlice( 0 )->getSliceType() == I_SLICE)
         {
@@ -968,29 +968,29 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
           estLambda = m_pcRateCtrl->getRCPic()->getLCUEstLambda( bpp );
           estQP     = m_pcRateCtrl->getRCPic()->getLCUEstQP    ( estLambda, pcSlice->getSliceQp() );
         }
-#if KWU_RC_MADPRED_E0227
-          estLambda = m_pcRateCtrl->getRCPic()->getLCUEstLambda( bpp );
-          estQP     = m_pcRateCtrl->getRCPic()->getLCUEstQP    ( estLambda, pcSlice->getSliceQp() );
-#endif
+//#if KWU_RC_MADPRED_E0227
+//          estLambda = m_pcRateCtrl->getRCPic()->getLCUEstLambda( bpp );
+//          estQP     = m_pcRateCtrl->getRCPic()->getLCUEstQP    ( estLambda, pcSlice->getSliceQp() );
+//#endif
 
         estQP     = Clip3( -pcSlice->getSPS()->getQpBDOffset(CHANNEL_TYPE_LUMA), MAX_QP, estQP );
 
         m_pcRdCost->setLambda(estLambda, pcSlice->getSPS()->getBitDepths());
 
-#if RDOQ_CHROMA_LAMBDA
+//#if RDOQ_CHROMA_LAMBDA
         // set lambda for RDOQ
         const Double chromaLambda = estLambda / m_pcRdCost->getChromaWeight();
         const Double lambdaArray[MAX_NUM_COMPONENT] = { estLambda, chromaLambda, chromaLambda };
         m_pcTrQuant->setLambdas( lambdaArray );
-#else
-        m_pcTrQuant->setLambda( estLambda );
-#endif
+//#else
+//        m_pcTrQuant->setLambda( estLambda );
+//#endif
       }
 
       m_pcRateCtrl->setRCQP( estQP );
-#if ADAPTIVE_QP_SELECTION
+//#if ADAPTIVE_QP_SELECTION
       pCtu->getSlice()->setSliceQpBase( estQP );
-#endif
+//#endif
     }
 
     // run CTU trial encoder

@@ -2781,9 +2781,9 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
                                 TComDataCU *&rpcTempCU,
                                 PartSize     eSize
                                 DEBUG_STRING_FN_DECLARE(sDebug)//<==> std::string &sDebug
-#if NH_3D_ENC_DEPTH
+//#if NH_3D_ENC_DEPTH
                               , Bool bOnlyIVP   //ONLY use "Inter View Prediction"
-#endif
+//#endif
                               )
 {
   DEBUG_STRING_NEW(sTest)//<==> std::string sTest;
@@ -2797,12 +2797,12 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
       return; // only check necessary 2Nx2N Intra in fast deltaqp mode
     }
   }
-#if NH_MV
+//#if NH_MV
   D_PRINT_INC_INDENT (g_traceModeCheck, "xCheckRDCostIntra; eSize: " + n2s(eSize) );
-#endif
+//#endif
 
   UInt uiDepth = rpcTempCU->getDepth( 0 );
-#if NH_3D_VSO // M5
+//#if NH_3D_VSO // M5
   if( m_pcRdCost->getUseRenModel() )
   {
     UInt  uiWidth     = m_ppcOrigYuv[uiDepth]->getWidth   ( COMPONENT_Y );
@@ -2811,12 +2811,12 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
     UInt  uiSrcStride = m_ppcOrigYuv[uiDepth]->getStride  ( COMPONENT_Y );
     m_pcRdCost->setRenModelData( rpcTempCU, 0, piSrc, uiSrcStride, uiWidth, uiHeight );
   }
-#endif
+//#endif
 
   rpcTempCU->setSkipFlagSubParts( false, 0, uiDepth );
-#if NH_3D_DIS
+//#if NH_3D_DIS
   rpcTempCU->setDISFlagSubParts( false, 0, uiDepth );
-#endif
+//#endif
 
 
   rpcTempCU->setPartSizeSubParts( eSize, 0, uiDepth );
@@ -2825,26 +2825,33 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
 
   Pel resiLuma[NUMBER_OF_STORED_RESIDUAL_TYPES][MAX_CU_SIZE * MAX_CU_SIZE];
 
-  m_pcPredSearch->estIntraPredLumaQT( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest) 
-#if NH_3D_ENC_DEPTH
+  m_pcPredSearch->estIntraPredLumaQT( rpcTempCU,
+          m_ppcOrigYuv[uiDepth],
+          m_ppcPredYuvTemp[uiDepth],
+          m_ppcResiYuvTemp[uiDepth],
+          m_ppcRecoYuvTemp[uiDepth],
+          resiLuma DEBUG_STRING_PASS_INTO(sTest)
+//#if NH_3D_ENC_DEPTH
                                     , bOnlyIVP
-#endif
+//#endif
                                     );
 
-  m_ppcRecoYuvTemp[uiDepth]->copyToPicComponent(COMPONENT_Y, rpcTempCU->getPic()->getPicYuvRec(), rpcTempCU->getCtuRsAddr(), rpcTempCU->getZorderIdxInCtu() );
+  m_ppcRecoYuvTemp[uiDepth]->copyToPicComponent(COMPONENT_Y,
+          rpcTempCU->getPic()->getPicYuvRec(), rpcTempCU->getCtuRsAddr(),
+          rpcTempCU->getZorderIdxInCtu() );
 
   if (rpcBestCU->getPic()->getChromaFormat()!=CHROMA_400)
   {
     m_pcPredSearch->estIntraPredChromaQT( rpcTempCU, m_ppcOrigYuv[uiDepth], m_ppcPredYuvTemp[uiDepth], m_ppcResiYuvTemp[uiDepth], m_ppcRecoYuvTemp[uiDepth], resiLuma DEBUG_STRING_PASS_INTO(sTest) );
   }
   
-#if NH_3D_SDC_INTRA
+//#if NH_3D_SDC_INTRA
   if( rpcTempCU->getSDCFlag( 0 ) )
   {
     assert( rpcTempCU->getTransformIdx(0) == 0 );
     assert( rpcTempCU->getCbf(0, COMPONENT_Y) == 1 );
   }
-#endif
+//#endif
 
   m_pcEntropyCoder->resetBits();
 
@@ -2853,18 +2860,18 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
     m_pcEntropyCoder->encodeCUTransquantBypassFlag( rpcTempCU, 0,          true );
   }
   m_pcEntropyCoder->encodeSkipFlag ( rpcTempCU, 0,          true );
-#if NH_3D_DIS
+//#if NH_3D_DIS
   m_pcEntropyCoder->encodeDIS( rpcTempCU, 0,          true );
   if(!rpcTempCU->getDISFlag(0))
   {
-#endif
+//#endif
     m_pcEntropyCoder->encodePredMode( rpcTempCU, 0,          true );
     m_pcEntropyCoder->encodePartSize( rpcTempCU, 0, uiDepth, true );
     m_pcEntropyCoder->encodePredInfo( rpcTempCU, 0 );
     m_pcEntropyCoder->encodeIPCMInfo(rpcTempCU, 0, true );
-#if NH_3D_SDC_INTRA
+//#if NH_3D_SDC_INTRA
     m_pcEntropyCoder->encodeSDCFlag( rpcTempCU, 0, true );
-#endif
+//#endif
 
     // Encode Coefficients
     Bool bCodeDQP = getdQPFlag();
@@ -2872,29 +2879,31 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
     m_pcEntropyCoder->encodeCoeff( rpcTempCU, 0, uiDepth, bCodeDQP, codeChromaQpAdjFlag );
     setCodeChromaQpAdjFlag( codeChromaQpAdjFlag );
     setdQPFlag( bCodeDQP );
-#if NH_3D_DIS
+//#if NH_3D_DIS
   }
-#endif
+//#endif
   m_pcRDGoOnSbacCoder->store(m_pppcRDSbacCoder[uiDepth][CI_TEMP_BEST]);
 
   rpcTempCU->getTotalBits() = m_pcEntropyCoder->getNumberOfWrittenBits();
   rpcTempCU->getTotalBins() = ((TEncBinCABAC *)((TEncSbac*)m_pcEntropyCoder->m_pcEntropyCoderIf)->getEncBinIf())->getBinsCoded();
-#if NH_3D_VSO // M6
+//#if NH_3D_VSO // M6
   if( m_pcRdCost->getUseLambdaScaleVSO())  
   {
     rpcTempCU->getTotalCost() = m_pcRdCost->calcRdCostVSO( rpcTempCU->getTotalBits(), rpcTempCU->getTotalDistortion() );  
   }
   else
-#endif
+//#endif
     rpcTempCU->getTotalCost() = m_pcRdCost->calcRdCost( rpcTempCU->getTotalBits(), rpcTempCU->getTotalDistortion() );
 
   xCheckDQP( rpcTempCU );
 
-  xCheckBestMode(rpcBestCU, rpcTempCU, uiDepth DEBUG_STRING_PASS_INTO(sDebug) DEBUG_STRING_PASS_INTO(sTest));
+  xCheckBestMode(rpcBestCU,
+          rpcTempCU,
+          uiDepth DEBUG_STRING_PASS_INTO(sDebug) DEBUG_STRING_PASS_INTO(sTest));
 
-#if NH_MV
+//#if NH_MV
   D_DEC_INDENT( g_traceModeCheck ); 
-#endif
+//#endif
 }
 
 
