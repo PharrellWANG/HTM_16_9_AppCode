@@ -29,13 +29,20 @@
       <w>pred</w>
       <w>quadtree</w>
       <w>rcvd</w>
+      <w>rdoq</w>
       <w>reco</w>
       <w>resi</w>
+      <w>sait</w>
       <w>sbac</w>
+      <w>sdcmrsad</w>
+      <w>subsampling</w>
       <w>substream</w>
       <w>substreams</w>
       <w>tcomchromaformat</w>
       <w>tcomrectangle</w>
+      <w>tcomtu</w>
+      <w>transquant</w>
+      <w>wedgelet</w>
       <w>wvso</w>
     </words>
   </dictionary>

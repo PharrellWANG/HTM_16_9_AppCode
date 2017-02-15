@@ -778,8 +778,8 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
 
   // initialize cost values - these are used by precompressSlice (they should be parameters).
   m_uiPicTotalBits  = 0;
-  m_dPicRdCost      = 0; // NOTE: This is a write-only variable!
-  m_uiPicDist       = 0;
+  m_dPicRdCost      = 0; //picture level distortion // NOTE: This is a write-only variable!
+  m_uiPicDist       = 0; //total distortion for the picture
 
   m_pcEntropyCoder->setEntropyCoder   ( m_pppcRDSbacCoder[0][CI_CURR_BEST] );
   m_pcEntropyCoder->resetEntropy      ( pcSlice );
@@ -1086,7 +1086,7 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
     m_uiPicTotalBits += pCtu->getTotalBits();
     m_dPicRdCost     += pCtu->getTotalCost();
     m_uiPicDist      += pCtu->getTotalDistortion();
-  }
+  }// for every ctu in the slice segment
 
   // store context state at the end of this slice-segment, in case the next slice is a dependent slice and continues using the CABAC contexts.
   if( pcSlice->getPPS()->getDependentSliceSegmentsEnabledFlag() )

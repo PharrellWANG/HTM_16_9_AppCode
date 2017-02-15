@@ -2870,7 +2870,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
         }
 
         bMaintainResidual[RESIDUAL_ENCODER_SIDE] = !(m_pcEncCfg->getUseReconBasedCrossCPredictionEstimate());
-
+        std::cout<<"uiInitTrDepth (the partition size) : "<<uiInitTrDepth<<std::endl;
   // Lambda calculation at equivalent Qp of 4 is recommended because at that Qp, the quantisation divisor is 1.
 #if FULL_NBIT
   const Double sqrtLambdaForFirstPass= (m_pcEncCfg->getCostMode()==COST_MIXED_LOSSLESS_LOSSY_CODING && pcCU->getCUTransquantBypass(0)) ?
@@ -2881,7 +2881,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
                 sqrt(0.57 * pow(2.0, ((LOSSLESS_AND_MIXED_LOSSLESS_RD_COST_TEST_QP_PRIME - 12 - 6 * (sps.getBitDepth(CHANNEL_TYPE_LUMA) - 8)) / 3.0)))
               : m_pcRdCost->getSqrtLambda();
 #endif
-
+    std::cout<<"sqrtLambdaForFirstPass :"<<sqrtLambdaForFirstPass<<std::endl;
   //===== set QP and clear Cbf =====
   if ( pps.getUseDQP() == true)
   {
@@ -2891,13 +2891,14 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
   {
     pcCU->setQPSubParts( pcCU->getSlice()->getSliceQp(), 0, uiDepth );
   }
-
-  //===== loop over partitions =====
+    int counter = 0;
+  std::cout<< "========###########____ loop over partitions ____###########======="<<std::endl;
   TComTURecurse tuRecurseCU(pcCU, 0);
   TComTURecurse tuRecurseWithPU(tuRecurseCU, false, (uiInitTrDepth==0)?TComTU::DONT_SPLIT : TComTU::QUAD_SPLIT);
-
+//    std::cout<<"#########  "<<counter<<std::endl;
   do
-  {
+  { counter ++;
+      std::cout<<"the "<<counter<<"st "<<"while loop (while (tuRecurseWithPU.nextSection(tuRecurseCU));)"<<std::endl;
     const UInt uiPartOffset=tuRecurseWithPU.GetAbsPartIdxTU();
 #if NH_MV
     D_PRINT_INC_INDENT(g_traceModeCheck, "uiPartOffset: " + n2s(uiPartOffset ) );
@@ -2912,7 +2913,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
     Int numModesAvailable     = 35; //total number of Intra modes
     UInt uiRdModeList[FAST_UDI_MAX_RDMODE_NUM];
     Int numModesForFullRD = m_pcEncCfg->getFastUDIUseMPMEnabled()?g_aucIntraModeNumFast_UseMPM[ uiWidthBit ] : g_aucIntraModeNumFast_NotUseMPM[ uiWidthBit ];
-
+    std::cout<<"numModesForFullRD: "<<numModesForFullRD<<std::endl;
     // this should always be true
     assert (tuRecurseWithPU.ProcessComponentSection(COMPONENT_Y));
     initIntraPatternChType( tuRecurseWithPU, COMPONENT_Y, true DEBUG_STRING_PASS_INTO(sTemp2) );
@@ -2927,7 +2928,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
 
     Bool doFastSearch = (numModesForFullRD != numModesAvailable);
     if (doFastSearch)
-    {
+    { std::cout<<"now do fast search    #####====-------"<<std::endl;
       assert(numModesForFullRD < numModesAvailable);
 
       for( Int i=0; i < numModesForFullRD; i++ )
@@ -2956,9 +2957,9 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
       for( Int modeIdx = 0; modeIdx < numModesAvailable; modeIdx++ )
       {
         UInt       uiMode = modeIdx;
-#if !NH_3D_VSO
-        Distortion uiSad  = 0;
-#endif
+//#if !NH_3D_VSO
+//        Distortion uiSad  = 0;
+//#endif
 #if NH_MV
         D_PRINT_INC_INDENT(g_traceModeCheck, "preTest; uiMode " + n2s(uiMode) );
 #endif
@@ -3056,7 +3057,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
 #endif
 
 #if NH_3D_DMM
-    if( m_pcEncCfg->getIsDepth() )
+    if( m_pcEncCfg->getIsDepth() )//--------------------==================================================================
     {
       const TComRectangle &puRect=tuRecurseWithPU.getRect(COMPONENT_Y);
       const UInt uiAbsPartIdx=tuRecurseWithPU.GetAbsPartIdxTU();
@@ -3132,7 +3133,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
         }
 #endif
       }
-    }
+    }//-------------------------------------------------------------------===============================================
 #endif
 
     //===== check modes (using r-d costs) =====
@@ -3143,9 +3144,9 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
     DEBUG_STRING_NEW(sPU)
     UInt       uiBestPUMode  = 0;
 #if NH_3D_ENC_DEPTH
-    UInt    uiBestPUModeConv  = 0;
-    UInt    uiSecondBestPUModeConv  = 0;
-    UInt    uiThirdBestPUModeConv  = 0;
+    UInt    uiBestPUModeConv  = 0;   //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--------------===============
+    UInt    uiSecondBestPUModeConv  = 0;   //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--------------===============
+    UInt    uiThirdBestPUModeConv  = 0;    //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--------------===============
 #endif
 
 #if NH_3D_VSO
@@ -3315,7 +3316,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
 
 #if HHI_RQT_INTRA_SPEEDUP
 #if NH_3D_ENC_DEPTH
-      xRecurIntraCodingLumaQT( pcOrgYuv, pcPredYuv, pcResiYuv, resiLumaPU, uiPUDistY, true, dPUCost, tuRecurseWithPU DEBUG_STRING_PASS_INTO(sMode), (zeroResi != 0) );
+       xRecurIntraCodingLumaQT( pcOrgYuv, pcPredYuv, pcResiYuv, resiLumaPU, uiPUDistY, true, dPUCost, tuRecurseWithPU DEBUG_STRING_PASS_INTO(sMode), (zeroResi != 0) );
 #if NH_3D_ENC_DEPTH
               if( dPUCost < dBestPUCostConv )
               {
@@ -3577,7 +3578,16 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
     }
 
     //=== update PU data ====
-    pcCU->setIntraDirSubParts     ( CHANNEL_TYPE_LUMA, uiBestPUMode, uiPartOffset, uiDepth + uiInitTrDepth );
+      pcCU->setIntraDirSubParts     ( CHANNEL_TYPE_LUMA, uiBestPUMode, uiPartOffset, uiDepth + uiInitTrDepth );
+
+      std::cout<< "uiBestPUMode             :   "<< uiBestPUMode<< "\n";
+//      std::cout<< "uiPartOffset             :   "<< uiPartOffset<< "\n";
+//      std::cout<< "uiDepth                  :   "<< uiDepth<< "\n";
+//      std::cout<< "uiInitTrDepth            :   "<< uiInitTrDepth<< "\n";
+//      std::cout<< "uiDepth + uiInitTrDepth  :   "<< uiDepth + uiInitTrDepth<< "\n";
+
+
+
 #if NH_3D_SDC_INTRA
     pcCU->setSDCFlagSubParts          ( bBestUseSDC, uiPartOffset, uiDepth + uiInitTrDepth );
 #endif

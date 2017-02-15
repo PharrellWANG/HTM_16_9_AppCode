@@ -70,8 +70,8 @@ class TComTU
     UInt          mLog2TrLumaSize;
     TComTU       *mpParent;
 
-    TComTU(const TComTU &);           // not defined - do not use
-    TComTU&operator=(const TComTU &); // not defined - do not use
+//    TComTU(const TComTU &);           // not defined - do not use
+//    TComTU&operator=(const TComTU &); // not defined - do not use
 
   public:
     TComTU(      TComDataCU *pcCU,
@@ -143,15 +143,16 @@ class TComTURecurse : public TComTU
 {
   public:
 
-    TComTURecurse(      TComDataCU *pcCU,
-                  const UInt        absPartIdxCU,
-                  const UInt        forcedDepthOfCU)
-      : TComTU(pcCU, absPartIdxCU, forcedDepthOfCU, 0) { }
+    TComTURecurse(TComDataCU    *pcCU,
+                  const UInt    absPartIdxCU,
+                  const UInt    forcedDepthOfCU
+                  )
+                  : TComTU(pcCU, absPartIdxCU, forcedDepthOfCU, 0) { }
 
-    TComTURecurse(      TComDataCU *pcCU,
-                  const UInt        absPartIdxCU); // CU's depth is taken from CU->getDepth(idx)
+    TComTURecurse(TComDataCU    *pcCU,
+                  const UInt    absPartIdxCU); // CU's depth is taken from CU->getDepth(idx)
 
-    TComTURecurse(      TComTU        &parentLevel,                            //Parent TU from which recursion children are derived
+    TComTURecurse(TComTU               &parentLevel,                            //Parent TU from which recursion children are derived
                   const Bool           bProcessLastOfLevel,                    //If true (and the split results in a "step-up" for chroma), the chroma TU is colocated with the last luma TU instead of the first
                   const TU_SPLIT_MODE  splitMode                 = QUAD_SPLIT, //DONT_SPLIT = create one new TU as a copy of its parent, VERTICAL_SPLIT = split the TU into top and bottom halves, QUAD_SPLIT = split the TU into four equal quadrants
                   const Bool           splitAtCurrentDepth       = false,      //Set true to keep the current depth when applying a vertical or quad split

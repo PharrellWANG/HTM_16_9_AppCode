@@ -100,7 +100,7 @@ private:
   TEncRateCtrl*           m_pcRateCtrl;                         ///< Rate control manager
   UInt                    m_uiSliceIdx;
   TEncSbac                m_lastSliceSegmentEndContextState;    ///< context storage for state at the end of the previous slice-segment (used for dependent slices only).
-  TEncSbac                m_entropyCodingSyncContextState;      ///< context storate for state of contexts at the wavefront/WPP/entropy-coding-sync second CTU of tile-row
+  TEncSbac                m_entropyCodingSyncContextState;      ///< context storage for state of contexts at the wavefront/WPP/entropy-coding-sync second CTU of tile-row
   SliceType               m_encCABACTableIdx;
 
   Void     setUpLambda(TComSlice* slice, const Double dLambda, Int iQP);

@@ -1591,7 +1591,7 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *
             m_pcRateCtrl->getRCPic()->setPicEstQP(sliceQP);
 
             m_pcSliceEncoder->resetQP(pcPic, sliceQP, lambda);
-        }
+        }//if "get rate control" is false, then jump to here
 
         UInt uiNumSliceSegments = 1;
 

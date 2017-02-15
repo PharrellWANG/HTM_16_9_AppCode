@@ -982,6 +982,7 @@ Void TAppEncTop::encode() {
   }
 #endif
 #if NH_MV
+    std::cout<<"m_targetEncLayerIdList.size()       : "<<m_targetEncLayerIdList.size()<<std::endl;
     while ((m_targetEncLayerIdList.size() != 0) && !allEos) {
         for (Int layer = 0; layer < m_numberOfLayers; layer++) {
 #if NH_3D
@@ -1006,6 +1007,7 @@ Void TAppEncTop::encode() {
 
                 // increase number of received frames
                 m_frameRcvd[layer]++;
+                std::cout<<"m_frameRcvd["<<layer<<"]    :       "<<m_frameRcvd[layer]<<std::endl<<std::endl;
 
                 frmCnt++;
 

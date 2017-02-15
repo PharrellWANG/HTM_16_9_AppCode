@@ -455,11 +455,23 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
   DvInfo.m_acDoNBDV.setZero();
 #endif
 #endif
-  const UInt uiLPelX   = rpcBestCU->getCUPelX();
-  const UInt uiRPelX   = uiLPelX + rpcBestCU->getWidth(0)  - 1;
-  const UInt uiTPelY   = rpcBestCU->getCUPelY();
-  const UInt uiBPelY   = uiTPelY + rpcBestCU->getHeight(0) - 1;
-  const UInt uiWidth   = rpcBestCU->getWidth(0);
+    std::cout<<""<<std::endl;
+    std::cout<<"******************************************************************************"<<std::endl;
+    const UInt uiLPelX   = rpcBestCU->getCUPelX();
+    std::cout<<"uiLPelX (Left pixel)        : " << uiLPelX <<std::endl;
+
+    const UInt uiRPelX   = uiLPelX + rpcBestCU->getWidth(0)  - 1;
+    std::cout<<"uiRPelX (Right pixel)       : " << uiRPelX <<std::endl;
+
+    const UInt uiTPelY   = rpcBestCU->getCUPelY();
+    std::cout<<"uiTPelX (Top pixel)         : " << uiTPelY <<std::endl;
+
+    const UInt uiBPelY   = uiTPelY + rpcBestCU->getHeight(0) - 1;
+    std::cout<<"uiBPelX (Bottom pixel)      : " << uiBPelY <<std::endl;
+
+    const UInt uiWidth   = rpcBestCU->getWidth(0);
+    std::cout<<"uiWidth (Width)             : " << uiWidth <<std::endl;
+    std::cout<<"**********************************"<<std::endl;
 
 #if NH_MV_ENC_DEC_TRAC
 #if ENC_DEC_TRACE
@@ -2801,7 +2813,7 @@ Void TEncCu::xCheckRDCostIntra( TComDataCU *&rpcBestCU,
   D_PRINT_INC_INDENT (g_traceModeCheck, "xCheckRDCostIntra; eSize: " + n2s(eSize) );
 //#endif
 
-  UInt uiDepth = rpcTempCU->getDepth( 0 );
+  UInt uiDepth = rpcTempCU->getDepth( 0 );  std::cout<<"uiDepth             : "<<uiDepth<<std::endl;
 //#if NH_3D_VSO // M5
   if( m_pcRdCost->getUseRenModel() )
   {

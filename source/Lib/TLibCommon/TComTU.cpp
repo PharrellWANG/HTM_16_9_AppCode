@@ -80,9 +80,9 @@ TComTU::TComTU(TComDataCU *pcCU, const UInt absPartIdxCU, const UInt cuDepth, co
 
 
 TComTURecurse::TComTURecurse(      TComDataCU *pcCU,
-                             const UInt        absPartIdxCU)
-  : TComTU(pcCU, absPartIdxCU, pcCU->getDepth(absPartIdxCU), 0)
-{ }
+                             const UInt        absPartIdxCU
+                            )
+                            : TComTU(pcCU, absPartIdxCU, pcCU->getDepth(absPartIdxCU), 0) { }
 
 
 
