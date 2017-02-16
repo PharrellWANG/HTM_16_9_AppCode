@@ -4815,22 +4815,17 @@ Void TComDataCU::xDeriveCenterIdx( UInt uiPartIdx, UInt& ruiPartIdxCenter ) cons
                                         + ( iPartWidth/m_pcPic->getMinCUWidth()  )/2];
 }
 
-#if NH_3D
 Void TComDataCU::compressMV(Int scale)
 {
    Int scaleFactor = (4 / scale ) * AMVP_DECIMATION_FACTOR / m_unitSize;
-#else
-Void TComDataCU::compressMV()
-{
-  Int scaleFactor = 4 * AMVP_DECIMATION_FACTOR / m_unitSize;
-#endif
-  if (scaleFactor > 0)
-  {
-    for(UInt i=0; i<NUM_REF_PIC_LIST_01; i++)
-    {
-      m_acCUMvField[i].compress(m_pePredMode, scaleFactor);
-    }
-  }
+
+   if (scaleFactor > 0)
+   {
+     for(UInt i=0; i<NUM_REF_PIC_LIST_01; i++)
+     {
+       m_acCUMvField[i].compress(m_pePredMode, scaleFactor);
+     }
+   }
 }
 #if NH_3D
 Void TComDataCU::printMV( )
