@@ -2,39 +2,60 @@
   <dictionary name="Pharrell_WANG">
     <words>
       <w>accessunit</w>
+      <w>avrg</w>
       <w>bcheck</w>
+      <w>bipred</w>
       <w>bitdepth</w>
       <w>bitstream</w>
+      <w>blen</w>
       <w>cabac</w>
       <w>cand</w>
       <w>coeff</w>
       <w>conv</w>
+      <w>crto</w>
+      <w>cscd</w>
       <w>ctus</w>
+      <w>deblock</w>
       <w>deblocked</w>
       <w>declarep</w>
       <w>dequantise</w>
       <w>ebsp</w>
       <w>encmain</w>
+      <w>fastintersearch</w>
       <w>filebuf</w>
       <w>hadamard</w>
       <w>hevc</w>
+      <w>highthroughputrext</w>
       <w>intra</w>
+      <w>ipcolourspace</w>
+      <w>irap</w>
       <w>lunit</w>
+      <w>mainrext</w>
+      <w>mainstillpicture</w>
       <w>maxval</w>
       <w>mesearch</w>
       <w>minval</w>
+      <w>multiviewmain</w>
+      <w>mvhevc</w>
       <w>nalu</w>
       <w>nalunit</w>
+      <w>nvcl</w>
       <w>precompress</w>
       <w>pred</w>
+      <w>psnr</w>
       <w>quadtree</w>
+      <w>radl</w>
+      <w>rasl</w>
       <w>rcvd</w>
       <w>rdoq</w>
+      <w>rdpcm</w>
       <w>reco</w>
       <w>resi</w>
       <w>sait</w>
       <w>sbac</w>
       <w>sdcmrsad</w>
+      <w>shvc</w>
+      <w>stsa</w>
       <w>subsampling</w>
       <w>substream</w>
       <w>substreams</w>
@@ -42,7 +63,9 @@
       <w>tcomrectangle</w>
       <w>tcomtu</w>
       <w>transquant</w>
+      <w>viewpos</w>
       <w>wedgelet</w>
+      <w>weightedprediction</w>
       <w>wvso</w>
     </words>
   </dictionary>

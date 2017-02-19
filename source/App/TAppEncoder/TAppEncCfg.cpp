@@ -794,7 +794,7 @@ Bool TAppEncCfg::parseCfg( Int argc, TChar* argv[] )
 
   po::Options opts;
   opts.addOptions()
-  ("help",                                            do_help,                                          false, "this help text")
+  ("help",                 do_help,                   false, "this help text")
   ("c",    po::parseConfigFile, "configuration file name")
   ("WarnUnknowParameter,w",                           warnUnknowParameter,                                  0, "warn for unknown configuration parameters instead of failing")
 

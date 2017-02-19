@@ -129,7 +129,7 @@ Void TAppEncTop::xInitLibCfg() {
 #endif
 #if NH_MV
     xSetTimingInfo(vps);
-    xSetHrdParameters(vps);
+    xSetHrdParameters(vps); // MULTIPLAYER HYPOTHETICAL REFERENCE DECODER (HRD) PARAMETERS
     xSetLayerIds(vps);
     xSetDimensionIdAndLength(vps);
     xSetDependencies(vps);
@@ -963,8 +963,20 @@ Void TAppEncTop::encode() {
     TComPicYuv picYuvTrueOrg[2];
     for (Int d = 0; d < 2; d++) {
         picYuvOrg[d] = new TComPicYuv;
-        picYuvOrg[d]->create(m_iSourceWidth, m_isField ? m_iSourceHeightOrg : m_iSourceHeight, (d > 0) ? CHROMA_400 : m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true);
-        picYuvTrueOrg[d].create(m_iSourceWidth, m_isField ? m_iSourceHeightOrg : m_iSourceHeight, (d > 0) ? CHROMA_400 : m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true);
+        picYuvOrg[d]->create(m_iSourceWidth,
+                             m_isField ? m_iSourceHeightOrg : m_iSourceHeight,
+                            (d > 0) ? CHROMA_400 : m_chromaFormatIDC,
+                             m_uiMaxCUWidth,
+                             m_uiMaxCUHeight,
+                             m_uiMaxTotalCUDepth,
+                             true);
+        picYuvTrueOrg[d].create(m_iSourceWidth,
+                                m_isField ? m_iSourceHeightOrg : m_iSourceHeight,
+                               (d > 0) ? CHROMA_400 : m_chromaFormatIDC,
+                                m_uiMaxCUWidth,
+                                m_uiMaxCUHeight,
+                                m_uiMaxTotalCUDepth,
+                                true);
     }
 #else
                                                                                                                             TComPicYuv cPicYuvTrueOrg;
@@ -1357,11 +1369,11 @@ Void TAppEncTop::rateStatsAccum(const AccessUnit &au, const std::vector<UInt> &a
         switch ((*it_au)->m_nalUnitType) {
             case NAL_UNIT_CODED_SLICE_TRAIL_R:
             case NAL_UNIT_CODED_SLICE_TRAIL_N:
-            case NAL_UNIT_CODED_SLICE_TSA_R:
+            case NAL_UNIT_CODED_SLICE_TSA_R: // TSA: temporal sub-layer access pictures
             case NAL_UNIT_CODED_SLICE_TSA_N:
             case NAL_UNIT_CODED_SLICE_STSA_R:
             case NAL_UNIT_CODED_SLICE_STSA_N:
-            case NAL_UNIT_CODED_SLICE_BLA_W_LP:
+            case NAL_UNIT_CODED_SLICE_BLA_W_LP: // BLA: broken link access picture
             case NAL_UNIT_CODED_SLICE_BLA_W_RADL:
             case NAL_UNIT_CODED_SLICE_BLA_N_LP:
             case NAL_UNIT_CODED_SLICE_IDR_W_RADL:

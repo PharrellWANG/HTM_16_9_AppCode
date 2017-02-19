@@ -2166,7 +2166,12 @@ Void TEncGOP::xCalculateAddPSNRs(const Bool isField, const Bool isFieldTopFieldF
     }
 }
 
-Void TEncGOP::xCalculateAddPSNR(TComPic *pcPic, TComPicYuv *pcPicD, const AccessUnit &accessUnit, Double dEncTime, const InputColourSpaceConversion conversion, const Bool printFrameMSE) {
+Void TEncGOP::xCalculateAddPSNR(TComPic *pcPic,
+                                TComPicYuv *pcPicD,
+                                const AccessUnit &accessUnit,
+                                Double dEncTime,
+                                const InputColourSpaceConversion conversion,
+                                const Bool printFrameMSE) {
     Double dPSNR[MAX_NUM_COMPONENT];
 
     for (Int i = 0; i < MAX_NUM_COMPONENT; i++) {
