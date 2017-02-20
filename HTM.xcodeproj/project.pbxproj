@@ -487,6 +487,7 @@
 		7894E36714890D9A009259F4 /* libTLibRenderer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTLibRenderer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7894E38A14890DD2009259F4 /* TAppRenderer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TAppRenderer; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C593B415872152004401C5 /* libTAppCommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTAppCommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED991E8F11DDEBEE823A70F9 /* csvfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = csvfile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -659,6 +660,7 @@
 				78486FAF1B0B62C70098FD5A /* TAppEncCfg.h */,
 				78486FB01B0B62C70098FD5A /* TAppEncTop.cpp */,
 				78486FB11B0B62C70098FD5A /* TAppEncTop.h */,
+				ED991E8F11DDEBEE823A70F9 /* csvfile.h */,
 			);
 			path = TAppEncoder;
 			sourceTree = "<group>";
