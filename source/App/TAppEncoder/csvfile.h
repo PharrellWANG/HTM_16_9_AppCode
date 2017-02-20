@@ -3,6 +3,7 @@
 //
 
 #pragma clang diagnostic push
+#pragma ide diagnostic ignored "OCUnusedGlobalDeclarationInspection"
 #pragma ide diagnostic ignored "IncompatibleTypes"
 #ifndef HTM_CSVFILE_H
 #define HTM_CSVFILE_H
