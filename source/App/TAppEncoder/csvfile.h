@@ -2,6 +2,8 @@
 // Created by Pharrell_WANG on 20/2/2017.
 //
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "IncompatibleTypes"
 #ifndef HTM_CSVFILE_H
 #define HTM_CSVFILE_H
 
@@ -45,15 +47,15 @@ public:
         return val(*this);
     }
 
-    csvfile &operator<<(const char *val) {
-        fs_ << '"' << val << '"' << separator_;
-        return *this;
-    }
-
-    csvfile &operator<<(const std::string &val) {
-        fs_ << '"' << val << '"' << separator_;
-        return *this;
-    }
+//    csvfile &operator<<(const char *val) {
+//        fs_ << '"' << val << '"' << separator_;
+//        return *this;
+//    }
+//
+//    csvfile &operator<<(const std::string &val) {
+//        fs_ << '"' << val << '"' << separator_;
+//        return *this;
+//    }
 
     template<typename T>
     csvfile &operator<<(const T &val) {
@@ -76,3 +78,5 @@ inline static csvfile &flush(csvfile &file) {
 
 
 #endif //HTM_CSVFILE_H
+
+#pragma clang diagnostic pop
