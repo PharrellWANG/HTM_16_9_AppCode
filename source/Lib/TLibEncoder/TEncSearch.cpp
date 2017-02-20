@@ -3015,6 +3015,7 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
 #endif
 
         CandNum += xUpdateCandList( uiMode, cost, numModesForFullRD, uiRdModeList, CandCostList );
+        std::cout<<"CandNum: "<<CandNum<<std::endl;
 #if NH_MV
         D_DEC_INDENT( g_traceModeCheck );
 #endif

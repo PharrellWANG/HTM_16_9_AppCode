@@ -1044,6 +1044,7 @@ Void TAppEncTop::encode() {
 #endif
             for (Int layer = 0; layer < m_numberOfLayers; layer++) {
 #if NH_3D
+                std::cout<<"layer       : "<<layer<<std::endl;
                 TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
                 TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
 #endif
@@ -1062,6 +1063,10 @@ Void TAppEncTop::encode() {
 
                 // call encoding function for one frame
                 m_acTEncTopList[layer]->encode(eos[layer], flush[layer] ? 0 : pcPicYuvOrg, flush[layer] ? 0 : &cPicYuvTrueOrg, snrCSC, *m_cListPicYuvRec[layer], outputAccessUnits, iNumEncoded, gopId);
+
+                std::cout<<"iNumEncoded : "<<iNumEncoded<<std::endl;
+                std::cout<<"layer       : "<<layer<<std::endl;
+
                 xWriteOutput(bitstreamFile, iNumEncoded, outputAccessUnits, layer);
                 outputAccessUnits.clear();
             }
@@ -1464,7 +1469,11 @@ Void TAppEncTop::printChromaFormat() {
 
 #if NH_3D_DLT
 
-Void TAppEncTop::xAnalyzeInputBaseDepth(UInt layer, UInt uiNumFrames, TComVPS *vps, TComDLT *dlt) {
+Void TAppEncTop::xAnalyzeInputBaseDepth(UInt layer,
+                                        UInt uiNumFrames,
+                                        TComVPS *vps,
+                                        TComDLT *dlt)
+{
     TComPicYuv *pcDepthPicYuvOrg = new TComPicYuv;
     TComPicYuv *pcDepthPicYuvTrueOrg = new TComPicYuv;
     // allocate original YUV buffer

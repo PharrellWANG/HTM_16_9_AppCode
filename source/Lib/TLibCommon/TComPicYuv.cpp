@@ -125,7 +125,7 @@ Void TComPicYuv::createWithoutCUInfo ( const Int picWidth,                 ///< 
     m_ctuOffsetInBuffer[chan]   = NULL;
     m_subCuOffsetInBuffer[chan] = NULL;
     }
-  }
+}
 
 
 
