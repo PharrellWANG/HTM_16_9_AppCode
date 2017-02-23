@@ -54,13 +54,13 @@ int main(int argc, char *argv[]) {
 
     try {
         csvfile csv("/Users/Pharrell_WANG/AppCodeProj/HTM_16_9_x/source/App/TAppEncoder/training_data.csv"); // throws exceptions!
-        // Hearer
-//        csv << "X" << "VALUE"        << endrow;
-        // Data
-        csv << 1 << "String value";
-        csv << 2 << 123;
-        csv << 3 << 1.f;
-        csv << 4 << 1.2;
+//        // Hearer
+////        csv << "X" << "VALUE"        << endrow;
+//        // Data
+//        csv << 1 << "String value";
+//        csv << 2 << 123;
+//        csv << 3 << 1.f;
+//        csv << 4 << 1.2;
     }
     catch (const std::exception &ex) {
         std::cout << "Exception was thrown: " << ex.what() << std::endl;

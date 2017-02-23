@@ -39,6 +39,8 @@
 #include "TLibCommon/TComRom.h"
 #include "TLibCommon/TComMotionInfo.h"
 #include "TEncSearch.h"
+#include <iostream>
+#include "csvfile.h"
 #include "TLibCommon/TComTU.h"
 #include "TLibCommon/Debug.h"
 #include <math.h>
@@ -2897,15 +2899,12 @@ TEncSearch::estIntraPredLumaQT(TComDataCU* pcCU,
   TComTURecurse tuRecurseWithPU(tuRecurseCU, false, (uiInitTrDepth==0)?TComTU::DONT_SPLIT : TComTU::QUAD_SPLIT);
 //    std::cout<<"#########  "<<counter<<std::endl;
   do
-  { counter ++;
+  {   counter ++;
       std::cout<<"the "<<counter<<"st "<<"while loop (while (tuRecurseWithPU.nextSection(tuRecurseCU));)"<<std::endl;
-    const UInt uiPartOffset=tuRecurseWithPU.GetAbsPartIdxTU();
+      const UInt uiPartOffset=tuRecurseWithPU.GetAbsPartIdxTU();
 #if NH_MV
-    D_PRINT_INC_INDENT(g_traceModeCheck, "uiPartOffset: " + n2s(uiPartOffset ) );
+      D_PRINT_INC_INDENT(g_traceModeCheck, "uiPartOffset: " + n2s(uiPartOffset ) );
 #endif
-
-//  for( UInt uiPU = 0, uiPartOffset=0; uiPU < uiNumPU; uiPU++, uiPartOffset += uiQNumParts )
-  //{
     //===== init pattern for luma prediction =====
     DEBUG_STRING_NEW(sTemp2)
 

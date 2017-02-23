@@ -42,6 +42,7 @@
 #include <fcntl.h>
 #include <assert.h>
 #include <iomanip>
+#include <csvfile.h>
 
 #include "TAppEncTop.h"
 #include "TLibEncoder/AnnexBwrite.h"
@@ -898,71 +899,54 @@ Void TAppEncTop::xInitLib(Bool isFieldCoding) {
  .
  */
 Void TAppEncTop::encode() {
-    //----->>>>>>>create the stream.bit file for writing the bitstream file
-    fstream bitstreamFile(m_bitstreamFileName.c_str(), fstream::binary | fstream::out);//binary: opens the file in binary mode, instead of text mode; out: opens the file in write mode.
-    /**
-  ---1.
-          In C++11 standard it's explicitly stated that .c_str() shall return
-         pointer to the internal buffer which is used by std::string.
-         type(m_bitstreamFileName) == std::string
-  ---2.
-         fstream::binary | fstream::out==> setting a fstream class wiht open mode as binary, and write into it.
-         I guess it is related to the stream.bit output file of encoder.
-  ---3.
-        if failed to open the bitstream file, "bitstreamFile" = 0, hence will enter the block below,
-        else won't enter the following block
-  ---4.
-        file streams are associated with files either on construction, or by calling member open.
-         obviously, here, the two things are associated on construction.
-         bitstreamFile is an object of fstream class. Object of this class maintain a filebuf object as their internal
-         stream buffer.
-         which performs input/output operations on the file they are associated with.
-  */
+    //>create the stream.bit file for writing the bitstream file
+    fstream bitstreamFile(m_bitstreamFileName.c_str(), fstream::binary | fstream::out);
     if (!bitstreamFile) {
         fprintf(stderr, "\nfailed to open bitstream file `%s' for writing\n", m_bitstreamFileName.c_str());
         exit(EXIT_FAILURE);
     }
 
-#if !NH_3D
-    TComPicYuv*       pcPicYuvOrg = new TComPicYuv;
-#endif
-    TComPicYuv *pcPicYuvRec = NULL;//class pointer to the rec .yuv files
+    //class pointer to the rec .yuv files
+    TComPicYuv *pcPicYuvRec = NULL;
 
     // initialize internal class & member variables
     xInitLibCfg();
     xCreateLib();
+    // field coding is not enabled
     xInitLib(m_isField);
 
     printChromaFormat();
 
     // main encoder loop
-#if NH_MV
     Bool allEos = false;
     std::vector<Bool> eos;
     std::vector<Bool> flush;
 
     Int gopSize = 1;
     Int maxGopSize = 0;
+
+    //> maxGopSize == 8
     maxGopSize = (std::max)(maxGopSize, m_acTEncTopList[0]->getGOPSize());
 
-    for (Int layer = 0; layer < m_numberOfLayers; layer++) {
+    //> m_numberOfLayers == 6
+    for (Int layer = 0; layer < m_numberOfLayers; layer++)
+    {
         eos.push_back(false);
         flush.push_back(false);
     }
-#else
-                                                                                                                            Int   iNumEncoded = 0;
-  Bool  bEos = false;
-#endif
+
     const InputColourSpaceConversion ipCSC = m_inputColourSpaceConvert;
     const InputColourSpaceConversion snrCSC = (!m_snrInternalColourSpace) ? m_inputColourSpaceConvert : IPCOLOURSPACE_UNCHANGED;
 
     list<AccessUnit> outputAccessUnits; ///< list of access units to write out.  is populated by the encoding process
 
-#if NH_3D
     TComPicYuv *picYuvOrg[2];
     TComPicYuv picYuvTrueOrg[2];
-    for (Int d = 0; d < 2; d++) {
+
+    for (Int d = 0; d < 2; d++)
+    {
         picYuvOrg[d] = new TComPicYuv;
+
         picYuvOrg[d]->create(m_iSourceWidth,
                              m_isField ? m_iSourceHeightOrg : m_iSourceHeight,
                             (d > 0) ? CHROMA_400 : m_chromaFormatIDC,
@@ -970,6 +954,7 @@ Void TAppEncTop::encode() {
                              m_uiMaxCUHeight,
                              m_uiMaxTotalCUDepth,
                              true);
+
         picYuvTrueOrg[d].create(m_iSourceWidth,
                                 m_isField ? m_iSourceHeightOrg : m_iSourceHeight,
                                (d > 0) ? CHROMA_400 : m_chromaFormatIDC,
@@ -977,39 +962,29 @@ Void TAppEncTop::encode() {
                                 m_uiMaxCUHeight,
                                 m_uiMaxTotalCUDepth,
                                 true);
-    }
-#else
-                                                                                                                            TComPicYuv cPicYuvTrueOrg;
 
-  // allocate original YUV buffer
-  if( m_isField )
-  {
-    pcPicYuvOrg->create  ( m_iSourceWidth, m_iSourceHeightOrg, m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
-    cPicYuvTrueOrg.create(m_iSourceWidth, m_iSourceHeightOrg, m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true);
-  }
-  else
-  {
-    pcPicYuvOrg->create  ( m_iSourceWidth, m_iSourceHeight, m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
-    cPicYuvTrueOrg.create(m_iSourceWidth, m_iSourceHeight, m_chromaFormatIDC, m_uiMaxCUWidth, m_uiMaxCUHeight, m_uiMaxTotalCUDepth, true );
-  }
-#endif
-#if NH_MV
+    }
+
     std::cout<<"m_targetEncLayerIdList.size()       : "<<m_targetEncLayerIdList.size()<<std::endl;
-    while ((m_targetEncLayerIdList.size() != 0) && !allEos) {
-        for (Int layer = 0; layer < m_numberOfLayers; layer++) {
-#if NH_3D
+
+    while ((m_targetEncLayerIdList.size() != 0) && !allEos)
+    {
+        for (Int layer = 0; layer < m_numberOfLayers; layer++)
+        {
             std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
 
             TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
-
             TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
-#endif
-            if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer))) {
+
+            if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer)))
+            {
                 continue;
             }
 
             Int frmCnt = 0;
-            while (!eos[layer] && frmCnt != gopSize) {
+
+            while (!eos[layer] && frmCnt != gopSize)
+            {
                 // get buffers
                 xGetBuffer(pcPicYuvRec, (UInt) layer);
 
@@ -1019,15 +994,18 @@ Void TAppEncTop::encode() {
 
                 // increase number of received frames
                 m_frameRcvd[layer]++;
-                std::cout<<"m_frameRcvd["<<layer<<"]    :       "<<m_frameRcvd[layer]<<std::endl<<std::endl;
+                std::cout<<"m_frameRcvd["<<layer<<"]    :       "<<m_frameRcvd[layer]<<std::endl;
 
                 frmCnt++;
 
                 eos[layer] = (m_frameRcvd[layer] == m_framesToBeEncoded);
                 allEos = allEos || eos[layer];
 
+                std::cout<<"allEos = "<<allEos<<std::endl<<std::endl;
+
                 // if end of file (which is only detected on a read failure) flush the encoder of any queued pictures
-                if (m_acTVideoIOYuvInputFileList[layer]->isEof()) {
+                if (m_acTVideoIOYuvInputFileList[layer]->isEof())
+                {
                     flush[layer] = true;
                     eos[layer] = true;
                     m_frameRcvd[layer]--;
@@ -1035,29 +1013,30 @@ Void TAppEncTop::encode() {
                 }
             }
         }
-        for (Int gopId = 0; gopId < gopSize; gopId++) {
-#if NH_3D_VSO || NH_3D
+
+        for (Int gopId = 0; gopId < gopSize; gopId++)
+        {
             UInt iNextPoc = (UInt) m_acTEncTopList[0]->getFrameId(gopId);
-            if (iNextPoc < m_framesToBeEncoded) {
+
+            if (iNextPoc < m_framesToBeEncoded)
+            {
                 m_cCameraData.update(iNextPoc);
             }
-#endif
-            for (Int layer = 0; layer < m_numberOfLayers; layer++) {
-#if NH_3D
+
+            for (Int layer = 0; layer < m_numberOfLayers; layer++)
+            {
                 std::cout<<"layer       : "<<layer<<std::endl;
+                std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
                 TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
                 TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
-#endif
                 if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer))) {
                     continue;
                 }
 
-#if NH_3D_VSO
                 if (m_bUseVSO && m_bUseEstimatedVSD && iNextPoc < m_framesToBeEncoded) {
                     m_cCameraData.setDispCoeff(iNextPoc, m_acTEncTopList[layer]->getViewIndex());
                     m_acTEncTopList[layer]->setDispCoeff(m_cCameraData.getDispCoeff());
                 }
-#endif
 
                 Int iNumEncoded = 0;
 
@@ -1065,7 +1044,7 @@ Void TAppEncTop::encode() {
                 m_acTEncTopList[layer]->encode(eos[layer], flush[layer] ? 0 : pcPicYuvOrg, flush[layer] ? 0 : &cPicYuvTrueOrg, snrCSC, *m_cListPicYuvRec[layer], outputAccessUnits, iNumEncoded, gopId);
 
                 std::cout<<"iNumEncoded : "<<iNumEncoded<<std::endl;
-                std::cout<<"layer       : "<<layer<<std::endl;
+//                std::cout<<"layer       : "<<layer<<std::endl;
 
                 xWriteOutput(bitstreamFile, iNumEncoded, outputAccessUnits, layer);
                 outputAccessUnits.clear();
@@ -1073,104 +1052,36 @@ Void TAppEncTop::encode() {
         }
 
         gopSize = maxGopSize;
+
     }
 
 
-    for (Int layer = 0; layer < m_numberOfLayers; layer++) {
-        if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer))) {
+    for (Int layer = 0; layer < m_numberOfLayers; layer++)
+    {
+        if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer)))
+        {
             continue;
         }
+
         m_acTEncTopList[layer]->printSummary(m_isField);
-    }
-#else
 
-                                                                                                                            while ( !bEos )
-  {
-    // get buffers
-    xGetBuffer(pcPicYuvRec);
-
-    // read input YUV file
-    m_cTVideoIOYuvInputFile.read( pcPicYuvOrg, &cPicYuvTrueOrg, ipCSC, m_aiPad, m_InputChromaFormatIDC, m_bClipInputVideoToRec709Range );
-
-    // increase number of received frames
-    m_iFrameRcvd++;
-
-    bEos = (m_isField && (m_iFrameRcvd == (m_framesToBeEncoded >> 1) )) || ( !m_isField && (m_iFrameRcvd == m_framesToBeEncoded) );
-
-    Bool flush = 0;
-    // if end of file (which is only detected on a read failure) flush the encoder of any queued pictures
-    if (m_cTVideoIOYuvInputFile.isEof())
-    {
-      flush = true;
-      bEos = true;
-      m_iFrameRcvd--;
-      m_cTEncTop.setFramesToBeEncoded(m_iFrameRcvd);
     }
 
-    // call encoding function for one frame
-    if ( m_isField )
-    {
-      m_cTEncTop.encode( bEos, flush ? 0 : pcPicYuvOrg, flush ? 0 : &cPicYuvTrueOrg, snrCSC, m_cListPicYuvRec, outputAccessUnits, iNumEncoded, m_isTopFieldFirst );
-    }
-    else
-    {
-      m_cTEncTop.encode( bEos, flush ? 0 : pcPicYuvOrg, flush ? 0 : &cPicYuvTrueOrg, snrCSC, m_cListPicYuvRec, outputAccessUnits, iNumEncoded );
-    }
-
-    // write bistream to file if necessary
-    if ( iNumEncoded > 0 )
-    {
-      xWriteOutput(bitstreamFile, iNumEncoded, outputAccessUnits);
-      outputAccessUnits.clear();
-    }
-    // temporally skip frames
-    if( m_temporalSubsampleRatio > 1 )
-    {
-      m_cTVideoIOYuvInputFile.skipFrames(m_temporalSubsampleRatio-1, m_iSourceWidth - m_aiPad[0], m_iSourceHeight - m_aiPad[1], m_InputChromaFormatIDC);
-    }
-  }
-
-  m_cTEncTop.printSummary(m_isField);
-#endif
-
-#if NH_3D
     // delete original YUV buffer
-    for (Int d = 0; d < 2; d++) {
+    for (Int d = 0; d < 2; d++)
+    {
         picYuvOrg[d]->destroy();
         delete picYuvOrg[d];
         picYuvOrg[d] = NULL;
 
         picYuvTrueOrg[d].destroy();
     }
-#else
-                                                                                                                            // delete original YUV buffer
-  pcPicYuvOrg->destroy();
-  delete pcPicYuvOrg;
-  pcPicYuvOrg = NULL;
-#endif
-
-#if !NH_MV
-                                                                                                                            // delete used buffers in encoder class
-  m_cTEncTop.deletePicBuffer();
-#endif
-#if !NH_3D
-    cPicYuvTrueOrg.destroy();
-#endif
 
     // delete buffers & classes
     xDeleteBuffer();
     xDestroyLib();
 
     printRateSummary();
-
-#if NH_3D_REN_MAX_DEV_OUT
-                                                                                                                            Double dMaxDispDiff = m_cCameraData.getMaxShiftDeviation();
-
-  if ( !(dMaxDispDiff < 0) )
-  {
-    printf("\n Max. possible shift error: %12.3f samples.\n", dMaxDispDiff );
-  }
-#endif
 
     return;
 }

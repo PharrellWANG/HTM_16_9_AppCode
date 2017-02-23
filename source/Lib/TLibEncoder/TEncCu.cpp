@@ -40,6 +40,7 @@
 #include "TEncCu.h"
 #include "TEncAnalyze.h"
 #include "TLibCommon/Debug.h"
+#include "csvfile.h"
 
 #include <cmath>
 #include <algorithm>
@@ -421,9 +422,9 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
 
 #if NH_3D_QTL
 #if NH_3D_QTLPC
-  Bool  bLimQtPredFalg    = pcPic->getSlice(0)->getQtPredFlag(); 
+  Bool  bLimQtPredFlag    = pcPic->getSlice(0)->getQtPredFlag();
 #else
-  Bool  bLimQtPredFalg    = false;
+  Bool  bLimQtPredFlag    = false;
 #endif
   TComPic *pcTexture      = rpcBestCU->getSlice()->getTexturePic();
 
@@ -472,6 +473,18 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
     const UInt uiWidth   = rpcBestCU->getWidth(0);
     std::cout<<"uiWidth (Width)             : " << uiWidth <<std::endl;
     std::cout<<"**********************************"<<std::endl;
+
+//    try {
+//        csvfile csv("/Users/Pharrell_WANG/AppCodeProj/HTM_16_9_x/source/App/TAppEncoder/training_data.csv"); // throws exceptions!
+//        csv << uiLPelX;
+//        csv << uiRPelX;
+//        csv << uiTPelY;
+//        csv << uiBPelY;
+//        csv << uiWidth << endrow;
+//    }
+//    catch (const std::exception &ex) {
+//        std::cout << "Exception was thrown: " << ex.what() << std::endl;
+//    }
 
 #if NH_MV_ENC_DEC_TRAC
 #if ENC_DEC_TRACE
@@ -569,9 +582,9 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
 #if NH_3D_QTL
       //logic for setting bTrySplit using the partition information that is stored of the texture colocated CU
 #if H_3D_FCO
-      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFalg ) && pcTexture->getReconMark())
+      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFlag ) && pcTexture->getReconMark())
 #else
-      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFalg ))
+      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFlag ))
 #endif
       {
         TComDataCU* pcTextureCU = pcTexture->getCtu( rpcBestCU->getCtuRsAddr() ); //Corresponding texture LCU
@@ -749,7 +762,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
 #endif
       }
 #if NH_3D_QTL
-      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFalg ))
+      if(depthMapDetect && !bIntraSliceDetect && !rapPic && ( m_pcEncCfg->getUseQTL() || bLimQtPredFlag ))
       {
         bTrySplitDQP = bTrySplit;
       }
@@ -759,7 +772,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
       {
         iQP = iMinQP;
       }
-    }
+    }//END of [--------->for (Int iQP=iMinQP; iQP<=iMaxQP; iQP++)<------]
 
 #if KWU_RC_MADPRED_E0227
     if ( uiDepth <= m_addSADDepth )
@@ -1099,7 +1112,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
 
 #endif
           }
-        }
+        }//> END of do inter mode
 #if  NH_3D_FAST_TEXTURE_ENCODING
         if(!bFMD)
         {
@@ -1147,7 +1160,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
           rpcTempCU->initEstData( uiDepth, iQP, bIsLosslessMode );
           if( uiDepth == sps.getLog2DiffMaxMinCodingBlockSize() )
           {
-#if NH_3D_QTL //Try IntraNxN
+#if NH_3D_QTL //>  Try IntraNxN
               if(bTrySplit)
               {
 #endif
@@ -1189,14 +1202,14 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
           }
         }
 #if  NH_3D_FAST_TEXTURE_ENCODING
-        }
+        }//> END of do normal intra modes.
 #endif
         if (bIsLosslessMode) // Restore loop variable if lossless mode was searched.
         {
           iQP = iMinQP;
         }
       }
-    }//774
+    }//> END of  !(early detection skip mode = False)
 
     if( rpcBestCU->getTotalCost()!=MAX_DOUBLE )
     {
@@ -1268,7 +1281,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
   if( bSubBranch && uiDepth < sps.getLog2DiffMaxMinCodingBlockSize() && (!getFastDeltaQp() || uiWidth > fastDeltaQPCuMaxSize || bBoundary))
 #endif
   {
-    // further split
+    //>>>>-------------->>>>>>>>>>>>>>>>>>>>> further split
     for (Int iQP=iMinQP; iQP<=iMaxQP; iQP++)
     {
       const Bool bIsLosslessMode = false; // False at this level. Next level down may set it to true.
@@ -1335,7 +1348,7 @@ Void TEncCu::xCompressCU( TComDataCU*& rpcBestCU, TComDataCU*& rpcTempCU, const 
           pcSubBestPartCU->copyToPic( uhNextDepth );
           rpcTempCU->copyPartFrom( pcSubBestPartCU, uiPartUnitIdx, uhNextDepth );
         }
-      }
+      }//> END of for loop
 
       m_pcRDGoOnSbacCoder->load(m_pppcRDSbacCoder[uhNextDepth][CI_NEXT_BEST]);
       if( !bBoundary )

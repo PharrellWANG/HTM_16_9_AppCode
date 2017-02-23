@@ -1027,7 +1027,7 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *
 
         UInt uiColDir = calculateCollocatedFromL1Flag(m_pcCfg, iGOPid, m_iGopSize);
 
-        /////////////////////////////////////////////////////////////////////////////////////////////////// Initial to start encoding
+        ///////////////////////////////////////////////// Initial to start encoding
         Int iTimeOffset;
         Int pocCurr;
         if (iPOCLast == 0) //case first frame or first top field
