@@ -12,6 +12,7 @@
       <w>cand</w>
       <w>coeff</w>
       <w>conv</w>
+      <w>cout</w>
       <w>crto</w>
       <w>cscd</w>
       <w>ctus</w>
@@ -22,6 +23,7 @@
       <w>dequantise</w>
       <w>ebsp</w>
       <w>encmain</w>
+      <w>endl</w>
       <w>endrow</w>
       <w>fastintersearch</w>
       <w>filebuf</w>
@@ -30,6 +32,7 @@
       <w>highthroughputrext</w>
       <w>intra</w>
       <w>ipcolourspace</w>
+      <w>ipcsc</w>
       <w>irap</w>
       <w>lunit</w>
       <w>mainrext</w>

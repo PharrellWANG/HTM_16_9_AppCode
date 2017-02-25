@@ -53,10 +53,12 @@
 int main(int argc, char *argv[]) {
 
     try {
-        csvfile csv("/Users/Pharrell_WANG/AppCodeProj/HTM_16_9_x/source/App/TAppEncoder/training_data.csv"); // throws exceptions!
-//        // Hearer
-////        csv << "X" << "VALUE"        << endrow;
-//        // Data
+        csvfile csv("/Users/Pharrell_WANG/AppCodeProj/HTM_16_9_x/source/App/TAppEncoder/training_data.csv");
+
+//        // > header
+//        csv << "X" << "VALUE" << endrow;
+
+//        // > Data
 //        csv << 1 << "String value";
 //        csv << 2 << 123;
 //        csv << 3 << 1.f;

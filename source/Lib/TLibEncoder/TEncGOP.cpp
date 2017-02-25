@@ -978,8 +978,16 @@ Void TEncGOP::initGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *> &rcList
 
 #endif
 
-Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *> &rcListPic, TComList<TComPicYuv *> &rcListPicYuvRecOut,
-        std::list<AccessUnit> &accessUnitsInGOP, Bool isField, Bool isTff, const InputColourSpaceConversion snr_conversion, const Bool printFrameMSE,
+Void TEncGOP::compressPicInGOP(
+        Int iPOCLast,
+        Int iNumPicRcvd,
+        TComList<TComPic *> &rcListPic,
+        TComList<TComPicYuv *> &rcListPicYuvRecOut,
+        std::list<AccessUnit> &accessUnitsInGOP,
+        Bool isField,
+        Bool isTff,
+        const InputColourSpaceConversion snr_conversion,
+        const Bool printFrameMSE,
         Int iGOPid)
 {
     // TODO: Split this function up.
@@ -990,9 +998,6 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *
     TComOutputBitstream *pcBitstreamRedirect;
     pcBitstreamRedirect = new TComOutputBitstream;
     AccessUnit::iterator itLocationToPushSliceHeaderNALU; // used to store location where NALU containing slice header is to be inserted
-#if !NH_MV
-    xInitGOP( iPOCLast, iNumPicRcvd, isField );
-#endif
 
     m_iNumPicCoded = 0;
     SEIMessages leadingSeiMessages;
@@ -1008,12 +1013,8 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *
     }
 
     // reset flag indicating whether pictures have been encoded
-#if !NH_MV
-    for ( Int iGOPid=0; iGOPid < m_iGopSize; iGOPid++ )
-#endif
-    {
-        m_pcCfg->setEncodedFlag(iGOPid, false);
-    }
+    m_pcCfg->setEncodedFlag(iGOPid, false);
+
 #if !NH_MV
     for ( Int iGOPid=0; iGOPid < m_iGopSize; iGOPid++ )
 #endif
@@ -1939,9 +1940,6 @@ Void TEncGOP::compressPicInGOP(Int iPOCLast, Int iNumPicRcvd, TComList<TComPic *
 
     delete pcBitstreamRedirect;
 
-#if !NH_MV
-    assert ( (m_iNumPicCoded == iNumPicRcvd) );
-#endif
 }
 
 Void TEncGOP::printOutSummary(UInt uiNumAllPicCoded, Bool isField, const Bool printMSEBasedSNR, const Bool printSequenceMSE, const BitDepths &bitDepths) {

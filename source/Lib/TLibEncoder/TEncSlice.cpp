@@ -870,7 +870,7 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
   Int iLastPosY = -1;
 #endif
 
-  for( UInt ctuTsAddr = startCtuTsAddr; ctuTsAddr < boundingCtuTsAddr; ++ctuTsAddr )
+  for( UInt ctuTsAddr = startCtuTsAddr; ctuTsAddr < boundingCtuTsAddr; ++ctuTsAddr ) // > boundingCtuTsAddr = 192 = ( 16*12 )
   {
     const UInt ctuRsAddr = pcPic->getPicSym()->getCtuTsToRsAddrMap(ctuTsAddr);
     // initialize CTU encoder
@@ -991,7 +991,7 @@ Void TEncSlice::compressSlice( TComPic* pcPic, const Bool bCompressEntireSlice, 
 //#if ADAPTIVE_QP_SELECTION
       pCtu->getSlice()->setSliceQpBase( estQP );
 //#endif
-    }
+    }//end of getUseRateControl
 
     // run CTU trial encoder
     m_pcCuEncoder->compressCtu( pCtu );

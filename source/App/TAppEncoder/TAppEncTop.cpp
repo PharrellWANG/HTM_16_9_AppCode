@@ -965,13 +965,13 @@ Void TAppEncTop::encode() {
 
     }
 
-    std::cout<<"m_targetEncLayerIdList.size()       : "<<m_targetEncLayerIdList.size()<<std::endl;
+//    std::cout<<"m_targetEncLayerIdList.size()       : "<<m_targetEncLayerIdList.size()<<std::endl;
 
     while ((m_targetEncLayerIdList.size() != 0) && !allEos)
     {
         for (Int layer = 0; layer < m_numberOfLayers; layer++)
         {
-            std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
+//            std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
 
             TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
             TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
@@ -994,7 +994,7 @@ Void TAppEncTop::encode() {
 
                 // increase number of received frames
                 m_frameRcvd[layer]++;
-                std::cout<<"m_frameRcvd["<<layer<<"]    :       "<<m_frameRcvd[layer]<<std::endl;
+                std::cout<<"m_frameRcvd["<<layer<<"] = "<<m_frameRcvd[layer]<<std::endl;
 
                 frmCnt++;
 
@@ -1014,6 +1014,8 @@ Void TAppEncTop::encode() {
             }
         }
 
+        // one GOP has int(gopSize) frame(s), every frame got a 'gopID',
+        // So here loop thru every frame in this GOP.
         for (Int gopId = 0; gopId < gopSize; gopId++)
         {
             UInt iNextPoc = (UInt) m_acTEncTopList[0]->getFrameId(gopId);
@@ -1023,12 +1025,14 @@ Void TAppEncTop::encode() {
                 m_cCameraData.update(iNextPoc);
             }
 
+            // One frame got 6 layers. (3 textures + 3 depths)
             for (Int layer = 0; layer < m_numberOfLayers; layer++)
             {
-                std::cout<<"layer       : "<<layer<<std::endl;
-                std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
+//                std::cout<<"layer       : "<<layer<<std::endl;
+//                std::cout<<"m_depthFlag"<<"["<<layer<<"]"<<" = "<<m_depthFlag[layer]<<std::endl;
                 TComPicYuv *pcPicYuvOrg = picYuvOrg[m_depthFlag[layer]];
                 TComPicYuv &cPicYuvTrueOrg = picYuvTrueOrg[m_depthFlag[layer]];
+
                 if (!xLayerIdInTargetEncLayerIdList(m_vps->getLayerIdInNuh(layer))) {
                     continue;
                 }
@@ -1041,7 +1045,15 @@ Void TAppEncTop::encode() {
                 Int iNumEncoded = 0;
 
                 // call encoding function for one frame
-                m_acTEncTopList[layer]->encode(eos[layer], flush[layer] ? 0 : pcPicYuvOrg, flush[layer] ? 0 : &cPicYuvTrueOrg, snrCSC, *m_cListPicYuvRec[layer], outputAccessUnits, iNumEncoded, gopId);
+                m_acTEncTopList[layer]->encode(
+                        eos[layer],
+                        flush[layer] ? 0 : pcPicYuvOrg,
+                        flush[layer] ? 0 : &cPicYuvTrueOrg,
+                        snrCSC,
+                        *m_cListPicYuvRec[layer],
+                        outputAccessUnits,
+                        iNumEncoded,
+                        gopId);
 
                 std::cout<<"iNumEncoded : "<<iNumEncoded<<std::endl;
 //                std::cout<<"layer       : "<<layer<<std::endl;
